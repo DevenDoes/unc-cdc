@@ -3,6 +3,9 @@ version: '3'
 networks:
   laravel:
 
+volumes:
+  mysql:
+
 services:
   site:
     build:
@@ -26,6 +29,8 @@ services:
     tty: true
     ports:
       - "3306:3306"
+    volumes:
+      - mysql:/var/lib/mysql
     environment:
       MYSQL_DATABASE: homestead
       MYSQL_USER: homestead
@@ -68,8 +73,13 @@ services:
     container_name: npm
     volumes:
       - ./src:/var/www/html
+    ports:
+      - "8081:3000"
+      - "8082:3001"
     working_dir: /var/www/html
     entrypoint: ['npm']
+    networks: 
+      - laravel
 
   artisan:
     build:
