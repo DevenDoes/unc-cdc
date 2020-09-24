@@ -22,28 +22,7 @@ mix.js('resources/js/app.js', 'public/js')
             require('tailwindcss'),
         ]
     })
-    .browserSync({
-        watch: true,
-        open: false,
-        proxy: {
-            target: 'nginx:80',
-            ws: true,
-        },
-
-        // proxy: 'nginx:80',
-        // host: 'localhost',
-        // port: 3000,
-        // ws: true,
-        // //watch: true,
-        // open: false,
-        // injectChanges: true,
-        // // files: [
-        // //     'public/css/app.css',
-        // //     'public/js/app.js',
-        // //     'resources/js/*'
-        // // ]
-        // reload: false,
-    });
+    .browserSync('cdc.test');
     // .webpackConfig({
     //     plugins: [
     //         new BrowserSyncPlugin(

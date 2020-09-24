@@ -1,16 +1,18 @@
 <template>
   <svg
     :id="id"
-    :class="styles"
+    :class="classAttributes"
     :aria-labelledby="id + 'AriaTitle' + ' ' + id + 'AriaDesc'"
     xmlns="http://www.w3.org/2000/svg"
+    width="26"
+    height="20"
     viewBox="0 0 448 512"
   >
     <title :id="id + 'AriaTitle'">{{ariaTitle}}</title>
     <desc :id="id + 'AriaDesc'">{{ariaDesc}}</desc>
     <path
-      fill="a"
-      d="M437.2 403.5L320 215V64h8c13.3 0 24-10.7 24-24V24c0-13.3-10.7-24-24-24H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h8v151L10.8 403.5C-18.5 450.6 15.3 512 70.9 512h306.2c55.7 0 89.4-61.5 60.1-108.5zM137.9 320l48.2-77.6c3.7-5.2 5.8-11.6 5.8-18.4V64h64v160c0 6.9 2.2 13.2 5.8 18.4l48.2 77.6h-172z"
+      class="a"
+      d="M108 284c-6.6 0-12-5.4-12-12v-32c0-6.6 5.4-12 12-12h232c6.6 0 12 5.4 12 12v32c0 6.6-5.4 12-12 12H108zM448 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48zm-48 346V86c0-3.3-2.7-6-6-6H54c-3.3 0-6 2.7-6 6v340c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"
     />
   </svg>
 </template>
@@ -34,6 +36,15 @@ export default {
       type: String,
       default: "",
     },
+    isVisible: {
+      type: Boolean,
+      default: true,
+    },
   },
+  computed: {
+    classAttributes: function() {
+      return this.styles + (this.isVisible ? ' block' : ' hidden');
+    }
+  }
 };
 </script>

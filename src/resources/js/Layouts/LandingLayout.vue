@@ -2,19 +2,25 @@
   <!-- Content container -->
   <div class>
     <!-- Header -->
-    <header 
+    <header
       class="fixed z-10 w-full h-16 md:h-24 bg-primary"
       ref="header"
     >
       <!-- Content wrapper -->
-      <div class="flex justify-center h-full px-6 md:justify-between">
+      <div
+        id="LogoWrapper"
+        class="flex justify-center h-full px-6 md:justify-between"
+      >
         <!-- Header Logo -->
         <a
+          id="LogoLink"
           href="#hero"
           class="flex-1 h-full py-4 transition duration-300 ease-in md:mx-8"
           :class="headerLogoIsVisible ? 'opacity-100' : 'opacity-0'"
+          v-on:click.prevent="handleLinkClick($event)"
         >
           <img
+            id="LogoImg"
             src="/img/branding/logo-horizontal.png"
             alt="Carolina Data Challenge logo."
             class="w-auto h-full transition duration-100 ease-in origin-center transform hover:scale-105"
@@ -38,7 +44,7 @@
           />
         </button>
         <!-- Menu navigation links -->
-        <navigation-menu 
+        <navigation-menu
           :isVisible="mobileNavIsVisible"
           @toggleNavMenu="toggleMobileNav"
         />
@@ -46,6 +52,10 @@
     </header>
     <!-- Page content -->
     <slot></slot>
+    <!-- Footer -->
+    <footer class="flex flex-col justify-center items-center px-8 py-16 sm:py-32 bg-primary">
+      <p class="text-base font-light leading-8 text-center font-primary text-light">Copyright © 2020 <a href="https://carolinadata.unc.edu/" class="text-highlight hover:underline">Carolina Analytics and Data Science</a>. All Rights Reserved </p>
+    </footer>
   </div>
 </template>
 
@@ -85,7 +95,30 @@ export default {
         this.headerLogoIsVisible = false;
         header.classList.remove('shadow-lg');
       }
-    } 
+    },
+    handleLinkClick: function(e) {
+      console.log(e.target.parentElement);
+      if (e.target.id === "LogoWrapper") {
+        document.querySelector(e.target.firstChild.hash).scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+      else if (e.target.id === "LogoImg") {
+        document.querySelector(e.target.parentElement.hash).scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+      else if (e.target.id === "LogoLink") {
+        document.querySelector(e.target.hash).scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+      else {
+        document.querySelector(e.target.hash).scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    },
   },
   beforeDestroy: function() {
     document.removeEventListener('scroll', this.throttle(this.toggleHeaderLogo, 100));
@@ -96,6 +129,6 @@ export default {
 
 <style lang="scss" scoped>
 
-
+@import "../../css/_utilities";
 
 </style>

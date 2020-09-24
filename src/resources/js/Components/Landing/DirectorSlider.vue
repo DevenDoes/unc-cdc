@@ -1,25 +1,33 @@
 <template>
   <swiper
-    ref="pastEventsSwiper"
+    ref="directorsSwiper"
     :options="swiperOptions"
   >
     <swiper-slide
-      v-for="i in 20"
-      :key="i"
+      v-for="director in directors"
+      :key="director.name"
       class="py-1"
     >
       <div class="card">
         <div class="card-img">
           <img
             class="swiper-lazy"
-            :data-src="'/img/past-events/' + i + '.jpg'"
-            alt="Image of attendees from previous Carolina Data Challenge events."
+            :data-src="'/img/headshots/' + director.img"
+            :alt="'Image of ' + director.name + '.'"
           >
+        </div>
+        <div class="card-body">
+          <p class="card-body-title">
+            {{ director.name }}
+          </p>
+          <p class="card-body-text">
+            {{ director.position }}
+          </p>
         </div>
       </div>
     </swiper-slide>
-    <div class="swiper-button-prev swiper-button-prev-past-events" slot="button-prev"></div>
-    <div class="swiper-button-next swiper-button-next-past-events" slot="button-next"></div>
+    <div class="swiper-button-prev swiper-button-prev-director" slot="button-prev"></div>
+    <div class="swiper-button-next swiper-button-next-director" slot="button-next"></div>
   </swiper>
 </template>
 
@@ -33,6 +41,58 @@ export default {
   },
   data: function() {
     return {
+      directors: {
+        lindsay: {
+          name: 'Lindsay Zhou',
+          position: 'Co-Executive',
+          img: 'lindsay-zhou.jpg',
+        },
+        shara: {
+          name: 'Shara He',
+          position: 'Co-Executive',
+          img: 'shara-he.jpg',
+        },
+        lucas: {
+          name: 'Lucas Zhang',
+          position: 'Graphic Design',
+          img: 'lucas-zhang.jpg',
+        },
+        adya: {
+          name: 'Adya Mahajan',
+          position: 'Sponsorship',
+          img: 'adya-mahajan.jpg',
+        },
+        harshul: {
+          name: 'Harshul Makwana',
+          position: 'Sponsorship',
+          img: 'harshul-makwana.jpg',
+        },
+        john: {
+          name: 'John Kirollos',
+          position: 'Hacker Experience',
+          img: 'john-kirollos.jpg',
+        },
+        sneha: {
+          name: 'Sneha Kottakkudy',
+          position: 'Logistics',
+          img: 'sneha-kottakkudy.jpg',
+        },
+        vanesa: {
+          name: 'Vanesa Munoz',
+          position: 'Logistics',
+          img: 'vanesa-munoz.jpg',
+        },
+        brooke: {
+          name: 'Brooke Bordonaro',
+          position: 'Marketing',
+          img: 'brooke-bordonaro.jpg',
+        },
+        deven: {
+          name: 'Deven Jahnke',
+          position: 'Web Developer',
+          img: 'deven-jahnke.jpg',
+        },
+      },
       swiperOptions: {
         direction: 'horizontal',
         centeredSlides: true,
@@ -67,15 +127,15 @@ export default {
         },
         watchSlidesVisibility: true,
         navigation: {
-          nextEl: '.swiper-button-next-past-events',
-          prevEl: '.swiper-button-prev-past-events'
+          nextEl: '.swiper-button-next-director',
+          prevEl: '.swiper-button-prev-director'
         }
       },
     };
   },
   computed: {
     swiper: function() {
-      return this.$refs.pastEventsSwiper.$swiper;
+      return this.$refs.directorsSwiper.$swiper;
     },
   },
 }
@@ -122,6 +182,15 @@ export default {
       height: 100%;
       width: 100%;
       object-fit: cover;
+    }
+  }
+  .card-body {
+    @apply pt-6 pb-2 flex flex-col items-center;
+    .card-body-title {
+      @apply font-primary font-medium text-primary text-lg;
+    }
+    .card-body-text {
+      @apply font-primary font-light text-dark text-base;
     }
   }
 }

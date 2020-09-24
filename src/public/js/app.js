@@ -2034,6 +2034,66 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Components/Icons/ExpandIcon.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Components/Icons/ExpandIcon.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: {
+    id: {
+      type: String,
+      "default": ""
+    },
+    styles: {
+      type: String,
+      "default": ""
+    },
+    ariaTitle: {
+      type: String,
+      "default": ""
+    },
+    ariaDesc: {
+      type: String,
+      "default": ""
+    },
+    isVisible: {
+      type: Boolean,
+      "default": true
+    }
+  },
+  computed: {
+    classAttributes: function classAttributes() {
+      return this.styles + (this.isVisible ? ' block' : ' hidden');
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Components/Icons/FinanceIcon.vue?vue&type=script&lang=js&":
 /*!****************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Components/Icons/FinanceIcon.vue?vue&type=script&lang=js& ***!
@@ -2192,6 +2252,66 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Components/Icons/MinimizeIcon.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Components/Icons/MinimizeIcon.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: {
+    id: {
+      type: String,
+      "default": ""
+    },
+    styles: {
+      type: String,
+      "default": ""
+    },
+    ariaTitle: {
+      type: String,
+      "default": ""
+    },
+    ariaDesc: {
+      type: String,
+      "default": ""
+    },
+    isVisible: {
+      type: Boolean,
+      "default": true
+    }
+  },
+  computed: {
+    classAttributes: function classAttributes() {
+      return this.styles + (this.isVisible ? ' block' : ' hidden');
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Components/Icons/PublicPolicyIcon.vue?vue&type=script&lang=js&":
 /*!*********************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Components/Icons/PublicPolicyIcon.vue?vue&type=script&lang=js& ***!
@@ -2235,6 +2355,162 @@ __webpack_require__.r(__webpack_exports__);
     ariaDesc: {
       type: String,
       "default": ""
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Components/Landing/DirectorSlider.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Components/Landing/DirectorSlider.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue_awesome_swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-awesome-swiper */ "./node_modules/vue-awesome-swiper/dist/vue-awesome-swiper.js");
+/* harmony import */ var vue_awesome_swiper__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_awesome_swiper__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var swiper_css_swiper_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/css/swiper.css */ "./node_modules/swiper/css/swiper.css");
+/* harmony import */ var swiper_css_swiper_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(swiper_css_swiper_css__WEBPACK_IMPORTED_MODULE_1__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    Swiper: vue_awesome_swiper__WEBPACK_IMPORTED_MODULE_0__["Swiper"],
+    SwiperSlide: vue_awesome_swiper__WEBPACK_IMPORTED_MODULE_0__["SwiperSlide"]
+  },
+  data: function data() {
+    return {
+      directors: {
+        lindsay: {
+          name: 'Lindsay Zhou',
+          position: 'Co-Executive',
+          img: 'lindsay-zhou.jpg'
+        },
+        shara: {
+          name: 'Shara He',
+          position: 'Co-Executive',
+          img: 'shara-he.jpg'
+        },
+        lucas: {
+          name: 'Lucas Zhang',
+          position: 'Graphic Design',
+          img: 'lucas-zhang.jpg'
+        },
+        adya: {
+          name: 'Adya Mahajan',
+          position: 'Sponsorship',
+          img: 'adya-mahajan.jpg'
+        },
+        harshul: {
+          name: 'Harshul Makwana',
+          position: 'Sponsorship',
+          img: 'harshul-makwana.jpg'
+        },
+        john: {
+          name: 'John Kirollos',
+          position: 'Hacker Experience',
+          img: 'john-kirollos.jpg'
+        },
+        sneha: {
+          name: 'Sneha Kottakkudy',
+          position: 'Logistics',
+          img: 'sneha-kottakkudy.jpg'
+        },
+        vanesa: {
+          name: 'Vanesa Munoz',
+          position: 'Logistics',
+          img: 'vanesa-munoz.jpg'
+        },
+        brooke: {
+          name: 'Brooke Bordonaro',
+          position: 'Marketing',
+          img: 'brooke-bordonaro.jpg'
+        },
+        deven: {
+          name: 'Deven Jahnke',
+          position: 'Web Developer',
+          img: 'deven-jahnke.jpg'
+        }
+      },
+      swiperOptions: {
+        direction: 'horizontal',
+        centeredSlides: true,
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false
+        },
+        slidesPerView: 1,
+        breakpoints: {
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 48
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 48
+          },
+          1280: {
+            slidesPerView: 4,
+            spaceBetween: 48
+          }
+        },
+        keyboard: {
+          enabled: true,
+          onlyInViewport: true
+        },
+        preloadImages: false,
+        lazy: {
+          loadPrevNext: true,
+          loadPrevNextAmount: 1
+        },
+        watchSlidesVisibility: true,
+        navigation: {
+          nextEl: '.swiper-button-next-director',
+          prevEl: '.swiper-button-prev-director'
+        }
+      }
+    };
+  },
+  computed: {
+    swiper: function swiper() {
+      return this.$refs.directorsSwiper.$swiper;
     }
   }
 });
@@ -2361,10 +2637,10 @@ __webpack_require__.r(__webpack_exports__);
       var body = document.querySelector('body');
 
       if (this.isVisible) {
-        body.classList.toggle('overflow-hidden');
+        body.classList.toggle('overflow-x-hidden');
         this.classAttributes = '-translate-x-0';
       } else {
-        body.classList.toggle('overflow-hidden');
+        body.classList.toggle('overflow-x-hidden');
         this.classAttributes = 'translate-x-full';
       }
     }
@@ -2465,8 +2741,8 @@ __webpack_require__.r(__webpack_exports__);
         },
         watchSlidesVisibility: true,
         navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
+          nextEl: '.swiper-button-next-past-events',
+          prevEl: '.swiper-button-prev-past-events'
         }
       }
     };
@@ -2475,9 +2751,71 @@ __webpack_require__.r(__webpack_exports__);
     swiper: function swiper() {
       return this.$refs.pastEventsSwiper.$swiper;
     }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Components/Landing/QuestionAnswer.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Components/Landing/QuestionAnswer.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Icons_ExpandIcon__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Icons/ExpandIcon */ "./resources/js/Components/Icons/ExpandIcon.vue");
+/* harmony import */ var _Icons_MinimizeIcon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Icons/MinimizeIcon */ "./resources/js/Components/Icons/MinimizeIcon.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    ExpandIcon: _Icons_ExpandIcon__WEBPACK_IMPORTED_MODULE_0__["default"],
+    MinimizeIcon: _Icons_MinimizeIcon__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
-  mounted: function mounted() {
-    console.log('Current Swiper instance object', this.swiper);
+  data: function data() {
+    return {
+      isVisible: false
+    };
+  },
+  methods: {
+    toggleVisibility: function toggleVisibility() {
+      this.isVisible = !this.isVisible;
+    }
   }
 });
 
@@ -3605,6 +3943,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -3639,6 +3987,27 @@ __webpack_require__.r(__webpack_exports__);
       } else {
         this.headerLogoIsVisible = false;
         header.classList.remove('shadow-lg');
+      }
+    },
+    handleLinkClick: function handleLinkClick(e) {
+      console.log(e.target.parentElement);
+
+      if (e.target.id === "LogoWrapper") {
+        document.querySelector(e.target.firstChild.hash).scrollIntoView({
+          behavior: 'smooth'
+        });
+      } else if (e.target.id === "LogoImg") {
+        document.querySelector(e.target.parentElement.hash).scrollIntoView({
+          behavior: 'smooth'
+        });
+      } else if (e.target.id === "LogoLink") {
+        document.querySelector(e.target.hash).scrollIntoView({
+          behavior: 'smooth'
+        });
+      } else {
+        document.querySelector(e.target.hash).scrollIntoView({
+          behavior: 'smooth'
+        });
       }
     }
   },
@@ -4027,10 +4396,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Layouts_LandingLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../Layouts/LandingLayout */ "./resources/js/Layouts/LandingLayout.vue");
 /* harmony import */ var _Components_Landing_ResponsiveGrid__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../Components/Landing/ResponsiveGrid */ "./resources/js/Components/Landing/ResponsiveGrid.vue");
 /* harmony import */ var _Components_Landing_PhotoSlider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../Components/Landing/PhotoSlider */ "./resources/js/Components/Landing/PhotoSlider.vue");
-/* harmony import */ var _Components_Icons_HealthcareIcon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../Components/Icons/HealthcareIcon */ "./resources/js/Components/Icons/HealthcareIcon.vue");
-/* harmony import */ var _Components_Icons_FinanceIcon__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../../Components/Icons/FinanceIcon */ "./resources/js/Components/Icons/FinanceIcon.vue");
-/* harmony import */ var _Components_Icons_PublicPolicyIcon__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../../Components/Icons/PublicPolicyIcon */ "./resources/js/Components/Icons/PublicPolicyIcon.vue");
-/* harmony import */ var _Components_Icons_EntertainmentIcon__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../../Components/Icons/EntertainmentIcon */ "./resources/js/Components/Icons/EntertainmentIcon.vue");
+/* harmony import */ var _Components_Landing_QuestionAnswer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Components/Landing/QuestionAnswer */ "./resources/js/Components/Landing/QuestionAnswer.vue");
+/* harmony import */ var _Components_Landing_DirectorSlider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../Components/Landing/DirectorSlider */ "./resources/js/Components/Landing/DirectorSlider.vue");
+/* harmony import */ var _Components_Icons_HealthcareIcon__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../../Components/Icons/HealthcareIcon */ "./resources/js/Components/Icons/HealthcareIcon.vue");
+/* harmony import */ var _Components_Icons_FinanceIcon__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../../Components/Icons/FinanceIcon */ "./resources/js/Components/Icons/FinanceIcon.vue");
+/* harmony import */ var _Components_Icons_PublicPolicyIcon__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./../../Components/Icons/PublicPolicyIcon */ "./resources/js/Components/Icons/PublicPolicyIcon.vue");
+/* harmony import */ var _Components_Icons_EntertainmentIcon__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../../Components/Icons/EntertainmentIcon */ "./resources/js/Components/Icons/EntertainmentIcon.vue");
 //
 //
 //
@@ -4208,6 +4579,437 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
 
 
 
@@ -4220,10 +5022,12 @@ __webpack_require__.r(__webpack_exports__);
     LandingLayout: _Layouts_LandingLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
     ResponsiveGrid: _Components_Landing_ResponsiveGrid__WEBPACK_IMPORTED_MODULE_1__["default"],
     PhotoSlider: _Components_Landing_PhotoSlider__WEBPACK_IMPORTED_MODULE_2__["default"],
-    HealthcareIcon: _Components_Icons_HealthcareIcon__WEBPACK_IMPORTED_MODULE_3__["default"],
-    FinanceIcon: _Components_Icons_FinanceIcon__WEBPACK_IMPORTED_MODULE_4__["default"],
-    PublicPolicyIcon: _Components_Icons_PublicPolicyIcon__WEBPACK_IMPORTED_MODULE_5__["default"],
-    EntertainmentIcon: _Components_Icons_EntertainmentIcon__WEBPACK_IMPORTED_MODULE_6__["default"]
+    QuestionAnswer: _Components_Landing_QuestionAnswer__WEBPACK_IMPORTED_MODULE_3__["default"],
+    DirectorSlider: _Components_Landing_DirectorSlider__WEBPACK_IMPORTED_MODULE_4__["default"],
+    HealthcareIcon: _Components_Icons_HealthcareIcon__WEBPACK_IMPORTED_MODULE_5__["default"],
+    FinanceIcon: _Components_Icons_FinanceIcon__WEBPACK_IMPORTED_MODULE_6__["default"],
+    PublicPolicyIcon: _Components_Icons_PublicPolicyIcon__WEBPACK_IMPORTED_MODULE_7__["default"],
+    EntertainmentIcon: _Components_Icons_EntertainmentIcon__WEBPACK_IMPORTED_MODULE_8__["default"]
   }
 });
 
@@ -5734,6 +6538,25 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Components/Landing/DirectorSlider.vue?vue&type=style&index=0&id=6c6e8030&lang=scss&scoped=true&":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Components/Landing/DirectorSlider.vue?vue&type=style&index=0&id=6c6e8030&lang=scss&scoped=true& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".bg-primary[data-v-6c6e8030] {\n  background-color: #330b53;\n}\n.bg-secondary[data-v-6c6e8030] {\n  background-color: #5a308c;\n}\n.bg-highlight[data-v-6c6e8030] {\n  background-color: #e60099;\n}\n.bg-light[data-v-6c6e8030] {\n  background-color: #f6f6f6;\n}\n.bg-dark[data-v-6c6e8030] {\n  background-color: #1d1d1d;\n}\n.text-primary[data-v-6c6e8030] {\n  color: #330b53;\n}\n.text-secondary[data-v-6c6e8030] {\n  color: #5a308c;\n}\n.text-highlight[data-v-6c6e8030] {\n  color: #e60099;\n}\n.text-light[data-v-6c6e8030] {\n  color: #f6f6f6;\n}\n.text-dark[data-v-6c6e8030] {\n  color: #1d1d1d;\n}\n.font-primary[data-v-6c6e8030] {\n  font-family: \"Roboto\", sans-serif;\n}\n.font-secondary[data-v-6c6e8030] {\n  font-family: \"Orbitron\", sans-serif;\n}\n.odd\\:bg-primary[data-v-6c6e8030]:nth-child(odd) {\n  background-color: #330b53;\n}\n.odd\\:bg-secondary[data-v-6c6e8030]:nth-child(odd) {\n  background-color: #5a308c;\n}\n.odd\\:bg-highlight[data-v-6c6e8030]:nth-child(odd) {\n  background-color: #e60099;\n}\n.odd\\:bg-light[data-v-6c6e8030]:nth-child(odd) {\n  background-color: #f6f6f6;\n}\n.odd\\:bg-dark[data-v-6c6e8030]:nth-child(odd) {\n  background-color: #1d1d1d;\n}\n.odd\\:text-primary[data-v-6c6e8030]:nth-child(odd) {\n  color: #330b53;\n}\n.odd\\:text-secondary[data-v-6c6e8030]:nth-child(odd) {\n  color: #5a308c;\n}\n.odd\\:text-highlight[data-v-6c6e8030]:nth-child(odd) {\n  color: #e60099;\n}\n.odd\\:text-light[data-v-6c6e8030]:nth-child(odd) {\n  color: #f6f6f6;\n}\n.odd\\:text-dark[data-v-6c6e8030]:nth-child(odd) {\n  color: #1d1d1d;\n}\n.odd\\:font-primary[data-v-6c6e8030]:nth-child(odd) {\n  font-family: \"Roboto\", sans-serif;\n}\n.odd\\:font-secondary[data-v-6c6e8030]:nth-child(odd) {\n  font-family: \"Orbitron\", sans-serif;\n}\n.even\\:bg-primary[data-v-6c6e8030]:nth-child(even) {\n  background-color: #330b53;\n}\n.even\\:bg-secondary[data-v-6c6e8030]:nth-child(even) {\n  background-color: #5a308c;\n}\n.even\\:bg-highlight[data-v-6c6e8030]:nth-child(even) {\n  background-color: #e60099;\n}\n.even\\:bg-light[data-v-6c6e8030]:nth-child(even) {\n  background-color: #f6f6f6;\n}\n.even\\:bg-dark[data-v-6c6e8030]:nth-child(even) {\n  background-color: #1d1d1d;\n}\n.even\\:text-primary[data-v-6c6e8030]:nth-child(even) {\n  color: #330b53;\n}\n.even\\:text-secondary[data-v-6c6e8030]:nth-child(even) {\n  color: #5a308c;\n}\n.even\\:text-highlight[data-v-6c6e8030]:nth-child(even) {\n  color: #e60099;\n}\n.even\\:text-light[data-v-6c6e8030]:nth-child(even) {\n  color: #f6f6f6;\n}\n.even\\:text-dark[data-v-6c6e8030]:nth-child(even) {\n  color: #1d1d1d;\n}\n.even\\:font-primary[data-v-6c6e8030]:nth-child(even) {\n  font-family: \"Roboto\", sans-serif;\n}\n.even\\:font-secondary[data-v-6c6e8030]:nth-child(even) {\n  font-family: \"Orbitron\", sans-serif;\n}\n.hover\\:bg-primary[data-v-6c6e8030]:hover {\n  background-color: #330b53;\n}\n.hover\\:bg-secondary[data-v-6c6e8030]:hover {\n  background-color: #5a308c;\n}\n.hover\\:bg-highlight[data-v-6c6e8030]:hover {\n  background-color: #e60099;\n}\n.hover\\:bg-light[data-v-6c6e8030]:hover {\n  background-color: #f6f6f6;\n}\n.hover\\:bg-dark[data-v-6c6e8030]:hover {\n  background-color: #1d1d1d;\n}\n.hover\\:text-primary[data-v-6c6e8030]:hover {\n  color: #330b53;\n}\n.hover\\:text-secondary[data-v-6c6e8030]:hover {\n  color: #5a308c;\n}\n.hover\\:text-highlight[data-v-6c6e8030]:hover {\n  color: #e60099;\n}\n.hover\\:text-light[data-v-6c6e8030]:hover {\n  color: #f6f6f6;\n}\n.hover\\:text-dark[data-v-6c6e8030]:hover {\n  color: #1d1d1d;\n}\n.hover\\:font-primary[data-v-6c6e8030]:hover {\n  font-family: \"Roboto\", sans-serif;\n}\n.hover\\:font-secondary[data-v-6c6e8030]:hover {\n  font-family: \"Orbitron\", sans-serif;\n}\n.card[data-v-6c6e8030] {\n  --bg-opacity: 1;\n  background-color: #ffffff;\n  background-color: rgba(255, 255, 255, var(--bg-opacity));\n  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);\n  height: 100%;\n  padding: 1rem;\n  margin-left: 2rem;\n  margin-right: 2rem;\n}\n.card .card-img[data-v-6c6e8030] {\n  width: 100%;\n  position: relative;\n}\n.card .card-img[data-v-6c6e8030]:before {\n  display: block;\n  content: \"\";\n  width: 100%;\n  padding-top: 100%;\n}\n.card .card-img > .content[data-v-6c6e8030] {\n  position: absolute;\n  padding: 10px;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n}\n.card .card-img > .content span[data-v-6c6e8030]:before {\n  content: \"$width\";\n}\n.card .card-img > .content span[data-v-6c6e8030]:after {\n  content: \"$height\";\n}\n.card .card-img img[data-v-6c6e8030] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  height: 100%;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.card .card-body[data-v-6c6e8030] {\n  padding-top: 1.5rem;\n  padding-bottom: 0.5rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.card .card-body .card-body-title[data-v-6c6e8030] {\n  font-family: \"Roboto\", sans-serif;\n  font-weight: 500;\n  color: #330b53;\n  font-size: 1.125rem;\n}\n.card .card-body .card-body-text[data-v-6c6e8030] {\n  font-family: \"Roboto\", sans-serif;\n  font-weight: 300;\n  color: #1d1d1d;\n  font-size: 1rem;\n}\n@media (min-width: 640px) {\n.card[data-v-6c6e8030] {\n    margin-left: 0;\n    margin-right: 0;\n}\n}\n.swiper-button-prev[data-v-6c6e8030] {\n  height: 3rem !important;\n  width: 3rem !important;\n  padding: 0.5rem !important;\n  color: #330b53 !important;\n  background-color: #f6f6f6;\n  border-radius: 9999px;\n  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);\n  --transform-translate-x: 0;\n  --transform-translate-y: 0;\n  --transform-rotate: 0;\n  --transform-skew-x: 0;\n  --transform-skew-y: 0;\n  --transform-scale-x: 1;\n  --transform-scale-y: 1;\n  transform: translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));\n  transform-origin: center;\n  --transform-scale-x: 1;\n  --transform-scale-y: 1;\n  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);\n}\n.swiper-button-prev[data-v-6c6e8030]::after {\n  font-size: 1rem !important;\n}\n.swiper-button-prev[data-v-6c6e8030]:hover {\n  --transform-scale-x: 1.05;\n  --transform-scale-y: 1.05;\n  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);\n}\n.swiper-button-next[data-v-6c6e8030] {\n  height: 3rem !important;\n  width: 3rem !important;\n  padding: 0.5rem !important;\n  color: #330b53 !important;\n  background-color: #f6f6f6;\n  border-radius: 9999px;\n  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);\n  --transform-translate-x: 0;\n  --transform-translate-y: 0;\n  --transform-rotate: 0;\n  --transform-skew-x: 0;\n  --transform-skew-y: 0;\n  --transform-scale-x: 1;\n  --transform-scale-y: 1;\n  transform: translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));\n  transform-origin: center;\n  --transform-scale-x: 1;\n  --transform-scale-y: 1;\n  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);\n}\n.swiper-button-next[data-v-6c6e8030]::after {\n  font-size: 1rem !important;\n}\n.swiper-button-next[data-v-6c6e8030]:hover {\n  --transform-scale-x: 1.05;\n  --transform-scale-y: 1.05;\n  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);\n}\n@media (min-width: 640px) {\n.sm\\:bg-primary[data-v-6c6e8030] {\n    background-color: #330b53;\n}\n.sm\\:bg-secondary[data-v-6c6e8030] {\n    background-color: #5a308c;\n}\n.sm\\:bg-highlight[data-v-6c6e8030] {\n    background-color: #e60099;\n}\n.sm\\:bg-light[data-v-6c6e8030] {\n    background-color: #f6f6f6;\n}\n.sm\\:bg-dark[data-v-6c6e8030] {\n    background-color: #1d1d1d;\n}\n.sm\\:text-primary[data-v-6c6e8030] {\n    color: #330b53;\n}\n.sm\\:text-secondary[data-v-6c6e8030] {\n    color: #5a308c;\n}\n.sm\\:text-highlight[data-v-6c6e8030] {\n    color: #e60099;\n}\n.sm\\:text-light[data-v-6c6e8030] {\n    color: #f6f6f6;\n}\n.sm\\:text-dark[data-v-6c6e8030] {\n    color: #1d1d1d;\n}\n.sm\\:font-primary[data-v-6c6e8030] {\n    font-family: \"Roboto\", sans-serif;\n}\n.sm\\:font-secondary[data-v-6c6e8030] {\n    font-family: \"Orbitron\", sans-serif;\n}\n.sm\\:odd\\:bg-primary[data-v-6c6e8030]:nth-child(odd) {\n    background-color: #330b53;\n}\n.sm\\:odd\\:bg-secondary[data-v-6c6e8030]:nth-child(odd) {\n    background-color: #5a308c;\n}\n.sm\\:odd\\:bg-highlight[data-v-6c6e8030]:nth-child(odd) {\n    background-color: #e60099;\n}\n.sm\\:odd\\:bg-light[data-v-6c6e8030]:nth-child(odd) {\n    background-color: #f6f6f6;\n}\n.sm\\:odd\\:bg-dark[data-v-6c6e8030]:nth-child(odd) {\n    background-color: #1d1d1d;\n}\n.sm\\:odd\\:text-primary[data-v-6c6e8030]:nth-child(odd) {\n    color: #330b53;\n}\n.sm\\:odd\\:text-secondary[data-v-6c6e8030]:nth-child(odd) {\n    color: #5a308c;\n}\n.sm\\:odd\\:text-highlight[data-v-6c6e8030]:nth-child(odd) {\n    color: #e60099;\n}\n.sm\\:odd\\:text-light[data-v-6c6e8030]:nth-child(odd) {\n    color: #f6f6f6;\n}\n.sm\\:odd\\:text-dark[data-v-6c6e8030]:nth-child(odd) {\n    color: #1d1d1d;\n}\n.sm\\:odd\\:font-primary[data-v-6c6e8030]:nth-child(odd) {\n    font-family: \"Roboto\", sans-serif;\n}\n.sm\\:odd\\:font-secondary[data-v-6c6e8030]:nth-child(odd) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.sm\\:even\\:bg-primary[data-v-6c6e8030]:nth-child(even) {\n    background-color: #330b53;\n}\n.sm\\:even\\:bg-secondary[data-v-6c6e8030]:nth-child(even) {\n    background-color: #5a308c;\n}\n.sm\\:even\\:bg-highlight[data-v-6c6e8030]:nth-child(even) {\n    background-color: #e60099;\n}\n.sm\\:even\\:bg-light[data-v-6c6e8030]:nth-child(even) {\n    background-color: #f6f6f6;\n}\n.sm\\:even\\:bg-dark[data-v-6c6e8030]:nth-child(even) {\n    background-color: #1d1d1d;\n}\n.sm\\:even\\:text-primary[data-v-6c6e8030]:nth-child(even) {\n    color: #330b53;\n}\n.sm\\:even\\:text-secondary[data-v-6c6e8030]:nth-child(even) {\n    color: #5a308c;\n}\n.sm\\:even\\:text-highlight[data-v-6c6e8030]:nth-child(even) {\n    color: #e60099;\n}\n.sm\\:even\\:text-light[data-v-6c6e8030]:nth-child(even) {\n    color: #f6f6f6;\n}\n.sm\\:even\\:text-dark[data-v-6c6e8030]:nth-child(even) {\n    color: #1d1d1d;\n}\n.sm\\:even\\:font-primary[data-v-6c6e8030]:nth-child(even) {\n    font-family: \"Roboto\", sans-serif;\n}\n.sm\\:even\\:font-secondary[data-v-6c6e8030]:nth-child(even) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.sm\\:hover\\:bg-primary[data-v-6c6e8030]:hover {\n    background-color: #330b53;\n}\n.sm\\:hover\\:bg-secondary[data-v-6c6e8030]:hover {\n    background-color: #5a308c;\n}\n.sm\\:hover\\:bg-highlight[data-v-6c6e8030]:hover {\n    background-color: #e60099;\n}\n.sm\\:hover\\:bg-light[data-v-6c6e8030]:hover {\n    background-color: #f6f6f6;\n}\n.sm\\:hover\\:bg-dark[data-v-6c6e8030]:hover {\n    background-color: #1d1d1d;\n}\n.sm\\:hover\\:text-primary[data-v-6c6e8030]:hover {\n    color: #330b53;\n}\n.sm\\:hover\\:text-secondary[data-v-6c6e8030]:hover {\n    color: #5a308c;\n}\n.sm\\:hover\\:text-highlight[data-v-6c6e8030]:hover {\n    color: #e60099;\n}\n.sm\\:hover\\:text-light[data-v-6c6e8030]:hover {\n    color: #f6f6f6;\n}\n.sm\\:hover\\:text-dark[data-v-6c6e8030]:hover {\n    color: #1d1d1d;\n}\n.sm\\:hover\\:font-primary[data-v-6c6e8030]:hover {\n    font-family: \"Roboto\", sans-serif;\n}\n.sm\\:hover\\:font-secondary[data-v-6c6e8030]:hover {\n    font-family: \"Orbitron\", sans-serif;\n}\n}\n@media (min-width: 768px) {\n.md\\:bg-primary[data-v-6c6e8030] {\n    background-color: #330b53;\n}\n.md\\:bg-secondary[data-v-6c6e8030] {\n    background-color: #5a308c;\n}\n.md\\:bg-highlight[data-v-6c6e8030] {\n    background-color: #e60099;\n}\n.md\\:bg-light[data-v-6c6e8030] {\n    background-color: #f6f6f6;\n}\n.md\\:bg-dark[data-v-6c6e8030] {\n    background-color: #1d1d1d;\n}\n.md\\:text-primary[data-v-6c6e8030] {\n    color: #330b53;\n}\n.md\\:text-secondary[data-v-6c6e8030] {\n    color: #5a308c;\n}\n.md\\:text-highlight[data-v-6c6e8030] {\n    color: #e60099;\n}\n.md\\:text-light[data-v-6c6e8030] {\n    color: #f6f6f6;\n}\n.md\\:text-dark[data-v-6c6e8030] {\n    color: #1d1d1d;\n}\n.md\\:font-primary[data-v-6c6e8030] {\n    font-family: \"Roboto\", sans-serif;\n}\n.md\\:font-secondary[data-v-6c6e8030] {\n    font-family: \"Orbitron\", sans-serif;\n}\n.md\\:odd\\:bg-primary[data-v-6c6e8030]:nth-child(odd) {\n    background-color: #330b53;\n}\n.md\\:odd\\:bg-secondary[data-v-6c6e8030]:nth-child(odd) {\n    background-color: #5a308c;\n}\n.md\\:odd\\:bg-highlight[data-v-6c6e8030]:nth-child(odd) {\n    background-color: #e60099;\n}\n.md\\:odd\\:bg-light[data-v-6c6e8030]:nth-child(odd) {\n    background-color: #f6f6f6;\n}\n.md\\:odd\\:bg-dark[data-v-6c6e8030]:nth-child(odd) {\n    background-color: #1d1d1d;\n}\n.md\\:odd\\:text-primary[data-v-6c6e8030]:nth-child(odd) {\n    color: #330b53;\n}\n.md\\:odd\\:text-secondary[data-v-6c6e8030]:nth-child(odd) {\n    color: #5a308c;\n}\n.md\\:odd\\:text-highlight[data-v-6c6e8030]:nth-child(odd) {\n    color: #e60099;\n}\n.md\\:odd\\:text-light[data-v-6c6e8030]:nth-child(odd) {\n    color: #f6f6f6;\n}\n.md\\:odd\\:text-dark[data-v-6c6e8030]:nth-child(odd) {\n    color: #1d1d1d;\n}\n.md\\:odd\\:font-primary[data-v-6c6e8030]:nth-child(odd) {\n    font-family: \"Roboto\", sans-serif;\n}\n.md\\:odd\\:font-secondary[data-v-6c6e8030]:nth-child(odd) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.md\\:even\\:bg-primary[data-v-6c6e8030]:nth-child(even) {\n    background-color: #330b53;\n}\n.md\\:even\\:bg-secondary[data-v-6c6e8030]:nth-child(even) {\n    background-color: #5a308c;\n}\n.md\\:even\\:bg-highlight[data-v-6c6e8030]:nth-child(even) {\n    background-color: #e60099;\n}\n.md\\:even\\:bg-light[data-v-6c6e8030]:nth-child(even) {\n    background-color: #f6f6f6;\n}\n.md\\:even\\:bg-dark[data-v-6c6e8030]:nth-child(even) {\n    background-color: #1d1d1d;\n}\n.md\\:even\\:text-primary[data-v-6c6e8030]:nth-child(even) {\n    color: #330b53;\n}\n.md\\:even\\:text-secondary[data-v-6c6e8030]:nth-child(even) {\n    color: #5a308c;\n}\n.md\\:even\\:text-highlight[data-v-6c6e8030]:nth-child(even) {\n    color: #e60099;\n}\n.md\\:even\\:text-light[data-v-6c6e8030]:nth-child(even) {\n    color: #f6f6f6;\n}\n.md\\:even\\:text-dark[data-v-6c6e8030]:nth-child(even) {\n    color: #1d1d1d;\n}\n.md\\:even\\:font-primary[data-v-6c6e8030]:nth-child(even) {\n    font-family: \"Roboto\", sans-serif;\n}\n.md\\:even\\:font-secondary[data-v-6c6e8030]:nth-child(even) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.md\\:hover\\:bg-primary[data-v-6c6e8030]:hover {\n    background-color: #330b53;\n}\n.md\\:hover\\:bg-secondary[data-v-6c6e8030]:hover {\n    background-color: #5a308c;\n}\n.md\\:hover\\:bg-highlight[data-v-6c6e8030]:hover {\n    background-color: #e60099;\n}\n.md\\:hover\\:bg-light[data-v-6c6e8030]:hover {\n    background-color: #f6f6f6;\n}\n.md\\:hover\\:bg-dark[data-v-6c6e8030]:hover {\n    background-color: #1d1d1d;\n}\n.md\\:hover\\:text-primary[data-v-6c6e8030]:hover {\n    color: #330b53;\n}\n.md\\:hover\\:text-secondary[data-v-6c6e8030]:hover {\n    color: #5a308c;\n}\n.md\\:hover\\:text-highlight[data-v-6c6e8030]:hover {\n    color: #e60099;\n}\n.md\\:hover\\:text-light[data-v-6c6e8030]:hover {\n    color: #f6f6f6;\n}\n.md\\:hover\\:text-dark[data-v-6c6e8030]:hover {\n    color: #1d1d1d;\n}\n.md\\:hover\\:font-primary[data-v-6c6e8030]:hover {\n    font-family: \"Roboto\", sans-serif;\n}\n.md\\:hover\\:font-secondary[data-v-6c6e8030]:hover {\n    font-family: \"Orbitron\", sans-serif;\n}\n}\n@media (min-width: 1024px) {\n.lg\\:bg-primary[data-v-6c6e8030] {\n    background-color: #330b53;\n}\n.lg\\:bg-secondary[data-v-6c6e8030] {\n    background-color: #5a308c;\n}\n.lg\\:bg-highlight[data-v-6c6e8030] {\n    background-color: #e60099;\n}\n.lg\\:bg-light[data-v-6c6e8030] {\n    background-color: #f6f6f6;\n}\n.lg\\:bg-dark[data-v-6c6e8030] {\n    background-color: #1d1d1d;\n}\n.lg\\:text-primary[data-v-6c6e8030] {\n    color: #330b53;\n}\n.lg\\:text-secondary[data-v-6c6e8030] {\n    color: #5a308c;\n}\n.lg\\:text-highlight[data-v-6c6e8030] {\n    color: #e60099;\n}\n.lg\\:text-light[data-v-6c6e8030] {\n    color: #f6f6f6;\n}\n.lg\\:text-dark[data-v-6c6e8030] {\n    color: #1d1d1d;\n}\n.lg\\:font-primary[data-v-6c6e8030] {\n    font-family: \"Roboto\", sans-serif;\n}\n.lg\\:font-secondary[data-v-6c6e8030] {\n    font-family: \"Orbitron\", sans-serif;\n}\n.lg\\:odd\\:bg-primary[data-v-6c6e8030]:nth-child(odd) {\n    background-color: #330b53;\n}\n.lg\\:odd\\:bg-secondary[data-v-6c6e8030]:nth-child(odd) {\n    background-color: #5a308c;\n}\n.lg\\:odd\\:bg-highlight[data-v-6c6e8030]:nth-child(odd) {\n    background-color: #e60099;\n}\n.lg\\:odd\\:bg-light[data-v-6c6e8030]:nth-child(odd) {\n    background-color: #f6f6f6;\n}\n.lg\\:odd\\:bg-dark[data-v-6c6e8030]:nth-child(odd) {\n    background-color: #1d1d1d;\n}\n.lg\\:odd\\:text-primary[data-v-6c6e8030]:nth-child(odd) {\n    color: #330b53;\n}\n.lg\\:odd\\:text-secondary[data-v-6c6e8030]:nth-child(odd) {\n    color: #5a308c;\n}\n.lg\\:odd\\:text-highlight[data-v-6c6e8030]:nth-child(odd) {\n    color: #e60099;\n}\n.lg\\:odd\\:text-light[data-v-6c6e8030]:nth-child(odd) {\n    color: #f6f6f6;\n}\n.lg\\:odd\\:text-dark[data-v-6c6e8030]:nth-child(odd) {\n    color: #1d1d1d;\n}\n.lg\\:odd\\:font-primary[data-v-6c6e8030]:nth-child(odd) {\n    font-family: \"Roboto\", sans-serif;\n}\n.lg\\:odd\\:font-secondary[data-v-6c6e8030]:nth-child(odd) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.lg\\:even\\:bg-primary[data-v-6c6e8030]:nth-child(even) {\n    background-color: #330b53;\n}\n.lg\\:even\\:bg-secondary[data-v-6c6e8030]:nth-child(even) {\n    background-color: #5a308c;\n}\n.lg\\:even\\:bg-highlight[data-v-6c6e8030]:nth-child(even) {\n    background-color: #e60099;\n}\n.lg\\:even\\:bg-light[data-v-6c6e8030]:nth-child(even) {\n    background-color: #f6f6f6;\n}\n.lg\\:even\\:bg-dark[data-v-6c6e8030]:nth-child(even) {\n    background-color: #1d1d1d;\n}\n.lg\\:even\\:text-primary[data-v-6c6e8030]:nth-child(even) {\n    color: #330b53;\n}\n.lg\\:even\\:text-secondary[data-v-6c6e8030]:nth-child(even) {\n    color: #5a308c;\n}\n.lg\\:even\\:text-highlight[data-v-6c6e8030]:nth-child(even) {\n    color: #e60099;\n}\n.lg\\:even\\:text-light[data-v-6c6e8030]:nth-child(even) {\n    color: #f6f6f6;\n}\n.lg\\:even\\:text-dark[data-v-6c6e8030]:nth-child(even) {\n    color: #1d1d1d;\n}\n.lg\\:even\\:font-primary[data-v-6c6e8030]:nth-child(even) {\n    font-family: \"Roboto\", sans-serif;\n}\n.lg\\:even\\:font-secondary[data-v-6c6e8030]:nth-child(even) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.lg\\:hover\\:bg-primary[data-v-6c6e8030]:hover {\n    background-color: #330b53;\n}\n.lg\\:hover\\:bg-secondary[data-v-6c6e8030]:hover {\n    background-color: #5a308c;\n}\n.lg\\:hover\\:bg-highlight[data-v-6c6e8030]:hover {\n    background-color: #e60099;\n}\n.lg\\:hover\\:bg-light[data-v-6c6e8030]:hover {\n    background-color: #f6f6f6;\n}\n.lg\\:hover\\:bg-dark[data-v-6c6e8030]:hover {\n    background-color: #1d1d1d;\n}\n.lg\\:hover\\:text-primary[data-v-6c6e8030]:hover {\n    color: #330b53;\n}\n.lg\\:hover\\:text-secondary[data-v-6c6e8030]:hover {\n    color: #5a308c;\n}\n.lg\\:hover\\:text-highlight[data-v-6c6e8030]:hover {\n    color: #e60099;\n}\n.lg\\:hover\\:text-light[data-v-6c6e8030]:hover {\n    color: #f6f6f6;\n}\n.lg\\:hover\\:text-dark[data-v-6c6e8030]:hover {\n    color: #1d1d1d;\n}\n.lg\\:hover\\:font-primary[data-v-6c6e8030]:hover {\n    font-family: \"Roboto\", sans-serif;\n}\n.lg\\:hover\\:font-secondary[data-v-6c6e8030]:hover {\n    font-family: \"Orbitron\", sans-serif;\n}\n}\n@media (min-width: 1280px) {\n.xl\\:bg-primary[data-v-6c6e8030] {\n    background-color: #330b53;\n}\n.xl\\:bg-secondary[data-v-6c6e8030] {\n    background-color: #5a308c;\n}\n.xl\\:bg-highlight[data-v-6c6e8030] {\n    background-color: #e60099;\n}\n.xl\\:bg-light[data-v-6c6e8030] {\n    background-color: #f6f6f6;\n}\n.xl\\:bg-dark[data-v-6c6e8030] {\n    background-color: #1d1d1d;\n}\n.xl\\:text-primary[data-v-6c6e8030] {\n    color: #330b53;\n}\n.xl\\:text-secondary[data-v-6c6e8030] {\n    color: #5a308c;\n}\n.xl\\:text-highlight[data-v-6c6e8030] {\n    color: #e60099;\n}\n.xl\\:text-light[data-v-6c6e8030] {\n    color: #f6f6f6;\n}\n.xl\\:text-dark[data-v-6c6e8030] {\n    color: #1d1d1d;\n}\n.xl\\:font-primary[data-v-6c6e8030] {\n    font-family: \"Roboto\", sans-serif;\n}\n.xl\\:font-secondary[data-v-6c6e8030] {\n    font-family: \"Orbitron\", sans-serif;\n}\n.xl\\:odd\\:bg-primary[data-v-6c6e8030]:nth-child(odd) {\n    background-color: #330b53;\n}\n.xl\\:odd\\:bg-secondary[data-v-6c6e8030]:nth-child(odd) {\n    background-color: #5a308c;\n}\n.xl\\:odd\\:bg-highlight[data-v-6c6e8030]:nth-child(odd) {\n    background-color: #e60099;\n}\n.xl\\:odd\\:bg-light[data-v-6c6e8030]:nth-child(odd) {\n    background-color: #f6f6f6;\n}\n.xl\\:odd\\:bg-dark[data-v-6c6e8030]:nth-child(odd) {\n    background-color: #1d1d1d;\n}\n.xl\\:odd\\:text-primary[data-v-6c6e8030]:nth-child(odd) {\n    color: #330b53;\n}\n.xl\\:odd\\:text-secondary[data-v-6c6e8030]:nth-child(odd) {\n    color: #5a308c;\n}\n.xl\\:odd\\:text-highlight[data-v-6c6e8030]:nth-child(odd) {\n    color: #e60099;\n}\n.xl\\:odd\\:text-light[data-v-6c6e8030]:nth-child(odd) {\n    color: #f6f6f6;\n}\n.xl\\:odd\\:text-dark[data-v-6c6e8030]:nth-child(odd) {\n    color: #1d1d1d;\n}\n.xl\\:odd\\:font-primary[data-v-6c6e8030]:nth-child(odd) {\n    font-family: \"Roboto\", sans-serif;\n}\n.xl\\:odd\\:font-secondary[data-v-6c6e8030]:nth-child(odd) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.xl\\:even\\:bg-primary[data-v-6c6e8030]:nth-child(even) {\n    background-color: #330b53;\n}\n.xl\\:even\\:bg-secondary[data-v-6c6e8030]:nth-child(even) {\n    background-color: #5a308c;\n}\n.xl\\:even\\:bg-highlight[data-v-6c6e8030]:nth-child(even) {\n    background-color: #e60099;\n}\n.xl\\:even\\:bg-light[data-v-6c6e8030]:nth-child(even) {\n    background-color: #f6f6f6;\n}\n.xl\\:even\\:bg-dark[data-v-6c6e8030]:nth-child(even) {\n    background-color: #1d1d1d;\n}\n.xl\\:even\\:text-primary[data-v-6c6e8030]:nth-child(even) {\n    color: #330b53;\n}\n.xl\\:even\\:text-secondary[data-v-6c6e8030]:nth-child(even) {\n    color: #5a308c;\n}\n.xl\\:even\\:text-highlight[data-v-6c6e8030]:nth-child(even) {\n    color: #e60099;\n}\n.xl\\:even\\:text-light[data-v-6c6e8030]:nth-child(even) {\n    color: #f6f6f6;\n}\n.xl\\:even\\:text-dark[data-v-6c6e8030]:nth-child(even) {\n    color: #1d1d1d;\n}\n.xl\\:even\\:font-primary[data-v-6c6e8030]:nth-child(even) {\n    font-family: \"Roboto\", sans-serif;\n}\n.xl\\:even\\:font-secondary[data-v-6c6e8030]:nth-child(even) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.xl\\:hover\\:bg-primary[data-v-6c6e8030]:hover {\n    background-color: #330b53;\n}\n.xl\\:hover\\:bg-secondary[data-v-6c6e8030]:hover {\n    background-color: #5a308c;\n}\n.xl\\:hover\\:bg-highlight[data-v-6c6e8030]:hover {\n    background-color: #e60099;\n}\n.xl\\:hover\\:bg-light[data-v-6c6e8030]:hover {\n    background-color: #f6f6f6;\n}\n.xl\\:hover\\:bg-dark[data-v-6c6e8030]:hover {\n    background-color: #1d1d1d;\n}\n.xl\\:hover\\:text-primary[data-v-6c6e8030]:hover {\n    color: #330b53;\n}\n.xl\\:hover\\:text-secondary[data-v-6c6e8030]:hover {\n    color: #5a308c;\n}\n.xl\\:hover\\:text-highlight[data-v-6c6e8030]:hover {\n    color: #e60099;\n}\n.xl\\:hover\\:text-light[data-v-6c6e8030]:hover {\n    color: #f6f6f6;\n}\n.xl\\:hover\\:text-dark[data-v-6c6e8030]:hover {\n    color: #1d1d1d;\n}\n.xl\\:hover\\:font-primary[data-v-6c6e8030]:hover {\n    font-family: \"Roboto\", sans-serif;\n}\n.xl\\:hover\\:font-secondary[data-v-6c6e8030]:hover {\n    font-family: \"Orbitron\", sans-serif;\n}\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Components/Landing/Navigation.vue?vue&type=style&index=0&id=de3be692&lang=scss&scoped=true&":
 /*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Components/Landing/Navigation.vue?vue&type=style&index=0&id=de3be692&lang=scss&scoped=true& ***!
@@ -5772,6 +6595,25 @@ exports.push([module.i, ".bg-primary[data-v-dae1c3c0] {\n  background-color: #33
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Components/Landing/QuestionAnswer.vue?vue&type=style&index=0&id=092c5067&lang=scss&scoped=true&":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Components/Landing/QuestionAnswer.vue?vue&type=style&index=0&id=092c5067&lang=scss&scoped=true& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".bg-primary[data-v-092c5067] {\n  background-color: #330b53;\n}\n.bg-secondary[data-v-092c5067] {\n  background-color: #5a308c;\n}\n.bg-highlight[data-v-092c5067] {\n  background-color: #e60099;\n}\n.bg-light[data-v-092c5067] {\n  background-color: #f6f6f6;\n}\n.bg-dark[data-v-092c5067] {\n  background-color: #1d1d1d;\n}\n.text-primary[data-v-092c5067] {\n  color: #330b53;\n}\n.text-secondary[data-v-092c5067] {\n  color: #5a308c;\n}\n.text-highlight[data-v-092c5067] {\n  color: #e60099;\n}\n.text-light[data-v-092c5067] {\n  color: #f6f6f6;\n}\n.text-dark[data-v-092c5067] {\n  color: #1d1d1d;\n}\n.font-primary[data-v-092c5067] {\n  font-family: \"Roboto\", sans-serif;\n}\n.font-secondary[data-v-092c5067] {\n  font-family: \"Orbitron\", sans-serif;\n}\n.odd\\:bg-primary[data-v-092c5067]:nth-child(odd) {\n  background-color: #330b53;\n}\n.odd\\:bg-secondary[data-v-092c5067]:nth-child(odd) {\n  background-color: #5a308c;\n}\n.odd\\:bg-highlight[data-v-092c5067]:nth-child(odd) {\n  background-color: #e60099;\n}\n.odd\\:bg-light[data-v-092c5067]:nth-child(odd) {\n  background-color: #f6f6f6;\n}\n.odd\\:bg-dark[data-v-092c5067]:nth-child(odd) {\n  background-color: #1d1d1d;\n}\n.odd\\:text-primary[data-v-092c5067]:nth-child(odd) {\n  color: #330b53;\n}\n.odd\\:text-secondary[data-v-092c5067]:nth-child(odd) {\n  color: #5a308c;\n}\n.odd\\:text-highlight[data-v-092c5067]:nth-child(odd) {\n  color: #e60099;\n}\n.odd\\:text-light[data-v-092c5067]:nth-child(odd) {\n  color: #f6f6f6;\n}\n.odd\\:text-dark[data-v-092c5067]:nth-child(odd) {\n  color: #1d1d1d;\n}\n.odd\\:font-primary[data-v-092c5067]:nth-child(odd) {\n  font-family: \"Roboto\", sans-serif;\n}\n.odd\\:font-secondary[data-v-092c5067]:nth-child(odd) {\n  font-family: \"Orbitron\", sans-serif;\n}\n.even\\:bg-primary[data-v-092c5067]:nth-child(even) {\n  background-color: #330b53;\n}\n.even\\:bg-secondary[data-v-092c5067]:nth-child(even) {\n  background-color: #5a308c;\n}\n.even\\:bg-highlight[data-v-092c5067]:nth-child(even) {\n  background-color: #e60099;\n}\n.even\\:bg-light[data-v-092c5067]:nth-child(even) {\n  background-color: #f6f6f6;\n}\n.even\\:bg-dark[data-v-092c5067]:nth-child(even) {\n  background-color: #1d1d1d;\n}\n.even\\:text-primary[data-v-092c5067]:nth-child(even) {\n  color: #330b53;\n}\n.even\\:text-secondary[data-v-092c5067]:nth-child(even) {\n  color: #5a308c;\n}\n.even\\:text-highlight[data-v-092c5067]:nth-child(even) {\n  color: #e60099;\n}\n.even\\:text-light[data-v-092c5067]:nth-child(even) {\n  color: #f6f6f6;\n}\n.even\\:text-dark[data-v-092c5067]:nth-child(even) {\n  color: #1d1d1d;\n}\n.even\\:font-primary[data-v-092c5067]:nth-child(even) {\n  font-family: \"Roboto\", sans-serif;\n}\n.even\\:font-secondary[data-v-092c5067]:nth-child(even) {\n  font-family: \"Orbitron\", sans-serif;\n}\n.hover\\:bg-primary[data-v-092c5067]:hover {\n  background-color: #330b53;\n}\n.hover\\:bg-secondary[data-v-092c5067]:hover {\n  background-color: #5a308c;\n}\n.hover\\:bg-highlight[data-v-092c5067]:hover {\n  background-color: #e60099;\n}\n.hover\\:bg-light[data-v-092c5067]:hover {\n  background-color: #f6f6f6;\n}\n.hover\\:bg-dark[data-v-092c5067]:hover {\n  background-color: #1d1d1d;\n}\n.hover\\:text-primary[data-v-092c5067]:hover {\n  color: #330b53;\n}\n.hover\\:text-secondary[data-v-092c5067]:hover {\n  color: #5a308c;\n}\n.hover\\:text-highlight[data-v-092c5067]:hover {\n  color: #e60099;\n}\n.hover\\:text-light[data-v-092c5067]:hover {\n  color: #f6f6f6;\n}\n.hover\\:text-dark[data-v-092c5067]:hover {\n  color: #1d1d1d;\n}\n.hover\\:font-primary[data-v-092c5067]:hover {\n  font-family: \"Roboto\", sans-serif;\n}\n.hover\\:font-secondary[data-v-092c5067]:hover {\n  font-family: \"Orbitron\", sans-serif;\n}\n.card[data-v-092c5067] {\n  width: 100%;\n  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);\n}\n.card .card-header[data-v-092c5067] {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 1rem;\n  --bg-opacity: 1;\n  background-color: #ffffff;\n  background-color: rgba(255, 255, 255, var(--bg-opacity));\n}\n.card .card-header .card-header-text[data-v-092c5067] {\n  font-size: 1.125rem;\n  font-weight: 500;\n  font-family: \"Roboto\", sans-serif;\n  color: #330b53;\n}\n.card .card-header .card-header-button[data-v-092c5067] {\n  flex: none;\n  width: 1.25rem;\n  height: 1.25rem;\n}\n.card .card-body[data-v-092c5067] {\n  padding-left: 1rem;\n  padding-right: 1rem;\n  padding-bottom: 1rem;\n  --bg-opacity: 1;\n  background-color: #ffffff;\n  background-color: rgba(255, 255, 255, var(--bg-opacity));\n}\n.card .card-body p[data-v-092c5067] {\n  font-size: 1rem;\n  font-weight: 300;\n  font-family: \"Roboto\", sans-serif;\n  color: #1d1d1d;\n}\n.card .card-body p[data-v-092c5067]:not(:first-child) {\n  padding-top: 1rem;\n}\n@media (min-width: 640px) {\n.sm\\:bg-primary[data-v-092c5067] {\n    background-color: #330b53;\n}\n.sm\\:bg-secondary[data-v-092c5067] {\n    background-color: #5a308c;\n}\n.sm\\:bg-highlight[data-v-092c5067] {\n    background-color: #e60099;\n}\n.sm\\:bg-light[data-v-092c5067] {\n    background-color: #f6f6f6;\n}\n.sm\\:bg-dark[data-v-092c5067] {\n    background-color: #1d1d1d;\n}\n.sm\\:text-primary[data-v-092c5067] {\n    color: #330b53;\n}\n.sm\\:text-secondary[data-v-092c5067] {\n    color: #5a308c;\n}\n.sm\\:text-highlight[data-v-092c5067] {\n    color: #e60099;\n}\n.sm\\:text-light[data-v-092c5067] {\n    color: #f6f6f6;\n}\n.sm\\:text-dark[data-v-092c5067] {\n    color: #1d1d1d;\n}\n.sm\\:font-primary[data-v-092c5067] {\n    font-family: \"Roboto\", sans-serif;\n}\n.sm\\:font-secondary[data-v-092c5067] {\n    font-family: \"Orbitron\", sans-serif;\n}\n.sm\\:odd\\:bg-primary[data-v-092c5067]:nth-child(odd) {\n    background-color: #330b53;\n}\n.sm\\:odd\\:bg-secondary[data-v-092c5067]:nth-child(odd) {\n    background-color: #5a308c;\n}\n.sm\\:odd\\:bg-highlight[data-v-092c5067]:nth-child(odd) {\n    background-color: #e60099;\n}\n.sm\\:odd\\:bg-light[data-v-092c5067]:nth-child(odd) {\n    background-color: #f6f6f6;\n}\n.sm\\:odd\\:bg-dark[data-v-092c5067]:nth-child(odd) {\n    background-color: #1d1d1d;\n}\n.sm\\:odd\\:text-primary[data-v-092c5067]:nth-child(odd) {\n    color: #330b53;\n}\n.sm\\:odd\\:text-secondary[data-v-092c5067]:nth-child(odd) {\n    color: #5a308c;\n}\n.sm\\:odd\\:text-highlight[data-v-092c5067]:nth-child(odd) {\n    color: #e60099;\n}\n.sm\\:odd\\:text-light[data-v-092c5067]:nth-child(odd) {\n    color: #f6f6f6;\n}\n.sm\\:odd\\:text-dark[data-v-092c5067]:nth-child(odd) {\n    color: #1d1d1d;\n}\n.sm\\:odd\\:font-primary[data-v-092c5067]:nth-child(odd) {\n    font-family: \"Roboto\", sans-serif;\n}\n.sm\\:odd\\:font-secondary[data-v-092c5067]:nth-child(odd) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.sm\\:even\\:bg-primary[data-v-092c5067]:nth-child(even) {\n    background-color: #330b53;\n}\n.sm\\:even\\:bg-secondary[data-v-092c5067]:nth-child(even) {\n    background-color: #5a308c;\n}\n.sm\\:even\\:bg-highlight[data-v-092c5067]:nth-child(even) {\n    background-color: #e60099;\n}\n.sm\\:even\\:bg-light[data-v-092c5067]:nth-child(even) {\n    background-color: #f6f6f6;\n}\n.sm\\:even\\:bg-dark[data-v-092c5067]:nth-child(even) {\n    background-color: #1d1d1d;\n}\n.sm\\:even\\:text-primary[data-v-092c5067]:nth-child(even) {\n    color: #330b53;\n}\n.sm\\:even\\:text-secondary[data-v-092c5067]:nth-child(even) {\n    color: #5a308c;\n}\n.sm\\:even\\:text-highlight[data-v-092c5067]:nth-child(even) {\n    color: #e60099;\n}\n.sm\\:even\\:text-light[data-v-092c5067]:nth-child(even) {\n    color: #f6f6f6;\n}\n.sm\\:even\\:text-dark[data-v-092c5067]:nth-child(even) {\n    color: #1d1d1d;\n}\n.sm\\:even\\:font-primary[data-v-092c5067]:nth-child(even) {\n    font-family: \"Roboto\", sans-serif;\n}\n.sm\\:even\\:font-secondary[data-v-092c5067]:nth-child(even) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.sm\\:hover\\:bg-primary[data-v-092c5067]:hover {\n    background-color: #330b53;\n}\n.sm\\:hover\\:bg-secondary[data-v-092c5067]:hover {\n    background-color: #5a308c;\n}\n.sm\\:hover\\:bg-highlight[data-v-092c5067]:hover {\n    background-color: #e60099;\n}\n.sm\\:hover\\:bg-light[data-v-092c5067]:hover {\n    background-color: #f6f6f6;\n}\n.sm\\:hover\\:bg-dark[data-v-092c5067]:hover {\n    background-color: #1d1d1d;\n}\n.sm\\:hover\\:text-primary[data-v-092c5067]:hover {\n    color: #330b53;\n}\n.sm\\:hover\\:text-secondary[data-v-092c5067]:hover {\n    color: #5a308c;\n}\n.sm\\:hover\\:text-highlight[data-v-092c5067]:hover {\n    color: #e60099;\n}\n.sm\\:hover\\:text-light[data-v-092c5067]:hover {\n    color: #f6f6f6;\n}\n.sm\\:hover\\:text-dark[data-v-092c5067]:hover {\n    color: #1d1d1d;\n}\n.sm\\:hover\\:font-primary[data-v-092c5067]:hover {\n    font-family: \"Roboto\", sans-serif;\n}\n.sm\\:hover\\:font-secondary[data-v-092c5067]:hover {\n    font-family: \"Orbitron\", sans-serif;\n}\n}\n@media (min-width: 768px) {\n.md\\:bg-primary[data-v-092c5067] {\n    background-color: #330b53;\n}\n.md\\:bg-secondary[data-v-092c5067] {\n    background-color: #5a308c;\n}\n.md\\:bg-highlight[data-v-092c5067] {\n    background-color: #e60099;\n}\n.md\\:bg-light[data-v-092c5067] {\n    background-color: #f6f6f6;\n}\n.md\\:bg-dark[data-v-092c5067] {\n    background-color: #1d1d1d;\n}\n.md\\:text-primary[data-v-092c5067] {\n    color: #330b53;\n}\n.md\\:text-secondary[data-v-092c5067] {\n    color: #5a308c;\n}\n.md\\:text-highlight[data-v-092c5067] {\n    color: #e60099;\n}\n.md\\:text-light[data-v-092c5067] {\n    color: #f6f6f6;\n}\n.md\\:text-dark[data-v-092c5067] {\n    color: #1d1d1d;\n}\n.md\\:font-primary[data-v-092c5067] {\n    font-family: \"Roboto\", sans-serif;\n}\n.md\\:font-secondary[data-v-092c5067] {\n    font-family: \"Orbitron\", sans-serif;\n}\n.md\\:odd\\:bg-primary[data-v-092c5067]:nth-child(odd) {\n    background-color: #330b53;\n}\n.md\\:odd\\:bg-secondary[data-v-092c5067]:nth-child(odd) {\n    background-color: #5a308c;\n}\n.md\\:odd\\:bg-highlight[data-v-092c5067]:nth-child(odd) {\n    background-color: #e60099;\n}\n.md\\:odd\\:bg-light[data-v-092c5067]:nth-child(odd) {\n    background-color: #f6f6f6;\n}\n.md\\:odd\\:bg-dark[data-v-092c5067]:nth-child(odd) {\n    background-color: #1d1d1d;\n}\n.md\\:odd\\:text-primary[data-v-092c5067]:nth-child(odd) {\n    color: #330b53;\n}\n.md\\:odd\\:text-secondary[data-v-092c5067]:nth-child(odd) {\n    color: #5a308c;\n}\n.md\\:odd\\:text-highlight[data-v-092c5067]:nth-child(odd) {\n    color: #e60099;\n}\n.md\\:odd\\:text-light[data-v-092c5067]:nth-child(odd) {\n    color: #f6f6f6;\n}\n.md\\:odd\\:text-dark[data-v-092c5067]:nth-child(odd) {\n    color: #1d1d1d;\n}\n.md\\:odd\\:font-primary[data-v-092c5067]:nth-child(odd) {\n    font-family: \"Roboto\", sans-serif;\n}\n.md\\:odd\\:font-secondary[data-v-092c5067]:nth-child(odd) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.md\\:even\\:bg-primary[data-v-092c5067]:nth-child(even) {\n    background-color: #330b53;\n}\n.md\\:even\\:bg-secondary[data-v-092c5067]:nth-child(even) {\n    background-color: #5a308c;\n}\n.md\\:even\\:bg-highlight[data-v-092c5067]:nth-child(even) {\n    background-color: #e60099;\n}\n.md\\:even\\:bg-light[data-v-092c5067]:nth-child(even) {\n    background-color: #f6f6f6;\n}\n.md\\:even\\:bg-dark[data-v-092c5067]:nth-child(even) {\n    background-color: #1d1d1d;\n}\n.md\\:even\\:text-primary[data-v-092c5067]:nth-child(even) {\n    color: #330b53;\n}\n.md\\:even\\:text-secondary[data-v-092c5067]:nth-child(even) {\n    color: #5a308c;\n}\n.md\\:even\\:text-highlight[data-v-092c5067]:nth-child(even) {\n    color: #e60099;\n}\n.md\\:even\\:text-light[data-v-092c5067]:nth-child(even) {\n    color: #f6f6f6;\n}\n.md\\:even\\:text-dark[data-v-092c5067]:nth-child(even) {\n    color: #1d1d1d;\n}\n.md\\:even\\:font-primary[data-v-092c5067]:nth-child(even) {\n    font-family: \"Roboto\", sans-serif;\n}\n.md\\:even\\:font-secondary[data-v-092c5067]:nth-child(even) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.md\\:hover\\:bg-primary[data-v-092c5067]:hover {\n    background-color: #330b53;\n}\n.md\\:hover\\:bg-secondary[data-v-092c5067]:hover {\n    background-color: #5a308c;\n}\n.md\\:hover\\:bg-highlight[data-v-092c5067]:hover {\n    background-color: #e60099;\n}\n.md\\:hover\\:bg-light[data-v-092c5067]:hover {\n    background-color: #f6f6f6;\n}\n.md\\:hover\\:bg-dark[data-v-092c5067]:hover {\n    background-color: #1d1d1d;\n}\n.md\\:hover\\:text-primary[data-v-092c5067]:hover {\n    color: #330b53;\n}\n.md\\:hover\\:text-secondary[data-v-092c5067]:hover {\n    color: #5a308c;\n}\n.md\\:hover\\:text-highlight[data-v-092c5067]:hover {\n    color: #e60099;\n}\n.md\\:hover\\:text-light[data-v-092c5067]:hover {\n    color: #f6f6f6;\n}\n.md\\:hover\\:text-dark[data-v-092c5067]:hover {\n    color: #1d1d1d;\n}\n.md\\:hover\\:font-primary[data-v-092c5067]:hover {\n    font-family: \"Roboto\", sans-serif;\n}\n.md\\:hover\\:font-secondary[data-v-092c5067]:hover {\n    font-family: \"Orbitron\", sans-serif;\n}\n}\n@media (min-width: 1024px) {\n.lg\\:bg-primary[data-v-092c5067] {\n    background-color: #330b53;\n}\n.lg\\:bg-secondary[data-v-092c5067] {\n    background-color: #5a308c;\n}\n.lg\\:bg-highlight[data-v-092c5067] {\n    background-color: #e60099;\n}\n.lg\\:bg-light[data-v-092c5067] {\n    background-color: #f6f6f6;\n}\n.lg\\:bg-dark[data-v-092c5067] {\n    background-color: #1d1d1d;\n}\n.lg\\:text-primary[data-v-092c5067] {\n    color: #330b53;\n}\n.lg\\:text-secondary[data-v-092c5067] {\n    color: #5a308c;\n}\n.lg\\:text-highlight[data-v-092c5067] {\n    color: #e60099;\n}\n.lg\\:text-light[data-v-092c5067] {\n    color: #f6f6f6;\n}\n.lg\\:text-dark[data-v-092c5067] {\n    color: #1d1d1d;\n}\n.lg\\:font-primary[data-v-092c5067] {\n    font-family: \"Roboto\", sans-serif;\n}\n.lg\\:font-secondary[data-v-092c5067] {\n    font-family: \"Orbitron\", sans-serif;\n}\n.lg\\:odd\\:bg-primary[data-v-092c5067]:nth-child(odd) {\n    background-color: #330b53;\n}\n.lg\\:odd\\:bg-secondary[data-v-092c5067]:nth-child(odd) {\n    background-color: #5a308c;\n}\n.lg\\:odd\\:bg-highlight[data-v-092c5067]:nth-child(odd) {\n    background-color: #e60099;\n}\n.lg\\:odd\\:bg-light[data-v-092c5067]:nth-child(odd) {\n    background-color: #f6f6f6;\n}\n.lg\\:odd\\:bg-dark[data-v-092c5067]:nth-child(odd) {\n    background-color: #1d1d1d;\n}\n.lg\\:odd\\:text-primary[data-v-092c5067]:nth-child(odd) {\n    color: #330b53;\n}\n.lg\\:odd\\:text-secondary[data-v-092c5067]:nth-child(odd) {\n    color: #5a308c;\n}\n.lg\\:odd\\:text-highlight[data-v-092c5067]:nth-child(odd) {\n    color: #e60099;\n}\n.lg\\:odd\\:text-light[data-v-092c5067]:nth-child(odd) {\n    color: #f6f6f6;\n}\n.lg\\:odd\\:text-dark[data-v-092c5067]:nth-child(odd) {\n    color: #1d1d1d;\n}\n.lg\\:odd\\:font-primary[data-v-092c5067]:nth-child(odd) {\n    font-family: \"Roboto\", sans-serif;\n}\n.lg\\:odd\\:font-secondary[data-v-092c5067]:nth-child(odd) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.lg\\:even\\:bg-primary[data-v-092c5067]:nth-child(even) {\n    background-color: #330b53;\n}\n.lg\\:even\\:bg-secondary[data-v-092c5067]:nth-child(even) {\n    background-color: #5a308c;\n}\n.lg\\:even\\:bg-highlight[data-v-092c5067]:nth-child(even) {\n    background-color: #e60099;\n}\n.lg\\:even\\:bg-light[data-v-092c5067]:nth-child(even) {\n    background-color: #f6f6f6;\n}\n.lg\\:even\\:bg-dark[data-v-092c5067]:nth-child(even) {\n    background-color: #1d1d1d;\n}\n.lg\\:even\\:text-primary[data-v-092c5067]:nth-child(even) {\n    color: #330b53;\n}\n.lg\\:even\\:text-secondary[data-v-092c5067]:nth-child(even) {\n    color: #5a308c;\n}\n.lg\\:even\\:text-highlight[data-v-092c5067]:nth-child(even) {\n    color: #e60099;\n}\n.lg\\:even\\:text-light[data-v-092c5067]:nth-child(even) {\n    color: #f6f6f6;\n}\n.lg\\:even\\:text-dark[data-v-092c5067]:nth-child(even) {\n    color: #1d1d1d;\n}\n.lg\\:even\\:font-primary[data-v-092c5067]:nth-child(even) {\n    font-family: \"Roboto\", sans-serif;\n}\n.lg\\:even\\:font-secondary[data-v-092c5067]:nth-child(even) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.lg\\:hover\\:bg-primary[data-v-092c5067]:hover {\n    background-color: #330b53;\n}\n.lg\\:hover\\:bg-secondary[data-v-092c5067]:hover {\n    background-color: #5a308c;\n}\n.lg\\:hover\\:bg-highlight[data-v-092c5067]:hover {\n    background-color: #e60099;\n}\n.lg\\:hover\\:bg-light[data-v-092c5067]:hover {\n    background-color: #f6f6f6;\n}\n.lg\\:hover\\:bg-dark[data-v-092c5067]:hover {\n    background-color: #1d1d1d;\n}\n.lg\\:hover\\:text-primary[data-v-092c5067]:hover {\n    color: #330b53;\n}\n.lg\\:hover\\:text-secondary[data-v-092c5067]:hover {\n    color: #5a308c;\n}\n.lg\\:hover\\:text-highlight[data-v-092c5067]:hover {\n    color: #e60099;\n}\n.lg\\:hover\\:text-light[data-v-092c5067]:hover {\n    color: #f6f6f6;\n}\n.lg\\:hover\\:text-dark[data-v-092c5067]:hover {\n    color: #1d1d1d;\n}\n.lg\\:hover\\:font-primary[data-v-092c5067]:hover {\n    font-family: \"Roboto\", sans-serif;\n}\n.lg\\:hover\\:font-secondary[data-v-092c5067]:hover {\n    font-family: \"Orbitron\", sans-serif;\n}\n}\n@media (min-width: 1280px) {\n.xl\\:bg-primary[data-v-092c5067] {\n    background-color: #330b53;\n}\n.xl\\:bg-secondary[data-v-092c5067] {\n    background-color: #5a308c;\n}\n.xl\\:bg-highlight[data-v-092c5067] {\n    background-color: #e60099;\n}\n.xl\\:bg-light[data-v-092c5067] {\n    background-color: #f6f6f6;\n}\n.xl\\:bg-dark[data-v-092c5067] {\n    background-color: #1d1d1d;\n}\n.xl\\:text-primary[data-v-092c5067] {\n    color: #330b53;\n}\n.xl\\:text-secondary[data-v-092c5067] {\n    color: #5a308c;\n}\n.xl\\:text-highlight[data-v-092c5067] {\n    color: #e60099;\n}\n.xl\\:text-light[data-v-092c5067] {\n    color: #f6f6f6;\n}\n.xl\\:text-dark[data-v-092c5067] {\n    color: #1d1d1d;\n}\n.xl\\:font-primary[data-v-092c5067] {\n    font-family: \"Roboto\", sans-serif;\n}\n.xl\\:font-secondary[data-v-092c5067] {\n    font-family: \"Orbitron\", sans-serif;\n}\n.xl\\:odd\\:bg-primary[data-v-092c5067]:nth-child(odd) {\n    background-color: #330b53;\n}\n.xl\\:odd\\:bg-secondary[data-v-092c5067]:nth-child(odd) {\n    background-color: #5a308c;\n}\n.xl\\:odd\\:bg-highlight[data-v-092c5067]:nth-child(odd) {\n    background-color: #e60099;\n}\n.xl\\:odd\\:bg-light[data-v-092c5067]:nth-child(odd) {\n    background-color: #f6f6f6;\n}\n.xl\\:odd\\:bg-dark[data-v-092c5067]:nth-child(odd) {\n    background-color: #1d1d1d;\n}\n.xl\\:odd\\:text-primary[data-v-092c5067]:nth-child(odd) {\n    color: #330b53;\n}\n.xl\\:odd\\:text-secondary[data-v-092c5067]:nth-child(odd) {\n    color: #5a308c;\n}\n.xl\\:odd\\:text-highlight[data-v-092c5067]:nth-child(odd) {\n    color: #e60099;\n}\n.xl\\:odd\\:text-light[data-v-092c5067]:nth-child(odd) {\n    color: #f6f6f6;\n}\n.xl\\:odd\\:text-dark[data-v-092c5067]:nth-child(odd) {\n    color: #1d1d1d;\n}\n.xl\\:odd\\:font-primary[data-v-092c5067]:nth-child(odd) {\n    font-family: \"Roboto\", sans-serif;\n}\n.xl\\:odd\\:font-secondary[data-v-092c5067]:nth-child(odd) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.xl\\:even\\:bg-primary[data-v-092c5067]:nth-child(even) {\n    background-color: #330b53;\n}\n.xl\\:even\\:bg-secondary[data-v-092c5067]:nth-child(even) {\n    background-color: #5a308c;\n}\n.xl\\:even\\:bg-highlight[data-v-092c5067]:nth-child(even) {\n    background-color: #e60099;\n}\n.xl\\:even\\:bg-light[data-v-092c5067]:nth-child(even) {\n    background-color: #f6f6f6;\n}\n.xl\\:even\\:bg-dark[data-v-092c5067]:nth-child(even) {\n    background-color: #1d1d1d;\n}\n.xl\\:even\\:text-primary[data-v-092c5067]:nth-child(even) {\n    color: #330b53;\n}\n.xl\\:even\\:text-secondary[data-v-092c5067]:nth-child(even) {\n    color: #5a308c;\n}\n.xl\\:even\\:text-highlight[data-v-092c5067]:nth-child(even) {\n    color: #e60099;\n}\n.xl\\:even\\:text-light[data-v-092c5067]:nth-child(even) {\n    color: #f6f6f6;\n}\n.xl\\:even\\:text-dark[data-v-092c5067]:nth-child(even) {\n    color: #1d1d1d;\n}\n.xl\\:even\\:font-primary[data-v-092c5067]:nth-child(even) {\n    font-family: \"Roboto\", sans-serif;\n}\n.xl\\:even\\:font-secondary[data-v-092c5067]:nth-child(even) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.xl\\:hover\\:bg-primary[data-v-092c5067]:hover {\n    background-color: #330b53;\n}\n.xl\\:hover\\:bg-secondary[data-v-092c5067]:hover {\n    background-color: #5a308c;\n}\n.xl\\:hover\\:bg-highlight[data-v-092c5067]:hover {\n    background-color: #e60099;\n}\n.xl\\:hover\\:bg-light[data-v-092c5067]:hover {\n    background-color: #f6f6f6;\n}\n.xl\\:hover\\:bg-dark[data-v-092c5067]:hover {\n    background-color: #1d1d1d;\n}\n.xl\\:hover\\:text-primary[data-v-092c5067]:hover {\n    color: #330b53;\n}\n.xl\\:hover\\:text-secondary[data-v-092c5067]:hover {\n    color: #5a308c;\n}\n.xl\\:hover\\:text-highlight[data-v-092c5067]:hover {\n    color: #e60099;\n}\n.xl\\:hover\\:text-light[data-v-092c5067]:hover {\n    color: #f6f6f6;\n}\n.xl\\:hover\\:text-dark[data-v-092c5067]:hover {\n    color: #1d1d1d;\n}\n.xl\\:hover\\:font-primary[data-v-092c5067]:hover {\n    font-family: \"Roboto\", sans-serif;\n}\n.xl\\:hover\\:font-secondary[data-v-092c5067]:hover {\n    font-family: \"Orbitron\", sans-serif;\n}\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Components/Landing/ResponsiveGrid.vue?vue&type=style&index=0&id=00b93d3d&lang=scss&scoped=true&":
 /*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Components/Landing/ResponsiveGrid.vue?vue&type=style&index=0&id=00b93d3d&lang=scss&scoped=true& ***!
@@ -5784,7 +6626,26 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".grid-root[data-v-00b93d3d] {\n  display: grid;\n  grid-template-columns: repeat(1, minmax(0, 1fr));\n  grid-gap: 3rem;\n  gap: 3rem;\n}\n.grid-root .grid-item[data-v-00b93d3d] {\n  grid-column: span 2 / span 2;\n}\n@media (min-width: 640px) {\n.grid-root[data-v-00b93d3d] {\n    grid-template-columns: repeat(4, minmax(0, 1fr));\n}\n@media (max-width: 1023px) {\n.grid-root .grid-item[data-v-00b93d3d]:last-child:nth-child(2n-1) {\n      grid-column-end: -2;\n}\n}\n}\n@media (min-width: 1024px) {\n.grid-root[data-v-00b93d3d] {\n    grid-template-columns: repeat(6, minmax(0, 1fr));\n}\n@media (max-width: 1279px) {\n.grid-root .grid-item[data-v-00b93d3d]:last-child:nth-child(3n-1) {\n      grid-column-end: -2;\n}\n.grid-root .grid-item[data-v-00b93d3d]:nth-last-child(2):nth-child(3n+1) {\n      grid-column-end: 4;\n}\n.grid-root .grid-item[data-v-00b93d3d]:last-child:nth-child(3n-2) {\n      grid-column-end: 5;\n}\n}\n}\n@media (min-width: 1280px) {\n.grid-root[data-v-00b93d3d] {\n    grid-template-columns: repeat(8, minmax(0, 1fr));\n}\n.grid-root .grid-item[data-v-00b93d3d]:last-child:nth-child(4n-1) {\n    grid-column-end: -2;\n}\n.grid-root .grid-item[data-v-00b93d3d]:nth-last-child(2):nth-child(4n-2) {\n    grid-column-end: -4;\n}\n.grid-root .grid-item[data-v-00b93d3d]:nth-last-child(3):nth-child(4n-3) {\n    grid-column-end: -5;\n}\n.grid-root .grid-item[data-v-00b93d3d]:last-child:nth-child(4n-2) {\n    grid-column-end: -3;\n}\n.grid-root .grid-item[data-v-00b93d3d]:nth-last-child(2):nth-child(4n-3) {\n    grid-column-end: -5;\n}\n.grid-root .grid-item[data-v-00b93d3d]:last-child:nth-child(4n-3) {\n    grid-column-end: -4;\n}\n}", ""]);
+exports.push([module.i, ".grid-root[data-v-00b93d3d] {\n  display: grid;\n  grid-template-columns: repeat(1, minmax(0, 1fr));\n  grid-gap: 3rem;\n  gap: 3rem;\n}\n.grid-root .grid-item[data-v-00b93d3d] {\n  grid-column: span 2 / span 2;\n}\n@media (min-width: 640px) {\n.grid-root[data-v-00b93d3d] {\n    grid-template-columns: repeat(4, minmax(0, 1fr));\n}\n@media (max-width: 1023px) {\n.grid-root .grid-item[data-v-00b93d3d]:last-child:nth-child(2n-1) {\n      grid-column-end: -2;\n}\n}\n}\n@media (min-width: 1024px) {\n.grid-root[data-v-00b93d3d] {\n    grid-template-columns: repeat(6, minmax(0, 1fr));\n}\n@media (max-width: 1279px) {\n.grid-root .grid-item[data-v-00b93d3d]:last-child:nth-child(3n-1) {\n      grid-column-end: -2;\n}\n.grid-root .grid-item[data-v-00b93d3d]:nth-last-child(2):nth-child(3n+1) {\n      grid-column-end: 4;\n}\n.grid-root .grid-item[data-v-00b93d3d]:last-child:nth-child(3n-2) {\n      grid-column-end: 5;\n}\n}\n}\n@media (min-width: 1280px) {\n.grid-root[data-v-00b93d3d] {\n    grid-template-columns: repeat(8, minmax(0, 1fr));\n}\n.grid-root .grid-item[data-v-00b93d3d]:last-child:nth-child(4n-1) {\n    grid-column-end: -2;\n}\n.grid-root .grid-item[data-v-00b93d3d]:nth-last-child(2):nth-child(4n-2) {\n    grid-column-end: -4;\n}\n.grid-root .grid-item[data-v-00b93d3d]:nth-last-child(3):nth-child(4n-3) {\n    grid-column-end: -6;\n}\n.grid-root .grid-item[data-v-00b93d3d]:last-child:nth-child(4n-2) {\n    grid-column-end: -3;\n}\n.grid-root .grid-item[data-v-00b93d3d]:nth-last-child(2):nth-child(4n-3) {\n    grid-column-end: -5;\n}\n.grid-root .grid-item[data-v-00b93d3d]:last-child:nth-child(4n-3) {\n    grid-column-end: -6;\n}\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Layouts/LandingLayout.vue?vue&type=style&index=0&id=21a289cd&lang=scss&scoped=true&":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Layouts/LandingLayout.vue?vue&type=style&index=0&id=21a289cd&lang=scss&scoped=true& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".bg-primary[data-v-21a289cd] {\n  background-color: #330b53;\n}\n.bg-secondary[data-v-21a289cd] {\n  background-color: #5a308c;\n}\n.bg-highlight[data-v-21a289cd] {\n  background-color: #e60099;\n}\n.bg-light[data-v-21a289cd] {\n  background-color: #f6f6f6;\n}\n.bg-dark[data-v-21a289cd] {\n  background-color: #1d1d1d;\n}\n.text-primary[data-v-21a289cd] {\n  color: #330b53;\n}\n.text-secondary[data-v-21a289cd] {\n  color: #5a308c;\n}\n.text-highlight[data-v-21a289cd] {\n  color: #e60099;\n}\n.text-light[data-v-21a289cd] {\n  color: #f6f6f6;\n}\n.text-dark[data-v-21a289cd] {\n  color: #1d1d1d;\n}\n.font-primary[data-v-21a289cd] {\n  font-family: \"Roboto\", sans-serif;\n}\n.font-secondary[data-v-21a289cd] {\n  font-family: \"Orbitron\", sans-serif;\n}\n.odd\\:bg-primary[data-v-21a289cd]:nth-child(odd) {\n  background-color: #330b53;\n}\n.odd\\:bg-secondary[data-v-21a289cd]:nth-child(odd) {\n  background-color: #5a308c;\n}\n.odd\\:bg-highlight[data-v-21a289cd]:nth-child(odd) {\n  background-color: #e60099;\n}\n.odd\\:bg-light[data-v-21a289cd]:nth-child(odd) {\n  background-color: #f6f6f6;\n}\n.odd\\:bg-dark[data-v-21a289cd]:nth-child(odd) {\n  background-color: #1d1d1d;\n}\n.odd\\:text-primary[data-v-21a289cd]:nth-child(odd) {\n  color: #330b53;\n}\n.odd\\:text-secondary[data-v-21a289cd]:nth-child(odd) {\n  color: #5a308c;\n}\n.odd\\:text-highlight[data-v-21a289cd]:nth-child(odd) {\n  color: #e60099;\n}\n.odd\\:text-light[data-v-21a289cd]:nth-child(odd) {\n  color: #f6f6f6;\n}\n.odd\\:text-dark[data-v-21a289cd]:nth-child(odd) {\n  color: #1d1d1d;\n}\n.odd\\:font-primary[data-v-21a289cd]:nth-child(odd) {\n  font-family: \"Roboto\", sans-serif;\n}\n.odd\\:font-secondary[data-v-21a289cd]:nth-child(odd) {\n  font-family: \"Orbitron\", sans-serif;\n}\n.even\\:bg-primary[data-v-21a289cd]:nth-child(even) {\n  background-color: #330b53;\n}\n.even\\:bg-secondary[data-v-21a289cd]:nth-child(even) {\n  background-color: #5a308c;\n}\n.even\\:bg-highlight[data-v-21a289cd]:nth-child(even) {\n  background-color: #e60099;\n}\n.even\\:bg-light[data-v-21a289cd]:nth-child(even) {\n  background-color: #f6f6f6;\n}\n.even\\:bg-dark[data-v-21a289cd]:nth-child(even) {\n  background-color: #1d1d1d;\n}\n.even\\:text-primary[data-v-21a289cd]:nth-child(even) {\n  color: #330b53;\n}\n.even\\:text-secondary[data-v-21a289cd]:nth-child(even) {\n  color: #5a308c;\n}\n.even\\:text-highlight[data-v-21a289cd]:nth-child(even) {\n  color: #e60099;\n}\n.even\\:text-light[data-v-21a289cd]:nth-child(even) {\n  color: #f6f6f6;\n}\n.even\\:text-dark[data-v-21a289cd]:nth-child(even) {\n  color: #1d1d1d;\n}\n.even\\:font-primary[data-v-21a289cd]:nth-child(even) {\n  font-family: \"Roboto\", sans-serif;\n}\n.even\\:font-secondary[data-v-21a289cd]:nth-child(even) {\n  font-family: \"Orbitron\", sans-serif;\n}\n.hover\\:bg-primary[data-v-21a289cd]:hover {\n  background-color: #330b53;\n}\n.hover\\:bg-secondary[data-v-21a289cd]:hover {\n  background-color: #5a308c;\n}\n.hover\\:bg-highlight[data-v-21a289cd]:hover {\n  background-color: #e60099;\n}\n.hover\\:bg-light[data-v-21a289cd]:hover {\n  background-color: #f6f6f6;\n}\n.hover\\:bg-dark[data-v-21a289cd]:hover {\n  background-color: #1d1d1d;\n}\n.hover\\:text-primary[data-v-21a289cd]:hover {\n  color: #330b53;\n}\n.hover\\:text-secondary[data-v-21a289cd]:hover {\n  color: #5a308c;\n}\n.hover\\:text-highlight[data-v-21a289cd]:hover {\n  color: #e60099;\n}\n.hover\\:text-light[data-v-21a289cd]:hover {\n  color: #f6f6f6;\n}\n.hover\\:text-dark[data-v-21a289cd]:hover {\n  color: #1d1d1d;\n}\n.hover\\:font-primary[data-v-21a289cd]:hover {\n  font-family: \"Roboto\", sans-serif;\n}\n.hover\\:font-secondary[data-v-21a289cd]:hover {\n  font-family: \"Orbitron\", sans-serif;\n}\n@media (min-width: 640px) {\n.sm\\:bg-primary[data-v-21a289cd] {\n    background-color: #330b53;\n}\n.sm\\:bg-secondary[data-v-21a289cd] {\n    background-color: #5a308c;\n}\n.sm\\:bg-highlight[data-v-21a289cd] {\n    background-color: #e60099;\n}\n.sm\\:bg-light[data-v-21a289cd] {\n    background-color: #f6f6f6;\n}\n.sm\\:bg-dark[data-v-21a289cd] {\n    background-color: #1d1d1d;\n}\n.sm\\:text-primary[data-v-21a289cd] {\n    color: #330b53;\n}\n.sm\\:text-secondary[data-v-21a289cd] {\n    color: #5a308c;\n}\n.sm\\:text-highlight[data-v-21a289cd] {\n    color: #e60099;\n}\n.sm\\:text-light[data-v-21a289cd] {\n    color: #f6f6f6;\n}\n.sm\\:text-dark[data-v-21a289cd] {\n    color: #1d1d1d;\n}\n.sm\\:font-primary[data-v-21a289cd] {\n    font-family: \"Roboto\", sans-serif;\n}\n.sm\\:font-secondary[data-v-21a289cd] {\n    font-family: \"Orbitron\", sans-serif;\n}\n.sm\\:odd\\:bg-primary[data-v-21a289cd]:nth-child(odd) {\n    background-color: #330b53;\n}\n.sm\\:odd\\:bg-secondary[data-v-21a289cd]:nth-child(odd) {\n    background-color: #5a308c;\n}\n.sm\\:odd\\:bg-highlight[data-v-21a289cd]:nth-child(odd) {\n    background-color: #e60099;\n}\n.sm\\:odd\\:bg-light[data-v-21a289cd]:nth-child(odd) {\n    background-color: #f6f6f6;\n}\n.sm\\:odd\\:bg-dark[data-v-21a289cd]:nth-child(odd) {\n    background-color: #1d1d1d;\n}\n.sm\\:odd\\:text-primary[data-v-21a289cd]:nth-child(odd) {\n    color: #330b53;\n}\n.sm\\:odd\\:text-secondary[data-v-21a289cd]:nth-child(odd) {\n    color: #5a308c;\n}\n.sm\\:odd\\:text-highlight[data-v-21a289cd]:nth-child(odd) {\n    color: #e60099;\n}\n.sm\\:odd\\:text-light[data-v-21a289cd]:nth-child(odd) {\n    color: #f6f6f6;\n}\n.sm\\:odd\\:text-dark[data-v-21a289cd]:nth-child(odd) {\n    color: #1d1d1d;\n}\n.sm\\:odd\\:font-primary[data-v-21a289cd]:nth-child(odd) {\n    font-family: \"Roboto\", sans-serif;\n}\n.sm\\:odd\\:font-secondary[data-v-21a289cd]:nth-child(odd) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.sm\\:even\\:bg-primary[data-v-21a289cd]:nth-child(even) {\n    background-color: #330b53;\n}\n.sm\\:even\\:bg-secondary[data-v-21a289cd]:nth-child(even) {\n    background-color: #5a308c;\n}\n.sm\\:even\\:bg-highlight[data-v-21a289cd]:nth-child(even) {\n    background-color: #e60099;\n}\n.sm\\:even\\:bg-light[data-v-21a289cd]:nth-child(even) {\n    background-color: #f6f6f6;\n}\n.sm\\:even\\:bg-dark[data-v-21a289cd]:nth-child(even) {\n    background-color: #1d1d1d;\n}\n.sm\\:even\\:text-primary[data-v-21a289cd]:nth-child(even) {\n    color: #330b53;\n}\n.sm\\:even\\:text-secondary[data-v-21a289cd]:nth-child(even) {\n    color: #5a308c;\n}\n.sm\\:even\\:text-highlight[data-v-21a289cd]:nth-child(even) {\n    color: #e60099;\n}\n.sm\\:even\\:text-light[data-v-21a289cd]:nth-child(even) {\n    color: #f6f6f6;\n}\n.sm\\:even\\:text-dark[data-v-21a289cd]:nth-child(even) {\n    color: #1d1d1d;\n}\n.sm\\:even\\:font-primary[data-v-21a289cd]:nth-child(even) {\n    font-family: \"Roboto\", sans-serif;\n}\n.sm\\:even\\:font-secondary[data-v-21a289cd]:nth-child(even) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.sm\\:hover\\:bg-primary[data-v-21a289cd]:hover {\n    background-color: #330b53;\n}\n.sm\\:hover\\:bg-secondary[data-v-21a289cd]:hover {\n    background-color: #5a308c;\n}\n.sm\\:hover\\:bg-highlight[data-v-21a289cd]:hover {\n    background-color: #e60099;\n}\n.sm\\:hover\\:bg-light[data-v-21a289cd]:hover {\n    background-color: #f6f6f6;\n}\n.sm\\:hover\\:bg-dark[data-v-21a289cd]:hover {\n    background-color: #1d1d1d;\n}\n.sm\\:hover\\:text-primary[data-v-21a289cd]:hover {\n    color: #330b53;\n}\n.sm\\:hover\\:text-secondary[data-v-21a289cd]:hover {\n    color: #5a308c;\n}\n.sm\\:hover\\:text-highlight[data-v-21a289cd]:hover {\n    color: #e60099;\n}\n.sm\\:hover\\:text-light[data-v-21a289cd]:hover {\n    color: #f6f6f6;\n}\n.sm\\:hover\\:text-dark[data-v-21a289cd]:hover {\n    color: #1d1d1d;\n}\n.sm\\:hover\\:font-primary[data-v-21a289cd]:hover {\n    font-family: \"Roboto\", sans-serif;\n}\n.sm\\:hover\\:font-secondary[data-v-21a289cd]:hover {\n    font-family: \"Orbitron\", sans-serif;\n}\n}\n@media (min-width: 768px) {\n.md\\:bg-primary[data-v-21a289cd] {\n    background-color: #330b53;\n}\n.md\\:bg-secondary[data-v-21a289cd] {\n    background-color: #5a308c;\n}\n.md\\:bg-highlight[data-v-21a289cd] {\n    background-color: #e60099;\n}\n.md\\:bg-light[data-v-21a289cd] {\n    background-color: #f6f6f6;\n}\n.md\\:bg-dark[data-v-21a289cd] {\n    background-color: #1d1d1d;\n}\n.md\\:text-primary[data-v-21a289cd] {\n    color: #330b53;\n}\n.md\\:text-secondary[data-v-21a289cd] {\n    color: #5a308c;\n}\n.md\\:text-highlight[data-v-21a289cd] {\n    color: #e60099;\n}\n.md\\:text-light[data-v-21a289cd] {\n    color: #f6f6f6;\n}\n.md\\:text-dark[data-v-21a289cd] {\n    color: #1d1d1d;\n}\n.md\\:font-primary[data-v-21a289cd] {\n    font-family: \"Roboto\", sans-serif;\n}\n.md\\:font-secondary[data-v-21a289cd] {\n    font-family: \"Orbitron\", sans-serif;\n}\n.md\\:odd\\:bg-primary[data-v-21a289cd]:nth-child(odd) {\n    background-color: #330b53;\n}\n.md\\:odd\\:bg-secondary[data-v-21a289cd]:nth-child(odd) {\n    background-color: #5a308c;\n}\n.md\\:odd\\:bg-highlight[data-v-21a289cd]:nth-child(odd) {\n    background-color: #e60099;\n}\n.md\\:odd\\:bg-light[data-v-21a289cd]:nth-child(odd) {\n    background-color: #f6f6f6;\n}\n.md\\:odd\\:bg-dark[data-v-21a289cd]:nth-child(odd) {\n    background-color: #1d1d1d;\n}\n.md\\:odd\\:text-primary[data-v-21a289cd]:nth-child(odd) {\n    color: #330b53;\n}\n.md\\:odd\\:text-secondary[data-v-21a289cd]:nth-child(odd) {\n    color: #5a308c;\n}\n.md\\:odd\\:text-highlight[data-v-21a289cd]:nth-child(odd) {\n    color: #e60099;\n}\n.md\\:odd\\:text-light[data-v-21a289cd]:nth-child(odd) {\n    color: #f6f6f6;\n}\n.md\\:odd\\:text-dark[data-v-21a289cd]:nth-child(odd) {\n    color: #1d1d1d;\n}\n.md\\:odd\\:font-primary[data-v-21a289cd]:nth-child(odd) {\n    font-family: \"Roboto\", sans-serif;\n}\n.md\\:odd\\:font-secondary[data-v-21a289cd]:nth-child(odd) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.md\\:even\\:bg-primary[data-v-21a289cd]:nth-child(even) {\n    background-color: #330b53;\n}\n.md\\:even\\:bg-secondary[data-v-21a289cd]:nth-child(even) {\n    background-color: #5a308c;\n}\n.md\\:even\\:bg-highlight[data-v-21a289cd]:nth-child(even) {\n    background-color: #e60099;\n}\n.md\\:even\\:bg-light[data-v-21a289cd]:nth-child(even) {\n    background-color: #f6f6f6;\n}\n.md\\:even\\:bg-dark[data-v-21a289cd]:nth-child(even) {\n    background-color: #1d1d1d;\n}\n.md\\:even\\:text-primary[data-v-21a289cd]:nth-child(even) {\n    color: #330b53;\n}\n.md\\:even\\:text-secondary[data-v-21a289cd]:nth-child(even) {\n    color: #5a308c;\n}\n.md\\:even\\:text-highlight[data-v-21a289cd]:nth-child(even) {\n    color: #e60099;\n}\n.md\\:even\\:text-light[data-v-21a289cd]:nth-child(even) {\n    color: #f6f6f6;\n}\n.md\\:even\\:text-dark[data-v-21a289cd]:nth-child(even) {\n    color: #1d1d1d;\n}\n.md\\:even\\:font-primary[data-v-21a289cd]:nth-child(even) {\n    font-family: \"Roboto\", sans-serif;\n}\n.md\\:even\\:font-secondary[data-v-21a289cd]:nth-child(even) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.md\\:hover\\:bg-primary[data-v-21a289cd]:hover {\n    background-color: #330b53;\n}\n.md\\:hover\\:bg-secondary[data-v-21a289cd]:hover {\n    background-color: #5a308c;\n}\n.md\\:hover\\:bg-highlight[data-v-21a289cd]:hover {\n    background-color: #e60099;\n}\n.md\\:hover\\:bg-light[data-v-21a289cd]:hover {\n    background-color: #f6f6f6;\n}\n.md\\:hover\\:bg-dark[data-v-21a289cd]:hover {\n    background-color: #1d1d1d;\n}\n.md\\:hover\\:text-primary[data-v-21a289cd]:hover {\n    color: #330b53;\n}\n.md\\:hover\\:text-secondary[data-v-21a289cd]:hover {\n    color: #5a308c;\n}\n.md\\:hover\\:text-highlight[data-v-21a289cd]:hover {\n    color: #e60099;\n}\n.md\\:hover\\:text-light[data-v-21a289cd]:hover {\n    color: #f6f6f6;\n}\n.md\\:hover\\:text-dark[data-v-21a289cd]:hover {\n    color: #1d1d1d;\n}\n.md\\:hover\\:font-primary[data-v-21a289cd]:hover {\n    font-family: \"Roboto\", sans-serif;\n}\n.md\\:hover\\:font-secondary[data-v-21a289cd]:hover {\n    font-family: \"Orbitron\", sans-serif;\n}\n}\n@media (min-width: 1024px) {\n.lg\\:bg-primary[data-v-21a289cd] {\n    background-color: #330b53;\n}\n.lg\\:bg-secondary[data-v-21a289cd] {\n    background-color: #5a308c;\n}\n.lg\\:bg-highlight[data-v-21a289cd] {\n    background-color: #e60099;\n}\n.lg\\:bg-light[data-v-21a289cd] {\n    background-color: #f6f6f6;\n}\n.lg\\:bg-dark[data-v-21a289cd] {\n    background-color: #1d1d1d;\n}\n.lg\\:text-primary[data-v-21a289cd] {\n    color: #330b53;\n}\n.lg\\:text-secondary[data-v-21a289cd] {\n    color: #5a308c;\n}\n.lg\\:text-highlight[data-v-21a289cd] {\n    color: #e60099;\n}\n.lg\\:text-light[data-v-21a289cd] {\n    color: #f6f6f6;\n}\n.lg\\:text-dark[data-v-21a289cd] {\n    color: #1d1d1d;\n}\n.lg\\:font-primary[data-v-21a289cd] {\n    font-family: \"Roboto\", sans-serif;\n}\n.lg\\:font-secondary[data-v-21a289cd] {\n    font-family: \"Orbitron\", sans-serif;\n}\n.lg\\:odd\\:bg-primary[data-v-21a289cd]:nth-child(odd) {\n    background-color: #330b53;\n}\n.lg\\:odd\\:bg-secondary[data-v-21a289cd]:nth-child(odd) {\n    background-color: #5a308c;\n}\n.lg\\:odd\\:bg-highlight[data-v-21a289cd]:nth-child(odd) {\n    background-color: #e60099;\n}\n.lg\\:odd\\:bg-light[data-v-21a289cd]:nth-child(odd) {\n    background-color: #f6f6f6;\n}\n.lg\\:odd\\:bg-dark[data-v-21a289cd]:nth-child(odd) {\n    background-color: #1d1d1d;\n}\n.lg\\:odd\\:text-primary[data-v-21a289cd]:nth-child(odd) {\n    color: #330b53;\n}\n.lg\\:odd\\:text-secondary[data-v-21a289cd]:nth-child(odd) {\n    color: #5a308c;\n}\n.lg\\:odd\\:text-highlight[data-v-21a289cd]:nth-child(odd) {\n    color: #e60099;\n}\n.lg\\:odd\\:text-light[data-v-21a289cd]:nth-child(odd) {\n    color: #f6f6f6;\n}\n.lg\\:odd\\:text-dark[data-v-21a289cd]:nth-child(odd) {\n    color: #1d1d1d;\n}\n.lg\\:odd\\:font-primary[data-v-21a289cd]:nth-child(odd) {\n    font-family: \"Roboto\", sans-serif;\n}\n.lg\\:odd\\:font-secondary[data-v-21a289cd]:nth-child(odd) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.lg\\:even\\:bg-primary[data-v-21a289cd]:nth-child(even) {\n    background-color: #330b53;\n}\n.lg\\:even\\:bg-secondary[data-v-21a289cd]:nth-child(even) {\n    background-color: #5a308c;\n}\n.lg\\:even\\:bg-highlight[data-v-21a289cd]:nth-child(even) {\n    background-color: #e60099;\n}\n.lg\\:even\\:bg-light[data-v-21a289cd]:nth-child(even) {\n    background-color: #f6f6f6;\n}\n.lg\\:even\\:bg-dark[data-v-21a289cd]:nth-child(even) {\n    background-color: #1d1d1d;\n}\n.lg\\:even\\:text-primary[data-v-21a289cd]:nth-child(even) {\n    color: #330b53;\n}\n.lg\\:even\\:text-secondary[data-v-21a289cd]:nth-child(even) {\n    color: #5a308c;\n}\n.lg\\:even\\:text-highlight[data-v-21a289cd]:nth-child(even) {\n    color: #e60099;\n}\n.lg\\:even\\:text-light[data-v-21a289cd]:nth-child(even) {\n    color: #f6f6f6;\n}\n.lg\\:even\\:text-dark[data-v-21a289cd]:nth-child(even) {\n    color: #1d1d1d;\n}\n.lg\\:even\\:font-primary[data-v-21a289cd]:nth-child(even) {\n    font-family: \"Roboto\", sans-serif;\n}\n.lg\\:even\\:font-secondary[data-v-21a289cd]:nth-child(even) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.lg\\:hover\\:bg-primary[data-v-21a289cd]:hover {\n    background-color: #330b53;\n}\n.lg\\:hover\\:bg-secondary[data-v-21a289cd]:hover {\n    background-color: #5a308c;\n}\n.lg\\:hover\\:bg-highlight[data-v-21a289cd]:hover {\n    background-color: #e60099;\n}\n.lg\\:hover\\:bg-light[data-v-21a289cd]:hover {\n    background-color: #f6f6f6;\n}\n.lg\\:hover\\:bg-dark[data-v-21a289cd]:hover {\n    background-color: #1d1d1d;\n}\n.lg\\:hover\\:text-primary[data-v-21a289cd]:hover {\n    color: #330b53;\n}\n.lg\\:hover\\:text-secondary[data-v-21a289cd]:hover {\n    color: #5a308c;\n}\n.lg\\:hover\\:text-highlight[data-v-21a289cd]:hover {\n    color: #e60099;\n}\n.lg\\:hover\\:text-light[data-v-21a289cd]:hover {\n    color: #f6f6f6;\n}\n.lg\\:hover\\:text-dark[data-v-21a289cd]:hover {\n    color: #1d1d1d;\n}\n.lg\\:hover\\:font-primary[data-v-21a289cd]:hover {\n    font-family: \"Roboto\", sans-serif;\n}\n.lg\\:hover\\:font-secondary[data-v-21a289cd]:hover {\n    font-family: \"Orbitron\", sans-serif;\n}\n}\n@media (min-width: 1280px) {\n.xl\\:bg-primary[data-v-21a289cd] {\n    background-color: #330b53;\n}\n.xl\\:bg-secondary[data-v-21a289cd] {\n    background-color: #5a308c;\n}\n.xl\\:bg-highlight[data-v-21a289cd] {\n    background-color: #e60099;\n}\n.xl\\:bg-light[data-v-21a289cd] {\n    background-color: #f6f6f6;\n}\n.xl\\:bg-dark[data-v-21a289cd] {\n    background-color: #1d1d1d;\n}\n.xl\\:text-primary[data-v-21a289cd] {\n    color: #330b53;\n}\n.xl\\:text-secondary[data-v-21a289cd] {\n    color: #5a308c;\n}\n.xl\\:text-highlight[data-v-21a289cd] {\n    color: #e60099;\n}\n.xl\\:text-light[data-v-21a289cd] {\n    color: #f6f6f6;\n}\n.xl\\:text-dark[data-v-21a289cd] {\n    color: #1d1d1d;\n}\n.xl\\:font-primary[data-v-21a289cd] {\n    font-family: \"Roboto\", sans-serif;\n}\n.xl\\:font-secondary[data-v-21a289cd] {\n    font-family: \"Orbitron\", sans-serif;\n}\n.xl\\:odd\\:bg-primary[data-v-21a289cd]:nth-child(odd) {\n    background-color: #330b53;\n}\n.xl\\:odd\\:bg-secondary[data-v-21a289cd]:nth-child(odd) {\n    background-color: #5a308c;\n}\n.xl\\:odd\\:bg-highlight[data-v-21a289cd]:nth-child(odd) {\n    background-color: #e60099;\n}\n.xl\\:odd\\:bg-light[data-v-21a289cd]:nth-child(odd) {\n    background-color: #f6f6f6;\n}\n.xl\\:odd\\:bg-dark[data-v-21a289cd]:nth-child(odd) {\n    background-color: #1d1d1d;\n}\n.xl\\:odd\\:text-primary[data-v-21a289cd]:nth-child(odd) {\n    color: #330b53;\n}\n.xl\\:odd\\:text-secondary[data-v-21a289cd]:nth-child(odd) {\n    color: #5a308c;\n}\n.xl\\:odd\\:text-highlight[data-v-21a289cd]:nth-child(odd) {\n    color: #e60099;\n}\n.xl\\:odd\\:text-light[data-v-21a289cd]:nth-child(odd) {\n    color: #f6f6f6;\n}\n.xl\\:odd\\:text-dark[data-v-21a289cd]:nth-child(odd) {\n    color: #1d1d1d;\n}\n.xl\\:odd\\:font-primary[data-v-21a289cd]:nth-child(odd) {\n    font-family: \"Roboto\", sans-serif;\n}\n.xl\\:odd\\:font-secondary[data-v-21a289cd]:nth-child(odd) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.xl\\:even\\:bg-primary[data-v-21a289cd]:nth-child(even) {\n    background-color: #330b53;\n}\n.xl\\:even\\:bg-secondary[data-v-21a289cd]:nth-child(even) {\n    background-color: #5a308c;\n}\n.xl\\:even\\:bg-highlight[data-v-21a289cd]:nth-child(even) {\n    background-color: #e60099;\n}\n.xl\\:even\\:bg-light[data-v-21a289cd]:nth-child(even) {\n    background-color: #f6f6f6;\n}\n.xl\\:even\\:bg-dark[data-v-21a289cd]:nth-child(even) {\n    background-color: #1d1d1d;\n}\n.xl\\:even\\:text-primary[data-v-21a289cd]:nth-child(even) {\n    color: #330b53;\n}\n.xl\\:even\\:text-secondary[data-v-21a289cd]:nth-child(even) {\n    color: #5a308c;\n}\n.xl\\:even\\:text-highlight[data-v-21a289cd]:nth-child(even) {\n    color: #e60099;\n}\n.xl\\:even\\:text-light[data-v-21a289cd]:nth-child(even) {\n    color: #f6f6f6;\n}\n.xl\\:even\\:text-dark[data-v-21a289cd]:nth-child(even) {\n    color: #1d1d1d;\n}\n.xl\\:even\\:font-primary[data-v-21a289cd]:nth-child(even) {\n    font-family: \"Roboto\", sans-serif;\n}\n.xl\\:even\\:font-secondary[data-v-21a289cd]:nth-child(even) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.xl\\:hover\\:bg-primary[data-v-21a289cd]:hover {\n    background-color: #330b53;\n}\n.xl\\:hover\\:bg-secondary[data-v-21a289cd]:hover {\n    background-color: #5a308c;\n}\n.xl\\:hover\\:bg-highlight[data-v-21a289cd]:hover {\n    background-color: #e60099;\n}\n.xl\\:hover\\:bg-light[data-v-21a289cd]:hover {\n    background-color: #f6f6f6;\n}\n.xl\\:hover\\:bg-dark[data-v-21a289cd]:hover {\n    background-color: #1d1d1d;\n}\n.xl\\:hover\\:text-primary[data-v-21a289cd]:hover {\n    color: #330b53;\n}\n.xl\\:hover\\:text-secondary[data-v-21a289cd]:hover {\n    color: #5a308c;\n}\n.xl\\:hover\\:text-highlight[data-v-21a289cd]:hover {\n    color: #e60099;\n}\n.xl\\:hover\\:text-light[data-v-21a289cd]:hover {\n    color: #f6f6f6;\n}\n.xl\\:hover\\:text-dark[data-v-21a289cd]:hover {\n    color: #1d1d1d;\n}\n.xl\\:hover\\:font-primary[data-v-21a289cd]:hover {\n    font-family: \"Roboto\", sans-serif;\n}\n.xl\\:hover\\:font-secondary[data-v-21a289cd]:hover {\n    font-family: \"Orbitron\", sans-serif;\n}\n}", ""]);
 
 // exports
 
@@ -5803,7 +6664,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".bg-primary[data-v-7f509ee1] {\n  background-color: #330b53;\n}\n.bg-secondary[data-v-7f509ee1] {\n  background-color: #5a308c;\n}\n.bg-highlight[data-v-7f509ee1] {\n  background-color: #e60099;\n}\n.bg-light[data-v-7f509ee1] {\n  background-color: #f6f6f6;\n}\n.bg-dark[data-v-7f509ee1] {\n  background-color: #1d1d1d;\n}\n.text-primary[data-v-7f509ee1] {\n  color: #330b53;\n}\n.text-secondary[data-v-7f509ee1] {\n  color: #5a308c;\n}\n.text-highlight[data-v-7f509ee1] {\n  color: #e60099;\n}\n.text-light[data-v-7f509ee1] {\n  color: #f6f6f6;\n}\n.text-dark[data-v-7f509ee1] {\n  color: #1d1d1d;\n}\n.font-primary[data-v-7f509ee1] {\n  font-family: \"Roboto\", sans-serif;\n}\n.font-secondary[data-v-7f509ee1] {\n  font-family: \"Orbitron\", sans-serif;\n}\n.odd\\:bg-primary[data-v-7f509ee1]:nth-child(odd) {\n  background-color: #330b53;\n}\n.odd\\:bg-secondary[data-v-7f509ee1]:nth-child(odd) {\n  background-color: #5a308c;\n}\n.odd\\:bg-highlight[data-v-7f509ee1]:nth-child(odd) {\n  background-color: #e60099;\n}\n.odd\\:bg-light[data-v-7f509ee1]:nth-child(odd) {\n  background-color: #f6f6f6;\n}\n.odd\\:bg-dark[data-v-7f509ee1]:nth-child(odd) {\n  background-color: #1d1d1d;\n}\n.odd\\:text-primary[data-v-7f509ee1]:nth-child(odd) {\n  color: #330b53;\n}\n.odd\\:text-secondary[data-v-7f509ee1]:nth-child(odd) {\n  color: #5a308c;\n}\n.odd\\:text-highlight[data-v-7f509ee1]:nth-child(odd) {\n  color: #e60099;\n}\n.odd\\:text-light[data-v-7f509ee1]:nth-child(odd) {\n  color: #f6f6f6;\n}\n.odd\\:text-dark[data-v-7f509ee1]:nth-child(odd) {\n  color: #1d1d1d;\n}\n.odd\\:font-primary[data-v-7f509ee1]:nth-child(odd) {\n  font-family: \"Roboto\", sans-serif;\n}\n.odd\\:font-secondary[data-v-7f509ee1]:nth-child(odd) {\n  font-family: \"Orbitron\", sans-serif;\n}\n.even\\:bg-primary[data-v-7f509ee1]:nth-child(even) {\n  background-color: #330b53;\n}\n.even\\:bg-secondary[data-v-7f509ee1]:nth-child(even) {\n  background-color: #5a308c;\n}\n.even\\:bg-highlight[data-v-7f509ee1]:nth-child(even) {\n  background-color: #e60099;\n}\n.even\\:bg-light[data-v-7f509ee1]:nth-child(even) {\n  background-color: #f6f6f6;\n}\n.even\\:bg-dark[data-v-7f509ee1]:nth-child(even) {\n  background-color: #1d1d1d;\n}\n.even\\:text-primary[data-v-7f509ee1]:nth-child(even) {\n  color: #330b53;\n}\n.even\\:text-secondary[data-v-7f509ee1]:nth-child(even) {\n  color: #5a308c;\n}\n.even\\:text-highlight[data-v-7f509ee1]:nth-child(even) {\n  color: #e60099;\n}\n.even\\:text-light[data-v-7f509ee1]:nth-child(even) {\n  color: #f6f6f6;\n}\n.even\\:text-dark[data-v-7f509ee1]:nth-child(even) {\n  color: #1d1d1d;\n}\n.even\\:font-primary[data-v-7f509ee1]:nth-child(even) {\n  font-family: \"Roboto\", sans-serif;\n}\n.even\\:font-secondary[data-v-7f509ee1]:nth-child(even) {\n  font-family: \"Orbitron\", sans-serif;\n}\n.hover\\:bg-primary[data-v-7f509ee1]:hover {\n  background-color: #330b53;\n}\n.hover\\:bg-secondary[data-v-7f509ee1]:hover {\n  background-color: #5a308c;\n}\n.hover\\:bg-highlight[data-v-7f509ee1]:hover {\n  background-color: #e60099;\n}\n.hover\\:bg-light[data-v-7f509ee1]:hover {\n  background-color: #f6f6f6;\n}\n.hover\\:bg-dark[data-v-7f509ee1]:hover {\n  background-color: #1d1d1d;\n}\n.hover\\:text-primary[data-v-7f509ee1]:hover {\n  color: #330b53;\n}\n.hover\\:text-secondary[data-v-7f509ee1]:hover {\n  color: #5a308c;\n}\n.hover\\:text-highlight[data-v-7f509ee1]:hover {\n  color: #e60099;\n}\n.hover\\:text-light[data-v-7f509ee1]:hover {\n  color: #f6f6f6;\n}\n.hover\\:text-dark[data-v-7f509ee1]:hover {\n  color: #1d1d1d;\n}\n.hover\\:font-primary[data-v-7f509ee1]:hover {\n  font-family: \"Roboto\", sans-serif;\n}\n.hover\\:font-secondary[data-v-7f509ee1]:hover {\n  font-family: \"Orbitron\", sans-serif;\n}\n.animate-logo[data-v-7f509ee1] {\n  -webkit-animation-name: logo-data-v-7f509ee1;\n          animation-name: logo-data-v-7f509ee1;\n  -webkit-animation-duration: 8s;\n          animation-duration: 8s;\n  -webkit-animation-iteration-count: infinite;\n          animation-iteration-count: infinite;\n  -webkit-animation-timing-function: ease-in-out;\n          animation-timing-function: ease-in-out;\n}\n.button[data-v-7f509ee1] {\n  display: inline-block;\n  padding-top: 0.5rem;\n  padding-bottom: 0.5rem;\n  padding-left: 0.75rem;\n  padding-right: 0.75rem;\n  border-radius: 0.25rem;\n  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);\n  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;\n  transition-duration: 100ms;\n}\n.button[data-v-7f509ee1]:hover {\n  background-color: #f6f6f6;\n  color: #1d1d1d;\n}\n@-webkit-keyframes logo-data-v-7f509ee1 {\n0% {\n    transform: scale(0.95);\n}\n50% {\n    transform: scale(1.05);\n}\n100% {\n    transform: scale(0.95);\n}\n}\n@keyframes logo-data-v-7f509ee1 {\n0% {\n    transform: scale(0.95);\n}\n50% {\n    transform: scale(1.05);\n}\n100% {\n    transform: scale(0.95);\n}\n}\n#heroBackground[data-v-7f509ee1] {\n  position: absolute;\n  -o-object-position: center;\n     object-position: center;\n  min-width: 100vw;\n  max-width: none;\n  min-height: 100%;\n  left: 50%;\n  top: 50%;\n  transform: translate(-50%, -50%);\n  z-index: -10;\n}\n.article-header[data-v-7f509ee1] {\n  font-size: 1.25rem;\n  font-weight: 400;\n  font-family: \"Orbitron\", sans-serif;\n}\n.article-body[data-v-7f509ee1] {\n  margin-top: 2rem;\n  font-size: 1rem;\n  font-weight: 400;\n  font-family: \"Roboto\", sans-serif;\n}\n@media (min-width: 640px) {\n.sm\\:bg-primary[data-v-7f509ee1] {\n    background-color: #330b53;\n}\n.sm\\:bg-secondary[data-v-7f509ee1] {\n    background-color: #5a308c;\n}\n.sm\\:bg-highlight[data-v-7f509ee1] {\n    background-color: #e60099;\n}\n.sm\\:bg-light[data-v-7f509ee1] {\n    background-color: #f6f6f6;\n}\n.sm\\:bg-dark[data-v-7f509ee1] {\n    background-color: #1d1d1d;\n}\n.sm\\:text-primary[data-v-7f509ee1] {\n    color: #330b53;\n}\n.sm\\:text-secondary[data-v-7f509ee1] {\n    color: #5a308c;\n}\n.sm\\:text-highlight[data-v-7f509ee1] {\n    color: #e60099;\n}\n.sm\\:text-light[data-v-7f509ee1] {\n    color: #f6f6f6;\n}\n.sm\\:text-dark[data-v-7f509ee1] {\n    color: #1d1d1d;\n}\n.sm\\:font-primary[data-v-7f509ee1] {\n    font-family: \"Roboto\", sans-serif;\n}\n.sm\\:font-secondary[data-v-7f509ee1] {\n    font-family: \"Orbitron\", sans-serif;\n}\n.sm\\:odd\\:bg-primary[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #330b53;\n}\n.sm\\:odd\\:bg-secondary[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #5a308c;\n}\n.sm\\:odd\\:bg-highlight[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #e60099;\n}\n.sm\\:odd\\:bg-light[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #f6f6f6;\n}\n.sm\\:odd\\:bg-dark[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #1d1d1d;\n}\n.sm\\:odd\\:text-primary[data-v-7f509ee1]:nth-child(odd) {\n    color: #330b53;\n}\n.sm\\:odd\\:text-secondary[data-v-7f509ee1]:nth-child(odd) {\n    color: #5a308c;\n}\n.sm\\:odd\\:text-highlight[data-v-7f509ee1]:nth-child(odd) {\n    color: #e60099;\n}\n.sm\\:odd\\:text-light[data-v-7f509ee1]:nth-child(odd) {\n    color: #f6f6f6;\n}\n.sm\\:odd\\:text-dark[data-v-7f509ee1]:nth-child(odd) {\n    color: #1d1d1d;\n}\n.sm\\:odd\\:font-primary[data-v-7f509ee1]:nth-child(odd) {\n    font-family: \"Roboto\", sans-serif;\n}\n.sm\\:odd\\:font-secondary[data-v-7f509ee1]:nth-child(odd) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.sm\\:even\\:bg-primary[data-v-7f509ee1]:nth-child(even) {\n    background-color: #330b53;\n}\n.sm\\:even\\:bg-secondary[data-v-7f509ee1]:nth-child(even) {\n    background-color: #5a308c;\n}\n.sm\\:even\\:bg-highlight[data-v-7f509ee1]:nth-child(even) {\n    background-color: #e60099;\n}\n.sm\\:even\\:bg-light[data-v-7f509ee1]:nth-child(even) {\n    background-color: #f6f6f6;\n}\n.sm\\:even\\:bg-dark[data-v-7f509ee1]:nth-child(even) {\n    background-color: #1d1d1d;\n}\n.sm\\:even\\:text-primary[data-v-7f509ee1]:nth-child(even) {\n    color: #330b53;\n}\n.sm\\:even\\:text-secondary[data-v-7f509ee1]:nth-child(even) {\n    color: #5a308c;\n}\n.sm\\:even\\:text-highlight[data-v-7f509ee1]:nth-child(even) {\n    color: #e60099;\n}\n.sm\\:even\\:text-light[data-v-7f509ee1]:nth-child(even) {\n    color: #f6f6f6;\n}\n.sm\\:even\\:text-dark[data-v-7f509ee1]:nth-child(even) {\n    color: #1d1d1d;\n}\n.sm\\:even\\:font-primary[data-v-7f509ee1]:nth-child(even) {\n    font-family: \"Roboto\", sans-serif;\n}\n.sm\\:even\\:font-secondary[data-v-7f509ee1]:nth-child(even) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.sm\\:hover\\:bg-primary[data-v-7f509ee1]:hover {\n    background-color: #330b53;\n}\n.sm\\:hover\\:bg-secondary[data-v-7f509ee1]:hover {\n    background-color: #5a308c;\n}\n.sm\\:hover\\:bg-highlight[data-v-7f509ee1]:hover {\n    background-color: #e60099;\n}\n.sm\\:hover\\:bg-light[data-v-7f509ee1]:hover {\n    background-color: #f6f6f6;\n}\n.sm\\:hover\\:bg-dark[data-v-7f509ee1]:hover {\n    background-color: #1d1d1d;\n}\n.sm\\:hover\\:text-primary[data-v-7f509ee1]:hover {\n    color: #330b53;\n}\n.sm\\:hover\\:text-secondary[data-v-7f509ee1]:hover {\n    color: #5a308c;\n}\n.sm\\:hover\\:text-highlight[data-v-7f509ee1]:hover {\n    color: #e60099;\n}\n.sm\\:hover\\:text-light[data-v-7f509ee1]:hover {\n    color: #f6f6f6;\n}\n.sm\\:hover\\:text-dark[data-v-7f509ee1]:hover {\n    color: #1d1d1d;\n}\n.sm\\:hover\\:font-primary[data-v-7f509ee1]:hover {\n    font-family: \"Roboto\", sans-serif;\n}\n.sm\\:hover\\:font-secondary[data-v-7f509ee1]:hover {\n    font-family: \"Orbitron\", sans-serif;\n}\n}\n@media (min-width: 768px) {\n.md\\:bg-primary[data-v-7f509ee1] {\n    background-color: #330b53;\n}\n.md\\:bg-secondary[data-v-7f509ee1] {\n    background-color: #5a308c;\n}\n.md\\:bg-highlight[data-v-7f509ee1] {\n    background-color: #e60099;\n}\n.md\\:bg-light[data-v-7f509ee1] {\n    background-color: #f6f6f6;\n}\n.md\\:bg-dark[data-v-7f509ee1] {\n    background-color: #1d1d1d;\n}\n.md\\:text-primary[data-v-7f509ee1] {\n    color: #330b53;\n}\n.md\\:text-secondary[data-v-7f509ee1] {\n    color: #5a308c;\n}\n.md\\:text-highlight[data-v-7f509ee1] {\n    color: #e60099;\n}\n.md\\:text-light[data-v-7f509ee1] {\n    color: #f6f6f6;\n}\n.md\\:text-dark[data-v-7f509ee1] {\n    color: #1d1d1d;\n}\n.md\\:font-primary[data-v-7f509ee1] {\n    font-family: \"Roboto\", sans-serif;\n}\n.md\\:font-secondary[data-v-7f509ee1] {\n    font-family: \"Orbitron\", sans-serif;\n}\n.md\\:odd\\:bg-primary[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #330b53;\n}\n.md\\:odd\\:bg-secondary[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #5a308c;\n}\n.md\\:odd\\:bg-highlight[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #e60099;\n}\n.md\\:odd\\:bg-light[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #f6f6f6;\n}\n.md\\:odd\\:bg-dark[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #1d1d1d;\n}\n.md\\:odd\\:text-primary[data-v-7f509ee1]:nth-child(odd) {\n    color: #330b53;\n}\n.md\\:odd\\:text-secondary[data-v-7f509ee1]:nth-child(odd) {\n    color: #5a308c;\n}\n.md\\:odd\\:text-highlight[data-v-7f509ee1]:nth-child(odd) {\n    color: #e60099;\n}\n.md\\:odd\\:text-light[data-v-7f509ee1]:nth-child(odd) {\n    color: #f6f6f6;\n}\n.md\\:odd\\:text-dark[data-v-7f509ee1]:nth-child(odd) {\n    color: #1d1d1d;\n}\n.md\\:odd\\:font-primary[data-v-7f509ee1]:nth-child(odd) {\n    font-family: \"Roboto\", sans-serif;\n}\n.md\\:odd\\:font-secondary[data-v-7f509ee1]:nth-child(odd) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.md\\:even\\:bg-primary[data-v-7f509ee1]:nth-child(even) {\n    background-color: #330b53;\n}\n.md\\:even\\:bg-secondary[data-v-7f509ee1]:nth-child(even) {\n    background-color: #5a308c;\n}\n.md\\:even\\:bg-highlight[data-v-7f509ee1]:nth-child(even) {\n    background-color: #e60099;\n}\n.md\\:even\\:bg-light[data-v-7f509ee1]:nth-child(even) {\n    background-color: #f6f6f6;\n}\n.md\\:even\\:bg-dark[data-v-7f509ee1]:nth-child(even) {\n    background-color: #1d1d1d;\n}\n.md\\:even\\:text-primary[data-v-7f509ee1]:nth-child(even) {\n    color: #330b53;\n}\n.md\\:even\\:text-secondary[data-v-7f509ee1]:nth-child(even) {\n    color: #5a308c;\n}\n.md\\:even\\:text-highlight[data-v-7f509ee1]:nth-child(even) {\n    color: #e60099;\n}\n.md\\:even\\:text-light[data-v-7f509ee1]:nth-child(even) {\n    color: #f6f6f6;\n}\n.md\\:even\\:text-dark[data-v-7f509ee1]:nth-child(even) {\n    color: #1d1d1d;\n}\n.md\\:even\\:font-primary[data-v-7f509ee1]:nth-child(even) {\n    font-family: \"Roboto\", sans-serif;\n}\n.md\\:even\\:font-secondary[data-v-7f509ee1]:nth-child(even) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.md\\:hover\\:bg-primary[data-v-7f509ee1]:hover {\n    background-color: #330b53;\n}\n.md\\:hover\\:bg-secondary[data-v-7f509ee1]:hover {\n    background-color: #5a308c;\n}\n.md\\:hover\\:bg-highlight[data-v-7f509ee1]:hover {\n    background-color: #e60099;\n}\n.md\\:hover\\:bg-light[data-v-7f509ee1]:hover {\n    background-color: #f6f6f6;\n}\n.md\\:hover\\:bg-dark[data-v-7f509ee1]:hover {\n    background-color: #1d1d1d;\n}\n.md\\:hover\\:text-primary[data-v-7f509ee1]:hover {\n    color: #330b53;\n}\n.md\\:hover\\:text-secondary[data-v-7f509ee1]:hover {\n    color: #5a308c;\n}\n.md\\:hover\\:text-highlight[data-v-7f509ee1]:hover {\n    color: #e60099;\n}\n.md\\:hover\\:text-light[data-v-7f509ee1]:hover {\n    color: #f6f6f6;\n}\n.md\\:hover\\:text-dark[data-v-7f509ee1]:hover {\n    color: #1d1d1d;\n}\n.md\\:hover\\:font-primary[data-v-7f509ee1]:hover {\n    font-family: \"Roboto\", sans-serif;\n}\n.md\\:hover\\:font-secondary[data-v-7f509ee1]:hover {\n    font-family: \"Orbitron\", sans-serif;\n}\n}\n@media (min-width: 1024px) {\n.lg\\:bg-primary[data-v-7f509ee1] {\n    background-color: #330b53;\n}\n.lg\\:bg-secondary[data-v-7f509ee1] {\n    background-color: #5a308c;\n}\n.lg\\:bg-highlight[data-v-7f509ee1] {\n    background-color: #e60099;\n}\n.lg\\:bg-light[data-v-7f509ee1] {\n    background-color: #f6f6f6;\n}\n.lg\\:bg-dark[data-v-7f509ee1] {\n    background-color: #1d1d1d;\n}\n.lg\\:text-primary[data-v-7f509ee1] {\n    color: #330b53;\n}\n.lg\\:text-secondary[data-v-7f509ee1] {\n    color: #5a308c;\n}\n.lg\\:text-highlight[data-v-7f509ee1] {\n    color: #e60099;\n}\n.lg\\:text-light[data-v-7f509ee1] {\n    color: #f6f6f6;\n}\n.lg\\:text-dark[data-v-7f509ee1] {\n    color: #1d1d1d;\n}\n.lg\\:font-primary[data-v-7f509ee1] {\n    font-family: \"Roboto\", sans-serif;\n}\n.lg\\:font-secondary[data-v-7f509ee1] {\n    font-family: \"Orbitron\", sans-serif;\n}\n.lg\\:odd\\:bg-primary[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #330b53;\n}\n.lg\\:odd\\:bg-secondary[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #5a308c;\n}\n.lg\\:odd\\:bg-highlight[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #e60099;\n}\n.lg\\:odd\\:bg-light[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #f6f6f6;\n}\n.lg\\:odd\\:bg-dark[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #1d1d1d;\n}\n.lg\\:odd\\:text-primary[data-v-7f509ee1]:nth-child(odd) {\n    color: #330b53;\n}\n.lg\\:odd\\:text-secondary[data-v-7f509ee1]:nth-child(odd) {\n    color: #5a308c;\n}\n.lg\\:odd\\:text-highlight[data-v-7f509ee1]:nth-child(odd) {\n    color: #e60099;\n}\n.lg\\:odd\\:text-light[data-v-7f509ee1]:nth-child(odd) {\n    color: #f6f6f6;\n}\n.lg\\:odd\\:text-dark[data-v-7f509ee1]:nth-child(odd) {\n    color: #1d1d1d;\n}\n.lg\\:odd\\:font-primary[data-v-7f509ee1]:nth-child(odd) {\n    font-family: \"Roboto\", sans-serif;\n}\n.lg\\:odd\\:font-secondary[data-v-7f509ee1]:nth-child(odd) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.lg\\:even\\:bg-primary[data-v-7f509ee1]:nth-child(even) {\n    background-color: #330b53;\n}\n.lg\\:even\\:bg-secondary[data-v-7f509ee1]:nth-child(even) {\n    background-color: #5a308c;\n}\n.lg\\:even\\:bg-highlight[data-v-7f509ee1]:nth-child(even) {\n    background-color: #e60099;\n}\n.lg\\:even\\:bg-light[data-v-7f509ee1]:nth-child(even) {\n    background-color: #f6f6f6;\n}\n.lg\\:even\\:bg-dark[data-v-7f509ee1]:nth-child(even) {\n    background-color: #1d1d1d;\n}\n.lg\\:even\\:text-primary[data-v-7f509ee1]:nth-child(even) {\n    color: #330b53;\n}\n.lg\\:even\\:text-secondary[data-v-7f509ee1]:nth-child(even) {\n    color: #5a308c;\n}\n.lg\\:even\\:text-highlight[data-v-7f509ee1]:nth-child(even) {\n    color: #e60099;\n}\n.lg\\:even\\:text-light[data-v-7f509ee1]:nth-child(even) {\n    color: #f6f6f6;\n}\n.lg\\:even\\:text-dark[data-v-7f509ee1]:nth-child(even) {\n    color: #1d1d1d;\n}\n.lg\\:even\\:font-primary[data-v-7f509ee1]:nth-child(even) {\n    font-family: \"Roboto\", sans-serif;\n}\n.lg\\:even\\:font-secondary[data-v-7f509ee1]:nth-child(even) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.lg\\:hover\\:bg-primary[data-v-7f509ee1]:hover {\n    background-color: #330b53;\n}\n.lg\\:hover\\:bg-secondary[data-v-7f509ee1]:hover {\n    background-color: #5a308c;\n}\n.lg\\:hover\\:bg-highlight[data-v-7f509ee1]:hover {\n    background-color: #e60099;\n}\n.lg\\:hover\\:bg-light[data-v-7f509ee1]:hover {\n    background-color: #f6f6f6;\n}\n.lg\\:hover\\:bg-dark[data-v-7f509ee1]:hover {\n    background-color: #1d1d1d;\n}\n.lg\\:hover\\:text-primary[data-v-7f509ee1]:hover {\n    color: #330b53;\n}\n.lg\\:hover\\:text-secondary[data-v-7f509ee1]:hover {\n    color: #5a308c;\n}\n.lg\\:hover\\:text-highlight[data-v-7f509ee1]:hover {\n    color: #e60099;\n}\n.lg\\:hover\\:text-light[data-v-7f509ee1]:hover {\n    color: #f6f6f6;\n}\n.lg\\:hover\\:text-dark[data-v-7f509ee1]:hover {\n    color: #1d1d1d;\n}\n.lg\\:hover\\:font-primary[data-v-7f509ee1]:hover {\n    font-family: \"Roboto\", sans-serif;\n}\n.lg\\:hover\\:font-secondary[data-v-7f509ee1]:hover {\n    font-family: \"Orbitron\", sans-serif;\n}\n}\n@media (min-width: 1280px) {\n.xl\\:bg-primary[data-v-7f509ee1] {\n    background-color: #330b53;\n}\n.xl\\:bg-secondary[data-v-7f509ee1] {\n    background-color: #5a308c;\n}\n.xl\\:bg-highlight[data-v-7f509ee1] {\n    background-color: #e60099;\n}\n.xl\\:bg-light[data-v-7f509ee1] {\n    background-color: #f6f6f6;\n}\n.xl\\:bg-dark[data-v-7f509ee1] {\n    background-color: #1d1d1d;\n}\n.xl\\:text-primary[data-v-7f509ee1] {\n    color: #330b53;\n}\n.xl\\:text-secondary[data-v-7f509ee1] {\n    color: #5a308c;\n}\n.xl\\:text-highlight[data-v-7f509ee1] {\n    color: #e60099;\n}\n.xl\\:text-light[data-v-7f509ee1] {\n    color: #f6f6f6;\n}\n.xl\\:text-dark[data-v-7f509ee1] {\n    color: #1d1d1d;\n}\n.xl\\:font-primary[data-v-7f509ee1] {\n    font-family: \"Roboto\", sans-serif;\n}\n.xl\\:font-secondary[data-v-7f509ee1] {\n    font-family: \"Orbitron\", sans-serif;\n}\n.xl\\:odd\\:bg-primary[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #330b53;\n}\n.xl\\:odd\\:bg-secondary[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #5a308c;\n}\n.xl\\:odd\\:bg-highlight[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #e60099;\n}\n.xl\\:odd\\:bg-light[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #f6f6f6;\n}\n.xl\\:odd\\:bg-dark[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #1d1d1d;\n}\n.xl\\:odd\\:text-primary[data-v-7f509ee1]:nth-child(odd) {\n    color: #330b53;\n}\n.xl\\:odd\\:text-secondary[data-v-7f509ee1]:nth-child(odd) {\n    color: #5a308c;\n}\n.xl\\:odd\\:text-highlight[data-v-7f509ee1]:nth-child(odd) {\n    color: #e60099;\n}\n.xl\\:odd\\:text-light[data-v-7f509ee1]:nth-child(odd) {\n    color: #f6f6f6;\n}\n.xl\\:odd\\:text-dark[data-v-7f509ee1]:nth-child(odd) {\n    color: #1d1d1d;\n}\n.xl\\:odd\\:font-primary[data-v-7f509ee1]:nth-child(odd) {\n    font-family: \"Roboto\", sans-serif;\n}\n.xl\\:odd\\:font-secondary[data-v-7f509ee1]:nth-child(odd) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.xl\\:even\\:bg-primary[data-v-7f509ee1]:nth-child(even) {\n    background-color: #330b53;\n}\n.xl\\:even\\:bg-secondary[data-v-7f509ee1]:nth-child(even) {\n    background-color: #5a308c;\n}\n.xl\\:even\\:bg-highlight[data-v-7f509ee1]:nth-child(even) {\n    background-color: #e60099;\n}\n.xl\\:even\\:bg-light[data-v-7f509ee1]:nth-child(even) {\n    background-color: #f6f6f6;\n}\n.xl\\:even\\:bg-dark[data-v-7f509ee1]:nth-child(even) {\n    background-color: #1d1d1d;\n}\n.xl\\:even\\:text-primary[data-v-7f509ee1]:nth-child(even) {\n    color: #330b53;\n}\n.xl\\:even\\:text-secondary[data-v-7f509ee1]:nth-child(even) {\n    color: #5a308c;\n}\n.xl\\:even\\:text-highlight[data-v-7f509ee1]:nth-child(even) {\n    color: #e60099;\n}\n.xl\\:even\\:text-light[data-v-7f509ee1]:nth-child(even) {\n    color: #f6f6f6;\n}\n.xl\\:even\\:text-dark[data-v-7f509ee1]:nth-child(even) {\n    color: #1d1d1d;\n}\n.xl\\:even\\:font-primary[data-v-7f509ee1]:nth-child(even) {\n    font-family: \"Roboto\", sans-serif;\n}\n.xl\\:even\\:font-secondary[data-v-7f509ee1]:nth-child(even) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.xl\\:hover\\:bg-primary[data-v-7f509ee1]:hover {\n    background-color: #330b53;\n}\n.xl\\:hover\\:bg-secondary[data-v-7f509ee1]:hover {\n    background-color: #5a308c;\n}\n.xl\\:hover\\:bg-highlight[data-v-7f509ee1]:hover {\n    background-color: #e60099;\n}\n.xl\\:hover\\:bg-light[data-v-7f509ee1]:hover {\n    background-color: #f6f6f6;\n}\n.xl\\:hover\\:bg-dark[data-v-7f509ee1]:hover {\n    background-color: #1d1d1d;\n}\n.xl\\:hover\\:text-primary[data-v-7f509ee1]:hover {\n    color: #330b53;\n}\n.xl\\:hover\\:text-secondary[data-v-7f509ee1]:hover {\n    color: #5a308c;\n}\n.xl\\:hover\\:text-highlight[data-v-7f509ee1]:hover {\n    color: #e60099;\n}\n.xl\\:hover\\:text-light[data-v-7f509ee1]:hover {\n    color: #f6f6f6;\n}\n.xl\\:hover\\:text-dark[data-v-7f509ee1]:hover {\n    color: #1d1d1d;\n}\n.xl\\:hover\\:font-primary[data-v-7f509ee1]:hover {\n    font-family: \"Roboto\", sans-serif;\n}\n.xl\\:hover\\:font-secondary[data-v-7f509ee1]:hover {\n    font-family: \"Orbitron\", sans-serif;\n}\n}", ""]);
+exports.push([module.i, ".bg-primary[data-v-7f509ee1] {\n  background-color: #330b53;\n}\n.bg-secondary[data-v-7f509ee1] {\n  background-color: #5a308c;\n}\n.bg-highlight[data-v-7f509ee1] {\n  background-color: #e60099;\n}\n.bg-light[data-v-7f509ee1] {\n  background-color: #f6f6f6;\n}\n.bg-dark[data-v-7f509ee1] {\n  background-color: #1d1d1d;\n}\n.text-primary[data-v-7f509ee1] {\n  color: #330b53;\n}\n.text-secondary[data-v-7f509ee1] {\n  color: #5a308c;\n}\n.text-highlight[data-v-7f509ee1] {\n  color: #e60099;\n}\n.text-light[data-v-7f509ee1] {\n  color: #f6f6f6;\n}\n.text-dark[data-v-7f509ee1] {\n  color: #1d1d1d;\n}\n.font-primary[data-v-7f509ee1] {\n  font-family: \"Roboto\", sans-serif;\n}\n.font-secondary[data-v-7f509ee1] {\n  font-family: \"Orbitron\", sans-serif;\n}\n.odd\\:bg-primary[data-v-7f509ee1]:nth-child(odd) {\n  background-color: #330b53;\n}\n.odd\\:bg-secondary[data-v-7f509ee1]:nth-child(odd) {\n  background-color: #5a308c;\n}\n.odd\\:bg-highlight[data-v-7f509ee1]:nth-child(odd) {\n  background-color: #e60099;\n}\n.odd\\:bg-light[data-v-7f509ee1]:nth-child(odd) {\n  background-color: #f6f6f6;\n}\n.odd\\:bg-dark[data-v-7f509ee1]:nth-child(odd) {\n  background-color: #1d1d1d;\n}\n.odd\\:text-primary[data-v-7f509ee1]:nth-child(odd) {\n  color: #330b53;\n}\n.odd\\:text-secondary[data-v-7f509ee1]:nth-child(odd) {\n  color: #5a308c;\n}\n.odd\\:text-highlight[data-v-7f509ee1]:nth-child(odd) {\n  color: #e60099;\n}\n.odd\\:text-light[data-v-7f509ee1]:nth-child(odd) {\n  color: #f6f6f6;\n}\n.odd\\:text-dark[data-v-7f509ee1]:nth-child(odd) {\n  color: #1d1d1d;\n}\n.odd\\:font-primary[data-v-7f509ee1]:nth-child(odd) {\n  font-family: \"Roboto\", sans-serif;\n}\n.odd\\:font-secondary[data-v-7f509ee1]:nth-child(odd) {\n  font-family: \"Orbitron\", sans-serif;\n}\n.even\\:bg-primary[data-v-7f509ee1]:nth-child(even) {\n  background-color: #330b53;\n}\n.even\\:bg-secondary[data-v-7f509ee1]:nth-child(even) {\n  background-color: #5a308c;\n}\n.even\\:bg-highlight[data-v-7f509ee1]:nth-child(even) {\n  background-color: #e60099;\n}\n.even\\:bg-light[data-v-7f509ee1]:nth-child(even) {\n  background-color: #f6f6f6;\n}\n.even\\:bg-dark[data-v-7f509ee1]:nth-child(even) {\n  background-color: #1d1d1d;\n}\n.even\\:text-primary[data-v-7f509ee1]:nth-child(even) {\n  color: #330b53;\n}\n.even\\:text-secondary[data-v-7f509ee1]:nth-child(even) {\n  color: #5a308c;\n}\n.even\\:text-highlight[data-v-7f509ee1]:nth-child(even) {\n  color: #e60099;\n}\n.even\\:text-light[data-v-7f509ee1]:nth-child(even) {\n  color: #f6f6f6;\n}\n.even\\:text-dark[data-v-7f509ee1]:nth-child(even) {\n  color: #1d1d1d;\n}\n.even\\:font-primary[data-v-7f509ee1]:nth-child(even) {\n  font-family: \"Roboto\", sans-serif;\n}\n.even\\:font-secondary[data-v-7f509ee1]:nth-child(even) {\n  font-family: \"Orbitron\", sans-serif;\n}\n.hover\\:bg-primary[data-v-7f509ee1]:hover {\n  background-color: #330b53;\n}\n.hover\\:bg-secondary[data-v-7f509ee1]:hover {\n  background-color: #5a308c;\n}\n.hover\\:bg-highlight[data-v-7f509ee1]:hover {\n  background-color: #e60099;\n}\n.hover\\:bg-light[data-v-7f509ee1]:hover {\n  background-color: #f6f6f6;\n}\n.hover\\:bg-dark[data-v-7f509ee1]:hover {\n  background-color: #1d1d1d;\n}\n.hover\\:text-primary[data-v-7f509ee1]:hover {\n  color: #330b53;\n}\n.hover\\:text-secondary[data-v-7f509ee1]:hover {\n  color: #5a308c;\n}\n.hover\\:text-highlight[data-v-7f509ee1]:hover {\n  color: #e60099;\n}\n.hover\\:text-light[data-v-7f509ee1]:hover {\n  color: #f6f6f6;\n}\n.hover\\:text-dark[data-v-7f509ee1]:hover {\n  color: #1d1d1d;\n}\n.hover\\:font-primary[data-v-7f509ee1]:hover {\n  font-family: \"Roboto\", sans-serif;\n}\n.hover\\:font-secondary[data-v-7f509ee1]:hover {\n  font-family: \"Orbitron\", sans-serif;\n}\n.animate-logo[data-v-7f509ee1] {\n  -webkit-animation-name: logo-data-v-7f509ee1;\n          animation-name: logo-data-v-7f509ee1;\n  -webkit-animation-duration: 8s;\n          animation-duration: 8s;\n  -webkit-animation-iteration-count: infinite;\n          animation-iteration-count: infinite;\n  -webkit-animation-timing-function: ease-in-out;\n          animation-timing-function: ease-in-out;\n}\n.button[data-v-7f509ee1] {\n  display: inline-block;\n  padding-top: 0.5rem;\n  padding-bottom: 0.5rem;\n  padding-left: 0.75rem;\n  padding-right: 0.75rem;\n  border-radius: 0.25rem;\n  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);\n  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;\n  transition-duration: 100ms;\n}\n.button[data-v-7f509ee1]:hover {\n  background-color: #f6f6f6;\n  color: #1d1d1d;\n}\n@-webkit-keyframes logo-data-v-7f509ee1 {\n0% {\n    transform: scale(0.95);\n}\n50% {\n    transform: scale(1.05);\n}\n100% {\n    transform: scale(0.95);\n}\n}\n@keyframes logo-data-v-7f509ee1 {\n0% {\n    transform: scale(0.95);\n}\n50% {\n    transform: scale(1.05);\n}\n100% {\n    transform: scale(0.95);\n}\n}\n#heroBackground[data-v-7f509ee1] {\n  position: absolute;\n  -o-object-position: center;\n     object-position: center;\n  min-width: 100vw;\n  max-width: none;\n  min-height: 100%;\n  left: 50%;\n  top: 50%;\n  transform: translate(-50%, -50%);\n  z-index: -10;\n}\n.article-header[data-v-7f509ee1] {\n  font-size: 1.25rem;\n  font-weight: 400;\n  font-family: \"Orbitron\", sans-serif;\n}\n.article-body[data-v-7f509ee1] {\n  margin-top: 2rem;\n  font-size: 1rem;\n  font-weight: 400;\n  font-family: \"Roboto\", sans-serif;\n}\n.schedule[data-v-7f509ee1] {\n  margin-top: 2rem;\n}\n.schedule table[data-v-7f509ee1] {\n  width: 100%;\n}\n.schedule table thead[data-v-7f509ee1] {\n  border-bottom-width: 1px;\n  --border-opacity: 1;\n  border-color: #ffffff;\n  border-color: rgba(255, 255, 255, var(--border-opacity));\n}\n.schedule table thead tr[data-v-7f509ee1] {\n  display: flex;\n}\n.schedule table thead tr th[data-v-7f509ee1]:first-child {\n  font-family: \"Roboto\", sans-serif;\n  font-weight: 400;\n  color: #f6f6f6;\n  font-size: 1rem;\n  padding-top: 1rem;\n  padding-bottom: 1rem;\n  margin-left: 0.5rem;\n  width: 25%;\n  text-align: left;\n}\n.schedule table thead tr th[data-v-7f509ee1]:nth-child(2) {\n  font-family: \"Roboto\", sans-serif;\n  font-weight: 400;\n  color: #f6f6f6;\n  font-size: 1rem;\n  padding-top: 1rem;\n  padding-bottom: 1rem;\n  width: 25%;\n  text-align: left;\n}\n.schedule table thead tr th[data-v-7f509ee1]:last-child {\n  font-family: \"Roboto\", sans-serif;\n  font-weight: 400;\n  color: #f6f6f6;\n  font-size: 1rem;\n  padding-top: 1rem;\n  padding-bottom: 1rem;\n  width: 50%;\n  flex: 1 1 0%;\n  text-align: left;\n}\n.schedule table tbody tr[data-v-7f509ee1] {\n  transition: background 0.2s ease-in;\n  display: flex;\n}\n.schedule table tbody tr[data-v-7f509ee1]:nth-child(even) {\n  background-color: #5a308c;\n}\n.schedule table tbody tr[data-v-7f509ee1]:first-child {\n  margin-top: 0;\n}\n.schedule table tbody tr[data-v-7f509ee1]:hover {\n  transition: background 0.2s ease-in;\n  background: #e60099;\n}\n.schedule table tbody tr td[data-v-7f509ee1]:first-child {\n  font-family: \"Roboto\", sans-serif;\n  font-weight: 300;\n  color: #f6f6f6;\n  font-size: 1rem;\n  padding-top: 1rem;\n  padding-bottom: 1rem;\n  margin-left: 0.5rem;\n  width: 25%;\n  text-align: left;\n}\n.schedule table tbody tr td[data-v-7f509ee1]:nth-child(2) {\n  font-family: \"Roboto\", sans-serif;\n  font-weight: 300;\n  color: #f6f6f6;\n  font-size: 1rem;\n  padding-top: 1rem;\n  padding-bottom: 1rem;\n  width: 25%;\n  text-align: left;\n}\n.schedule table tbody tr td[data-v-7f509ee1]:last-child {\n  font-family: \"Roboto\", sans-serif;\n  font-weight: 300;\n  color: #f6f6f6;\n  font-size: 1rem;\n  padding-top: 1rem;\n  padding-bottom: 1rem;\n  flex: 1 1 0%;\n  width: 50%;\n  text-align: left;\n  margin-right: 0.5rem;\n}\n.sponsor[data-v-7f509ee1] {\n  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);\n  display: flex;\n  flex-direction: column;\n  --bg-opacity: 1;\n  background-color: #ffffff;\n  background-color: rgba(255, 255, 255, var(--bg-opacity));\n  transform-origin: center;\n  --transform-scale-x: 1;\n  --transform-scale-y: 1;\n  --transform-translate-x: 0;\n  --transform-translate-y: 0;\n  --transform-rotate: 0;\n  --transform-skew-x: 0;\n  --transform-skew-y: 0;\n  --transform-scale-x: 1;\n  --transform-scale-y: 1;\n  transform: translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));\n  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;\n  transition-duration: 200ms;\n  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);\n}\n.sponsor[data-v-7f509ee1]:hover {\n  --transform-scale-x: 1.05;\n  --transform-scale-y: 1.05;\n}\n.sponsor .sponsor-img[data-v-7f509ee1] {\n  height: 8rem;\n  padding: 1rem;\n  display: flex;\n  justify-content: center;\n}\n.sponsor .sponsor-img img[data-v-7f509ee1] {\n  -o-object-fit: contain;\n     object-fit: contain;\n}\n.sponsor .sponsor-tag[data-v-7f509ee1] {\n  padding: 0.5rem;\n  flex: 1 1 0%;\n  display: flex;\n  background-color: #330b53;\n}\n.sponsor .sponsor-tag .sponsor-tag-text[data-v-7f509ee1] {\n  font-family: \"Roboto\", sans-serif;\n  font-weight: 300;\n  font-size: 1rem;\n  color: #f6f6f6;\n  text-align: center;\n  justify-content: center;\n  align-items: center;\n  flex: 1 1 0%;\n}\n@media (min-width: 768px) {\n.schedule table thead tr th[data-v-7f509ee1]:first-child {\n    width: 16.666667%;\n    margin-left: 1rem;\n}\n.schedule table thead tr th[data-v-7f509ee1]:nth-child(2) {\n    width: 16.666667%;\n}\n.schedule table thead tr th[data-v-7f509ee1]:last-child {\n    width: 66.666667%;\n    margin-right: 1rem;\n}\n.schedule table tbody tr td[data-v-7f509ee1]:first-child {\n    width: 16.666667%;\n    margin-left: 1rem;\n}\n.schedule table tbody tr td[data-v-7f509ee1]:nth-child(2) {\n    width: 16.666667%;\n}\n.schedule table tbody tr td[data-v-7f509ee1]:last-child {\n    width: 66.666667%;\n    margin-right: 1rem;\n}\n}\n@media (min-width: 640px) {\n.sm\\:bg-primary[data-v-7f509ee1] {\n    background-color: #330b53;\n}\n.sm\\:bg-secondary[data-v-7f509ee1] {\n    background-color: #5a308c;\n}\n.sm\\:bg-highlight[data-v-7f509ee1] {\n    background-color: #e60099;\n}\n.sm\\:bg-light[data-v-7f509ee1] {\n    background-color: #f6f6f6;\n}\n.sm\\:bg-dark[data-v-7f509ee1] {\n    background-color: #1d1d1d;\n}\n.sm\\:text-primary[data-v-7f509ee1] {\n    color: #330b53;\n}\n.sm\\:text-secondary[data-v-7f509ee1] {\n    color: #5a308c;\n}\n.sm\\:text-highlight[data-v-7f509ee1] {\n    color: #e60099;\n}\n.sm\\:text-light[data-v-7f509ee1] {\n    color: #f6f6f6;\n}\n.sm\\:text-dark[data-v-7f509ee1] {\n    color: #1d1d1d;\n}\n.sm\\:font-primary[data-v-7f509ee1] {\n    font-family: \"Roboto\", sans-serif;\n}\n.sm\\:font-secondary[data-v-7f509ee1] {\n    font-family: \"Orbitron\", sans-serif;\n}\n.sm\\:odd\\:bg-primary[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #330b53;\n}\n.sm\\:odd\\:bg-secondary[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #5a308c;\n}\n.sm\\:odd\\:bg-highlight[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #e60099;\n}\n.sm\\:odd\\:bg-light[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #f6f6f6;\n}\n.sm\\:odd\\:bg-dark[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #1d1d1d;\n}\n.sm\\:odd\\:text-primary[data-v-7f509ee1]:nth-child(odd) {\n    color: #330b53;\n}\n.sm\\:odd\\:text-secondary[data-v-7f509ee1]:nth-child(odd) {\n    color: #5a308c;\n}\n.sm\\:odd\\:text-highlight[data-v-7f509ee1]:nth-child(odd) {\n    color: #e60099;\n}\n.sm\\:odd\\:text-light[data-v-7f509ee1]:nth-child(odd) {\n    color: #f6f6f6;\n}\n.sm\\:odd\\:text-dark[data-v-7f509ee1]:nth-child(odd) {\n    color: #1d1d1d;\n}\n.sm\\:odd\\:font-primary[data-v-7f509ee1]:nth-child(odd) {\n    font-family: \"Roboto\", sans-serif;\n}\n.sm\\:odd\\:font-secondary[data-v-7f509ee1]:nth-child(odd) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.sm\\:even\\:bg-primary[data-v-7f509ee1]:nth-child(even) {\n    background-color: #330b53;\n}\n.sm\\:even\\:bg-secondary[data-v-7f509ee1]:nth-child(even) {\n    background-color: #5a308c;\n}\n.sm\\:even\\:bg-highlight[data-v-7f509ee1]:nth-child(even) {\n    background-color: #e60099;\n}\n.sm\\:even\\:bg-light[data-v-7f509ee1]:nth-child(even) {\n    background-color: #f6f6f6;\n}\n.sm\\:even\\:bg-dark[data-v-7f509ee1]:nth-child(even) {\n    background-color: #1d1d1d;\n}\n.sm\\:even\\:text-primary[data-v-7f509ee1]:nth-child(even) {\n    color: #330b53;\n}\n.sm\\:even\\:text-secondary[data-v-7f509ee1]:nth-child(even) {\n    color: #5a308c;\n}\n.sm\\:even\\:text-highlight[data-v-7f509ee1]:nth-child(even) {\n    color: #e60099;\n}\n.sm\\:even\\:text-light[data-v-7f509ee1]:nth-child(even) {\n    color: #f6f6f6;\n}\n.sm\\:even\\:text-dark[data-v-7f509ee1]:nth-child(even) {\n    color: #1d1d1d;\n}\n.sm\\:even\\:font-primary[data-v-7f509ee1]:nth-child(even) {\n    font-family: \"Roboto\", sans-serif;\n}\n.sm\\:even\\:font-secondary[data-v-7f509ee1]:nth-child(even) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.sm\\:hover\\:bg-primary[data-v-7f509ee1]:hover {\n    background-color: #330b53;\n}\n.sm\\:hover\\:bg-secondary[data-v-7f509ee1]:hover {\n    background-color: #5a308c;\n}\n.sm\\:hover\\:bg-highlight[data-v-7f509ee1]:hover {\n    background-color: #e60099;\n}\n.sm\\:hover\\:bg-light[data-v-7f509ee1]:hover {\n    background-color: #f6f6f6;\n}\n.sm\\:hover\\:bg-dark[data-v-7f509ee1]:hover {\n    background-color: #1d1d1d;\n}\n.sm\\:hover\\:text-primary[data-v-7f509ee1]:hover {\n    color: #330b53;\n}\n.sm\\:hover\\:text-secondary[data-v-7f509ee1]:hover {\n    color: #5a308c;\n}\n.sm\\:hover\\:text-highlight[data-v-7f509ee1]:hover {\n    color: #e60099;\n}\n.sm\\:hover\\:text-light[data-v-7f509ee1]:hover {\n    color: #f6f6f6;\n}\n.sm\\:hover\\:text-dark[data-v-7f509ee1]:hover {\n    color: #1d1d1d;\n}\n.sm\\:hover\\:font-primary[data-v-7f509ee1]:hover {\n    font-family: \"Roboto\", sans-serif;\n}\n.sm\\:hover\\:font-secondary[data-v-7f509ee1]:hover {\n    font-family: \"Orbitron\", sans-serif;\n}\n}\n@media (min-width: 768px) {\n.md\\:bg-primary[data-v-7f509ee1] {\n    background-color: #330b53;\n}\n.md\\:bg-secondary[data-v-7f509ee1] {\n    background-color: #5a308c;\n}\n.md\\:bg-highlight[data-v-7f509ee1] {\n    background-color: #e60099;\n}\n.md\\:bg-light[data-v-7f509ee1] {\n    background-color: #f6f6f6;\n}\n.md\\:bg-dark[data-v-7f509ee1] {\n    background-color: #1d1d1d;\n}\n.md\\:text-primary[data-v-7f509ee1] {\n    color: #330b53;\n}\n.md\\:text-secondary[data-v-7f509ee1] {\n    color: #5a308c;\n}\n.md\\:text-highlight[data-v-7f509ee1] {\n    color: #e60099;\n}\n.md\\:text-light[data-v-7f509ee1] {\n    color: #f6f6f6;\n}\n.md\\:text-dark[data-v-7f509ee1] {\n    color: #1d1d1d;\n}\n.md\\:font-primary[data-v-7f509ee1] {\n    font-family: \"Roboto\", sans-serif;\n}\n.md\\:font-secondary[data-v-7f509ee1] {\n    font-family: \"Orbitron\", sans-serif;\n}\n.md\\:odd\\:bg-primary[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #330b53;\n}\n.md\\:odd\\:bg-secondary[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #5a308c;\n}\n.md\\:odd\\:bg-highlight[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #e60099;\n}\n.md\\:odd\\:bg-light[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #f6f6f6;\n}\n.md\\:odd\\:bg-dark[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #1d1d1d;\n}\n.md\\:odd\\:text-primary[data-v-7f509ee1]:nth-child(odd) {\n    color: #330b53;\n}\n.md\\:odd\\:text-secondary[data-v-7f509ee1]:nth-child(odd) {\n    color: #5a308c;\n}\n.md\\:odd\\:text-highlight[data-v-7f509ee1]:nth-child(odd) {\n    color: #e60099;\n}\n.md\\:odd\\:text-light[data-v-7f509ee1]:nth-child(odd) {\n    color: #f6f6f6;\n}\n.md\\:odd\\:text-dark[data-v-7f509ee1]:nth-child(odd) {\n    color: #1d1d1d;\n}\n.md\\:odd\\:font-primary[data-v-7f509ee1]:nth-child(odd) {\n    font-family: \"Roboto\", sans-serif;\n}\n.md\\:odd\\:font-secondary[data-v-7f509ee1]:nth-child(odd) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.md\\:even\\:bg-primary[data-v-7f509ee1]:nth-child(even) {\n    background-color: #330b53;\n}\n.md\\:even\\:bg-secondary[data-v-7f509ee1]:nth-child(even) {\n    background-color: #5a308c;\n}\n.md\\:even\\:bg-highlight[data-v-7f509ee1]:nth-child(even) {\n    background-color: #e60099;\n}\n.md\\:even\\:bg-light[data-v-7f509ee1]:nth-child(even) {\n    background-color: #f6f6f6;\n}\n.md\\:even\\:bg-dark[data-v-7f509ee1]:nth-child(even) {\n    background-color: #1d1d1d;\n}\n.md\\:even\\:text-primary[data-v-7f509ee1]:nth-child(even) {\n    color: #330b53;\n}\n.md\\:even\\:text-secondary[data-v-7f509ee1]:nth-child(even) {\n    color: #5a308c;\n}\n.md\\:even\\:text-highlight[data-v-7f509ee1]:nth-child(even) {\n    color: #e60099;\n}\n.md\\:even\\:text-light[data-v-7f509ee1]:nth-child(even) {\n    color: #f6f6f6;\n}\n.md\\:even\\:text-dark[data-v-7f509ee1]:nth-child(even) {\n    color: #1d1d1d;\n}\n.md\\:even\\:font-primary[data-v-7f509ee1]:nth-child(even) {\n    font-family: \"Roboto\", sans-serif;\n}\n.md\\:even\\:font-secondary[data-v-7f509ee1]:nth-child(even) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.md\\:hover\\:bg-primary[data-v-7f509ee1]:hover {\n    background-color: #330b53;\n}\n.md\\:hover\\:bg-secondary[data-v-7f509ee1]:hover {\n    background-color: #5a308c;\n}\n.md\\:hover\\:bg-highlight[data-v-7f509ee1]:hover {\n    background-color: #e60099;\n}\n.md\\:hover\\:bg-light[data-v-7f509ee1]:hover {\n    background-color: #f6f6f6;\n}\n.md\\:hover\\:bg-dark[data-v-7f509ee1]:hover {\n    background-color: #1d1d1d;\n}\n.md\\:hover\\:text-primary[data-v-7f509ee1]:hover {\n    color: #330b53;\n}\n.md\\:hover\\:text-secondary[data-v-7f509ee1]:hover {\n    color: #5a308c;\n}\n.md\\:hover\\:text-highlight[data-v-7f509ee1]:hover {\n    color: #e60099;\n}\n.md\\:hover\\:text-light[data-v-7f509ee1]:hover {\n    color: #f6f6f6;\n}\n.md\\:hover\\:text-dark[data-v-7f509ee1]:hover {\n    color: #1d1d1d;\n}\n.md\\:hover\\:font-primary[data-v-7f509ee1]:hover {\n    font-family: \"Roboto\", sans-serif;\n}\n.md\\:hover\\:font-secondary[data-v-7f509ee1]:hover {\n    font-family: \"Orbitron\", sans-serif;\n}\n}\n@media (min-width: 1024px) {\n.lg\\:bg-primary[data-v-7f509ee1] {\n    background-color: #330b53;\n}\n.lg\\:bg-secondary[data-v-7f509ee1] {\n    background-color: #5a308c;\n}\n.lg\\:bg-highlight[data-v-7f509ee1] {\n    background-color: #e60099;\n}\n.lg\\:bg-light[data-v-7f509ee1] {\n    background-color: #f6f6f6;\n}\n.lg\\:bg-dark[data-v-7f509ee1] {\n    background-color: #1d1d1d;\n}\n.lg\\:text-primary[data-v-7f509ee1] {\n    color: #330b53;\n}\n.lg\\:text-secondary[data-v-7f509ee1] {\n    color: #5a308c;\n}\n.lg\\:text-highlight[data-v-7f509ee1] {\n    color: #e60099;\n}\n.lg\\:text-light[data-v-7f509ee1] {\n    color: #f6f6f6;\n}\n.lg\\:text-dark[data-v-7f509ee1] {\n    color: #1d1d1d;\n}\n.lg\\:font-primary[data-v-7f509ee1] {\n    font-family: \"Roboto\", sans-serif;\n}\n.lg\\:font-secondary[data-v-7f509ee1] {\n    font-family: \"Orbitron\", sans-serif;\n}\n.lg\\:odd\\:bg-primary[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #330b53;\n}\n.lg\\:odd\\:bg-secondary[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #5a308c;\n}\n.lg\\:odd\\:bg-highlight[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #e60099;\n}\n.lg\\:odd\\:bg-light[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #f6f6f6;\n}\n.lg\\:odd\\:bg-dark[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #1d1d1d;\n}\n.lg\\:odd\\:text-primary[data-v-7f509ee1]:nth-child(odd) {\n    color: #330b53;\n}\n.lg\\:odd\\:text-secondary[data-v-7f509ee1]:nth-child(odd) {\n    color: #5a308c;\n}\n.lg\\:odd\\:text-highlight[data-v-7f509ee1]:nth-child(odd) {\n    color: #e60099;\n}\n.lg\\:odd\\:text-light[data-v-7f509ee1]:nth-child(odd) {\n    color: #f6f6f6;\n}\n.lg\\:odd\\:text-dark[data-v-7f509ee1]:nth-child(odd) {\n    color: #1d1d1d;\n}\n.lg\\:odd\\:font-primary[data-v-7f509ee1]:nth-child(odd) {\n    font-family: \"Roboto\", sans-serif;\n}\n.lg\\:odd\\:font-secondary[data-v-7f509ee1]:nth-child(odd) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.lg\\:even\\:bg-primary[data-v-7f509ee1]:nth-child(even) {\n    background-color: #330b53;\n}\n.lg\\:even\\:bg-secondary[data-v-7f509ee1]:nth-child(even) {\n    background-color: #5a308c;\n}\n.lg\\:even\\:bg-highlight[data-v-7f509ee1]:nth-child(even) {\n    background-color: #e60099;\n}\n.lg\\:even\\:bg-light[data-v-7f509ee1]:nth-child(even) {\n    background-color: #f6f6f6;\n}\n.lg\\:even\\:bg-dark[data-v-7f509ee1]:nth-child(even) {\n    background-color: #1d1d1d;\n}\n.lg\\:even\\:text-primary[data-v-7f509ee1]:nth-child(even) {\n    color: #330b53;\n}\n.lg\\:even\\:text-secondary[data-v-7f509ee1]:nth-child(even) {\n    color: #5a308c;\n}\n.lg\\:even\\:text-highlight[data-v-7f509ee1]:nth-child(even) {\n    color: #e60099;\n}\n.lg\\:even\\:text-light[data-v-7f509ee1]:nth-child(even) {\n    color: #f6f6f6;\n}\n.lg\\:even\\:text-dark[data-v-7f509ee1]:nth-child(even) {\n    color: #1d1d1d;\n}\n.lg\\:even\\:font-primary[data-v-7f509ee1]:nth-child(even) {\n    font-family: \"Roboto\", sans-serif;\n}\n.lg\\:even\\:font-secondary[data-v-7f509ee1]:nth-child(even) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.lg\\:hover\\:bg-primary[data-v-7f509ee1]:hover {\n    background-color: #330b53;\n}\n.lg\\:hover\\:bg-secondary[data-v-7f509ee1]:hover {\n    background-color: #5a308c;\n}\n.lg\\:hover\\:bg-highlight[data-v-7f509ee1]:hover {\n    background-color: #e60099;\n}\n.lg\\:hover\\:bg-light[data-v-7f509ee1]:hover {\n    background-color: #f6f6f6;\n}\n.lg\\:hover\\:bg-dark[data-v-7f509ee1]:hover {\n    background-color: #1d1d1d;\n}\n.lg\\:hover\\:text-primary[data-v-7f509ee1]:hover {\n    color: #330b53;\n}\n.lg\\:hover\\:text-secondary[data-v-7f509ee1]:hover {\n    color: #5a308c;\n}\n.lg\\:hover\\:text-highlight[data-v-7f509ee1]:hover {\n    color: #e60099;\n}\n.lg\\:hover\\:text-light[data-v-7f509ee1]:hover {\n    color: #f6f6f6;\n}\n.lg\\:hover\\:text-dark[data-v-7f509ee1]:hover {\n    color: #1d1d1d;\n}\n.lg\\:hover\\:font-primary[data-v-7f509ee1]:hover {\n    font-family: \"Roboto\", sans-serif;\n}\n.lg\\:hover\\:font-secondary[data-v-7f509ee1]:hover {\n    font-family: \"Orbitron\", sans-serif;\n}\n}\n@media (min-width: 1280px) {\n.xl\\:bg-primary[data-v-7f509ee1] {\n    background-color: #330b53;\n}\n.xl\\:bg-secondary[data-v-7f509ee1] {\n    background-color: #5a308c;\n}\n.xl\\:bg-highlight[data-v-7f509ee1] {\n    background-color: #e60099;\n}\n.xl\\:bg-light[data-v-7f509ee1] {\n    background-color: #f6f6f6;\n}\n.xl\\:bg-dark[data-v-7f509ee1] {\n    background-color: #1d1d1d;\n}\n.xl\\:text-primary[data-v-7f509ee1] {\n    color: #330b53;\n}\n.xl\\:text-secondary[data-v-7f509ee1] {\n    color: #5a308c;\n}\n.xl\\:text-highlight[data-v-7f509ee1] {\n    color: #e60099;\n}\n.xl\\:text-light[data-v-7f509ee1] {\n    color: #f6f6f6;\n}\n.xl\\:text-dark[data-v-7f509ee1] {\n    color: #1d1d1d;\n}\n.xl\\:font-primary[data-v-7f509ee1] {\n    font-family: \"Roboto\", sans-serif;\n}\n.xl\\:font-secondary[data-v-7f509ee1] {\n    font-family: \"Orbitron\", sans-serif;\n}\n.xl\\:odd\\:bg-primary[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #330b53;\n}\n.xl\\:odd\\:bg-secondary[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #5a308c;\n}\n.xl\\:odd\\:bg-highlight[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #e60099;\n}\n.xl\\:odd\\:bg-light[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #f6f6f6;\n}\n.xl\\:odd\\:bg-dark[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #1d1d1d;\n}\n.xl\\:odd\\:text-primary[data-v-7f509ee1]:nth-child(odd) {\n    color: #330b53;\n}\n.xl\\:odd\\:text-secondary[data-v-7f509ee1]:nth-child(odd) {\n    color: #5a308c;\n}\n.xl\\:odd\\:text-highlight[data-v-7f509ee1]:nth-child(odd) {\n    color: #e60099;\n}\n.xl\\:odd\\:text-light[data-v-7f509ee1]:nth-child(odd) {\n    color: #f6f6f6;\n}\n.xl\\:odd\\:text-dark[data-v-7f509ee1]:nth-child(odd) {\n    color: #1d1d1d;\n}\n.xl\\:odd\\:font-primary[data-v-7f509ee1]:nth-child(odd) {\n    font-family: \"Roboto\", sans-serif;\n}\n.xl\\:odd\\:font-secondary[data-v-7f509ee1]:nth-child(odd) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.xl\\:even\\:bg-primary[data-v-7f509ee1]:nth-child(even) {\n    background-color: #330b53;\n}\n.xl\\:even\\:bg-secondary[data-v-7f509ee1]:nth-child(even) {\n    background-color: #5a308c;\n}\n.xl\\:even\\:bg-highlight[data-v-7f509ee1]:nth-child(even) {\n    background-color: #e60099;\n}\n.xl\\:even\\:bg-light[data-v-7f509ee1]:nth-child(even) {\n    background-color: #f6f6f6;\n}\n.xl\\:even\\:bg-dark[data-v-7f509ee1]:nth-child(even) {\n    background-color: #1d1d1d;\n}\n.xl\\:even\\:text-primary[data-v-7f509ee1]:nth-child(even) {\n    color: #330b53;\n}\n.xl\\:even\\:text-secondary[data-v-7f509ee1]:nth-child(even) {\n    color: #5a308c;\n}\n.xl\\:even\\:text-highlight[data-v-7f509ee1]:nth-child(even) {\n    color: #e60099;\n}\n.xl\\:even\\:text-light[data-v-7f509ee1]:nth-child(even) {\n    color: #f6f6f6;\n}\n.xl\\:even\\:text-dark[data-v-7f509ee1]:nth-child(even) {\n    color: #1d1d1d;\n}\n.xl\\:even\\:font-primary[data-v-7f509ee1]:nth-child(even) {\n    font-family: \"Roboto\", sans-serif;\n}\n.xl\\:even\\:font-secondary[data-v-7f509ee1]:nth-child(even) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.xl\\:hover\\:bg-primary[data-v-7f509ee1]:hover {\n    background-color: #330b53;\n}\n.xl\\:hover\\:bg-secondary[data-v-7f509ee1]:hover {\n    background-color: #5a308c;\n}\n.xl\\:hover\\:bg-highlight[data-v-7f509ee1]:hover {\n    background-color: #e60099;\n}\n.xl\\:hover\\:bg-light[data-v-7f509ee1]:hover {\n    background-color: #f6f6f6;\n}\n.xl\\:hover\\:bg-dark[data-v-7f509ee1]:hover {\n    background-color: #1d1d1d;\n}\n.xl\\:hover\\:text-primary[data-v-7f509ee1]:hover {\n    color: #330b53;\n}\n.xl\\:hover\\:text-secondary[data-v-7f509ee1]:hover {\n    color: #5a308c;\n}\n.xl\\:hover\\:text-highlight[data-v-7f509ee1]:hover {\n    color: #e60099;\n}\n.xl\\:hover\\:text-light[data-v-7f509ee1]:hover {\n    color: #f6f6f6;\n}\n.xl\\:hover\\:text-dark[data-v-7f509ee1]:hover {\n    color: #1d1d1d;\n}\n.xl\\:hover\\:font-primary[data-v-7f509ee1]:hover {\n    font-family: \"Roboto\", sans-serif;\n}\n.xl\\:hover\\:font-secondary[data-v-7f509ee1]:hover {\n    font-family: \"Orbitron\", sans-serif;\n}\n}", ""]);
 
 // exports
 
@@ -26710,6 +27571,36 @@ extend(win, ssrWindow);
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Components/Landing/DirectorSlider.vue?vue&type=style&index=0&id=6c6e8030&lang=scss&scoped=true&":
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Components/Landing/DirectorSlider.vue?vue&type=style&index=0&id=6c6e8030&lang=scss&scoped=true& ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../node_modules/vue-loader/lib??vue-loader-options!./DirectorSlider.vue?vue&type=style&index=0&id=6c6e8030&lang=scss&scoped=true& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Components/Landing/DirectorSlider.vue?vue&type=style&index=0&id=6c6e8030&lang=scss&scoped=true&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Components/Landing/Navigation.vue?vue&type=style&index=0&id=de3be692&lang=scss&scoped=true&":
 /*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Components/Landing/Navigation.vue?vue&type=style&index=0&id=de3be692&lang=scss&scoped=true& ***!
@@ -26770,6 +27661,36 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Components/Landing/QuestionAnswer.vue?vue&type=style&index=0&id=092c5067&lang=scss&scoped=true&":
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Components/Landing/QuestionAnswer.vue?vue&type=style&index=0&id=092c5067&lang=scss&scoped=true& ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../node_modules/vue-loader/lib??vue-loader-options!./QuestionAnswer.vue?vue&type=style&index=0&id=092c5067&lang=scss&scoped=true& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Components/Landing/QuestionAnswer.vue?vue&type=style&index=0&id=092c5067&lang=scss&scoped=true&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Components/Landing/ResponsiveGrid.vue?vue&type=style&index=0&id=00b93d3d&lang=scss&scoped=true&":
 /*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Components/Landing/ResponsiveGrid.vue?vue&type=style&index=0&id=00b93d3d&lang=scss&scoped=true& ***!
@@ -26793,6 +27714,36 @@ options.transform = transform
 options.insertInto = undefined;
 
 var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Layouts/LandingLayout.vue?vue&type=style&index=0&id=21a289cd&lang=scss&scoped=true&":
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Layouts/LandingLayout.vue?vue&type=style&index=0&id=21a289cd&lang=scss&scoped=true& ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../node_modules/vue-loader/lib??vue-loader-options!./LandingLayout.vue?vue&type=style&index=0&id=21a289cd&lang=scss&scoped=true& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Layouts/LandingLayout.vue?vue&type=style&index=0&id=21a289cd&lang=scss&scoped=true&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
 
 if(content.locals) module.exports = content.locals;
 
@@ -35816,6 +36767,60 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Components/Icons/ExpandIcon.vue?vue&type=template&id=17090eb3&":
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Components/Icons/ExpandIcon.vue?vue&type=template&id=17090eb3& ***!
+  \*******************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "svg",
+    {
+      class: _vm.classAttributes,
+      attrs: {
+        id: _vm.id,
+        "aria-labelledby": _vm.id + "AriaTitle" + " " + _vm.id + "AriaDesc",
+        xmlns: "http://www.w3.org/2000/svg",
+        width: "26",
+        height: "20",
+        viewBox: "0 0 448 512"
+      }
+    },
+    [
+      _c("title", { attrs: { id: _vm.id + "AriaTitle" } }, [
+        _vm._v(_vm._s(_vm.ariaTitle))
+      ]),
+      _vm._v(" "),
+      _c("desc", { attrs: { id: _vm.id + "AriaDesc" } }, [
+        _vm._v(_vm._s(_vm.ariaDesc))
+      ]),
+      _vm._v(" "),
+      _c("path", {
+        staticClass: "a",
+        attrs: {
+          d:
+            "M352 240v32c0 6.6-5.4 12-12 12h-88v88c0 6.6-5.4 12-12 12h-32c-6.6 0-12-5.4-12-12v-88h-88c-6.6 0-12-5.4-12-12v-32c0-6.6 5.4-12 12-12h88v-88c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v88h88c6.6 0 12 5.4 12 12zm96-160v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48zm-48 346V86c0-3.3-2.7-6-6-6H54c-3.3 0-6 2.7-6 6v340c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"
+        }
+      })
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Components/Icons/FinanceIcon.vue?vue&type=template&id=4b92b623&":
 /*!********************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Components/Icons/FinanceIcon.vue?vue&type=template&id=4b92b623& ***!
@@ -35891,7 +36896,7 @@ var render = function() {
         id: _vm.id,
         "aria-labelledby": _vm.id + "AriaTitle" + " " + _vm.id + "AriaDesc",
         xmlns: "http://www.w3.org/2000/svg",
-        viewBox: "0 0 512 512"
+        viewBox: "0 0 448 512"
       }
     },
     [
@@ -35907,7 +36912,7 @@ var render = function() {
         attrs: {
           fill: "a",
           d:
-            "M447.1 112c-34.2.5-62.3 28.4-63 62.6-.5 24.3 12.5 45.6 32 56.8V344c0 57.3-50.2 104-112 104-60 0-109.2-44.1-111.9-99.2C265 333.8 320 269.2 320 192V36.6c0-11.4-8.1-21.3-19.3-23.5L237.8.5c-13-2.6-25.6 5.8-28.2 18.8L206.4 35c-2.6 13 5.8 25.6 18.8 28.2l30.7 6.1v121.4c0 52.9-42.2 96.7-95.1 97.2-53.4.5-96.9-42.7-96.9-96V69.4l30.7-6.1c13-2.6 21.4-15.2 18.8-28.2l-3.1-15.7C107.7 6.4 95.1-2 82.1.6L19.3 13C8.1 15.3 0 25.1 0 36.6V192c0 77.3 55.1 142 128.1 156.8C130.7 439.2 208.6 512 304 512c97 0 176-75.4 176-168V231.4c19.1-11.1 32-31.7 32-55.4 0-35.7-29.2-64.5-64.9-64zm.9 80c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16-7.2 16-16 16z"
+            "M437.2 403.5L320 215V64h8c13.3 0 24-10.7 24-24V24c0-13.3-10.7-24-24-24H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h8v151L10.8 403.5C-18.5 450.6 15.3 512 70.9 512h306.2c55.7 0 89.4-61.5 60.1-108.5zM137.9 320l48.2-77.6c3.7-5.2 5.8-11.6 5.8-18.4V64h64v160c0 6.9 2.2 13.2 5.8 18.4l48.2 77.6h-172z"
         }
       })
     ]
@@ -35974,6 +36979,60 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Components/Icons/MinimizeIcon.vue?vue&type=template&id=7a76f8b7&":
+/*!*********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Components/Icons/MinimizeIcon.vue?vue&type=template&id=7a76f8b7& ***!
+  \*********************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "svg",
+    {
+      class: _vm.classAttributes,
+      attrs: {
+        id: _vm.id,
+        "aria-labelledby": _vm.id + "AriaTitle" + " " + _vm.id + "AriaDesc",
+        xmlns: "http://www.w3.org/2000/svg",
+        width: "26",
+        height: "20",
+        viewBox: "0 0 448 512"
+      }
+    },
+    [
+      _c("title", { attrs: { id: _vm.id + "AriaTitle" } }, [
+        _vm._v(_vm._s(_vm.ariaTitle))
+      ]),
+      _vm._v(" "),
+      _c("desc", { attrs: { id: _vm.id + "AriaDesc" } }, [
+        _vm._v(_vm._s(_vm.ariaDesc))
+      ]),
+      _vm._v(" "),
+      _c("path", {
+        staticClass: "a",
+        attrs: {
+          d:
+            "M108 284c-6.6 0-12-5.4-12-12v-32c0-6.6 5.4-12 12-12h232c6.6 0 12 5.4 12 12v32c0 6.6-5.4 12-12 12H108zM448 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48zm-48 346V86c0-3.3-2.7-6-6-6H54c-3.3 0-6 2.7-6 6v340c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"
+        }
+      })
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Components/Icons/PublicPolicyIcon.vue?vue&type=template&id=2bcd2214&":
 /*!*************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Components/Icons/PublicPolicyIcon.vue?vue&type=template&id=2bcd2214& ***!
@@ -36017,6 +37076,75 @@ var render = function() {
         }
       })
     ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Components/Landing/DirectorSlider.vue?vue&type=template&id=6c6e8030&scoped=true&":
+/*!*************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Components/Landing/DirectorSlider.vue?vue&type=template&id=6c6e8030&scoped=true& ***!
+  \*************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "swiper",
+    { ref: "directorsSwiper", attrs: { options: _vm.swiperOptions } },
+    [
+      _vm._l(_vm.directors, function(director) {
+        return _c("swiper-slide", { key: director.name, staticClass: "py-1" }, [
+          _c("div", { staticClass: "card" }, [
+            _c("div", { staticClass: "card-img" }, [
+              _c("img", {
+                staticClass: "swiper-lazy",
+                attrs: {
+                  "data-src": "/img/headshots/" + director.img,
+                  alt: "Image of " + director.name + "."
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-body" }, [
+              _c("p", { staticClass: "card-body-title" }, [
+                _vm._v("\n          " + _vm._s(director.name) + "\n        ")
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "card-body-text" }, [
+                _vm._v(
+                  "\n          " + _vm._s(director.position) + "\n        "
+                )
+              ])
+            ])
+          ])
+        ])
+      }),
+      _vm._v(" "),
+      _c("div", {
+        staticClass: "swiper-button-prev swiper-button-prev-director",
+        attrs: { slot: "button-prev" },
+        slot: "button-prev"
+      }),
+      _vm._v(" "),
+      _c("div", {
+        staticClass: "swiper-button-next swiper-button-next-director",
+        attrs: { slot: "button-next" },
+        slot: "button-next"
+      })
+    ],
+    2
   )
 }
 var staticRenderFns = []
@@ -36098,7 +37226,7 @@ var render = function() {
                   }
                 }
               },
-              [_vm._v("\n          Photos \n        ")]
+              [_vm._v("\n          Photos\n        ")]
             )
           ]),
           _vm._v(" "),
@@ -36254,19 +37382,90 @@ var render = function() {
       }),
       _vm._v(" "),
       _c("div", {
-        staticClass: "swiper-button-prev",
+        staticClass: "swiper-button-prev swiper-button-prev-past-events",
         attrs: { slot: "button-prev" },
         slot: "button-prev"
       }),
       _vm._v(" "),
       _c("div", {
-        staticClass: "swiper-button-next",
+        staticClass: "swiper-button-next swiper-button-next-past-events",
         attrs: { slot: "button-next" },
         slot: "button-next"
       })
     ],
     2
   )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Components/Landing/QuestionAnswer.vue?vue&type=template&id=092c5067&scoped=true&":
+/*!*************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Components/Landing/QuestionAnswer.vue?vue&type=template&id=092c5067&scoped=true& ***!
+  \*************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "card" }, [
+    _c(
+      "a",
+      {
+        staticClass: "card-header",
+        attrs: { href: "#" },
+        on: {
+          click: function($event) {
+            $event.preventDefault()
+            return _vm.toggleVisibility($event)
+          }
+        }
+      },
+      [
+        _c("p", { staticClass: "card-header-text" }, [_vm._t("question")], 2),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            staticClass: "card-header-button",
+            attrs: {
+              "aria-label": "Button to toggle visibility of the FAQ answer."
+            }
+          },
+          [
+            _c("expand-icon", {
+              attrs: {
+                styles: "fill-current text-primary w-full h-full",
+                isVisible: !_vm.isVisible
+              }
+            }),
+            _vm._v(" "),
+            _c("minimize-icon", {
+              attrs: {
+                styles: "fill-current text-primary w-full h-full",
+                isVisible: _vm.isVisible
+              }
+            })
+          ],
+          1
+        )
+      ]
+    ),
+    _vm._v(" "),
+    _vm.isVisible
+      ? _c("div", { staticClass: "card-body" }, [_vm._t("answer")], 2)
+      : _vm._e()
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -38393,7 +39592,8 @@ var render = function() {
           _c(
             "div",
             {
-              staticClass: "flex justify-center h-full px-6 md:justify-between"
+              staticClass: "flex justify-center h-full px-6 md:justify-between",
+              attrs: { id: "LogoWrapper" }
             },
             [
               _c(
@@ -38402,13 +39602,20 @@ var render = function() {
                   staticClass:
                     "flex-1 h-full py-4 transition duration-300 ease-in md:mx-8",
                   class: _vm.headerLogoIsVisible ? "opacity-100" : "opacity-0",
-                  attrs: { href: "#hero" }
+                  attrs: { id: "LogoLink", href: "#hero" },
+                  on: {
+                    click: function($event) {
+                      $event.preventDefault()
+                      return _vm.handleLinkClick($event)
+                    }
+                  }
                 },
                 [
                   _c("img", {
                     staticClass:
                       "w-auto h-full transition duration-100 ease-in origin-center transform hover:scale-105",
                     attrs: {
+                      id: "LogoImg",
                       src: "/img/branding/logo-horizontal.png",
                       alt: "Carolina Data Challenge logo."
                     }
@@ -38457,12 +39664,48 @@ var render = function() {
         ]
       ),
       _vm._v(" "),
-      _vm._t("default")
+      _vm._t("default"),
+      _vm._v(" "),
+      _vm._m(0)
     ],
     2
   )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "footer",
+      {
+        staticClass:
+          "flex flex-col justify-center items-center px-8 py-16 sm:py-32 bg-primary"
+      },
+      [
+        _c(
+          "p",
+          {
+            staticClass:
+              "text-base font-light leading-8 text-center font-primary text-light"
+          },
+          [
+            _vm._v("Copyright © 2020 "),
+            _c(
+              "a",
+              {
+                staticClass: "text-highlight hover:underline",
+                attrs: { href: "https://carolinadata.unc.edu/" }
+              },
+              [_vm._v("Carolina Analytics and Data Science")]
+            ),
+            _vm._v(". All Rights Reserved ")
+          ]
+        )
+      ]
+    )
+  }
+]
 render._withStripped = true
 
 
@@ -39256,7 +40499,7 @@ var render = function() {
             }),
             _vm._v(" "),
             _c("img", {
-              staticClass: "hidden w-3/5 md:block animate-logo",
+              staticClass: "hidden w-3/5 xl:w-1/2 md:block animate-logo",
               attrs: {
                 src: "/img/branding/logo-horizontal.png",
                 alt: "Carolina Data Challenge logo"
@@ -39290,43 +40533,19 @@ var render = function() {
               1
             )
           ]
-        ),
-        _vm._v(" "),
-        _c(
-          "video",
-          {
-            attrs: {
-              id: "heroBackground",
-              autoplay: "",
-              loop: "",
-              muted: "",
-              playsinline: ""
-            },
-            domProps: { muted: true }
-          },
-          [
-            _c("source", {
-              attrs: {
-                src: "TEMP/img/branding/retro-grid-bg.webm",
-                type: "video/webm"
-              }
-            })
-          ]
         )
       ]
     ),
     _vm._v(" "),
     _c(
       "section",
-      {
-        staticClass:
-          "divide-y divide-gray-400 bg-light sm:flex sm:flex-col sm:items-center"
-      },
+      { staticClass: "bg-light sm:flex sm:flex-col sm:items-center" },
       [
         _c(
           "article",
           {
-            staticClass: "py-16 mx-8 sm:w-3/4 sm:mx-0 sm:py-32 lg:w-3/5",
+            staticClass:
+              "py-16 mx-8 sm:w-3/4 sm:mx-0 sm:py-32 lg:w-3/5 border-b border-gray-400",
             attrs: { id: "about" }
           },
           [
@@ -39375,7 +40594,8 @@ var render = function() {
         _c(
           "article",
           {
-            staticClass: "py-16 mx-8 sm:w-3/4 sm:mx-0 sm:py-32 lg:w-3/5",
+            staticClass:
+              "py-16 mx-8 sm:w-3/4 sm:mx-0 sm:py-32 lg:w-3/5 border-b border-gray-400",
             attrs: { id: "tracks" }
           },
           [
@@ -39388,7 +40608,7 @@ var render = function() {
                 "div",
                 {
                   staticClass:
-                    "flex flex-col items-center w-full h-full p-4 bg-white rounded shadow-md grid-item"
+                    "flex flex-col items-center w-full h-full p-4 bg-white shadow-md grid-item"
                 },
                 [
                   _c(
@@ -39400,7 +40620,8 @@ var render = function() {
                     [
                       _c("healthcare-icon", {
                         attrs: {
-                          styles: "text-light fill-current object-contain",
+                          styles:
+                            "text-light fill-current object-contain h-12 w-12",
                           ariaTitle: "Stethoscope icon",
                           ariaDesc:
                             "Stethoscope icon for the health and sciences track card."
@@ -39438,7 +40659,7 @@ var render = function() {
                 "div",
                 {
                   staticClass:
-                    "flex flex-col items-center w-full h-full p-4 bg-white rounded shadow-md grid-item"
+                    "flex flex-col items-center w-full h-full p-4 bg-white shadow-md grid-item"
                 },
                 [
                   _c(
@@ -39450,7 +40671,8 @@ var render = function() {
                     [
                       _c("finance-icon", {
                         attrs: {
-                          styles: "text-light fill-current object-contain",
+                          styles:
+                            "text-light fill-current object-contain h-20 w-20",
                           ariaTitle: "Money icon",
                           ariaDesc: "Money icon for the finance track card."
                         }
@@ -39483,7 +40705,7 @@ var render = function() {
                 "div",
                 {
                   staticClass:
-                    "flex flex-col items-center w-full h-full p-4 bg-white rounded shadow-md grid-item"
+                    "flex flex-col items-center w-full h-full p-4 bg-white shadow-md grid-item"
                 },
                 [
                   _c(
@@ -39495,7 +40717,8 @@ var render = function() {
                     [
                       _c("public-policy-icon", {
                         attrs: {
-                          styles: "text-light fill-current object-contain",
+                          styles:
+                            "text-light fill-current object-contain h-20 w-20",
                           ariaTitle: "Scale icon",
                           ariaDesc: "Scale icon for the humanities track card."
                         }
@@ -39532,7 +40755,7 @@ var render = function() {
                 "div",
                 {
                   staticClass:
-                    "flex flex-col items-center w-full h-full p-4 bg-white rounded shadow-md grid-item"
+                    "flex flex-col items-center w-full h-full p-4 bg-white shadow-md grid-item"
                 },
                 [
                   _c(
@@ -39544,7 +40767,8 @@ var render = function() {
                     [
                       _c("entertainment-icon", {
                         attrs: {
-                          styles: "text-light fill-current object-contain",
+                          styles:
+                            "text-light fill-current object-contain h-20 w-20",
                           ariaTitle: "Digital media icon",
                           ariaDesc:
                             "Digital media icon for the entertainment track card."
@@ -39585,7 +40809,7 @@ var render = function() {
         _c(
           "article",
           {
-            staticClass: "py-16 mx-8 sm:w-3/4 sm:mx-0 sm:py-32 lg:w-3/5",
+            staticClass: "pt-16 mx-8 sm:w-3/4 sm:mx-0 sm:pt-32 lg:w-3/5",
             attrs: { id: "photos" }
           },
           [
@@ -39595,9 +40819,13 @@ var render = function() {
           ]
         ),
         _vm._v(" "),
-        _c("photo-slider", { staticClass: "w-screen" })
-      ],
-      1
+        _c(
+          "div",
+          { staticClass: "w-full mt-8 pb-16 sm:pb-32" },
+          [_c("photo-slider", { staticClass: "w-full" })],
+          1
+        )
+      ]
     ),
     _vm._v(" "),
     _c(
@@ -39613,26 +40841,898 @@ var render = function() {
           [
             _c("h2", { staticClass: "article-header text-light" }, [
               _vm._v("\n        Event Schedule\n      ")
+            ]),
+            _vm._v(" "),
+            _c("div", [
+              _c("div", { staticClass: "schedule" }, [
+                _c("table", [
+                  _c("thead", [
+                    _c("tr", [
+                      _c("th", [_vm._v("Date")]),
+                      _vm._v(" "),
+                      _c("th", [_vm._v("Time")]),
+                      _vm._v(" "),
+                      _c("th", [_vm._v("Event")])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("tbody", [
+                    _c("tr", [
+                      _c("td", [_vm._v("Sep. 28th")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("19:00 to 20:00")]),
+                      _vm._v(" "),
+                      _c("td", [
+                        _vm._v("Workshop: Introduction to R - R Series")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", [_vm._v("Sep. 29th")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("18:00 to 19:00")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("Workshop: Introduction to Tableau")])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", [_vm._v("Sep. 30th")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("19:00 to 20:00")]),
+                      _vm._v(" "),
+                      _c("td", [
+                        _vm._v("Workshop: Introduction to Git & Github")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", [_vm._v("Oct. 1st")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("19:00 to 20:00")]),
+                      _vm._v(" "),
+                      _c("td", [
+                        _vm._v(
+                          "Workshop: Introduction to Spatial Data - R Series"
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", [_vm._v("Oct. 2nd")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("19:00 to 20:00")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("Meet and Greet")])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", [_vm._v("Oct. 3rd")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("09:00 to 10:00")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("Team Matching")])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", [_vm._v("Oct. 3rd")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("10:00 to 10:45")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("Opening Ceremony")])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", [_vm._v("Oct. 3rd")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("11:00")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("Hacking Begins")])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", [_vm._v("Oct. 3rd")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("11:00 to 11:30")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("Team Matching on Discord")])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", [_vm._v("Oct. 3rd")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("11:00 to 13:00")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("Sponsorship Fair")])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", [_vm._v("Oct. 3rd")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("13:15 to 14:00")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("Workshop: Introduction to R")])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", [_vm._v("Oct. 3rd")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("13:00 to 18:30")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("Mentor Lounge")])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", [_vm._v("Oct. 3rd")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("14:00 to 15:00")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("Workshop: Sponsor TBA")])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", [_vm._v("Oct. 3rd")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("15:00 to 16:00")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("Workshop: Text Processing")])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", [_vm._v("Oct. 3rd")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("16:00 to 17:00")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("Workshop: Sponsor TBA")])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", [_vm._v("Oct. 3rd")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("17:00 to 18:00")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("Workshop: Sponsor TBA")])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", [_vm._v("Oct. 3rd")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("18:00 to 19:00")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("Diversity Panel")])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", [_vm._v("Oct. 3rd")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("19:00 to 20:00")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("Workshop: Sponsor TBA")])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", [_vm._v("Oct. 3rd")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("20:00 to 21:00")]),
+                      _vm._v(" "),
+                      _c("td", [
+                        _vm._v(
+                          "Workshop: Machine Learning Powered Applications"
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", [_vm._v("Oct. 3rd")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("22:00 to 22:30")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("Mini-Event: Wikipedia Race")])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", [_vm._v("Oct. 4th")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("00:00 to 1:00")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("Midnight Check-in")])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", [_vm._v("Oct. 4th")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("1:00 to 2:00")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("Mini-Event: CODEWORDS")])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", [_vm._v("Oct. 4th")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("9:00 to 11:00")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("Mentor Lounge")])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", [_vm._v("Oct. 4th")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("11:00")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("Hacking Ends")])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", [_vm._v("Oct. 4th")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("12:00")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("Presentation Submission Deadline")])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", [_vm._v("Oct. 4th")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("12:00 to 18:00")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("Judging")])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", [_vm._v("Oct. 4th")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("12:30 to 13:30")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("Data Science Recruiting Panel")])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", [_vm._v("Oct. 4th")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("14:00 to 14:30")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("Mini-Event: Skribbl.io")])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", [_vm._v("Oct. 4th")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("18:00 to 19:00")]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("Closing Ceremony")])
+                    ])
+                  ])
+                ])
+              ])
             ])
           ]
         )
       ]
     ),
     _vm._v(" "),
-    _c("div", {
-      staticClass: "w-screen h-screen bg-red-500",
-      attrs: { id: "" }
-    }),
-    _vm._v(" "),
-    _c("div", {
-      staticClass: "w-screen h-screen bg-green-500",
-      attrs: { id: "photos" }
-    }),
-    _vm._v(" "),
-    _c("div", {
-      staticClass: "w-screen h-screen bg-yellow-500",
-      attrs: { id: "schedule" }
-    })
+    _c(
+      "section",
+      { staticClass: "bg-light sm:flex sm:flex-col sm:items-center" },
+      [
+        _c(
+          "article",
+          {
+            staticClass:
+              "py-16 mx-8 sm:w-3/4 sm:mx-0 sm:py-32 lg:w-3/5 border-b border-gray-400",
+            attrs: { id: "faqs" }
+          },
+          [
+            _c("h2", { staticClass: "article-header text-primary" }, [
+              _vm._v("\n        Frequently Asked Questions\n      ")
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "flex flex-col w-full mt-8" },
+              [
+                _c("question-answer", {
+                  staticClass: "mb-4",
+                  scopedSlots: _vm._u([
+                    {
+                      key: "question",
+                      fn: function() {
+                        return [
+                          _vm._v(
+                            "\n            What is a hackathon?\n          "
+                          )
+                        ]
+                      },
+                      proxy: true
+                    },
+                    {
+                      key: "answer",
+                      fn: function() {
+                        return [
+                          _c("p", [
+                            _vm._v(
+                              "\n              A hackathon is a team event where participants get together and make awesome projects! At the end of it, you can submit your project for various prizes. If hacking isn’t your thing, you can also attend workshops, as well as any of our fun events scattered throughout the day.\n            "
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("p", [
+                            _vm._v(
+                              "\n              The Carolina Data Challenge is a bit different from your standard hackathon since we’re specifically targeting data science. At CDC, you’ll have a couple of datasets to choose from, and you can use those datasets to create visualizations, identify patterns, and tell stories.\n            "
+                            )
+                          ])
+                        ]
+                      },
+                      proxy: true
+                    }
+                  ])
+                }),
+                _vm._v(" "),
+                _c("question-answer", {
+                  staticClass: "mb-4",
+                  scopedSlots: _vm._u([
+                    {
+                      key: "question",
+                      fn: function() {
+                        return [
+                          _vm._v(
+                            "\n            How much do I need to know about data science?\n          "
+                          )
+                        ]
+                      },
+                      proxy: true
+                    },
+                    {
+                      key: "answer",
+                      fn: function() {
+                        return [
+                          _c("p", [
+                            _vm._v(
+                              "\n              Nothing! You don’t need any prior experience to participate in CDC, so students of all skill levels are welcome to attend. If you’re new to data science, we’ll have a lot of workshops and mentors to help you along the way.\n            "
+                            )
+                          ])
+                        ]
+                      },
+                      proxy: true
+                    }
+                  ])
+                }),
+                _vm._v(" "),
+                _c("question-answer", {
+                  staticClass: "mb-4",
+                  scopedSlots: _vm._u([
+                    {
+                      key: "question",
+                      fn: function() {
+                        return [
+                          _vm._v(
+                            "\n            How will this year's event be affected by COVID-19?\n          "
+                          )
+                        ]
+                      },
+                      proxy: true
+                    },
+                    {
+                      key: "answer",
+                      fn: function() {
+                        return [
+                          _c("p", [
+                            _vm._v(
+                              "\n              This year, we’re going completely virtual to make sure everyone stays safe and healthy! CDC will take place through our new event portal and some other online platforms. More details will come out as we finalize logistics!\n            "
+                            )
+                          ])
+                        ]
+                      },
+                      proxy: true
+                    }
+                  ])
+                }),
+                _vm._v(" "),
+                _c("question-answer", {
+                  staticClass: "mb-4",
+                  scopedSlots: _vm._u([
+                    {
+                      key: "question",
+                      fn: function() {
+                        return [
+                          _vm._v("\n            Who can attend?\n          ")
+                        ]
+                      },
+                      proxy: true
+                    },
+                    {
+                      key: "answer",
+                      fn: function() {
+                        return [
+                          _c("p", [
+                            _vm._v(
+                              "\n              CDC is open to undergraduate and graduate students of all skill levels, majors, etc.\n            "
+                            )
+                          ])
+                        ]
+                      },
+                      proxy: true
+                    }
+                  ])
+                }),
+                _vm._v(" "),
+                _c("question-answer", {
+                  staticClass: "mb-4",
+                  scopedSlots: _vm._u([
+                    {
+                      key: "question",
+                      fn: function() {
+                        return [
+                          _vm._v("\n            How do teams work?\n          ")
+                        ]
+                      },
+                      proxy: true
+                    },
+                    {
+                      key: "answer",
+                      fn: function() {
+                        return [
+                          _c("p", [
+                            _vm._v(
+                              "\n              You can work individually or with a team of up to four people. If you already know some people you want to work with, that’s great, but don’t worry if not! We’ll have events before hacking begins to help you connect with other hackers you might want to work with. You can also meet others through the CDC Slack workspace, so keep an eye out for information about joining Slack after you register!\n            "
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("p", [
+                            _vm._v(
+                              "\n              Whether you already have a team you'd like to work with or you find one the day of the event, don't worry about telling us just yet. At anytime during the event you'll be able to create and modify your team through our custom event portal to let us know who you're working with.\n            "
+                            )
+                          ])
+                        ]
+                      },
+                      proxy: true
+                    }
+                  ])
+                }),
+                _vm._v(" "),
+                _c("question-answer", {
+                  staticClass: "mb-4",
+                  scopedSlots: _vm._u([
+                    {
+                      key: "question",
+                      fn: function() {
+                        return [
+                          _vm._v("\n            What can I build?\n          ")
+                        ]
+                      },
+                      proxy: true
+                    },
+                    {
+                      key: "answer",
+                      fn: function() {
+                        return [
+                          _c("p", [
+                            _vm._v(
+                              "\n              You can work on just about anything you can think of, as long as you incorporate one of the datasets we provide! You’re also welcome to use outside data sources in addition to the Carolina Data Challenge datasets, as well as any publicly available code you find. However, you may not submit old code (i.e. from previous projects you’ve worked on) for judging.\n            "
+                            )
+                          ])
+                        ]
+                      },
+                      proxy: true
+                    }
+                  ])
+                }),
+                _vm._v(" "),
+                _c("question-answer", {
+                  staticClass: "mb-4",
+                  scopedSlots: _vm._u([
+                    {
+                      key: "question",
+                      fn: function() {
+                        return [
+                          _vm._v("\n            Will I fit in?\n          ")
+                        ]
+                      },
+                      proxy: true
+                    },
+                    {
+                      key: "answer",
+                      fn: function() {
+                        return [
+                          _c("p", [
+                            _vm._v(
+                              "\n              Absolutely! CDC is committed to creating an open, inclusive environment for all of our participants, volunteers, sponsors, mentors, and anybody else who works with us. If you have any concerns, feel free to contact us at "
+                            ),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "text-highlight hover:underline",
+                                attrs: { href: "mailto:hello@cdcunc.com" }
+                              },
+                              [_vm._v("hello@cdcunc.com")]
+                            ),
+                            _vm._v(".\n            ")
+                          ])
+                        ]
+                      },
+                      proxy: true
+                    }
+                  ])
+                }),
+                _vm._v(" "),
+                _c("question-answer", {
+                  staticClass: "mb-4",
+                  scopedSlots: _vm._u([
+                    {
+                      key: "question",
+                      fn: function() {
+                        return [
+                          _vm._v(
+                            "\n            Are there any costs?\n          "
+                          )
+                        ]
+                      },
+                      proxy: true
+                    },
+                    {
+                      key: "answer",
+                      fn: function() {
+                        return [
+                          _c("p", [
+                            _vm._v("\n              CDC is completely "),
+                            _c("span", { staticClass: "text-highlight" }, [
+                              _vm._v("free")
+                            ]),
+                            _vm._v(
+                              " for participants, thanks to all of our awesome sponsors! Participants will also receive free swag!\n            "
+                            )
+                          ])
+                        ]
+                      },
+                      proxy: true
+                    }
+                  ])
+                }),
+                _vm._v(" "),
+                _c("question-answer", {
+                  staticClass: "mb-4",
+                  scopedSlots: _vm._u([
+                    {
+                      key: "question",
+                      fn: function() {
+                        return [
+                          _vm._v("\n            How do I get swag?\n          ")
+                        ]
+                      },
+                      proxy: true
+                    },
+                    {
+                      key: "answer",
+                      fn: function() {
+                        return [
+                          _c("p", [
+                            _vm._v(
+                              "\n              There will be various ways to earn points throughout the event, such as submitting a project or attending mini events, that go towards receiving swag! After registering, keep an eye out for an email with more information about swag requirements. We’ll also touch base on swag requirements again during the event!\n            "
+                            )
+                          ])
+                        ]
+                      },
+                      proxy: true
+                    }
+                  ])
+                }),
+                _vm._v(" "),
+                _c("question-answer", {
+                  staticClass: "mb-4",
+                  scopedSlots: _vm._u([
+                    {
+                      key: "question",
+                      fn: function() {
+                        return [
+                          _vm._v("\n            What will I need?\n          ")
+                        ]
+                      },
+                      proxy: true
+                    },
+                    {
+                      key: "answer",
+                      fn: function() {
+                        return [
+                          _c("p", [
+                            _vm._v(
+                              "\n              CDC is completely virtual this year. All you’ll need is your device to hack on (i.e. laptop, desktop, tablet, etc.) and internet connection!\n            "
+                            )
+                          ])
+                        ]
+                      },
+                      proxy: true
+                    }
+                  ])
+                }),
+                _vm._v(" "),
+                _c("question-answer", {
+                  staticClass: "mb-4",
+                  scopedSlots: _vm._u([
+                    {
+                      key: "question",
+                      fn: function() {
+                        return [
+                          _vm._v(
+                            "\n            How can I register?\n          "
+                          )
+                        ]
+                      },
+                      proxy: true
+                    },
+                    {
+                      key: "answer",
+                      fn: function() {
+                        return [
+                          _c("p", [
+                            _vm._v(
+                              "\n              Registration for the Carolina Data Challenge is now open! You can register "
+                            ),
+                            _c(
+                              "a",
+                              {
+                                staticClass:
+                                  "registration-link text-highlight hover:underline",
+                                attrs: {
+                                  href:
+                                    "https://carolinadatachallenge.typeform.com/to/pagD5j"
+                                }
+                              },
+                              [_vm._v("here")]
+                            ),
+                            _vm._v("!\n            ")
+                          ])
+                        ]
+                      },
+                      proxy: true
+                    }
+                  ])
+                }),
+                _vm._v(" "),
+                _c("question-answer", {
+                  scopedSlots: _vm._u([
+                    {
+                      key: "question",
+                      fn: function() {
+                        return [
+                          _vm._v(
+                            "\n            I still have questions!\n          "
+                          )
+                        ]
+                      },
+                      proxy: true
+                    },
+                    {
+                      key: "answer",
+                      fn: function() {
+                        return [
+                          _c("p", [
+                            _vm._v(
+                              "\n              For any questions, comments, concerns, suggestions, or memes you have about the Carolina Data Challenge, please reach out at "
+                            ),
+                            _c(
+                              "a",
+                              {
+                                staticClass: "text-highlight hover:underline",
+                                attrs: { href: "mailto:hello@cdcunc.com" }
+                              },
+                              [_vm._v("hello@cdcunc.com")]
+                            ),
+                            _vm._v("!\n            ")
+                          ])
+                        ]
+                      },
+                      proxy: true
+                    }
+                  ])
+                })
+              ],
+              1
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "article",
+          {
+            staticClass: "pt-16 mx-8 sm:w-3/4 sm:mx-0 sm:pt-32 lg:w-3/5",
+            attrs: { id: "directors" }
+          },
+          [
+            _c("h2", { staticClass: "article-header text-primary" }, [
+              _vm._v("\n        Our Team of Directors\n      ")
+            ])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "w-full mt-8 pb-16 sm:pb-32" },
+          [_c("director-slider", { staticClass: "w-full" })],
+          1
+        ),
+        _vm._v(" "),
+        _c(
+          "article",
+          {
+            staticClass:
+              "py-16 mx-8 sm:w-3/4 sm:mx-0 sm:py-32 lg:w-3/5 border-t border-gray-400",
+            attrs: { id: "sponsors" }
+          },
+          [
+            _c("h2", { staticClass: "article-header text-primary" }, [
+              _vm._v("\n        Our Sponsors\n      ")
+            ]),
+            _vm._v(" "),
+            _c("responsive-grid", { attrs: { styles: "mt-8" } }, [
+              _c(
+                "a",
+                {
+                  staticClass: "sponsor grid-item",
+                  attrs: { href: "https://www.captechconsulting.com/" }
+                },
+                [
+                  _c("div", { staticClass: "sponsor-img" }, [
+                    _c("img", {
+                      attrs: {
+                        src: "/img/sponsors/captech.jpg",
+                        alt: "CapTech logo"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "sponsor-tag" }, [
+                    _c("p", { staticClass: "sponsor-tag-text" }, [
+                      _vm._v("\n              CapTech\n            ")
+                    ])
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass: "sponsor grid-item",
+                  attrs: { href: "https://www.ey.com/en_us" }
+                },
+                [
+                  _c("div", { staticClass: "sponsor-img" }, [
+                    _c("img", {
+                      attrs: { src: "/img/sponsors/ey.jpg", alt: "EY logo" }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "sponsor-tag" }, [
+                    _c("p", { staticClass: "sponsor-tag-text" }, [
+                      _vm._v("\n              EY\n            ")
+                    ])
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass: "sponsor grid-item",
+                  attrs: { href: "https://analytics.ncsu.edu/" }
+                },
+                [
+                  _c("div", { staticClass: "sponsor-img" }, [
+                    _c("img", {
+                      attrs: {
+                        src: "/img/sponsors/iaa.jpg",
+                        alt: "Institute for Advanced Analytics logo"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "sponsor-tag" }, [
+                    _c("p", { staticClass: "sponsor-tag-text" }, [
+                      _vm._v(
+                        "\n              Institute for Advanced Analytics\n            "
+                      )
+                    ])
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass: "sponsor grid-item",
+                  attrs: { href: "https://www.metlife.com/" }
+                },
+                [
+                  _c("div", { staticClass: "sponsor-img" }, [
+                    _c("img", {
+                      attrs: {
+                        src: "/img/sponsors/metlife.jpg",
+                        alt: "MetLife logo"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "sponsor-tag" }, [
+                    _c("p", { staticClass: "sponsor-tag-text" }, [
+                      _vm._v("\n              MetLife\n            ")
+                    ])
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass: "sponsor grid-item",
+                  attrs: { href: "https://www.sas.com/en_us/home.html" }
+                },
+                [
+                  _c("div", { staticClass: "sponsor-img" }, [
+                    _c("img", {
+                      attrs: { src: "/img/sponsors/sas.jpg", alt: "SAS logo" }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "sponsor-tag" }, [
+                    _c("p", { staticClass: "sponsor-tag-text" }, [
+                      _vm._v("\n              SAS\n            ")
+                    ])
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass: "sponsor grid-item",
+                  attrs: { href: "https://cs.unc.edu/" }
+                },
+                [
+                  _c("div", { staticClass: "sponsor-img" }, [
+                    _c("img", {
+                      attrs: {
+                        src: "/img/sponsors/unc-cs.jpg",
+                        alt:
+                          "University of North Carolina at Chapel Hill Computer Science Department logo"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "sponsor-tag" }, [
+                    _c("p", { staticClass: "sponsor-tag-text" }, [
+                      _vm._v(
+                        "\n              UNC Computer Science\n            "
+                      )
+                    ])
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass: "sponsor grid-item",
+                  attrs: { href: "http://www.visualdatatools.com/" }
+                },
+                [
+                  _c("div", { staticClass: "sponsor-img" }, [
+                    _c("img", {
+                      attrs: {
+                        src: "/img/sponsors/visualdatatools.jpg",
+                        alt: "VisualDataTools logo"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "sponsor-tag" }, [
+                    _c("p", { staticClass: "sponsor-tag-text" }, [
+                      _vm._v("\n              VisualDataTools\n            ")
+                    ])
+                  ])
+                ]
+              )
+            ])
+          ],
+          1
+        )
+      ]
+    )
   ])
 }
 var staticRenderFns = []
@@ -54489,6 +56589,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/Components/Icons/ExpandIcon.vue":
+/*!******************************************************!*\
+  !*** ./resources/js/Components/Icons/ExpandIcon.vue ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _ExpandIcon_vue_vue_type_template_id_17090eb3___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ExpandIcon.vue?vue&type=template&id=17090eb3& */ "./resources/js/Components/Icons/ExpandIcon.vue?vue&type=template&id=17090eb3&");
+/* harmony import */ var _ExpandIcon_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ExpandIcon.vue?vue&type=script&lang=js& */ "./resources/js/Components/Icons/ExpandIcon.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ExpandIcon_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ExpandIcon_vue_vue_type_template_id_17090eb3___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ExpandIcon_vue_vue_type_template_id_17090eb3___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Components/Icons/ExpandIcon.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Components/Icons/ExpandIcon.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/Components/Icons/ExpandIcon.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExpandIcon_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./ExpandIcon.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Components/Icons/ExpandIcon.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExpandIcon_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/Components/Icons/ExpandIcon.vue?vue&type=template&id=17090eb3&":
+/*!*************************************************************************************!*\
+  !*** ./resources/js/Components/Icons/ExpandIcon.vue?vue&type=template&id=17090eb3& ***!
+  \*************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExpandIcon_vue_vue_type_template_id_17090eb3___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./ExpandIcon.vue?vue&type=template&id=17090eb3& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Components/Icons/ExpandIcon.vue?vue&type=template&id=17090eb3&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExpandIcon_vue_vue_type_template_id_17090eb3___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExpandIcon_vue_vue_type_template_id_17090eb3___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/Components/Icons/FinanceIcon.vue":
 /*!*******************************************************!*\
   !*** ./resources/js/Components/Icons/FinanceIcon.vue ***!
@@ -54696,6 +56865,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/Components/Icons/MinimizeIcon.vue":
+/*!********************************************************!*\
+  !*** ./resources/js/Components/Icons/MinimizeIcon.vue ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _MinimizeIcon_vue_vue_type_template_id_7a76f8b7___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MinimizeIcon.vue?vue&type=template&id=7a76f8b7& */ "./resources/js/Components/Icons/MinimizeIcon.vue?vue&type=template&id=7a76f8b7&");
+/* harmony import */ var _MinimizeIcon_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MinimizeIcon.vue?vue&type=script&lang=js& */ "./resources/js/Components/Icons/MinimizeIcon.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _MinimizeIcon_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _MinimizeIcon_vue_vue_type_template_id_7a76f8b7___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _MinimizeIcon_vue_vue_type_template_id_7a76f8b7___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Components/Icons/MinimizeIcon.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Components/Icons/MinimizeIcon.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************!*\
+  !*** ./resources/js/Components/Icons/MinimizeIcon.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MinimizeIcon_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./MinimizeIcon.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Components/Icons/MinimizeIcon.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MinimizeIcon_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/Components/Icons/MinimizeIcon.vue?vue&type=template&id=7a76f8b7&":
+/*!***************************************************************************************!*\
+  !*** ./resources/js/Components/Icons/MinimizeIcon.vue?vue&type=template&id=7a76f8b7& ***!
+  \***************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MinimizeIcon_vue_vue_type_template_id_7a76f8b7___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./MinimizeIcon.vue?vue&type=template&id=7a76f8b7& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Components/Icons/MinimizeIcon.vue?vue&type=template&id=7a76f8b7&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MinimizeIcon_vue_vue_type_template_id_7a76f8b7___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MinimizeIcon_vue_vue_type_template_id_7a76f8b7___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/Components/Icons/PublicPolicyIcon.vue":
 /*!************************************************************!*\
   !*** ./resources/js/Components/Icons/PublicPolicyIcon.vue ***!
@@ -54760,6 +56998,93 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PublicPolicyIcon_vue_vue_type_template_id_2bcd2214___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PublicPolicyIcon_vue_vue_type_template_id_2bcd2214___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/Components/Landing/DirectorSlider.vue":
+/*!************************************************************!*\
+  !*** ./resources/js/Components/Landing/DirectorSlider.vue ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _DirectorSlider_vue_vue_type_template_id_6c6e8030_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DirectorSlider.vue?vue&type=template&id=6c6e8030&scoped=true& */ "./resources/js/Components/Landing/DirectorSlider.vue?vue&type=template&id=6c6e8030&scoped=true&");
+/* harmony import */ var _DirectorSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DirectorSlider.vue?vue&type=script&lang=js& */ "./resources/js/Components/Landing/DirectorSlider.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _DirectorSlider_vue_vue_type_style_index_0_id_6c6e8030_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./DirectorSlider.vue?vue&type=style&index=0&id=6c6e8030&lang=scss&scoped=true& */ "./resources/js/Components/Landing/DirectorSlider.vue?vue&type=style&index=0&id=6c6e8030&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _DirectorSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _DirectorSlider_vue_vue_type_template_id_6c6e8030_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _DirectorSlider_vue_vue_type_template_id_6c6e8030_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "6c6e8030",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Components/Landing/DirectorSlider.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Components/Landing/DirectorSlider.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************!*\
+  !*** ./resources/js/Components/Landing/DirectorSlider.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DirectorSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./DirectorSlider.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Components/Landing/DirectorSlider.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DirectorSlider_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/Components/Landing/DirectorSlider.vue?vue&type=style&index=0&id=6c6e8030&lang=scss&scoped=true&":
+/*!**********************************************************************************************************************!*\
+  !*** ./resources/js/Components/Landing/DirectorSlider.vue?vue&type=style&index=0&id=6c6e8030&lang=scss&scoped=true& ***!
+  \**********************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_DirectorSlider_vue_vue_type_style_index_0_id_6c6e8030_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader!../../../../node_modules/css-loader!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../node_modules/vue-loader/lib??vue-loader-options!./DirectorSlider.vue?vue&type=style&index=0&id=6c6e8030&lang=scss&scoped=true& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Components/Landing/DirectorSlider.vue?vue&type=style&index=0&id=6c6e8030&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_DirectorSlider_vue_vue_type_style_index_0_id_6c6e8030_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_DirectorSlider_vue_vue_type_style_index_0_id_6c6e8030_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_DirectorSlider_vue_vue_type_style_index_0_id_6c6e8030_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_DirectorSlider_vue_vue_type_style_index_0_id_6c6e8030_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_DirectorSlider_vue_vue_type_style_index_0_id_6c6e8030_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/js/Components/Landing/DirectorSlider.vue?vue&type=template&id=6c6e8030&scoped=true&":
+/*!*******************************************************************************************************!*\
+  !*** ./resources/js/Components/Landing/DirectorSlider.vue?vue&type=template&id=6c6e8030&scoped=true& ***!
+  \*******************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DirectorSlider_vue_vue_type_template_id_6c6e8030_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./DirectorSlider.vue?vue&type=template&id=6c6e8030&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Components/Landing/DirectorSlider.vue?vue&type=template&id=6c6e8030&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DirectorSlider_vue_vue_type_template_id_6c6e8030_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DirectorSlider_vue_vue_type_template_id_6c6e8030_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -54934,6 +57259,93 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PhotoSlider_vue_vue_type_template_id_dae1c3c0_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PhotoSlider_vue_vue_type_template_id_dae1c3c0_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/Components/Landing/QuestionAnswer.vue":
+/*!************************************************************!*\
+  !*** ./resources/js/Components/Landing/QuestionAnswer.vue ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _QuestionAnswer_vue_vue_type_template_id_092c5067_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./QuestionAnswer.vue?vue&type=template&id=092c5067&scoped=true& */ "./resources/js/Components/Landing/QuestionAnswer.vue?vue&type=template&id=092c5067&scoped=true&");
+/* harmony import */ var _QuestionAnswer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./QuestionAnswer.vue?vue&type=script&lang=js& */ "./resources/js/Components/Landing/QuestionAnswer.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _QuestionAnswer_vue_vue_type_style_index_0_id_092c5067_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./QuestionAnswer.vue?vue&type=style&index=0&id=092c5067&lang=scss&scoped=true& */ "./resources/js/Components/Landing/QuestionAnswer.vue?vue&type=style&index=0&id=092c5067&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _QuestionAnswer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _QuestionAnswer_vue_vue_type_template_id_092c5067_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _QuestionAnswer_vue_vue_type_template_id_092c5067_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "092c5067",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Components/Landing/QuestionAnswer.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Components/Landing/QuestionAnswer.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************!*\
+  !*** ./resources/js/Components/Landing/QuestionAnswer.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_QuestionAnswer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./QuestionAnswer.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Components/Landing/QuestionAnswer.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_QuestionAnswer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/Components/Landing/QuestionAnswer.vue?vue&type=style&index=0&id=092c5067&lang=scss&scoped=true&":
+/*!**********************************************************************************************************************!*\
+  !*** ./resources/js/Components/Landing/QuestionAnswer.vue?vue&type=style&index=0&id=092c5067&lang=scss&scoped=true& ***!
+  \**********************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_QuestionAnswer_vue_vue_type_style_index_0_id_092c5067_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader!../../../../node_modules/css-loader!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../node_modules/vue-loader/lib??vue-loader-options!./QuestionAnswer.vue?vue&type=style&index=0&id=092c5067&lang=scss&scoped=true& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Components/Landing/QuestionAnswer.vue?vue&type=style&index=0&id=092c5067&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_QuestionAnswer_vue_vue_type_style_index_0_id_092c5067_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_QuestionAnswer_vue_vue_type_style_index_0_id_092c5067_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_QuestionAnswer_vue_vue_type_style_index_0_id_092c5067_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_QuestionAnswer_vue_vue_type_style_index_0_id_092c5067_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_QuestionAnswer_vue_vue_type_style_index_0_id_092c5067_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/js/Components/Landing/QuestionAnswer.vue?vue&type=template&id=092c5067&scoped=true&":
+/*!*******************************************************************************************************!*\
+  !*** ./resources/js/Components/Landing/QuestionAnswer.vue?vue&type=template&id=092c5067&scoped=true& ***!
+  \*******************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_QuestionAnswer_vue_vue_type_template_id_092c5067_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./QuestionAnswer.vue?vue&type=template&id=092c5067&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Components/Landing/QuestionAnswer.vue?vue&type=template&id=092c5067&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_QuestionAnswer_vue_vue_type_template_id_092c5067_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_QuestionAnswer_vue_vue_type_template_id_092c5067_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -56491,7 +58903,9 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _LandingLayout_vue_vue_type_template_id_21a289cd_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./LandingLayout.vue?vue&type=template&id=21a289cd&scoped=true& */ "./resources/js/Layouts/LandingLayout.vue?vue&type=template&id=21a289cd&scoped=true&");
 /* harmony import */ var _LandingLayout_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./LandingLayout.vue?vue&type=script&lang=js& */ "./resources/js/Layouts/LandingLayout.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _LandingLayout_vue_vue_type_style_index_0_id_21a289cd_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./LandingLayout.vue?vue&type=style&index=0&id=21a289cd&lang=scss&scoped=true& */ "./resources/js/Layouts/LandingLayout.vue?vue&type=style&index=0&id=21a289cd&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
 
 
 
@@ -56499,7 +58913,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
   _LandingLayout_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _LandingLayout_vue_vue_type_template_id_21a289cd_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
   _LandingLayout_vue_vue_type_template_id_21a289cd_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
@@ -56528,6 +58942,22 @@ component.options.__file = "resources/js/Layouts/LandingLayout.vue"
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_LandingLayout_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./LandingLayout.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Layouts/LandingLayout.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_LandingLayout_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/Layouts/LandingLayout.vue?vue&type=style&index=0&id=21a289cd&lang=scss&scoped=true&":
+/*!**********************************************************************************************************!*\
+  !*** ./resources/js/Layouts/LandingLayout.vue?vue&type=style&index=0&id=21a289cd&lang=scss&scoped=true& ***!
+  \**********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_LandingLayout_vue_vue_type_style_index_0_id_21a289cd_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../node_modules/vue-loader/lib??vue-loader-options!./LandingLayout.vue?vue&type=style&index=0&id=21a289cd&lang=scss&scoped=true& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Layouts/LandingLayout.vue?vue&type=style&index=0&id=21a289cd&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_LandingLayout_vue_vue_type_style_index_0_id_21a289cd_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_LandingLayout_vue_vue_type_style_index_0_id_21a289cd_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_LandingLayout_vue_vue_type_style_index_0_id_21a289cd_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_LandingLayout_vue_vue_type_style_index_0_id_21a289cd_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_LandingLayout_vue_vue_type_style_index_0_id_21a289cd_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
@@ -57850,8 +60280,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /var/www/html/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /var/www/html/resources/css/app.scss */"./resources/css/app.scss");
+__webpack_require__(/*! D:\Coding\unc-cdc\src\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\Coding\unc-cdc\src\resources\css\app.scss */"./resources/css/app.scss");
 
 
 /***/ })

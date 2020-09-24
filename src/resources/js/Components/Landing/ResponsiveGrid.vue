@@ -1,5 +1,5 @@
 <template>
-  <div 
+  <div
     :id="id"
     class="grid-root"
     :class="styles"
@@ -75,7 +75,7 @@ export default {
         grid-column-end: -4;
       }
       &:nth-last-child(3):nth-child(4n - 3) {
-        grid-column-end: -5;
+        grid-column-end: -6;
       }
       &:last-child:nth-child(4n - 2) {
         grid-column-end: -3;
@@ -84,7 +84,7 @@ export default {
         grid-column-end: -5;
       }
       &:last-child:nth-child(4n - 3) {
-        grid-column-end: -4;
+        grid-column-end: -6;
       }
     }
   }
