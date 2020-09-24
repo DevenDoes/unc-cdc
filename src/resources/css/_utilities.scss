@@ -1,0 +1,54 @@
+@import "./variables";
+
+// Custom utilities here
+@responsive {
+  @variants odd, even, hover {
+    .bg-primary {
+      background-color: $accent-primary;
+    }
+
+    .bg-secondary {
+      background-color: $accent-secondary;
+    }
+
+    .bg-highlight {
+      background-color: $accent-highlight;
+    }
+
+    .bg-light {
+      background-color: $light;
+    }
+
+    .bg-dark {
+      background-color: $dark;
+    }
+
+    .text-primary {
+      color: $accent-primary;
+    }
+
+    .text-secondary {
+      color: $accent-secondary;
+    }
+
+    .text-highlight {
+      color: $accent-highlight;
+    }
+
+    .text-light {
+      color: $light;
+    }
+
+    .text-dark {
+      color: $dark;
+    }
+
+    .font-primary {
+      font-family: $fontPrimary;
+    }
+
+    .font-secondary {
+      font-family: $fontSecondary;
+    }
+  }
+}

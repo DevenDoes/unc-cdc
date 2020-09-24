@@ -10,6 +10,9 @@ Vue.use(InertiaApp);
 Vue.use(InertiaForm);
 Vue.use(PortalVue);
 
+import Throttle from "./Mixins/ThrottleFunction"
+Vue.mixin(Throttle);
+
 const app = document.getElementById('app');
 
 new Vue({
