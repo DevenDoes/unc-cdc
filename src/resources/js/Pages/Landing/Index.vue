@@ -22,7 +22,7 @@
       <div class="mt-8">
         <!-- Register button -->
         <inertia-link
-          href="/sign-up"
+          href="/register"
           class="mr-2 text-lg font-normal shadow-lg button bg-highlight text-light font-primary"
         >
           Register
@@ -595,6 +595,17 @@
           <div class="sponsor-tag">
             <p class="sponsor-tag-text">
               VisualDataTools
+            </p>
+          </div>
+        </a>
+        <!-- Sponsor? -->
+        <a
+          href="mailto:sponsors@cdcunc.com"
+          class="grid-item bg-primary w-full hover:bg-secondary origin-center scale-100 transform transition duration-200 ease-in hover:scale-105"
+        >
+          <div class="p-4 w-full h-full flex items-center justify-center">
+            <p class="font-semibold text-light text-xl">
+              Interested in sponsoring our hackathon?
             </p>
           </div>
         </a>

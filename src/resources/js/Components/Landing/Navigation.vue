@@ -69,19 +69,19 @@
           </a>
         </li>
       </ul>
-      <div class="flex flex-col mb-6">
-        <a
-          href="#register"
-          class="block px-3 py-2 text-center transition duration-300 rounded shadow-md bg-highlight text-light hover:bg-light hover:text-dark"
+      <div class="flex flex-col mb-6 px-4 w-full">
+        <inertia-link
+          href="/register"
+          class="block w-full px-3 py-2 mt-3 text-center transition duration-300 rounded shadow-md bg-highlight text-light hover:bg-light hover:text-dark"
         >
           Register
-        </a>
-        <a
-          href="http://eepurl.com/gFzI4n"
-          class="block px-3 py-2 mt-3 text-center transition duration-300 rounded shadow-md bg-secondary text-light hover:bg-light hover:text-dark"
+        </inertia-link>
+        <inertia-link
+          href="/login"
+          class="block w-full px-3 py-2 mt-3 text-center transition duration-300 rounded shadow-md bg-secondary text-light hover:bg-light hover:text-dark"
         >
-          Newsletter
-        </a>
+          Login
+        </inertia-link>
       </div>
     </nav>
     <div
