@@ -18,29 +18,44 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/**
+ * Landing Page
+ */
 Route::get('/', function () {
     return Inertia\Inertia::render('Landing/Index');
 });
 
 /**
- * Custom Auth Routes
+ * Login
  */
 Route::get('/login', function () {
   return Inertia\Inertia::render('Auth/Login');
 })->middleware(['guest'])->name('login');
 
+/**
+ * Register
+ */
 Route::get('/register', function () {
   return Inertia\Inertia::render('Auth/Register');
 })->middleware(['guest'])->name('register');
 
+/**
+ * Forgot Password
+ */
 Route::get('/forgot-password', function () {
   return Inertia\Inertia::render('Auth/ForgotPassword');
 })->middleware(['guest'])->name('password.request');
 
+/**
+ * Password Reset Link Sent
+ */
 Route::get('/password-reset-sent', function () {
   return Inertia\Inertia::render('Auth/PasswordResetSent');
 })->middleware(['guest']);
 
+/**
+ * Reset Password
+ */
 Route::get('/reset-password/{token}', function (Request $request, $token) {
   return Inertia\Inertia::render('Auth/ResetPassword', [
     'email' => $request['email'],
@@ -48,15 +63,29 @@ Route::get('/reset-password/{token}', function (Request $request, $token) {
   ]);
 })->middleware(['guest'])->name('password.reset');
 
+/**
+ * Verify Email
+ */
 Route::middleware(['auth:sanctum'])->get('/email/verify', function () {
   return Inertia\Inertia::render('Auth/VerifyEmail');
 })->name('verification.notice');
 
+/**
+ * Dashboard
+ */
 Route::middleware(['auth:sanctum', 'registered'])
     ->get('/dashboard', function () {
         $user = new \App\Models\User();
-        return Inertia\Inertia::render('Dashboard');
+        return Inertia\Inertia::render('Portal/NextSteps');
     })->name('dashboard');
+
+/**
+ * Next Steps
+ */
+Route::middleware(['auth:sanctum', 'registered'])
+    ->get('/next-steps', function () {
+        return \Inertia\Inertia::render('Portal/NextSteps');
+    })->name('next.steps');
 
 /**
  * Personal Details

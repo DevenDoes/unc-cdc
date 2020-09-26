@@ -4,8 +4,8 @@
     <header class="fixed z-10 w-full h-16 md:h-24 bg-primary shadow-md">
       <div class="flex justify-center h-full px-6 md:justify-between">
         <inertia-link
-          href="/portal"
-          class="flex-1 h-full py-4 md:mx-8"
+          href="/next-steps"
+          class="flex-initial h-full py-4 md:mx-8"
         >
           <img
             src="/img/branding/favicon.png"
@@ -13,6 +13,9 @@
             class="w-auto h-full"
           >
         </inertia-link>
+        <h1 class="px-4 self-center justify-self-center flex-1 font-primary font-bold text-light text-xl md:text-2xl">
+          <slot name="page-title"></slot>
+        </h1>
         <!-- Menu button -->
         <button class="z-20 w-10 h-full md:w-16" v-on:click="toggleNav">
           <menu-icon

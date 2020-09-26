@@ -3027,6 +3027,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -3059,6 +3066,9 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     toggleVisibility: function toggleVisibility() {
       this.$emit('toggleNavMenu');
+    },
+    handleLogout: function handleLogout() {
+      this.$inertia.post('/logout');
     }
   }
 });
@@ -4275,6 +4285,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Components_Icons_MenuIcon__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Components/Icons/MenuIcon */ "./resources/js/Components/Icons/MenuIcon.vue");
 /* harmony import */ var _Components_Icons_CloseIcon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Components/Icons/CloseIcon */ "./resources/js/Components/Icons/CloseIcon.vue");
 /* harmony import */ var _Components_Portal_Navigation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Components/Portal/Navigation */ "./resources/js/Components/Portal/Navigation.vue");
+//
+//
+//
 //
 //
 //
@@ -6055,6 +6068,102 @@ __webpack_require__.r(__webpack_exports__);
     FinanceIcon: _Components_Icons_FinanceIcon__WEBPACK_IMPORTED_MODULE_6__["default"],
     PublicPolicyIcon: _Components_Icons_PublicPolicyIcon__WEBPACK_IMPORTED_MODULE_7__["default"],
     EntertainmentIcon: _Components_Icons_EntertainmentIcon__WEBPACK_IMPORTED_MODULE_8__["default"]
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Portal/NextSteps.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Portal/NextSteps.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Layouts_PortalLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../Layouts/PortalLayout */ "./resources/js/Layouts/PortalLayout.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "NextSteps",
+  components: {
+    PortalLayout: _Layouts_PortalLayout__WEBPACK_IMPORTED_MODULE_0__["default"]
   }
 });
 
@@ -8750,6 +8859,25 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 // module
 exports.push([module.i, ".bg-primary[data-v-7f509ee1] {\n  background-color: #330b53;\n}\n.bg-secondary[data-v-7f509ee1] {\n  background-color: #5a308c;\n}\n.bg-highlight[data-v-7f509ee1] {\n  background-color: #e60099;\n}\n.bg-light[data-v-7f509ee1] {\n  background-color: #f6f6f6;\n}\n.bg-dark[data-v-7f509ee1] {\n  background-color: #1d1d1d;\n}\n.text-primary[data-v-7f509ee1] {\n  color: #330b53;\n}\n.text-secondary[data-v-7f509ee1] {\n  color: #5a308c;\n}\n.text-highlight[data-v-7f509ee1] {\n  color: #e60099;\n}\n.text-light[data-v-7f509ee1] {\n  color: #f6f6f6;\n}\n.text-dark[data-v-7f509ee1] {\n  color: #1d1d1d;\n}\n.font-primary[data-v-7f509ee1] {\n  font-family: \"Nunito Sans\", sans-serif;\n}\n.font-secondary[data-v-7f509ee1] {\n  font-family: \"Orbitron\", sans-serif;\n}\n.odd\\:bg-primary[data-v-7f509ee1]:nth-child(odd) {\n  background-color: #330b53;\n}\n.odd\\:bg-secondary[data-v-7f509ee1]:nth-child(odd) {\n  background-color: #5a308c;\n}\n.odd\\:bg-highlight[data-v-7f509ee1]:nth-child(odd) {\n  background-color: #e60099;\n}\n.odd\\:bg-light[data-v-7f509ee1]:nth-child(odd) {\n  background-color: #f6f6f6;\n}\n.odd\\:bg-dark[data-v-7f509ee1]:nth-child(odd) {\n  background-color: #1d1d1d;\n}\n.odd\\:text-primary[data-v-7f509ee1]:nth-child(odd) {\n  color: #330b53;\n}\n.odd\\:text-secondary[data-v-7f509ee1]:nth-child(odd) {\n  color: #5a308c;\n}\n.odd\\:text-highlight[data-v-7f509ee1]:nth-child(odd) {\n  color: #e60099;\n}\n.odd\\:text-light[data-v-7f509ee1]:nth-child(odd) {\n  color: #f6f6f6;\n}\n.odd\\:text-dark[data-v-7f509ee1]:nth-child(odd) {\n  color: #1d1d1d;\n}\n.odd\\:font-primary[data-v-7f509ee1]:nth-child(odd) {\n  font-family: \"Nunito Sans\", sans-serif;\n}\n.odd\\:font-secondary[data-v-7f509ee1]:nth-child(odd) {\n  font-family: \"Orbitron\", sans-serif;\n}\n.even\\:bg-primary[data-v-7f509ee1]:nth-child(even) {\n  background-color: #330b53;\n}\n.even\\:bg-secondary[data-v-7f509ee1]:nth-child(even) {\n  background-color: #5a308c;\n}\n.even\\:bg-highlight[data-v-7f509ee1]:nth-child(even) {\n  background-color: #e60099;\n}\n.even\\:bg-light[data-v-7f509ee1]:nth-child(even) {\n  background-color: #f6f6f6;\n}\n.even\\:bg-dark[data-v-7f509ee1]:nth-child(even) {\n  background-color: #1d1d1d;\n}\n.even\\:text-primary[data-v-7f509ee1]:nth-child(even) {\n  color: #330b53;\n}\n.even\\:text-secondary[data-v-7f509ee1]:nth-child(even) {\n  color: #5a308c;\n}\n.even\\:text-highlight[data-v-7f509ee1]:nth-child(even) {\n  color: #e60099;\n}\n.even\\:text-light[data-v-7f509ee1]:nth-child(even) {\n  color: #f6f6f6;\n}\n.even\\:text-dark[data-v-7f509ee1]:nth-child(even) {\n  color: #1d1d1d;\n}\n.even\\:font-primary[data-v-7f509ee1]:nth-child(even) {\n  font-family: \"Nunito Sans\", sans-serif;\n}\n.even\\:font-secondary[data-v-7f509ee1]:nth-child(even) {\n  font-family: \"Orbitron\", sans-serif;\n}\n.hover\\:bg-primary[data-v-7f509ee1]:hover {\n  background-color: #330b53;\n}\n.hover\\:bg-secondary[data-v-7f509ee1]:hover {\n  background-color: #5a308c;\n}\n.hover\\:bg-highlight[data-v-7f509ee1]:hover {\n  background-color: #e60099;\n}\n.hover\\:bg-light[data-v-7f509ee1]:hover {\n  background-color: #f6f6f6;\n}\n.hover\\:bg-dark[data-v-7f509ee1]:hover {\n  background-color: #1d1d1d;\n}\n.hover\\:text-primary[data-v-7f509ee1]:hover {\n  color: #330b53;\n}\n.hover\\:text-secondary[data-v-7f509ee1]:hover {\n  color: #5a308c;\n}\n.hover\\:text-highlight[data-v-7f509ee1]:hover {\n  color: #e60099;\n}\n.hover\\:text-light[data-v-7f509ee1]:hover {\n  color: #f6f6f6;\n}\n.hover\\:text-dark[data-v-7f509ee1]:hover {\n  color: #1d1d1d;\n}\n.hover\\:font-primary[data-v-7f509ee1]:hover {\n  font-family: \"Nunito Sans\", sans-serif;\n}\n.hover\\:font-secondary[data-v-7f509ee1]:hover {\n  font-family: \"Orbitron\", sans-serif;\n}\n.h-72[data-v-7f509ee1] {\n  height: 18rem;\n}\n.h-80[data-v-7f509ee1] {\n  height: 20rem;\n}\n.h-88[data-v-7f509ee1] {\n  height: 22rem;\n}\n.h-96[data-v-7f509ee1] {\n  height: 24rem;\n}\n.h-104[data-v-7f509ee1] {\n  height: 26rem;\n}\n.w-72[data-v-7f509ee1] {\n  width: 18rem;\n}\n.w-80[data-v-7f509ee1] {\n  width: 20rem;\n}\n.w-88[data-v-7f509ee1] {\n  width: 22rem;\n}\n.w-max-88[data-v-7f509ee1] {\n  max-width: 22rem;\n}\n.w-96[data-v-7f509ee1] {\n  width: 24rem;\n}\n.w-max-96[data-v-7f509ee1] {\n  max-width: 24rem;\n}\n.w-104[data-v-7f509ee1] {\n  width: 26rem;\n}\n.animate-logo[data-v-7f509ee1] {\n  -webkit-animation-name: logo-data-v-7f509ee1;\n          animation-name: logo-data-v-7f509ee1;\n  -webkit-animation-duration: 8s;\n          animation-duration: 8s;\n  -webkit-animation-iteration-count: infinite;\n          animation-iteration-count: infinite;\n  -webkit-animation-timing-function: ease-in-out;\n          animation-timing-function: ease-in-out;\n}\n.button[data-v-7f509ee1] {\n  display: inline-block;\n  padding-top: 0.5rem;\n  padding-bottom: 0.5rem;\n  padding-left: 0.75rem;\n  padding-right: 0.75rem;\n  border-radius: 0.25rem;\n  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);\n  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;\n  transition-duration: 100ms;\n}\n.button[data-v-7f509ee1]:hover {\n  background-color: #f6f6f6;\n  color: #1d1d1d;\n}\n@-webkit-keyframes logo-data-v-7f509ee1 {\n0% {\n    transform: scale(0.95);\n}\n50% {\n    transform: scale(1.05);\n}\n100% {\n    transform: scale(0.95);\n}\n}\n@keyframes logo-data-v-7f509ee1 {\n0% {\n    transform: scale(0.95);\n}\n50% {\n    transform: scale(1.05);\n}\n100% {\n    transform: scale(0.95);\n}\n}\n#heroBackground[data-v-7f509ee1] {\n  position: absolute;\n  -o-object-position: center;\n     object-position: center;\n  min-width: 100vw;\n  max-width: none;\n  min-height: 100%;\n  left: 50%;\n  top: 50%;\n  transform: translate(-50%, -50%);\n  z-index: -10;\n}\n.article-header[data-v-7f509ee1] {\n  font-size: 1.25rem;\n  font-weight: 400;\n  font-family: \"Orbitron\", sans-serif;\n}\n.article-body[data-v-7f509ee1] {\n  margin-top: 2rem;\n  font-size: 1rem;\n  font-weight: 400;\n  font-family: \"Nunito Sans\", sans-serif;\n}\n.schedule[data-v-7f509ee1] {\n  margin-top: 2rem;\n}\n.schedule table[data-v-7f509ee1] {\n  width: 100%;\n}\n.schedule table thead[data-v-7f509ee1] {\n  border-bottom-width: 1px;\n  --border-opacity: 1;\n  border-color: #ffffff;\n  border-color: rgba(255, 255, 255, var(--border-opacity));\n}\n.schedule table thead tr[data-v-7f509ee1] {\n  display: flex;\n}\n.schedule table thead tr th[data-v-7f509ee1]:first-child {\n  font-family: \"Nunito Sans\", sans-serif;\n  font-weight: 400;\n  color: #f6f6f6;\n  font-size: 1rem;\n  padding-top: 1rem;\n  padding-bottom: 1rem;\n  margin-left: 0.5rem;\n  width: 25%;\n  text-align: left;\n}\n.schedule table thead tr th[data-v-7f509ee1]:nth-child(2) {\n  font-family: \"Nunito Sans\", sans-serif;\n  font-weight: 400;\n  color: #f6f6f6;\n  font-size: 1rem;\n  padding-top: 1rem;\n  padding-bottom: 1rem;\n  width: 25%;\n  text-align: left;\n}\n.schedule table thead tr th[data-v-7f509ee1]:last-child {\n  font-family: \"Nunito Sans\", sans-serif;\n  font-weight: 400;\n  color: #f6f6f6;\n  font-size: 1rem;\n  padding-top: 1rem;\n  padding-bottom: 1rem;\n  width: 50%;\n  flex: 1 1 0%;\n  text-align: left;\n}\n.schedule table tbody tr[data-v-7f509ee1] {\n  transition: background 0.2s ease-in;\n  display: flex;\n}\n.schedule table tbody tr[data-v-7f509ee1]:nth-child(even) {\n  background-color: #5a308c;\n}\n.schedule table tbody tr[data-v-7f509ee1]:first-child {\n  margin-top: 0;\n}\n.schedule table tbody tr[data-v-7f509ee1]:hover {\n  transition: background 0.2s ease-in;\n  background: #e60099;\n}\n.schedule table tbody tr td[data-v-7f509ee1]:first-child {\n  font-family: \"Nunito Sans\", sans-serif;\n  font-weight: 300;\n  color: #f6f6f6;\n  font-size: 1rem;\n  padding-top: 1rem;\n  padding-bottom: 1rem;\n  margin-left: 0.5rem;\n  width: 25%;\n  text-align: left;\n}\n.schedule table tbody tr td[data-v-7f509ee1]:nth-child(2) {\n  font-family: \"Nunito Sans\", sans-serif;\n  font-weight: 300;\n  color: #f6f6f6;\n  font-size: 1rem;\n  padding-top: 1rem;\n  padding-bottom: 1rem;\n  width: 25%;\n  text-align: left;\n}\n.schedule table tbody tr td[data-v-7f509ee1]:last-child {\n  font-family: \"Nunito Sans\", sans-serif;\n  font-weight: 300;\n  color: #f6f6f6;\n  font-size: 1rem;\n  padding-top: 1rem;\n  padding-bottom: 1rem;\n  flex: 1 1 0%;\n  width: 50%;\n  text-align: left;\n  margin-right: 0.5rem;\n}\n.sponsor[data-v-7f509ee1] {\n  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);\n  display: flex;\n  flex-direction: column;\n  --bg-opacity: 1;\n  background-color: #ffffff;\n  background-color: rgba(255, 255, 255, var(--bg-opacity));\n  transform-origin: center;\n  --transform-scale-x: 1;\n  --transform-scale-y: 1;\n  --transform-translate-x: 0;\n  --transform-translate-y: 0;\n  --transform-rotate: 0;\n  --transform-skew-x: 0;\n  --transform-skew-y: 0;\n  --transform-scale-x: 1;\n  --transform-scale-y: 1;\n  transform: translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));\n  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;\n  transition-duration: 200ms;\n  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);\n}\n.sponsor[data-v-7f509ee1]:hover {\n  --transform-scale-x: 1.05;\n  --transform-scale-y: 1.05;\n}\n.sponsor .sponsor-img[data-v-7f509ee1] {\n  height: 8rem;\n  padding: 1rem;\n  display: flex;\n  justify-content: center;\n}\n.sponsor .sponsor-img img[data-v-7f509ee1] {\n  -o-object-fit: contain;\n     object-fit: contain;\n}\n.sponsor .sponsor-tag[data-v-7f509ee1] {\n  padding: 0.5rem;\n  flex: 1 1 0%;\n  display: flex;\n  background-color: #330b53;\n}\n.sponsor .sponsor-tag .sponsor-tag-text[data-v-7f509ee1] {\n  font-family: \"Nunito Sans\", sans-serif;\n  font-weight: 300;\n  font-size: 1rem;\n  color: #f6f6f6;\n  text-align: center;\n  justify-content: center;\n  align-items: center;\n  flex: 1 1 0%;\n}\n@media (min-width: 768px) {\n.schedule table thead tr th[data-v-7f509ee1]:first-child {\n    width: 16.666667%;\n    margin-left: 1rem;\n}\n.schedule table thead tr th[data-v-7f509ee1]:nth-child(2) {\n    width: 16.666667%;\n}\n.schedule table thead tr th[data-v-7f509ee1]:last-child {\n    width: 66.666667%;\n    margin-right: 1rem;\n}\n.schedule table tbody tr td[data-v-7f509ee1]:first-child {\n    width: 16.666667%;\n    margin-left: 1rem;\n}\n.schedule table tbody tr td[data-v-7f509ee1]:nth-child(2) {\n    width: 16.666667%;\n}\n.schedule table tbody tr td[data-v-7f509ee1]:last-child {\n    width: 66.666667%;\n    margin-right: 1rem;\n}\n}\n@media (min-width: 640px) {\n.sm\\:bg-primary[data-v-7f509ee1] {\n    background-color: #330b53;\n}\n.sm\\:bg-secondary[data-v-7f509ee1] {\n    background-color: #5a308c;\n}\n.sm\\:bg-highlight[data-v-7f509ee1] {\n    background-color: #e60099;\n}\n.sm\\:bg-light[data-v-7f509ee1] {\n    background-color: #f6f6f6;\n}\n.sm\\:bg-dark[data-v-7f509ee1] {\n    background-color: #1d1d1d;\n}\n.sm\\:text-primary[data-v-7f509ee1] {\n    color: #330b53;\n}\n.sm\\:text-secondary[data-v-7f509ee1] {\n    color: #5a308c;\n}\n.sm\\:text-highlight[data-v-7f509ee1] {\n    color: #e60099;\n}\n.sm\\:text-light[data-v-7f509ee1] {\n    color: #f6f6f6;\n}\n.sm\\:text-dark[data-v-7f509ee1] {\n    color: #1d1d1d;\n}\n.sm\\:font-primary[data-v-7f509ee1] {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.sm\\:font-secondary[data-v-7f509ee1] {\n    font-family: \"Orbitron\", sans-serif;\n}\n.sm\\:odd\\:bg-primary[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #330b53;\n}\n.sm\\:odd\\:bg-secondary[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #5a308c;\n}\n.sm\\:odd\\:bg-highlight[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #e60099;\n}\n.sm\\:odd\\:bg-light[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #f6f6f6;\n}\n.sm\\:odd\\:bg-dark[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #1d1d1d;\n}\n.sm\\:odd\\:text-primary[data-v-7f509ee1]:nth-child(odd) {\n    color: #330b53;\n}\n.sm\\:odd\\:text-secondary[data-v-7f509ee1]:nth-child(odd) {\n    color: #5a308c;\n}\n.sm\\:odd\\:text-highlight[data-v-7f509ee1]:nth-child(odd) {\n    color: #e60099;\n}\n.sm\\:odd\\:text-light[data-v-7f509ee1]:nth-child(odd) {\n    color: #f6f6f6;\n}\n.sm\\:odd\\:text-dark[data-v-7f509ee1]:nth-child(odd) {\n    color: #1d1d1d;\n}\n.sm\\:odd\\:font-primary[data-v-7f509ee1]:nth-child(odd) {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.sm\\:odd\\:font-secondary[data-v-7f509ee1]:nth-child(odd) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.sm\\:even\\:bg-primary[data-v-7f509ee1]:nth-child(even) {\n    background-color: #330b53;\n}\n.sm\\:even\\:bg-secondary[data-v-7f509ee1]:nth-child(even) {\n    background-color: #5a308c;\n}\n.sm\\:even\\:bg-highlight[data-v-7f509ee1]:nth-child(even) {\n    background-color: #e60099;\n}\n.sm\\:even\\:bg-light[data-v-7f509ee1]:nth-child(even) {\n    background-color: #f6f6f6;\n}\n.sm\\:even\\:bg-dark[data-v-7f509ee1]:nth-child(even) {\n    background-color: #1d1d1d;\n}\n.sm\\:even\\:text-primary[data-v-7f509ee1]:nth-child(even) {\n    color: #330b53;\n}\n.sm\\:even\\:text-secondary[data-v-7f509ee1]:nth-child(even) {\n    color: #5a308c;\n}\n.sm\\:even\\:text-highlight[data-v-7f509ee1]:nth-child(even) {\n    color: #e60099;\n}\n.sm\\:even\\:text-light[data-v-7f509ee1]:nth-child(even) {\n    color: #f6f6f6;\n}\n.sm\\:even\\:text-dark[data-v-7f509ee1]:nth-child(even) {\n    color: #1d1d1d;\n}\n.sm\\:even\\:font-primary[data-v-7f509ee1]:nth-child(even) {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.sm\\:even\\:font-secondary[data-v-7f509ee1]:nth-child(even) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.sm\\:hover\\:bg-primary[data-v-7f509ee1]:hover {\n    background-color: #330b53;\n}\n.sm\\:hover\\:bg-secondary[data-v-7f509ee1]:hover {\n    background-color: #5a308c;\n}\n.sm\\:hover\\:bg-highlight[data-v-7f509ee1]:hover {\n    background-color: #e60099;\n}\n.sm\\:hover\\:bg-light[data-v-7f509ee1]:hover {\n    background-color: #f6f6f6;\n}\n.sm\\:hover\\:bg-dark[data-v-7f509ee1]:hover {\n    background-color: #1d1d1d;\n}\n.sm\\:hover\\:text-primary[data-v-7f509ee1]:hover {\n    color: #330b53;\n}\n.sm\\:hover\\:text-secondary[data-v-7f509ee1]:hover {\n    color: #5a308c;\n}\n.sm\\:hover\\:text-highlight[data-v-7f509ee1]:hover {\n    color: #e60099;\n}\n.sm\\:hover\\:text-light[data-v-7f509ee1]:hover {\n    color: #f6f6f6;\n}\n.sm\\:hover\\:text-dark[data-v-7f509ee1]:hover {\n    color: #1d1d1d;\n}\n.sm\\:hover\\:font-primary[data-v-7f509ee1]:hover {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.sm\\:hover\\:font-secondary[data-v-7f509ee1]:hover {\n    font-family: \"Orbitron\", sans-serif;\n}\n.sm\\:h-72[data-v-7f509ee1] {\n    height: 18rem;\n}\n.sm\\:h-80[data-v-7f509ee1] {\n    height: 20rem;\n}\n.sm\\:h-88[data-v-7f509ee1] {\n    height: 22rem;\n}\n.sm\\:h-96[data-v-7f509ee1] {\n    height: 24rem;\n}\n.sm\\:h-104[data-v-7f509ee1] {\n    height: 26rem;\n}\n.sm\\:w-72[data-v-7f509ee1] {\n    width: 18rem;\n}\n.sm\\:w-80[data-v-7f509ee1] {\n    width: 20rem;\n}\n.sm\\:w-88[data-v-7f509ee1] {\n    width: 22rem;\n}\n.sm\\:w-max-88[data-v-7f509ee1] {\n    max-width: 22rem;\n}\n.sm\\:w-96[data-v-7f509ee1] {\n    width: 24rem;\n}\n.sm\\:w-max-96[data-v-7f509ee1] {\n    max-width: 24rem;\n}\n.sm\\:w-104[data-v-7f509ee1] {\n    width: 26rem;\n}\n}\n@media (min-width: 768px) {\n.md\\:bg-primary[data-v-7f509ee1] {\n    background-color: #330b53;\n}\n.md\\:bg-secondary[data-v-7f509ee1] {\n    background-color: #5a308c;\n}\n.md\\:bg-highlight[data-v-7f509ee1] {\n    background-color: #e60099;\n}\n.md\\:bg-light[data-v-7f509ee1] {\n    background-color: #f6f6f6;\n}\n.md\\:bg-dark[data-v-7f509ee1] {\n    background-color: #1d1d1d;\n}\n.md\\:text-primary[data-v-7f509ee1] {\n    color: #330b53;\n}\n.md\\:text-secondary[data-v-7f509ee1] {\n    color: #5a308c;\n}\n.md\\:text-highlight[data-v-7f509ee1] {\n    color: #e60099;\n}\n.md\\:text-light[data-v-7f509ee1] {\n    color: #f6f6f6;\n}\n.md\\:text-dark[data-v-7f509ee1] {\n    color: #1d1d1d;\n}\n.md\\:font-primary[data-v-7f509ee1] {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.md\\:font-secondary[data-v-7f509ee1] {\n    font-family: \"Orbitron\", sans-serif;\n}\n.md\\:odd\\:bg-primary[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #330b53;\n}\n.md\\:odd\\:bg-secondary[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #5a308c;\n}\n.md\\:odd\\:bg-highlight[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #e60099;\n}\n.md\\:odd\\:bg-light[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #f6f6f6;\n}\n.md\\:odd\\:bg-dark[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #1d1d1d;\n}\n.md\\:odd\\:text-primary[data-v-7f509ee1]:nth-child(odd) {\n    color: #330b53;\n}\n.md\\:odd\\:text-secondary[data-v-7f509ee1]:nth-child(odd) {\n    color: #5a308c;\n}\n.md\\:odd\\:text-highlight[data-v-7f509ee1]:nth-child(odd) {\n    color: #e60099;\n}\n.md\\:odd\\:text-light[data-v-7f509ee1]:nth-child(odd) {\n    color: #f6f6f6;\n}\n.md\\:odd\\:text-dark[data-v-7f509ee1]:nth-child(odd) {\n    color: #1d1d1d;\n}\n.md\\:odd\\:font-primary[data-v-7f509ee1]:nth-child(odd) {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.md\\:odd\\:font-secondary[data-v-7f509ee1]:nth-child(odd) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.md\\:even\\:bg-primary[data-v-7f509ee1]:nth-child(even) {\n    background-color: #330b53;\n}\n.md\\:even\\:bg-secondary[data-v-7f509ee1]:nth-child(even) {\n    background-color: #5a308c;\n}\n.md\\:even\\:bg-highlight[data-v-7f509ee1]:nth-child(even) {\n    background-color: #e60099;\n}\n.md\\:even\\:bg-light[data-v-7f509ee1]:nth-child(even) {\n    background-color: #f6f6f6;\n}\n.md\\:even\\:bg-dark[data-v-7f509ee1]:nth-child(even) {\n    background-color: #1d1d1d;\n}\n.md\\:even\\:text-primary[data-v-7f509ee1]:nth-child(even) {\n    color: #330b53;\n}\n.md\\:even\\:text-secondary[data-v-7f509ee1]:nth-child(even) {\n    color: #5a308c;\n}\n.md\\:even\\:text-highlight[data-v-7f509ee1]:nth-child(even) {\n    color: #e60099;\n}\n.md\\:even\\:text-light[data-v-7f509ee1]:nth-child(even) {\n    color: #f6f6f6;\n}\n.md\\:even\\:text-dark[data-v-7f509ee1]:nth-child(even) {\n    color: #1d1d1d;\n}\n.md\\:even\\:font-primary[data-v-7f509ee1]:nth-child(even) {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.md\\:even\\:font-secondary[data-v-7f509ee1]:nth-child(even) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.md\\:hover\\:bg-primary[data-v-7f509ee1]:hover {\n    background-color: #330b53;\n}\n.md\\:hover\\:bg-secondary[data-v-7f509ee1]:hover {\n    background-color: #5a308c;\n}\n.md\\:hover\\:bg-highlight[data-v-7f509ee1]:hover {\n    background-color: #e60099;\n}\n.md\\:hover\\:bg-light[data-v-7f509ee1]:hover {\n    background-color: #f6f6f6;\n}\n.md\\:hover\\:bg-dark[data-v-7f509ee1]:hover {\n    background-color: #1d1d1d;\n}\n.md\\:hover\\:text-primary[data-v-7f509ee1]:hover {\n    color: #330b53;\n}\n.md\\:hover\\:text-secondary[data-v-7f509ee1]:hover {\n    color: #5a308c;\n}\n.md\\:hover\\:text-highlight[data-v-7f509ee1]:hover {\n    color: #e60099;\n}\n.md\\:hover\\:text-light[data-v-7f509ee1]:hover {\n    color: #f6f6f6;\n}\n.md\\:hover\\:text-dark[data-v-7f509ee1]:hover {\n    color: #1d1d1d;\n}\n.md\\:hover\\:font-primary[data-v-7f509ee1]:hover {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.md\\:hover\\:font-secondary[data-v-7f509ee1]:hover {\n    font-family: \"Orbitron\", sans-serif;\n}\n.md\\:h-72[data-v-7f509ee1] {\n    height: 18rem;\n}\n.md\\:h-80[data-v-7f509ee1] {\n    height: 20rem;\n}\n.md\\:h-88[data-v-7f509ee1] {\n    height: 22rem;\n}\n.md\\:h-96[data-v-7f509ee1] {\n    height: 24rem;\n}\n.md\\:h-104[data-v-7f509ee1] {\n    height: 26rem;\n}\n.md\\:w-72[data-v-7f509ee1] {\n    width: 18rem;\n}\n.md\\:w-80[data-v-7f509ee1] {\n    width: 20rem;\n}\n.md\\:w-88[data-v-7f509ee1] {\n    width: 22rem;\n}\n.md\\:w-max-88[data-v-7f509ee1] {\n    max-width: 22rem;\n}\n.md\\:w-96[data-v-7f509ee1] {\n    width: 24rem;\n}\n.md\\:w-max-96[data-v-7f509ee1] {\n    max-width: 24rem;\n}\n.md\\:w-104[data-v-7f509ee1] {\n    width: 26rem;\n}\n}\n@media (min-width: 1024px) {\n.lg\\:bg-primary[data-v-7f509ee1] {\n    background-color: #330b53;\n}\n.lg\\:bg-secondary[data-v-7f509ee1] {\n    background-color: #5a308c;\n}\n.lg\\:bg-highlight[data-v-7f509ee1] {\n    background-color: #e60099;\n}\n.lg\\:bg-light[data-v-7f509ee1] {\n    background-color: #f6f6f6;\n}\n.lg\\:bg-dark[data-v-7f509ee1] {\n    background-color: #1d1d1d;\n}\n.lg\\:text-primary[data-v-7f509ee1] {\n    color: #330b53;\n}\n.lg\\:text-secondary[data-v-7f509ee1] {\n    color: #5a308c;\n}\n.lg\\:text-highlight[data-v-7f509ee1] {\n    color: #e60099;\n}\n.lg\\:text-light[data-v-7f509ee1] {\n    color: #f6f6f6;\n}\n.lg\\:text-dark[data-v-7f509ee1] {\n    color: #1d1d1d;\n}\n.lg\\:font-primary[data-v-7f509ee1] {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.lg\\:font-secondary[data-v-7f509ee1] {\n    font-family: \"Orbitron\", sans-serif;\n}\n.lg\\:odd\\:bg-primary[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #330b53;\n}\n.lg\\:odd\\:bg-secondary[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #5a308c;\n}\n.lg\\:odd\\:bg-highlight[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #e60099;\n}\n.lg\\:odd\\:bg-light[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #f6f6f6;\n}\n.lg\\:odd\\:bg-dark[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #1d1d1d;\n}\n.lg\\:odd\\:text-primary[data-v-7f509ee1]:nth-child(odd) {\n    color: #330b53;\n}\n.lg\\:odd\\:text-secondary[data-v-7f509ee1]:nth-child(odd) {\n    color: #5a308c;\n}\n.lg\\:odd\\:text-highlight[data-v-7f509ee1]:nth-child(odd) {\n    color: #e60099;\n}\n.lg\\:odd\\:text-light[data-v-7f509ee1]:nth-child(odd) {\n    color: #f6f6f6;\n}\n.lg\\:odd\\:text-dark[data-v-7f509ee1]:nth-child(odd) {\n    color: #1d1d1d;\n}\n.lg\\:odd\\:font-primary[data-v-7f509ee1]:nth-child(odd) {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.lg\\:odd\\:font-secondary[data-v-7f509ee1]:nth-child(odd) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.lg\\:even\\:bg-primary[data-v-7f509ee1]:nth-child(even) {\n    background-color: #330b53;\n}\n.lg\\:even\\:bg-secondary[data-v-7f509ee1]:nth-child(even) {\n    background-color: #5a308c;\n}\n.lg\\:even\\:bg-highlight[data-v-7f509ee1]:nth-child(even) {\n    background-color: #e60099;\n}\n.lg\\:even\\:bg-light[data-v-7f509ee1]:nth-child(even) {\n    background-color: #f6f6f6;\n}\n.lg\\:even\\:bg-dark[data-v-7f509ee1]:nth-child(even) {\n    background-color: #1d1d1d;\n}\n.lg\\:even\\:text-primary[data-v-7f509ee1]:nth-child(even) {\n    color: #330b53;\n}\n.lg\\:even\\:text-secondary[data-v-7f509ee1]:nth-child(even) {\n    color: #5a308c;\n}\n.lg\\:even\\:text-highlight[data-v-7f509ee1]:nth-child(even) {\n    color: #e60099;\n}\n.lg\\:even\\:text-light[data-v-7f509ee1]:nth-child(even) {\n    color: #f6f6f6;\n}\n.lg\\:even\\:text-dark[data-v-7f509ee1]:nth-child(even) {\n    color: #1d1d1d;\n}\n.lg\\:even\\:font-primary[data-v-7f509ee1]:nth-child(even) {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.lg\\:even\\:font-secondary[data-v-7f509ee1]:nth-child(even) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.lg\\:hover\\:bg-primary[data-v-7f509ee1]:hover {\n    background-color: #330b53;\n}\n.lg\\:hover\\:bg-secondary[data-v-7f509ee1]:hover {\n    background-color: #5a308c;\n}\n.lg\\:hover\\:bg-highlight[data-v-7f509ee1]:hover {\n    background-color: #e60099;\n}\n.lg\\:hover\\:bg-light[data-v-7f509ee1]:hover {\n    background-color: #f6f6f6;\n}\n.lg\\:hover\\:bg-dark[data-v-7f509ee1]:hover {\n    background-color: #1d1d1d;\n}\n.lg\\:hover\\:text-primary[data-v-7f509ee1]:hover {\n    color: #330b53;\n}\n.lg\\:hover\\:text-secondary[data-v-7f509ee1]:hover {\n    color: #5a308c;\n}\n.lg\\:hover\\:text-highlight[data-v-7f509ee1]:hover {\n    color: #e60099;\n}\n.lg\\:hover\\:text-light[data-v-7f509ee1]:hover {\n    color: #f6f6f6;\n}\n.lg\\:hover\\:text-dark[data-v-7f509ee1]:hover {\n    color: #1d1d1d;\n}\n.lg\\:hover\\:font-primary[data-v-7f509ee1]:hover {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.lg\\:hover\\:font-secondary[data-v-7f509ee1]:hover {\n    font-family: \"Orbitron\", sans-serif;\n}\n.lg\\:h-72[data-v-7f509ee1] {\n    height: 18rem;\n}\n.lg\\:h-80[data-v-7f509ee1] {\n    height: 20rem;\n}\n.lg\\:h-88[data-v-7f509ee1] {\n    height: 22rem;\n}\n.lg\\:h-96[data-v-7f509ee1] {\n    height: 24rem;\n}\n.lg\\:h-104[data-v-7f509ee1] {\n    height: 26rem;\n}\n.lg\\:w-72[data-v-7f509ee1] {\n    width: 18rem;\n}\n.lg\\:w-80[data-v-7f509ee1] {\n    width: 20rem;\n}\n.lg\\:w-88[data-v-7f509ee1] {\n    width: 22rem;\n}\n.lg\\:w-max-88[data-v-7f509ee1] {\n    max-width: 22rem;\n}\n.lg\\:w-96[data-v-7f509ee1] {\n    width: 24rem;\n}\n.lg\\:w-max-96[data-v-7f509ee1] {\n    max-width: 24rem;\n}\n.lg\\:w-104[data-v-7f509ee1] {\n    width: 26rem;\n}\n}\n@media (min-width: 1280px) {\n.xl\\:bg-primary[data-v-7f509ee1] {\n    background-color: #330b53;\n}\n.xl\\:bg-secondary[data-v-7f509ee1] {\n    background-color: #5a308c;\n}\n.xl\\:bg-highlight[data-v-7f509ee1] {\n    background-color: #e60099;\n}\n.xl\\:bg-light[data-v-7f509ee1] {\n    background-color: #f6f6f6;\n}\n.xl\\:bg-dark[data-v-7f509ee1] {\n    background-color: #1d1d1d;\n}\n.xl\\:text-primary[data-v-7f509ee1] {\n    color: #330b53;\n}\n.xl\\:text-secondary[data-v-7f509ee1] {\n    color: #5a308c;\n}\n.xl\\:text-highlight[data-v-7f509ee1] {\n    color: #e60099;\n}\n.xl\\:text-light[data-v-7f509ee1] {\n    color: #f6f6f6;\n}\n.xl\\:text-dark[data-v-7f509ee1] {\n    color: #1d1d1d;\n}\n.xl\\:font-primary[data-v-7f509ee1] {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.xl\\:font-secondary[data-v-7f509ee1] {\n    font-family: \"Orbitron\", sans-serif;\n}\n.xl\\:odd\\:bg-primary[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #330b53;\n}\n.xl\\:odd\\:bg-secondary[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #5a308c;\n}\n.xl\\:odd\\:bg-highlight[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #e60099;\n}\n.xl\\:odd\\:bg-light[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #f6f6f6;\n}\n.xl\\:odd\\:bg-dark[data-v-7f509ee1]:nth-child(odd) {\n    background-color: #1d1d1d;\n}\n.xl\\:odd\\:text-primary[data-v-7f509ee1]:nth-child(odd) {\n    color: #330b53;\n}\n.xl\\:odd\\:text-secondary[data-v-7f509ee1]:nth-child(odd) {\n    color: #5a308c;\n}\n.xl\\:odd\\:text-highlight[data-v-7f509ee1]:nth-child(odd) {\n    color: #e60099;\n}\n.xl\\:odd\\:text-light[data-v-7f509ee1]:nth-child(odd) {\n    color: #f6f6f6;\n}\n.xl\\:odd\\:text-dark[data-v-7f509ee1]:nth-child(odd) {\n    color: #1d1d1d;\n}\n.xl\\:odd\\:font-primary[data-v-7f509ee1]:nth-child(odd) {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.xl\\:odd\\:font-secondary[data-v-7f509ee1]:nth-child(odd) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.xl\\:even\\:bg-primary[data-v-7f509ee1]:nth-child(even) {\n    background-color: #330b53;\n}\n.xl\\:even\\:bg-secondary[data-v-7f509ee1]:nth-child(even) {\n    background-color: #5a308c;\n}\n.xl\\:even\\:bg-highlight[data-v-7f509ee1]:nth-child(even) {\n    background-color: #e60099;\n}\n.xl\\:even\\:bg-light[data-v-7f509ee1]:nth-child(even) {\n    background-color: #f6f6f6;\n}\n.xl\\:even\\:bg-dark[data-v-7f509ee1]:nth-child(even) {\n    background-color: #1d1d1d;\n}\n.xl\\:even\\:text-primary[data-v-7f509ee1]:nth-child(even) {\n    color: #330b53;\n}\n.xl\\:even\\:text-secondary[data-v-7f509ee1]:nth-child(even) {\n    color: #5a308c;\n}\n.xl\\:even\\:text-highlight[data-v-7f509ee1]:nth-child(even) {\n    color: #e60099;\n}\n.xl\\:even\\:text-light[data-v-7f509ee1]:nth-child(even) {\n    color: #f6f6f6;\n}\n.xl\\:even\\:text-dark[data-v-7f509ee1]:nth-child(even) {\n    color: #1d1d1d;\n}\n.xl\\:even\\:font-primary[data-v-7f509ee1]:nth-child(even) {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.xl\\:even\\:font-secondary[data-v-7f509ee1]:nth-child(even) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.xl\\:hover\\:bg-primary[data-v-7f509ee1]:hover {\n    background-color: #330b53;\n}\n.xl\\:hover\\:bg-secondary[data-v-7f509ee1]:hover {\n    background-color: #5a308c;\n}\n.xl\\:hover\\:bg-highlight[data-v-7f509ee1]:hover {\n    background-color: #e60099;\n}\n.xl\\:hover\\:bg-light[data-v-7f509ee1]:hover {\n    background-color: #f6f6f6;\n}\n.xl\\:hover\\:bg-dark[data-v-7f509ee1]:hover {\n    background-color: #1d1d1d;\n}\n.xl\\:hover\\:text-primary[data-v-7f509ee1]:hover {\n    color: #330b53;\n}\n.xl\\:hover\\:text-secondary[data-v-7f509ee1]:hover {\n    color: #5a308c;\n}\n.xl\\:hover\\:text-highlight[data-v-7f509ee1]:hover {\n    color: #e60099;\n}\n.xl\\:hover\\:text-light[data-v-7f509ee1]:hover {\n    color: #f6f6f6;\n}\n.xl\\:hover\\:text-dark[data-v-7f509ee1]:hover {\n    color: #1d1d1d;\n}\n.xl\\:hover\\:font-primary[data-v-7f509ee1]:hover {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.xl\\:hover\\:font-secondary[data-v-7f509ee1]:hover {\n    font-family: \"Orbitron\", sans-serif;\n}\n.xl\\:h-72[data-v-7f509ee1] {\n    height: 18rem;\n}\n.xl\\:h-80[data-v-7f509ee1] {\n    height: 20rem;\n}\n.xl\\:h-88[data-v-7f509ee1] {\n    height: 22rem;\n}\n.xl\\:h-96[data-v-7f509ee1] {\n    height: 24rem;\n}\n.xl\\:h-104[data-v-7f509ee1] {\n    height: 26rem;\n}\n.xl\\:w-72[data-v-7f509ee1] {\n    width: 18rem;\n}\n.xl\\:w-80[data-v-7f509ee1] {\n    width: 20rem;\n}\n.xl\\:w-88[data-v-7f509ee1] {\n    width: 22rem;\n}\n.xl\\:w-max-88[data-v-7f509ee1] {\n    max-width: 22rem;\n}\n.xl\\:w-96[data-v-7f509ee1] {\n    width: 24rem;\n}\n.xl\\:w-max-96[data-v-7f509ee1] {\n    max-width: 24rem;\n}\n.xl\\:w-104[data-v-7f509ee1] {\n    width: 26rem;\n}\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Portal/NextSteps.vue?vue&type=style&index=0&id=a33e59cc&lang=scss&scoped=true&":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Portal/NextSteps.vue?vue&type=style&index=0&id=a33e59cc&lang=scss&scoped=true& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".bg-primary[data-v-a33e59cc] {\n  background-color: #330b53;\n}\n.bg-secondary[data-v-a33e59cc] {\n  background-color: #5a308c;\n}\n.bg-highlight[data-v-a33e59cc] {\n  background-color: #e60099;\n}\n.bg-light[data-v-a33e59cc] {\n  background-color: #f6f6f6;\n}\n.bg-dark[data-v-a33e59cc] {\n  background-color: #1d1d1d;\n}\n.text-primary[data-v-a33e59cc] {\n  color: #330b53;\n}\n.text-secondary[data-v-a33e59cc] {\n  color: #5a308c;\n}\n.text-highlight[data-v-a33e59cc] {\n  color: #e60099;\n}\n.text-light[data-v-a33e59cc] {\n  color: #f6f6f6;\n}\n.text-dark[data-v-a33e59cc] {\n  color: #1d1d1d;\n}\n.font-primary[data-v-a33e59cc] {\n  font-family: \"Nunito Sans\", sans-serif;\n}\n.font-secondary[data-v-a33e59cc] {\n  font-family: \"Orbitron\", sans-serif;\n}\n.odd\\:bg-primary[data-v-a33e59cc]:nth-child(odd) {\n  background-color: #330b53;\n}\n.odd\\:bg-secondary[data-v-a33e59cc]:nth-child(odd) {\n  background-color: #5a308c;\n}\n.odd\\:bg-highlight[data-v-a33e59cc]:nth-child(odd) {\n  background-color: #e60099;\n}\n.odd\\:bg-light[data-v-a33e59cc]:nth-child(odd) {\n  background-color: #f6f6f6;\n}\n.odd\\:bg-dark[data-v-a33e59cc]:nth-child(odd) {\n  background-color: #1d1d1d;\n}\n.odd\\:text-primary[data-v-a33e59cc]:nth-child(odd) {\n  color: #330b53;\n}\n.odd\\:text-secondary[data-v-a33e59cc]:nth-child(odd) {\n  color: #5a308c;\n}\n.odd\\:text-highlight[data-v-a33e59cc]:nth-child(odd) {\n  color: #e60099;\n}\n.odd\\:text-light[data-v-a33e59cc]:nth-child(odd) {\n  color: #f6f6f6;\n}\n.odd\\:text-dark[data-v-a33e59cc]:nth-child(odd) {\n  color: #1d1d1d;\n}\n.odd\\:font-primary[data-v-a33e59cc]:nth-child(odd) {\n  font-family: \"Nunito Sans\", sans-serif;\n}\n.odd\\:font-secondary[data-v-a33e59cc]:nth-child(odd) {\n  font-family: \"Orbitron\", sans-serif;\n}\n.even\\:bg-primary[data-v-a33e59cc]:nth-child(even) {\n  background-color: #330b53;\n}\n.even\\:bg-secondary[data-v-a33e59cc]:nth-child(even) {\n  background-color: #5a308c;\n}\n.even\\:bg-highlight[data-v-a33e59cc]:nth-child(even) {\n  background-color: #e60099;\n}\n.even\\:bg-light[data-v-a33e59cc]:nth-child(even) {\n  background-color: #f6f6f6;\n}\n.even\\:bg-dark[data-v-a33e59cc]:nth-child(even) {\n  background-color: #1d1d1d;\n}\n.even\\:text-primary[data-v-a33e59cc]:nth-child(even) {\n  color: #330b53;\n}\n.even\\:text-secondary[data-v-a33e59cc]:nth-child(even) {\n  color: #5a308c;\n}\n.even\\:text-highlight[data-v-a33e59cc]:nth-child(even) {\n  color: #e60099;\n}\n.even\\:text-light[data-v-a33e59cc]:nth-child(even) {\n  color: #f6f6f6;\n}\n.even\\:text-dark[data-v-a33e59cc]:nth-child(even) {\n  color: #1d1d1d;\n}\n.even\\:font-primary[data-v-a33e59cc]:nth-child(even) {\n  font-family: \"Nunito Sans\", sans-serif;\n}\n.even\\:font-secondary[data-v-a33e59cc]:nth-child(even) {\n  font-family: \"Orbitron\", sans-serif;\n}\n.hover\\:bg-primary[data-v-a33e59cc]:hover {\n  background-color: #330b53;\n}\n.hover\\:bg-secondary[data-v-a33e59cc]:hover {\n  background-color: #5a308c;\n}\n.hover\\:bg-highlight[data-v-a33e59cc]:hover {\n  background-color: #e60099;\n}\n.hover\\:bg-light[data-v-a33e59cc]:hover {\n  background-color: #f6f6f6;\n}\n.hover\\:bg-dark[data-v-a33e59cc]:hover {\n  background-color: #1d1d1d;\n}\n.hover\\:text-primary[data-v-a33e59cc]:hover {\n  color: #330b53;\n}\n.hover\\:text-secondary[data-v-a33e59cc]:hover {\n  color: #5a308c;\n}\n.hover\\:text-highlight[data-v-a33e59cc]:hover {\n  color: #e60099;\n}\n.hover\\:text-light[data-v-a33e59cc]:hover {\n  color: #f6f6f6;\n}\n.hover\\:text-dark[data-v-a33e59cc]:hover {\n  color: #1d1d1d;\n}\n.hover\\:font-primary[data-v-a33e59cc]:hover {\n  font-family: \"Nunito Sans\", sans-serif;\n}\n.hover\\:font-secondary[data-v-a33e59cc]:hover {\n  font-family: \"Orbitron\", sans-serif;\n}\n.h-72[data-v-a33e59cc] {\n  height: 18rem;\n}\n.h-80[data-v-a33e59cc] {\n  height: 20rem;\n}\n.h-88[data-v-a33e59cc] {\n  height: 22rem;\n}\n.h-96[data-v-a33e59cc] {\n  height: 24rem;\n}\n.h-104[data-v-a33e59cc] {\n  height: 26rem;\n}\n.w-72[data-v-a33e59cc] {\n  width: 18rem;\n}\n.w-80[data-v-a33e59cc] {\n  width: 20rem;\n}\n.w-88[data-v-a33e59cc] {\n  width: 22rem;\n}\n.w-max-88[data-v-a33e59cc] {\n  max-width: 22rem;\n}\n.w-96[data-v-a33e59cc] {\n  width: 24rem;\n}\n.w-max-96[data-v-a33e59cc] {\n  max-width: 24rem;\n}\n.w-104[data-v-a33e59cc] {\n  width: 26rem;\n}\n.card[data-v-a33e59cc] {\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n  --bg-opacity: 1;\n  background-color: #ffffff;\n  background-color: rgba(255, 255, 255, var(--bg-opacity));\n  padding: 2rem;\n  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);\n  grid-column: span 1 / span 1;\n}\n.card .title[data-v-a33e59cc] {\n  font-family: \"Nunito Sans\", sans-serif;\n  font-weight: 700;\n  color: #330b53;\n  font-size: 1.25rem;\n}\n.card .text[data-v-a33e59cc] {\n  margin-top: 1rem;\n  font-family: \"Nunito Sans\", sans-serif;\n  font-weight: 300;\n  color: #1d1d1d;\n  font-size: 1rem;\n}\n.card .right[data-v-a33e59cc] {\n  display: flex;\n  justify-content: flex-end;\n}\n.card .button[data-v-a33e59cc] {\n  display: inline-block;\n  margin-top: 2rem;\n  padding-left: 1.5rem;\n  padding-right: 1.5rem;\n  padding-top: 0.5rem;\n  padding-bottom: 0.5rem;\n  background-color: #330b53;\n  border-radius: 0.25rem;\n  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);\n  font-family: \"Nunito Sans\", sans-serif;\n  font-weight: 400;\n  font-size: 1rem;\n  color: #f6f6f6;\n}\n.card .button[data-v-a33e59cc]:hover {\n  background-color: #5a308c;\n}\n.header[data-v-a33e59cc] {\n  grid-column: span 1 / span 1;\n  padding-top: 1rem;\n  padding-bottom: 1rem;\n  background-color: #330b53;\n}\n.header .title[data-v-a33e59cc] {\n  font-family: \"Nunito Sans\", sans-serif;\n  font-weight: 700;\n  color: #f6f6f6;\n  font-size: 1.5rem;\n}\n@media (min-width: 640px) {\n.sm\\:bg-primary[data-v-a33e59cc] {\n    background-color: #330b53;\n}\n.sm\\:bg-secondary[data-v-a33e59cc] {\n    background-color: #5a308c;\n}\n.sm\\:bg-highlight[data-v-a33e59cc] {\n    background-color: #e60099;\n}\n.sm\\:bg-light[data-v-a33e59cc] {\n    background-color: #f6f6f6;\n}\n.sm\\:bg-dark[data-v-a33e59cc] {\n    background-color: #1d1d1d;\n}\n.sm\\:text-primary[data-v-a33e59cc] {\n    color: #330b53;\n}\n.sm\\:text-secondary[data-v-a33e59cc] {\n    color: #5a308c;\n}\n.sm\\:text-highlight[data-v-a33e59cc] {\n    color: #e60099;\n}\n.sm\\:text-light[data-v-a33e59cc] {\n    color: #f6f6f6;\n}\n.sm\\:text-dark[data-v-a33e59cc] {\n    color: #1d1d1d;\n}\n.sm\\:font-primary[data-v-a33e59cc] {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.sm\\:font-secondary[data-v-a33e59cc] {\n    font-family: \"Orbitron\", sans-serif;\n}\n.sm\\:odd\\:bg-primary[data-v-a33e59cc]:nth-child(odd) {\n    background-color: #330b53;\n}\n.sm\\:odd\\:bg-secondary[data-v-a33e59cc]:nth-child(odd) {\n    background-color: #5a308c;\n}\n.sm\\:odd\\:bg-highlight[data-v-a33e59cc]:nth-child(odd) {\n    background-color: #e60099;\n}\n.sm\\:odd\\:bg-light[data-v-a33e59cc]:nth-child(odd) {\n    background-color: #f6f6f6;\n}\n.sm\\:odd\\:bg-dark[data-v-a33e59cc]:nth-child(odd) {\n    background-color: #1d1d1d;\n}\n.sm\\:odd\\:text-primary[data-v-a33e59cc]:nth-child(odd) {\n    color: #330b53;\n}\n.sm\\:odd\\:text-secondary[data-v-a33e59cc]:nth-child(odd) {\n    color: #5a308c;\n}\n.sm\\:odd\\:text-highlight[data-v-a33e59cc]:nth-child(odd) {\n    color: #e60099;\n}\n.sm\\:odd\\:text-light[data-v-a33e59cc]:nth-child(odd) {\n    color: #f6f6f6;\n}\n.sm\\:odd\\:text-dark[data-v-a33e59cc]:nth-child(odd) {\n    color: #1d1d1d;\n}\n.sm\\:odd\\:font-primary[data-v-a33e59cc]:nth-child(odd) {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.sm\\:odd\\:font-secondary[data-v-a33e59cc]:nth-child(odd) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.sm\\:even\\:bg-primary[data-v-a33e59cc]:nth-child(even) {\n    background-color: #330b53;\n}\n.sm\\:even\\:bg-secondary[data-v-a33e59cc]:nth-child(even) {\n    background-color: #5a308c;\n}\n.sm\\:even\\:bg-highlight[data-v-a33e59cc]:nth-child(even) {\n    background-color: #e60099;\n}\n.sm\\:even\\:bg-light[data-v-a33e59cc]:nth-child(even) {\n    background-color: #f6f6f6;\n}\n.sm\\:even\\:bg-dark[data-v-a33e59cc]:nth-child(even) {\n    background-color: #1d1d1d;\n}\n.sm\\:even\\:text-primary[data-v-a33e59cc]:nth-child(even) {\n    color: #330b53;\n}\n.sm\\:even\\:text-secondary[data-v-a33e59cc]:nth-child(even) {\n    color: #5a308c;\n}\n.sm\\:even\\:text-highlight[data-v-a33e59cc]:nth-child(even) {\n    color: #e60099;\n}\n.sm\\:even\\:text-light[data-v-a33e59cc]:nth-child(even) {\n    color: #f6f6f6;\n}\n.sm\\:even\\:text-dark[data-v-a33e59cc]:nth-child(even) {\n    color: #1d1d1d;\n}\n.sm\\:even\\:font-primary[data-v-a33e59cc]:nth-child(even) {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.sm\\:even\\:font-secondary[data-v-a33e59cc]:nth-child(even) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.sm\\:hover\\:bg-primary[data-v-a33e59cc]:hover {\n    background-color: #330b53;\n}\n.sm\\:hover\\:bg-secondary[data-v-a33e59cc]:hover {\n    background-color: #5a308c;\n}\n.sm\\:hover\\:bg-highlight[data-v-a33e59cc]:hover {\n    background-color: #e60099;\n}\n.sm\\:hover\\:bg-light[data-v-a33e59cc]:hover {\n    background-color: #f6f6f6;\n}\n.sm\\:hover\\:bg-dark[data-v-a33e59cc]:hover {\n    background-color: #1d1d1d;\n}\n.sm\\:hover\\:text-primary[data-v-a33e59cc]:hover {\n    color: #330b53;\n}\n.sm\\:hover\\:text-secondary[data-v-a33e59cc]:hover {\n    color: #5a308c;\n}\n.sm\\:hover\\:text-highlight[data-v-a33e59cc]:hover {\n    color: #e60099;\n}\n.sm\\:hover\\:text-light[data-v-a33e59cc]:hover {\n    color: #f6f6f6;\n}\n.sm\\:hover\\:text-dark[data-v-a33e59cc]:hover {\n    color: #1d1d1d;\n}\n.sm\\:hover\\:font-primary[data-v-a33e59cc]:hover {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.sm\\:hover\\:font-secondary[data-v-a33e59cc]:hover {\n    font-family: \"Orbitron\", sans-serif;\n}\n.sm\\:h-72[data-v-a33e59cc] {\n    height: 18rem;\n}\n.sm\\:h-80[data-v-a33e59cc] {\n    height: 20rem;\n}\n.sm\\:h-88[data-v-a33e59cc] {\n    height: 22rem;\n}\n.sm\\:h-96[data-v-a33e59cc] {\n    height: 24rem;\n}\n.sm\\:h-104[data-v-a33e59cc] {\n    height: 26rem;\n}\n.sm\\:w-72[data-v-a33e59cc] {\n    width: 18rem;\n}\n.sm\\:w-80[data-v-a33e59cc] {\n    width: 20rem;\n}\n.sm\\:w-88[data-v-a33e59cc] {\n    width: 22rem;\n}\n.sm\\:w-max-88[data-v-a33e59cc] {\n    max-width: 22rem;\n}\n.sm\\:w-96[data-v-a33e59cc] {\n    width: 24rem;\n}\n.sm\\:w-max-96[data-v-a33e59cc] {\n    max-width: 24rem;\n}\n.sm\\:w-104[data-v-a33e59cc] {\n    width: 26rem;\n}\n}\n@media (min-width: 768px) {\n.md\\:bg-primary[data-v-a33e59cc] {\n    background-color: #330b53;\n}\n.md\\:bg-secondary[data-v-a33e59cc] {\n    background-color: #5a308c;\n}\n.md\\:bg-highlight[data-v-a33e59cc] {\n    background-color: #e60099;\n}\n.md\\:bg-light[data-v-a33e59cc] {\n    background-color: #f6f6f6;\n}\n.md\\:bg-dark[data-v-a33e59cc] {\n    background-color: #1d1d1d;\n}\n.md\\:text-primary[data-v-a33e59cc] {\n    color: #330b53;\n}\n.md\\:text-secondary[data-v-a33e59cc] {\n    color: #5a308c;\n}\n.md\\:text-highlight[data-v-a33e59cc] {\n    color: #e60099;\n}\n.md\\:text-light[data-v-a33e59cc] {\n    color: #f6f6f6;\n}\n.md\\:text-dark[data-v-a33e59cc] {\n    color: #1d1d1d;\n}\n.md\\:font-primary[data-v-a33e59cc] {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.md\\:font-secondary[data-v-a33e59cc] {\n    font-family: \"Orbitron\", sans-serif;\n}\n.md\\:odd\\:bg-primary[data-v-a33e59cc]:nth-child(odd) {\n    background-color: #330b53;\n}\n.md\\:odd\\:bg-secondary[data-v-a33e59cc]:nth-child(odd) {\n    background-color: #5a308c;\n}\n.md\\:odd\\:bg-highlight[data-v-a33e59cc]:nth-child(odd) {\n    background-color: #e60099;\n}\n.md\\:odd\\:bg-light[data-v-a33e59cc]:nth-child(odd) {\n    background-color: #f6f6f6;\n}\n.md\\:odd\\:bg-dark[data-v-a33e59cc]:nth-child(odd) {\n    background-color: #1d1d1d;\n}\n.md\\:odd\\:text-primary[data-v-a33e59cc]:nth-child(odd) {\n    color: #330b53;\n}\n.md\\:odd\\:text-secondary[data-v-a33e59cc]:nth-child(odd) {\n    color: #5a308c;\n}\n.md\\:odd\\:text-highlight[data-v-a33e59cc]:nth-child(odd) {\n    color: #e60099;\n}\n.md\\:odd\\:text-light[data-v-a33e59cc]:nth-child(odd) {\n    color: #f6f6f6;\n}\n.md\\:odd\\:text-dark[data-v-a33e59cc]:nth-child(odd) {\n    color: #1d1d1d;\n}\n.md\\:odd\\:font-primary[data-v-a33e59cc]:nth-child(odd) {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.md\\:odd\\:font-secondary[data-v-a33e59cc]:nth-child(odd) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.md\\:even\\:bg-primary[data-v-a33e59cc]:nth-child(even) {\n    background-color: #330b53;\n}\n.md\\:even\\:bg-secondary[data-v-a33e59cc]:nth-child(even) {\n    background-color: #5a308c;\n}\n.md\\:even\\:bg-highlight[data-v-a33e59cc]:nth-child(even) {\n    background-color: #e60099;\n}\n.md\\:even\\:bg-light[data-v-a33e59cc]:nth-child(even) {\n    background-color: #f6f6f6;\n}\n.md\\:even\\:bg-dark[data-v-a33e59cc]:nth-child(even) {\n    background-color: #1d1d1d;\n}\n.md\\:even\\:text-primary[data-v-a33e59cc]:nth-child(even) {\n    color: #330b53;\n}\n.md\\:even\\:text-secondary[data-v-a33e59cc]:nth-child(even) {\n    color: #5a308c;\n}\n.md\\:even\\:text-highlight[data-v-a33e59cc]:nth-child(even) {\n    color: #e60099;\n}\n.md\\:even\\:text-light[data-v-a33e59cc]:nth-child(even) {\n    color: #f6f6f6;\n}\n.md\\:even\\:text-dark[data-v-a33e59cc]:nth-child(even) {\n    color: #1d1d1d;\n}\n.md\\:even\\:font-primary[data-v-a33e59cc]:nth-child(even) {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.md\\:even\\:font-secondary[data-v-a33e59cc]:nth-child(even) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.md\\:hover\\:bg-primary[data-v-a33e59cc]:hover {\n    background-color: #330b53;\n}\n.md\\:hover\\:bg-secondary[data-v-a33e59cc]:hover {\n    background-color: #5a308c;\n}\n.md\\:hover\\:bg-highlight[data-v-a33e59cc]:hover {\n    background-color: #e60099;\n}\n.md\\:hover\\:bg-light[data-v-a33e59cc]:hover {\n    background-color: #f6f6f6;\n}\n.md\\:hover\\:bg-dark[data-v-a33e59cc]:hover {\n    background-color: #1d1d1d;\n}\n.md\\:hover\\:text-primary[data-v-a33e59cc]:hover {\n    color: #330b53;\n}\n.md\\:hover\\:text-secondary[data-v-a33e59cc]:hover {\n    color: #5a308c;\n}\n.md\\:hover\\:text-highlight[data-v-a33e59cc]:hover {\n    color: #e60099;\n}\n.md\\:hover\\:text-light[data-v-a33e59cc]:hover {\n    color: #f6f6f6;\n}\n.md\\:hover\\:text-dark[data-v-a33e59cc]:hover {\n    color: #1d1d1d;\n}\n.md\\:hover\\:font-primary[data-v-a33e59cc]:hover {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.md\\:hover\\:font-secondary[data-v-a33e59cc]:hover {\n    font-family: \"Orbitron\", sans-serif;\n}\n.md\\:h-72[data-v-a33e59cc] {\n    height: 18rem;\n}\n.md\\:h-80[data-v-a33e59cc] {\n    height: 20rem;\n}\n.md\\:h-88[data-v-a33e59cc] {\n    height: 22rem;\n}\n.md\\:h-96[data-v-a33e59cc] {\n    height: 24rem;\n}\n.md\\:h-104[data-v-a33e59cc] {\n    height: 26rem;\n}\n.md\\:w-72[data-v-a33e59cc] {\n    width: 18rem;\n}\n.md\\:w-80[data-v-a33e59cc] {\n    width: 20rem;\n}\n.md\\:w-88[data-v-a33e59cc] {\n    width: 22rem;\n}\n.md\\:w-max-88[data-v-a33e59cc] {\n    max-width: 22rem;\n}\n.md\\:w-96[data-v-a33e59cc] {\n    width: 24rem;\n}\n.md\\:w-max-96[data-v-a33e59cc] {\n    max-width: 24rem;\n}\n.md\\:w-104[data-v-a33e59cc] {\n    width: 26rem;\n}\n}\n@media (min-width: 1024px) {\n.lg\\:bg-primary[data-v-a33e59cc] {\n    background-color: #330b53;\n}\n.lg\\:bg-secondary[data-v-a33e59cc] {\n    background-color: #5a308c;\n}\n.lg\\:bg-highlight[data-v-a33e59cc] {\n    background-color: #e60099;\n}\n.lg\\:bg-light[data-v-a33e59cc] {\n    background-color: #f6f6f6;\n}\n.lg\\:bg-dark[data-v-a33e59cc] {\n    background-color: #1d1d1d;\n}\n.lg\\:text-primary[data-v-a33e59cc] {\n    color: #330b53;\n}\n.lg\\:text-secondary[data-v-a33e59cc] {\n    color: #5a308c;\n}\n.lg\\:text-highlight[data-v-a33e59cc] {\n    color: #e60099;\n}\n.lg\\:text-light[data-v-a33e59cc] {\n    color: #f6f6f6;\n}\n.lg\\:text-dark[data-v-a33e59cc] {\n    color: #1d1d1d;\n}\n.lg\\:font-primary[data-v-a33e59cc] {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.lg\\:font-secondary[data-v-a33e59cc] {\n    font-family: \"Orbitron\", sans-serif;\n}\n.lg\\:odd\\:bg-primary[data-v-a33e59cc]:nth-child(odd) {\n    background-color: #330b53;\n}\n.lg\\:odd\\:bg-secondary[data-v-a33e59cc]:nth-child(odd) {\n    background-color: #5a308c;\n}\n.lg\\:odd\\:bg-highlight[data-v-a33e59cc]:nth-child(odd) {\n    background-color: #e60099;\n}\n.lg\\:odd\\:bg-light[data-v-a33e59cc]:nth-child(odd) {\n    background-color: #f6f6f6;\n}\n.lg\\:odd\\:bg-dark[data-v-a33e59cc]:nth-child(odd) {\n    background-color: #1d1d1d;\n}\n.lg\\:odd\\:text-primary[data-v-a33e59cc]:nth-child(odd) {\n    color: #330b53;\n}\n.lg\\:odd\\:text-secondary[data-v-a33e59cc]:nth-child(odd) {\n    color: #5a308c;\n}\n.lg\\:odd\\:text-highlight[data-v-a33e59cc]:nth-child(odd) {\n    color: #e60099;\n}\n.lg\\:odd\\:text-light[data-v-a33e59cc]:nth-child(odd) {\n    color: #f6f6f6;\n}\n.lg\\:odd\\:text-dark[data-v-a33e59cc]:nth-child(odd) {\n    color: #1d1d1d;\n}\n.lg\\:odd\\:font-primary[data-v-a33e59cc]:nth-child(odd) {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.lg\\:odd\\:font-secondary[data-v-a33e59cc]:nth-child(odd) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.lg\\:even\\:bg-primary[data-v-a33e59cc]:nth-child(even) {\n    background-color: #330b53;\n}\n.lg\\:even\\:bg-secondary[data-v-a33e59cc]:nth-child(even) {\n    background-color: #5a308c;\n}\n.lg\\:even\\:bg-highlight[data-v-a33e59cc]:nth-child(even) {\n    background-color: #e60099;\n}\n.lg\\:even\\:bg-light[data-v-a33e59cc]:nth-child(even) {\n    background-color: #f6f6f6;\n}\n.lg\\:even\\:bg-dark[data-v-a33e59cc]:nth-child(even) {\n    background-color: #1d1d1d;\n}\n.lg\\:even\\:text-primary[data-v-a33e59cc]:nth-child(even) {\n    color: #330b53;\n}\n.lg\\:even\\:text-secondary[data-v-a33e59cc]:nth-child(even) {\n    color: #5a308c;\n}\n.lg\\:even\\:text-highlight[data-v-a33e59cc]:nth-child(even) {\n    color: #e60099;\n}\n.lg\\:even\\:text-light[data-v-a33e59cc]:nth-child(even) {\n    color: #f6f6f6;\n}\n.lg\\:even\\:text-dark[data-v-a33e59cc]:nth-child(even) {\n    color: #1d1d1d;\n}\n.lg\\:even\\:font-primary[data-v-a33e59cc]:nth-child(even) {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.lg\\:even\\:font-secondary[data-v-a33e59cc]:nth-child(even) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.lg\\:hover\\:bg-primary[data-v-a33e59cc]:hover {\n    background-color: #330b53;\n}\n.lg\\:hover\\:bg-secondary[data-v-a33e59cc]:hover {\n    background-color: #5a308c;\n}\n.lg\\:hover\\:bg-highlight[data-v-a33e59cc]:hover {\n    background-color: #e60099;\n}\n.lg\\:hover\\:bg-light[data-v-a33e59cc]:hover {\n    background-color: #f6f6f6;\n}\n.lg\\:hover\\:bg-dark[data-v-a33e59cc]:hover {\n    background-color: #1d1d1d;\n}\n.lg\\:hover\\:text-primary[data-v-a33e59cc]:hover {\n    color: #330b53;\n}\n.lg\\:hover\\:text-secondary[data-v-a33e59cc]:hover {\n    color: #5a308c;\n}\n.lg\\:hover\\:text-highlight[data-v-a33e59cc]:hover {\n    color: #e60099;\n}\n.lg\\:hover\\:text-light[data-v-a33e59cc]:hover {\n    color: #f6f6f6;\n}\n.lg\\:hover\\:text-dark[data-v-a33e59cc]:hover {\n    color: #1d1d1d;\n}\n.lg\\:hover\\:font-primary[data-v-a33e59cc]:hover {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.lg\\:hover\\:font-secondary[data-v-a33e59cc]:hover {\n    font-family: \"Orbitron\", sans-serif;\n}\n.lg\\:h-72[data-v-a33e59cc] {\n    height: 18rem;\n}\n.lg\\:h-80[data-v-a33e59cc] {\n    height: 20rem;\n}\n.lg\\:h-88[data-v-a33e59cc] {\n    height: 22rem;\n}\n.lg\\:h-96[data-v-a33e59cc] {\n    height: 24rem;\n}\n.lg\\:h-104[data-v-a33e59cc] {\n    height: 26rem;\n}\n.lg\\:w-72[data-v-a33e59cc] {\n    width: 18rem;\n}\n.lg\\:w-80[data-v-a33e59cc] {\n    width: 20rem;\n}\n.lg\\:w-88[data-v-a33e59cc] {\n    width: 22rem;\n}\n.lg\\:w-max-88[data-v-a33e59cc] {\n    max-width: 22rem;\n}\n.lg\\:w-96[data-v-a33e59cc] {\n    width: 24rem;\n}\n.lg\\:w-max-96[data-v-a33e59cc] {\n    max-width: 24rem;\n}\n.lg\\:w-104[data-v-a33e59cc] {\n    width: 26rem;\n}\n}\n@media (min-width: 1280px) {\n.xl\\:bg-primary[data-v-a33e59cc] {\n    background-color: #330b53;\n}\n.xl\\:bg-secondary[data-v-a33e59cc] {\n    background-color: #5a308c;\n}\n.xl\\:bg-highlight[data-v-a33e59cc] {\n    background-color: #e60099;\n}\n.xl\\:bg-light[data-v-a33e59cc] {\n    background-color: #f6f6f6;\n}\n.xl\\:bg-dark[data-v-a33e59cc] {\n    background-color: #1d1d1d;\n}\n.xl\\:text-primary[data-v-a33e59cc] {\n    color: #330b53;\n}\n.xl\\:text-secondary[data-v-a33e59cc] {\n    color: #5a308c;\n}\n.xl\\:text-highlight[data-v-a33e59cc] {\n    color: #e60099;\n}\n.xl\\:text-light[data-v-a33e59cc] {\n    color: #f6f6f6;\n}\n.xl\\:text-dark[data-v-a33e59cc] {\n    color: #1d1d1d;\n}\n.xl\\:font-primary[data-v-a33e59cc] {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.xl\\:font-secondary[data-v-a33e59cc] {\n    font-family: \"Orbitron\", sans-serif;\n}\n.xl\\:odd\\:bg-primary[data-v-a33e59cc]:nth-child(odd) {\n    background-color: #330b53;\n}\n.xl\\:odd\\:bg-secondary[data-v-a33e59cc]:nth-child(odd) {\n    background-color: #5a308c;\n}\n.xl\\:odd\\:bg-highlight[data-v-a33e59cc]:nth-child(odd) {\n    background-color: #e60099;\n}\n.xl\\:odd\\:bg-light[data-v-a33e59cc]:nth-child(odd) {\n    background-color: #f6f6f6;\n}\n.xl\\:odd\\:bg-dark[data-v-a33e59cc]:nth-child(odd) {\n    background-color: #1d1d1d;\n}\n.xl\\:odd\\:text-primary[data-v-a33e59cc]:nth-child(odd) {\n    color: #330b53;\n}\n.xl\\:odd\\:text-secondary[data-v-a33e59cc]:nth-child(odd) {\n    color: #5a308c;\n}\n.xl\\:odd\\:text-highlight[data-v-a33e59cc]:nth-child(odd) {\n    color: #e60099;\n}\n.xl\\:odd\\:text-light[data-v-a33e59cc]:nth-child(odd) {\n    color: #f6f6f6;\n}\n.xl\\:odd\\:text-dark[data-v-a33e59cc]:nth-child(odd) {\n    color: #1d1d1d;\n}\n.xl\\:odd\\:font-primary[data-v-a33e59cc]:nth-child(odd) {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.xl\\:odd\\:font-secondary[data-v-a33e59cc]:nth-child(odd) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.xl\\:even\\:bg-primary[data-v-a33e59cc]:nth-child(even) {\n    background-color: #330b53;\n}\n.xl\\:even\\:bg-secondary[data-v-a33e59cc]:nth-child(even) {\n    background-color: #5a308c;\n}\n.xl\\:even\\:bg-highlight[data-v-a33e59cc]:nth-child(even) {\n    background-color: #e60099;\n}\n.xl\\:even\\:bg-light[data-v-a33e59cc]:nth-child(even) {\n    background-color: #f6f6f6;\n}\n.xl\\:even\\:bg-dark[data-v-a33e59cc]:nth-child(even) {\n    background-color: #1d1d1d;\n}\n.xl\\:even\\:text-primary[data-v-a33e59cc]:nth-child(even) {\n    color: #330b53;\n}\n.xl\\:even\\:text-secondary[data-v-a33e59cc]:nth-child(even) {\n    color: #5a308c;\n}\n.xl\\:even\\:text-highlight[data-v-a33e59cc]:nth-child(even) {\n    color: #e60099;\n}\n.xl\\:even\\:text-light[data-v-a33e59cc]:nth-child(even) {\n    color: #f6f6f6;\n}\n.xl\\:even\\:text-dark[data-v-a33e59cc]:nth-child(even) {\n    color: #1d1d1d;\n}\n.xl\\:even\\:font-primary[data-v-a33e59cc]:nth-child(even) {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.xl\\:even\\:font-secondary[data-v-a33e59cc]:nth-child(even) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.xl\\:hover\\:bg-primary[data-v-a33e59cc]:hover {\n    background-color: #330b53;\n}\n.xl\\:hover\\:bg-secondary[data-v-a33e59cc]:hover {\n    background-color: #5a308c;\n}\n.xl\\:hover\\:bg-highlight[data-v-a33e59cc]:hover {\n    background-color: #e60099;\n}\n.xl\\:hover\\:bg-light[data-v-a33e59cc]:hover {\n    background-color: #f6f6f6;\n}\n.xl\\:hover\\:bg-dark[data-v-a33e59cc]:hover {\n    background-color: #1d1d1d;\n}\n.xl\\:hover\\:text-primary[data-v-a33e59cc]:hover {\n    color: #330b53;\n}\n.xl\\:hover\\:text-secondary[data-v-a33e59cc]:hover {\n    color: #5a308c;\n}\n.xl\\:hover\\:text-highlight[data-v-a33e59cc]:hover {\n    color: #e60099;\n}\n.xl\\:hover\\:text-light[data-v-a33e59cc]:hover {\n    color: #f6f6f6;\n}\n.xl\\:hover\\:text-dark[data-v-a33e59cc]:hover {\n    color: #1d1d1d;\n}\n.xl\\:hover\\:font-primary[data-v-a33e59cc]:hover {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.xl\\:hover\\:font-secondary[data-v-a33e59cc]:hover {\n    font-family: \"Orbitron\", sans-serif;\n}\n.xl\\:h-72[data-v-a33e59cc] {\n    height: 18rem;\n}\n.xl\\:h-80[data-v-a33e59cc] {\n    height: 20rem;\n}\n.xl\\:h-88[data-v-a33e59cc] {\n    height: 22rem;\n}\n.xl\\:h-96[data-v-a33e59cc] {\n    height: 24rem;\n}\n.xl\\:h-104[data-v-a33e59cc] {\n    height: 26rem;\n}\n.xl\\:w-72[data-v-a33e59cc] {\n    width: 18rem;\n}\n.xl\\:w-80[data-v-a33e59cc] {\n    width: 20rem;\n}\n.xl\\:w-88[data-v-a33e59cc] {\n    width: 22rem;\n}\n.xl\\:w-max-88[data-v-a33e59cc] {\n    max-width: 22rem;\n}\n.xl\\:w-96[data-v-a33e59cc] {\n    width: 24rem;\n}\n.xl\\:w-max-96[data-v-a33e59cc] {\n    max-width: 24rem;\n}\n.xl\\:w-104[data-v-a33e59cc] {\n    width: 26rem;\n}\n}", ""]);
 
 // exports
 
@@ -32269,6 +32397,36 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Portal/NextSteps.vue?vue&type=style&index=0&id=a33e59cc&lang=scss&scoped=true&":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Portal/NextSteps.vue?vue&type=style&index=0&id=a33e59cc&lang=scss&scoped=true& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../node_modules/vue-loader/lib??vue-loader-options!./NextSteps.vue?vue&type=style&index=0&id=a33e59cc&lang=scss&scoped=true& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Portal/NextSteps.vue?vue&type=style&index=0&id=a33e59cc&lang=scss&scoped=true&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Portal/Profile/AcademicDetails.vue?vue&type=style&index=0&id=497cb4db&lang=scss&scoped=true&":
 /*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Portal/Profile/AcademicDetails.vue?vue&type=style&index=0&id=497cb4db&lang=scss&scoped=true& ***!
@@ -45271,8 +45429,8 @@ var render = function() {
             [
               _c(
                 "inertia-link",
-                { staticClass: "nav-links", attrs: { href: "/portal" } },
-                [_vm._v("\n          Dashboard\n        ")]
+                { staticClass: "nav-links", attrs: { href: "/next-steps" } },
+                [_vm._v("\n            Next Steps\n          ")]
               )
             ],
             1
@@ -45288,49 +45446,7 @@ var render = function() {
                   staticClass: "nav-links",
                   attrs: { href: "/portal/schedule" }
                 },
-                [_vm._v("\n          Schedule\n        ")]
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "li",
-            { staticClass: "nav-li" },
-            [
-              _c(
-                "inertia-link",
-                {
-                  staticClass: "nav-links",
-                  attrs: { href: "/portal/profiles" }
-                },
-                [_vm._v("\n          Attendees\n        ")]
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "li",
-            { staticClass: "nav-li" },
-            [
-              _c(
-                "inertia-link",
-                { staticClass: "nav-links", attrs: { href: "/portal/teams" } },
-                [_vm._v("\n          Teams\n        ")]
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "li",
-            { staticClass: "nav-li" },
-            [
-              _c(
-                "inertia-link",
-                { staticClass: "nav-links", attrs: { href: "/portal/prizes" } },
-                [_vm._v("\n          Prizes\n        ")]
+                [_vm._v("\n            Schedule\n          ")]
               )
             ],
             1
@@ -45346,7 +45462,7 @@ var render = function() {
                   staticClass: "nav-links",
                   attrs: { href: "/portal/resources" }
                 },
-                [_vm._v("\n          Resources\n        ")]
+                [_vm._v("\n            Resources\n          ")]
               )
             ],
             1
@@ -45362,7 +45478,7 @@ var render = function() {
               {
                 staticClass:
                   "flex justify-center items-center w-14 h-14 rounded-full px-1 py-1 mt-3 text-center transition duration-300 rounded shadow-md bg-secondary text-light hover:bg-light hover:text-dark",
-                attrs: { href: "/portal/profile" }
+                attrs: { href: "/user/profile" }
               },
               [
                 _c("user-icon", {
@@ -45382,7 +45498,23 @@ var render = function() {
               {
                 staticClass: "text-light font-primary font-light text-sm mt-1"
               },
-              [_vm._v("\n        Profile\n      ")]
+              [_vm._v("\n          Profile\n        ")]
+            ),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass:
+                  "text-light font-primary font-light text-sm mt-4 block px-2 py-1 bg-secondary rounded hover:bg-light hover:text-dark",
+                attrs: { href: "#" },
+                on: {
+                  click: function($event) {
+                    $event.preventDefault()
+                    return _vm.handleLogout($event)
+                  }
+                }
+              },
+              [_vm._v("\n          Logout\n        ")]
             )
           ],
           1
@@ -47703,8 +47835,8 @@ var render = function() {
               _c(
                 "inertia-link",
                 {
-                  staticClass: "flex-1 h-full py-4 md:mx-8",
-                  attrs: { href: "/portal" }
+                  staticClass: "flex-initial h-full py-4 md:mx-8",
+                  attrs: { href: "/next-steps" }
                 },
                 [
                   _c("img", {
@@ -47715,6 +47847,16 @@ var render = function() {
                     }
                   })
                 ]
+              ),
+              _vm._v(" "),
+              _c(
+                "h1",
+                {
+                  staticClass:
+                    "px-4 self-center justify-self-center flex-1 font-primary font-bold text-light text-xl md:text-2xl"
+                },
+                [_vm._t("page-title")],
+                2
               ),
               _vm._v(" "),
               _c(
@@ -50787,6 +50929,155 @@ var render = function() {
       ]
     )
   ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Portal/NextSteps.vue?vue&type=template&id=a33e59cc&scoped=true&":
+/*!**************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Portal/NextSteps.vue?vue&type=template&id=a33e59cc&scoped=true& ***!
+  \**************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "portal-layout",
+    {
+      scopedSlots: _vm._u([
+        {
+          key: "page-title",
+          fn: function() {
+            return [_vm._v("\n    Next Steps\n  ")]
+          },
+          proxy: true
+        }
+      ])
+    },
+    [
+      _vm._v(" "),
+      _c("section", { staticClass: "container mx-auto" }, [
+        _c(
+          "div",
+          {
+            staticClass:
+              "my-8 md:my-16 grid grid-cols-1 md:grid-cols-2 grid-flow-row gap-6"
+          },
+          [
+            _c("article", { staticClass: "card" }, [
+              _c("h2", { staticClass: "title" }, [
+                _vm._v("\n          Join the Conversation\n        ")
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "text" }, [
+                _vm._v(
+                  "\n          With this year's Carolina Data Challenge being pushed online, fostering meaningful and productive conversation between attendees has been at the forefront of our minds. To aid in that pursuit, we've created a CDC Discord to make communication quick and easy. If your looking to share a meme, find a team, or ask a question be sure to join!\n        "
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "right" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass: "button",
+                    attrs: { href: "https://discord.gg/phuhxAp" }
+                  },
+                  [_vm._v("\n            Join our Discord\n          ")]
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("article", { staticClass: "card" }, [
+              _c("h2", { staticClass: "title" }, [
+                _vm._v("\n          Attend our Sponsor Fair\n        ")
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "text" }, [
+                _vm._v(
+                  "\n          As students ourselves, we know that the opportunity to meet with sponsors face-to-face is a big draw of any hackathon. That's why we're excited to offer valuable one-on-one time with recruiters to all of our attendees, making you the focus of the conversation. To take full advantage of this unique opportunity, be sure to register on Brazen by uploading your resume.\n        "
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "right" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass: "button",
+                    attrs: {
+                      href:
+                        "https://app.brazenconnect.com/a/unc-computer-sceince-dept/e/k63NW"
+                    }
+                  },
+                  [_vm._v("\n            Reserve your Spot\n          ")]
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("article", { staticClass: "card" }, [
+              _c("h2", { staticClass: "title" }, [
+                _vm._v("\n          Discover our Schedule\n        ")
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "text" }, [
+                _vm._v(
+                  "\n          Whether you're a data science pro or are just learning what it is that data scientist even do, we promise to make the Carolina Data Challenge well worth your time. With more exciting events and unique learning opportunities than ever before, this year's CDC is designed from the ground up to cater to attendees of all skill levels. Check out our schedule to learn more.\n        "
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "right" },
+                [
+                  _c(
+                    "inertia-link",
+                    { staticClass: "button", attrs: { href: "/schedule" } },
+                    [_vm._v("\n            View our Schedule\n          ")]
+                  )
+                ],
+                1
+              )
+            ]),
+            _vm._v(" "),
+            _c("article", { staticClass: "card" }, [
+              _c("h2", { staticClass: "title" }, [
+                _vm._v("\n          Explore our Resources\n        ")
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "text" }, [
+                _vm._v(
+                  "\n          If you find yourself feeling uncertain about what to expect from your first virtual hackathon, you're not alone. Whether your anxious about finding a team to work with or can't shake the feeling that you're missing something important, we've got your back. To help shake your nerves read through our collection of resources containing everything you need to know.\n        "
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "right" },
+                [
+                  _c(
+                    "inertia-link",
+                    { staticClass: "button", attrs: { href: "/resources" } },
+                    [_vm._v("\n            Read our Resources\n          ")]
+                  )
+                ],
+                1
+              )
+            ])
+          ]
+        )
+      ])
+    ]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -71444,6 +71735,8 @@ var map = {
 	"./Dashboard.vue": "./resources/js/Pages/Dashboard.vue",
 	"./Landing/Index": "./resources/js/Pages/Landing/Index.vue",
 	"./Landing/Index.vue": "./resources/js/Pages/Landing/Index.vue",
+	"./Portal/NextSteps": "./resources/js/Pages/Portal/NextSteps.vue",
+	"./Portal/NextSteps.vue": "./resources/js/Pages/Portal/NextSteps.vue",
 	"./Portal/Profile/AcademicDetails": "./resources/js/Pages/Portal/Profile/AcademicDetails.vue",
 	"./Portal/Profile/AcademicDetails.vue": "./resources/js/Pages/Portal/Profile/AcademicDetails.vue",
 	"./Portal/Profile/PersonalDetails": "./resources/js/Pages/Portal/Profile/PersonalDetails.vue",
@@ -72201,6 +72494,93 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_7f509ee1_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_7f509ee1_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Portal/NextSteps.vue":
+/*!*************************************************!*\
+  !*** ./resources/js/Pages/Portal/NextSteps.vue ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _NextSteps_vue_vue_type_template_id_a33e59cc_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./NextSteps.vue?vue&type=template&id=a33e59cc&scoped=true& */ "./resources/js/Pages/Portal/NextSteps.vue?vue&type=template&id=a33e59cc&scoped=true&");
+/* harmony import */ var _NextSteps_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NextSteps.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Portal/NextSteps.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _NextSteps_vue_vue_type_style_index_0_id_a33e59cc_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./NextSteps.vue?vue&type=style&index=0&id=a33e59cc&lang=scss&scoped=true& */ "./resources/js/Pages/Portal/NextSteps.vue?vue&type=style&index=0&id=a33e59cc&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _NextSteps_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _NextSteps_vue_vue_type_template_id_a33e59cc_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _NextSteps_vue_vue_type_template_id_a33e59cc_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "a33e59cc",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Pages/Portal/NextSteps.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Portal/NextSteps.vue?vue&type=script&lang=js&":
+/*!**************************************************************************!*\
+  !*** ./resources/js/Pages/Portal/NextSteps.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NextSteps_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./NextSteps.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Portal/NextSteps.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NextSteps_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Portal/NextSteps.vue?vue&type=style&index=0&id=a33e59cc&lang=scss&scoped=true&":
+/*!***********************************************************************************************************!*\
+  !*** ./resources/js/Pages/Portal/NextSteps.vue?vue&type=style&index=0&id=a33e59cc&lang=scss&scoped=true& ***!
+  \***********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_NextSteps_vue_vue_type_style_index_0_id_a33e59cc_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader!../../../../node_modules/css-loader!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../node_modules/vue-loader/lib??vue-loader-options!./NextSteps.vue?vue&type=style&index=0&id=a33e59cc&lang=scss&scoped=true& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Portal/NextSteps.vue?vue&type=style&index=0&id=a33e59cc&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_NextSteps_vue_vue_type_style_index_0_id_a33e59cc_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_NextSteps_vue_vue_type_style_index_0_id_a33e59cc_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_NextSteps_vue_vue_type_style_index_0_id_a33e59cc_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_NextSteps_vue_vue_type_style_index_0_id_a33e59cc_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_NextSteps_vue_vue_type_style_index_0_id_a33e59cc_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Portal/NextSteps.vue?vue&type=template&id=a33e59cc&scoped=true&":
+/*!********************************************************************************************!*\
+  !*** ./resources/js/Pages/Portal/NextSteps.vue?vue&type=template&id=a33e59cc&scoped=true& ***!
+  \********************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NextSteps_vue_vue_type_template_id_a33e59cc_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./NextSteps.vue?vue&type=template&id=a33e59cc&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Portal/NextSteps.vue?vue&type=template&id=a33e59cc&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NextSteps_vue_vue_type_template_id_a33e59cc_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NextSteps_vue_vue_type_template_id_a33e59cc_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
