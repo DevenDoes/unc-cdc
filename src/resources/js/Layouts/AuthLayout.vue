@@ -35,7 +35,7 @@ export default {
   }
 }
 .checkbox {
-  @apply rounded shadow-sm border-gray-300;
+  @apply rounded shadow-sm border border-gray-300;
 }
 .button {
   @apply px-6 py-2 rounded shadow-sm font-primary font-normal text-base;

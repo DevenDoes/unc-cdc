@@ -21,6 +21,9 @@
     import Welcome from './../Jetstream/Welcome'
 
     export default {
+      props: [
+        'typeform'
+      ],
         components: {
             AppLayout,
             Welcome,

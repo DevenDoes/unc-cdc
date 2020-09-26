@@ -1,6 +1,10 @@
 <?php
 
+use App\Http\Controllers\UserAcademicsController;
+use App\Http\Controllers\UserDetailsController;
+use App\Http\Controllers\UserShippingController;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -48,6 +52,35 @@ Route::middleware(['auth:sanctum'])->get('/email/verify', function () {
   return Inertia\Inertia::render('Auth/VerifyEmail');
 })->name('verification.notice');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return Inertia\Inertia::render('Dashboard');
-})->name('dashboard');
+Route::middleware(['auth:sanctum', 'registered'])
+    ->get('/dashboard', function () {
+        $user = new \App\Models\User();
+        return Inertia\Inertia::render('Dashboard');
+    })->name('dashboard');
+
+/**
+ * Personal Details
+ */
+Route::middleware(['auth:sanctum'])
+    ->get('/profile/personal-details', [UserDetailsController::class, 'show'])
+    ->name('details.personal');
+Route::middleware(['auth:sanctum'])
+    ->post('/profile/personal-details', [UserDetailsController::class, 'store']);
+
+/**
+ * Academic Details
+ */
+Route::middleware(['auth:sanctum', 'details.personal'])
+    ->get('/profile/academic-details', [UserAcademicsController::class, 'show'])
+    ->name('details.academic');
+Route::middleware(['auth:sanctum', 'details.personal'])
+    ->post('/profile/academic-details', [UserAcademicsController::class, 'store']);
+
+/**
+ * Shipping Details
+ */
+Route::middleware(['auth:sanctum', 'details.personal', 'details.academic'])
+    ->get('/profile/shipping-details', [UserShippingController::class, 'show'])
+    ->name('details.shipping');
+Route::middleware(['auth:sanctum', 'details.personal', 'details.academic'])
+    ->post('/profile/shipping-details', [UserShippingController::class, 'store']);

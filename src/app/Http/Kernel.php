@@ -2,6 +2,7 @@
 
 namespace App\Http;
 
+use App\Http\Middleware\VerifyPersonalDetails;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -43,6 +44,13 @@ class Kernel extends HttpKernel
             'throttle:api',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
+
+        'registered' => [
+            \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+            \App\Http\Middleware\VerifyPersonalDetails::class,
+            \App\Http\Middleware\VerifyAcademicDetails::class,
+            \App\Http\Middleware\VerifyShippingDetails::class,
+        ],
     ];
 
     /**
@@ -62,5 +70,8 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+        'details.personal' => \App\Http\Middleware\VerifyPersonalDetails::class,
+        'details.academic' => \App\Http\Middleware\VerifyAcademicDetails::class,
+        'details.shipping' => \App\Http\Middleware\VerifyShippingDetails::class,
     ];
 }
