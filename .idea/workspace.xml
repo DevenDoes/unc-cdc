@@ -20,9 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0f32ae6-be69-4424-8533-c02c8728dd60" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +44,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -188,7 +187,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -221,6 +220,7 @@
       <workItem from="1601055446549" duration="8572000" />
       <workItem from="1601065404381" duration="48199000" />
       <workItem from="1601175818536" duration="8066000" />
+      <workItem from="1601187789878" duration="95000" />
     </task>
     <servers />
   </component>
@@ -239,6 +239,11 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
+  </component>
   <component name="WindowStateProjectService">
     <state x="1085" y="416" key="#com.intellij.ide.util.MemberChooser" timestamp="1601063478823">
       <screen x="0" y="0" width="2560" height="1400" />
@@ -253,10 +258,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1081" y="574" key="#com.jetbrains.php.refactoring.move.namespace.PhpMoveNamespaceDialog#/2560.0.1920.1040/0.0.2560.1400/-2560.0.2048.1112@0.0.2560.1400" timestamp="1601021482050" />
-    <state x="781" y="345" key="SettingsEditor" timestamp="1601021719789">
+    <state x="781" y="345" key="SettingsEditor" timestamp="1601187844346">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="781" y="345" key="SettingsEditor/2560.0.1920.1040/0.0.2560.1400/-2560.0.2048.1112@0.0.2560.1400" timestamp="1601021719789" />
+    <state x="781" y="345" key="SettingsEditor/2560.0.1920.1040/0.0.2560.1400/-2560.0.2048.1112@0.0.2560.1400" timestamp="1601187844346" />
     <state x="93" y="100" width="1073" height="1207" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1600996062991">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
