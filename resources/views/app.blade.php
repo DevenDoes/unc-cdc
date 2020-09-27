@@ -10,6 +10,19 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Nunito+Sans:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 
+        @if (env('APP_ENV') == 'production')
+
+            <!-- Google Analytics - Global Site Tag -->
+                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176492863-1"></script>
+                <script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', 'UA-176492863-1');
+                </script>
+
+        @endif
+
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
