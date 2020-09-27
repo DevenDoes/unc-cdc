@@ -4,7 +4,7 @@
       Next Steps
     </template>
     <section class="container mx-auto">
-      <div class="my-8 md:my-16 grid grid-cols-1 md:grid-cols-2 grid-flow-row gap-6">
+      <div class="mt-8 md:mt-16 grid grid-cols-1 md:grid-cols-2 grid-flow-row gap-6">
         <article class="card">
           <h2 class="title">
             Join the Conversation

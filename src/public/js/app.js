@@ -7170,6 +7170,188 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Portal/Resources.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Portal/Resources.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Layouts_PortalLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../Layouts/PortalLayout */ "./resources/js/Layouts/PortalLayout.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "Resources",
+  components: {
+    PortalLayout: _Layouts_PortalLayout__WEBPACK_IMPORTED_MODULE_0__["default"]
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Portal/Schedule.vue?vue&type=script&lang=js&":
 /*!*********************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Portal/Schedule.vue?vue&type=script&lang=js& ***!
@@ -7183,6 +7365,46 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Components_Portal_FormWrapper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../Components/Portal/FormWrapper */ "./resources/js/Components/Portal/FormWrapper.vue");
 /* harmony import */ var luxon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! luxon */ "./node_modules/luxon/build/cjs-browser/luxon.js");
 /* harmony import */ var luxon__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(luxon__WEBPACK_IMPORTED_MODULE_2__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -7273,11 +7495,13 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   computed: {
-    events: function events() {
+    eventsLocal: function eventsLocal() {
       // Get the distinct event dates
       var events = {};
       this.$props.schedule.forEach(function (event) {
-        var date = luxon__WEBPACK_IMPORTED_MODULE_2__["DateTime"].fromSQL(event.date).toLocaleString({
+        var date = luxon__WEBPACK_IMPORTED_MODULE_2__["DateTime"].fromSQL(event.date + ' ' + event.start, {
+          zone: 'America/New_York'
+        }).setZone('local').toLocaleString({
           weekday: 'long',
           month: 'long',
           day: '2-digit'
@@ -7288,28 +7512,52 @@ __webpack_require__.r(__webpack_exports__);
         }
 
         events[date].push({
-          startLocal: luxon__WEBPACK_IMPORTED_MODULE_2__["DateTime"].fromSQL(event.date + ' ' + event.start, {
+          start: luxon__WEBPACK_IMPORTED_MODULE_2__["DateTime"].fromSQL(event.date + ' ' + event.start, {
             zone: 'America/New_York'
           }).setZone('local').toLocaleString({
             hour: '2-digit',
             minute: '2-digit',
             hour12: true
           }),
-          startEST: luxon__WEBPACK_IMPORTED_MODULE_2__["DateTime"].fromSQL(event.date + ' ' + event.start, {
+          end: luxon__WEBPACK_IMPORTED_MODULE_2__["DateTime"].fromSQL(event.date + ' ' + event.end, {
+            zone: 'America/New_York'
+          }).setZone('local').toLocaleString({
+            hour: '2-digit',
+            minute: '2-digit',
+            hour12: true
+          }),
+          type: event.type,
+          event: event.event,
+          url: event.url
+        });
+      });
+      return events;
+    },
+    eventsEST: function eventsEST() {
+      // Get the distinct event dates
+      var events = {};
+      this.$props.schedule.forEach(function (event) {
+        var date = luxon__WEBPACK_IMPORTED_MODULE_2__["DateTime"].fromSQL(event.date + ' ' + event.start, {
+          zone: 'America/New_York'
+        }).toLocaleString({
+          weekday: 'long',
+          month: 'long',
+          day: '2-digit'
+        });
+
+        if (!events.hasOwnProperty(date)) {
+          events[date] = [];
+        }
+
+        events[date].push({
+          start: luxon__WEBPACK_IMPORTED_MODULE_2__["DateTime"].fromSQL(event.date + ' ' + event.start, {
             zone: 'America/New_York'
           }).toLocaleString({
             hour: '2-digit',
             minute: '2-digit',
             hour12: true
           }),
-          endLocal: luxon__WEBPACK_IMPORTED_MODULE_2__["DateTime"].fromSQL(event.date + ' ' + event.end, {
-            zone: 'America/New_York'
-          }).setZone('local').toLocaleString({
-            hour: '2-digit',
-            minute: '2-digit',
-            hour12: true
-          }),
-          endEST: luxon__WEBPACK_IMPORTED_MODULE_2__["DateTime"].fromSQL(event.date + ' ' + event.end, {
+          end: luxon__WEBPACK_IMPORTED_MODULE_2__["DateTime"].fromSQL(event.date + ' ' + event.end, {
             zone: 'America/New_York'
           }).toLocaleString({
             hour: '2-digit',
@@ -9099,6 +9347,25 @@ exports.push([module.i, ".bg-primary[data-v-6a7b1458] {\n  background-color: #33
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Portal/Resources.vue?vue&type=style&index=0&id=1f48d8cb&lang=scss&scoped=true&":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Portal/Resources.vue?vue&type=style&index=0&id=1f48d8cb&lang=scss&scoped=true& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".bg-primary[data-v-1f48d8cb] {\n  background-color: #330b53;\n}\n.bg-secondary[data-v-1f48d8cb] {\n  background-color: #5a308c;\n}\n.bg-highlight[data-v-1f48d8cb] {\n  background-color: #e60099;\n}\n.bg-light[data-v-1f48d8cb] {\n  background-color: #f6f6f6;\n}\n.bg-dark[data-v-1f48d8cb] {\n  background-color: #1d1d1d;\n}\n.text-primary[data-v-1f48d8cb] {\n  color: #330b53;\n}\n.text-secondary[data-v-1f48d8cb] {\n  color: #5a308c;\n}\n.text-highlight[data-v-1f48d8cb] {\n  color: #e60099;\n}\n.text-light[data-v-1f48d8cb] {\n  color: #f6f6f6;\n}\n.text-dark[data-v-1f48d8cb] {\n  color: #1d1d1d;\n}\n.font-primary[data-v-1f48d8cb] {\n  font-family: \"Nunito Sans\", sans-serif;\n}\n.font-secondary[data-v-1f48d8cb] {\n  font-family: \"Orbitron\", sans-serif;\n}\n.odd\\:bg-primary[data-v-1f48d8cb]:nth-child(odd) {\n  background-color: #330b53;\n}\n.odd\\:bg-secondary[data-v-1f48d8cb]:nth-child(odd) {\n  background-color: #5a308c;\n}\n.odd\\:bg-highlight[data-v-1f48d8cb]:nth-child(odd) {\n  background-color: #e60099;\n}\n.odd\\:bg-light[data-v-1f48d8cb]:nth-child(odd) {\n  background-color: #f6f6f6;\n}\n.odd\\:bg-dark[data-v-1f48d8cb]:nth-child(odd) {\n  background-color: #1d1d1d;\n}\n.odd\\:text-primary[data-v-1f48d8cb]:nth-child(odd) {\n  color: #330b53;\n}\n.odd\\:text-secondary[data-v-1f48d8cb]:nth-child(odd) {\n  color: #5a308c;\n}\n.odd\\:text-highlight[data-v-1f48d8cb]:nth-child(odd) {\n  color: #e60099;\n}\n.odd\\:text-light[data-v-1f48d8cb]:nth-child(odd) {\n  color: #f6f6f6;\n}\n.odd\\:text-dark[data-v-1f48d8cb]:nth-child(odd) {\n  color: #1d1d1d;\n}\n.odd\\:font-primary[data-v-1f48d8cb]:nth-child(odd) {\n  font-family: \"Nunito Sans\", sans-serif;\n}\n.odd\\:font-secondary[data-v-1f48d8cb]:nth-child(odd) {\n  font-family: \"Orbitron\", sans-serif;\n}\n.even\\:bg-primary[data-v-1f48d8cb]:nth-child(even) {\n  background-color: #330b53;\n}\n.even\\:bg-secondary[data-v-1f48d8cb]:nth-child(even) {\n  background-color: #5a308c;\n}\n.even\\:bg-highlight[data-v-1f48d8cb]:nth-child(even) {\n  background-color: #e60099;\n}\n.even\\:bg-light[data-v-1f48d8cb]:nth-child(even) {\n  background-color: #f6f6f6;\n}\n.even\\:bg-dark[data-v-1f48d8cb]:nth-child(even) {\n  background-color: #1d1d1d;\n}\n.even\\:text-primary[data-v-1f48d8cb]:nth-child(even) {\n  color: #330b53;\n}\n.even\\:text-secondary[data-v-1f48d8cb]:nth-child(even) {\n  color: #5a308c;\n}\n.even\\:text-highlight[data-v-1f48d8cb]:nth-child(even) {\n  color: #e60099;\n}\n.even\\:text-light[data-v-1f48d8cb]:nth-child(even) {\n  color: #f6f6f6;\n}\n.even\\:text-dark[data-v-1f48d8cb]:nth-child(even) {\n  color: #1d1d1d;\n}\n.even\\:font-primary[data-v-1f48d8cb]:nth-child(even) {\n  font-family: \"Nunito Sans\", sans-serif;\n}\n.even\\:font-secondary[data-v-1f48d8cb]:nth-child(even) {\n  font-family: \"Orbitron\", sans-serif;\n}\n.hover\\:bg-primary[data-v-1f48d8cb]:hover {\n  background-color: #330b53;\n}\n.hover\\:bg-secondary[data-v-1f48d8cb]:hover {\n  background-color: #5a308c;\n}\n.hover\\:bg-highlight[data-v-1f48d8cb]:hover {\n  background-color: #e60099;\n}\n.hover\\:bg-light[data-v-1f48d8cb]:hover {\n  background-color: #f6f6f6;\n}\n.hover\\:bg-dark[data-v-1f48d8cb]:hover {\n  background-color: #1d1d1d;\n}\n.hover\\:text-primary[data-v-1f48d8cb]:hover {\n  color: #330b53;\n}\n.hover\\:text-secondary[data-v-1f48d8cb]:hover {\n  color: #5a308c;\n}\n.hover\\:text-highlight[data-v-1f48d8cb]:hover {\n  color: #e60099;\n}\n.hover\\:text-light[data-v-1f48d8cb]:hover {\n  color: #f6f6f6;\n}\n.hover\\:text-dark[data-v-1f48d8cb]:hover {\n  color: #1d1d1d;\n}\n.hover\\:font-primary[data-v-1f48d8cb]:hover {\n  font-family: \"Nunito Sans\", sans-serif;\n}\n.hover\\:font-secondary[data-v-1f48d8cb]:hover {\n  font-family: \"Orbitron\", sans-serif;\n}\n.h-72[data-v-1f48d8cb] {\n  height: 18rem;\n}\n.h-80[data-v-1f48d8cb] {\n  height: 20rem;\n}\n.h-88[data-v-1f48d8cb] {\n  height: 22rem;\n}\n.h-96[data-v-1f48d8cb] {\n  height: 24rem;\n}\n.h-104[data-v-1f48d8cb] {\n  height: 26rem;\n}\n.w-72[data-v-1f48d8cb] {\n  width: 18rem;\n}\n.w-80[data-v-1f48d8cb] {\n  width: 20rem;\n}\n.w-88[data-v-1f48d8cb] {\n  width: 22rem;\n}\n.w-max-88[data-v-1f48d8cb] {\n  max-width: 22rem;\n}\n.w-96[data-v-1f48d8cb] {\n  width: 24rem;\n}\n.w-max-96[data-v-1f48d8cb] {\n  max-width: 24rem;\n}\n.w-104[data-v-1f48d8cb] {\n  width: 26rem;\n}\n.card[data-v-1f48d8cb] {\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n  --bg-opacity: 1;\n  background-color: #ffffff;\n  background-color: rgba(255, 255, 255, var(--bg-opacity));\n  padding: 2rem;\n  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);\n}\n.card[data-v-1f48d8cb]:not(:first-child) {\n  margin-top: 2rem;\n}\n.card .title[data-v-1f48d8cb] {\n  font-family: \"Nunito Sans\", sans-serif;\n  font-weight: 700;\n  color: #330b53;\n  font-size: 1.25rem;\n}\n.card .sub-title[data-v-1f48d8cb] {\n  font-family: \"Nunito Sans\", sans-serif;\n  font-weight: 700;\n  color: #1d1d1d;\n  margin-top: 1rem;\n  font-size: 1.125rem;\n}\n.card .text[data-v-1f48d8cb] {\n  margin-top: 1rem;\n  font-family: \"Nunito Sans\", sans-serif;\n  font-weight: 300;\n  color: #1d1d1d;\n  font-size: 1rem;\n}\n.card .text .link[data-v-1f48d8cb] {\n  color: #e60099;\n}\n.card .text .link[data-v-1f48d8cb]:hover {\n  text-decoration: underline;\n}\n.card .text-sub-title[data-v-1f48d8cb] {\n  margin-top: 0.5rem;\n}\n.card .right[data-v-1f48d8cb] {\n  display: flex;\n  justify-content: flex-end;\n}\n.card .button[data-v-1f48d8cb] {\n  display: inline-block;\n  margin-top: 2rem;\n  padding-left: 1.5rem;\n  padding-right: 1.5rem;\n  padding-top: 0.5rem;\n  padding-bottom: 0.5rem;\n  background-color: #330b53;\n  border-radius: 0.25rem;\n  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);\n  font-family: \"Nunito Sans\", sans-serif;\n  font-weight: 400;\n  font-size: 1rem;\n  color: #f6f6f6;\n}\n.card .button[data-v-1f48d8cb]:hover {\n  background-color: #5a308c;\n}\n@media (min-width: 640px) {\n.sm\\:bg-primary[data-v-1f48d8cb] {\n    background-color: #330b53;\n}\n.sm\\:bg-secondary[data-v-1f48d8cb] {\n    background-color: #5a308c;\n}\n.sm\\:bg-highlight[data-v-1f48d8cb] {\n    background-color: #e60099;\n}\n.sm\\:bg-light[data-v-1f48d8cb] {\n    background-color: #f6f6f6;\n}\n.sm\\:bg-dark[data-v-1f48d8cb] {\n    background-color: #1d1d1d;\n}\n.sm\\:text-primary[data-v-1f48d8cb] {\n    color: #330b53;\n}\n.sm\\:text-secondary[data-v-1f48d8cb] {\n    color: #5a308c;\n}\n.sm\\:text-highlight[data-v-1f48d8cb] {\n    color: #e60099;\n}\n.sm\\:text-light[data-v-1f48d8cb] {\n    color: #f6f6f6;\n}\n.sm\\:text-dark[data-v-1f48d8cb] {\n    color: #1d1d1d;\n}\n.sm\\:font-primary[data-v-1f48d8cb] {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.sm\\:font-secondary[data-v-1f48d8cb] {\n    font-family: \"Orbitron\", sans-serif;\n}\n.sm\\:odd\\:bg-primary[data-v-1f48d8cb]:nth-child(odd) {\n    background-color: #330b53;\n}\n.sm\\:odd\\:bg-secondary[data-v-1f48d8cb]:nth-child(odd) {\n    background-color: #5a308c;\n}\n.sm\\:odd\\:bg-highlight[data-v-1f48d8cb]:nth-child(odd) {\n    background-color: #e60099;\n}\n.sm\\:odd\\:bg-light[data-v-1f48d8cb]:nth-child(odd) {\n    background-color: #f6f6f6;\n}\n.sm\\:odd\\:bg-dark[data-v-1f48d8cb]:nth-child(odd) {\n    background-color: #1d1d1d;\n}\n.sm\\:odd\\:text-primary[data-v-1f48d8cb]:nth-child(odd) {\n    color: #330b53;\n}\n.sm\\:odd\\:text-secondary[data-v-1f48d8cb]:nth-child(odd) {\n    color: #5a308c;\n}\n.sm\\:odd\\:text-highlight[data-v-1f48d8cb]:nth-child(odd) {\n    color: #e60099;\n}\n.sm\\:odd\\:text-light[data-v-1f48d8cb]:nth-child(odd) {\n    color: #f6f6f6;\n}\n.sm\\:odd\\:text-dark[data-v-1f48d8cb]:nth-child(odd) {\n    color: #1d1d1d;\n}\n.sm\\:odd\\:font-primary[data-v-1f48d8cb]:nth-child(odd) {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.sm\\:odd\\:font-secondary[data-v-1f48d8cb]:nth-child(odd) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.sm\\:even\\:bg-primary[data-v-1f48d8cb]:nth-child(even) {\n    background-color: #330b53;\n}\n.sm\\:even\\:bg-secondary[data-v-1f48d8cb]:nth-child(even) {\n    background-color: #5a308c;\n}\n.sm\\:even\\:bg-highlight[data-v-1f48d8cb]:nth-child(even) {\n    background-color: #e60099;\n}\n.sm\\:even\\:bg-light[data-v-1f48d8cb]:nth-child(even) {\n    background-color: #f6f6f6;\n}\n.sm\\:even\\:bg-dark[data-v-1f48d8cb]:nth-child(even) {\n    background-color: #1d1d1d;\n}\n.sm\\:even\\:text-primary[data-v-1f48d8cb]:nth-child(even) {\n    color: #330b53;\n}\n.sm\\:even\\:text-secondary[data-v-1f48d8cb]:nth-child(even) {\n    color: #5a308c;\n}\n.sm\\:even\\:text-highlight[data-v-1f48d8cb]:nth-child(even) {\n    color: #e60099;\n}\n.sm\\:even\\:text-light[data-v-1f48d8cb]:nth-child(even) {\n    color: #f6f6f6;\n}\n.sm\\:even\\:text-dark[data-v-1f48d8cb]:nth-child(even) {\n    color: #1d1d1d;\n}\n.sm\\:even\\:font-primary[data-v-1f48d8cb]:nth-child(even) {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.sm\\:even\\:font-secondary[data-v-1f48d8cb]:nth-child(even) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.sm\\:hover\\:bg-primary[data-v-1f48d8cb]:hover {\n    background-color: #330b53;\n}\n.sm\\:hover\\:bg-secondary[data-v-1f48d8cb]:hover {\n    background-color: #5a308c;\n}\n.sm\\:hover\\:bg-highlight[data-v-1f48d8cb]:hover {\n    background-color: #e60099;\n}\n.sm\\:hover\\:bg-light[data-v-1f48d8cb]:hover {\n    background-color: #f6f6f6;\n}\n.sm\\:hover\\:bg-dark[data-v-1f48d8cb]:hover {\n    background-color: #1d1d1d;\n}\n.sm\\:hover\\:text-primary[data-v-1f48d8cb]:hover {\n    color: #330b53;\n}\n.sm\\:hover\\:text-secondary[data-v-1f48d8cb]:hover {\n    color: #5a308c;\n}\n.sm\\:hover\\:text-highlight[data-v-1f48d8cb]:hover {\n    color: #e60099;\n}\n.sm\\:hover\\:text-light[data-v-1f48d8cb]:hover {\n    color: #f6f6f6;\n}\n.sm\\:hover\\:text-dark[data-v-1f48d8cb]:hover {\n    color: #1d1d1d;\n}\n.sm\\:hover\\:font-primary[data-v-1f48d8cb]:hover {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.sm\\:hover\\:font-secondary[data-v-1f48d8cb]:hover {\n    font-family: \"Orbitron\", sans-serif;\n}\n.sm\\:h-72[data-v-1f48d8cb] {\n    height: 18rem;\n}\n.sm\\:h-80[data-v-1f48d8cb] {\n    height: 20rem;\n}\n.sm\\:h-88[data-v-1f48d8cb] {\n    height: 22rem;\n}\n.sm\\:h-96[data-v-1f48d8cb] {\n    height: 24rem;\n}\n.sm\\:h-104[data-v-1f48d8cb] {\n    height: 26rem;\n}\n.sm\\:w-72[data-v-1f48d8cb] {\n    width: 18rem;\n}\n.sm\\:w-80[data-v-1f48d8cb] {\n    width: 20rem;\n}\n.sm\\:w-88[data-v-1f48d8cb] {\n    width: 22rem;\n}\n.sm\\:w-max-88[data-v-1f48d8cb] {\n    max-width: 22rem;\n}\n.sm\\:w-96[data-v-1f48d8cb] {\n    width: 24rem;\n}\n.sm\\:w-max-96[data-v-1f48d8cb] {\n    max-width: 24rem;\n}\n.sm\\:w-104[data-v-1f48d8cb] {\n    width: 26rem;\n}\n}\n@media (min-width: 768px) {\n.md\\:bg-primary[data-v-1f48d8cb] {\n    background-color: #330b53;\n}\n.md\\:bg-secondary[data-v-1f48d8cb] {\n    background-color: #5a308c;\n}\n.md\\:bg-highlight[data-v-1f48d8cb] {\n    background-color: #e60099;\n}\n.md\\:bg-light[data-v-1f48d8cb] {\n    background-color: #f6f6f6;\n}\n.md\\:bg-dark[data-v-1f48d8cb] {\n    background-color: #1d1d1d;\n}\n.md\\:text-primary[data-v-1f48d8cb] {\n    color: #330b53;\n}\n.md\\:text-secondary[data-v-1f48d8cb] {\n    color: #5a308c;\n}\n.md\\:text-highlight[data-v-1f48d8cb] {\n    color: #e60099;\n}\n.md\\:text-light[data-v-1f48d8cb] {\n    color: #f6f6f6;\n}\n.md\\:text-dark[data-v-1f48d8cb] {\n    color: #1d1d1d;\n}\n.md\\:font-primary[data-v-1f48d8cb] {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.md\\:font-secondary[data-v-1f48d8cb] {\n    font-family: \"Orbitron\", sans-serif;\n}\n.md\\:odd\\:bg-primary[data-v-1f48d8cb]:nth-child(odd) {\n    background-color: #330b53;\n}\n.md\\:odd\\:bg-secondary[data-v-1f48d8cb]:nth-child(odd) {\n    background-color: #5a308c;\n}\n.md\\:odd\\:bg-highlight[data-v-1f48d8cb]:nth-child(odd) {\n    background-color: #e60099;\n}\n.md\\:odd\\:bg-light[data-v-1f48d8cb]:nth-child(odd) {\n    background-color: #f6f6f6;\n}\n.md\\:odd\\:bg-dark[data-v-1f48d8cb]:nth-child(odd) {\n    background-color: #1d1d1d;\n}\n.md\\:odd\\:text-primary[data-v-1f48d8cb]:nth-child(odd) {\n    color: #330b53;\n}\n.md\\:odd\\:text-secondary[data-v-1f48d8cb]:nth-child(odd) {\n    color: #5a308c;\n}\n.md\\:odd\\:text-highlight[data-v-1f48d8cb]:nth-child(odd) {\n    color: #e60099;\n}\n.md\\:odd\\:text-light[data-v-1f48d8cb]:nth-child(odd) {\n    color: #f6f6f6;\n}\n.md\\:odd\\:text-dark[data-v-1f48d8cb]:nth-child(odd) {\n    color: #1d1d1d;\n}\n.md\\:odd\\:font-primary[data-v-1f48d8cb]:nth-child(odd) {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.md\\:odd\\:font-secondary[data-v-1f48d8cb]:nth-child(odd) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.md\\:even\\:bg-primary[data-v-1f48d8cb]:nth-child(even) {\n    background-color: #330b53;\n}\n.md\\:even\\:bg-secondary[data-v-1f48d8cb]:nth-child(even) {\n    background-color: #5a308c;\n}\n.md\\:even\\:bg-highlight[data-v-1f48d8cb]:nth-child(even) {\n    background-color: #e60099;\n}\n.md\\:even\\:bg-light[data-v-1f48d8cb]:nth-child(even) {\n    background-color: #f6f6f6;\n}\n.md\\:even\\:bg-dark[data-v-1f48d8cb]:nth-child(even) {\n    background-color: #1d1d1d;\n}\n.md\\:even\\:text-primary[data-v-1f48d8cb]:nth-child(even) {\n    color: #330b53;\n}\n.md\\:even\\:text-secondary[data-v-1f48d8cb]:nth-child(even) {\n    color: #5a308c;\n}\n.md\\:even\\:text-highlight[data-v-1f48d8cb]:nth-child(even) {\n    color: #e60099;\n}\n.md\\:even\\:text-light[data-v-1f48d8cb]:nth-child(even) {\n    color: #f6f6f6;\n}\n.md\\:even\\:text-dark[data-v-1f48d8cb]:nth-child(even) {\n    color: #1d1d1d;\n}\n.md\\:even\\:font-primary[data-v-1f48d8cb]:nth-child(even) {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.md\\:even\\:font-secondary[data-v-1f48d8cb]:nth-child(even) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.md\\:hover\\:bg-primary[data-v-1f48d8cb]:hover {\n    background-color: #330b53;\n}\n.md\\:hover\\:bg-secondary[data-v-1f48d8cb]:hover {\n    background-color: #5a308c;\n}\n.md\\:hover\\:bg-highlight[data-v-1f48d8cb]:hover {\n    background-color: #e60099;\n}\n.md\\:hover\\:bg-light[data-v-1f48d8cb]:hover {\n    background-color: #f6f6f6;\n}\n.md\\:hover\\:bg-dark[data-v-1f48d8cb]:hover {\n    background-color: #1d1d1d;\n}\n.md\\:hover\\:text-primary[data-v-1f48d8cb]:hover {\n    color: #330b53;\n}\n.md\\:hover\\:text-secondary[data-v-1f48d8cb]:hover {\n    color: #5a308c;\n}\n.md\\:hover\\:text-highlight[data-v-1f48d8cb]:hover {\n    color: #e60099;\n}\n.md\\:hover\\:text-light[data-v-1f48d8cb]:hover {\n    color: #f6f6f6;\n}\n.md\\:hover\\:text-dark[data-v-1f48d8cb]:hover {\n    color: #1d1d1d;\n}\n.md\\:hover\\:font-primary[data-v-1f48d8cb]:hover {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.md\\:hover\\:font-secondary[data-v-1f48d8cb]:hover {\n    font-family: \"Orbitron\", sans-serif;\n}\n.md\\:h-72[data-v-1f48d8cb] {\n    height: 18rem;\n}\n.md\\:h-80[data-v-1f48d8cb] {\n    height: 20rem;\n}\n.md\\:h-88[data-v-1f48d8cb] {\n    height: 22rem;\n}\n.md\\:h-96[data-v-1f48d8cb] {\n    height: 24rem;\n}\n.md\\:h-104[data-v-1f48d8cb] {\n    height: 26rem;\n}\n.md\\:w-72[data-v-1f48d8cb] {\n    width: 18rem;\n}\n.md\\:w-80[data-v-1f48d8cb] {\n    width: 20rem;\n}\n.md\\:w-88[data-v-1f48d8cb] {\n    width: 22rem;\n}\n.md\\:w-max-88[data-v-1f48d8cb] {\n    max-width: 22rem;\n}\n.md\\:w-96[data-v-1f48d8cb] {\n    width: 24rem;\n}\n.md\\:w-max-96[data-v-1f48d8cb] {\n    max-width: 24rem;\n}\n.md\\:w-104[data-v-1f48d8cb] {\n    width: 26rem;\n}\n}\n@media (min-width: 1024px) {\n.lg\\:bg-primary[data-v-1f48d8cb] {\n    background-color: #330b53;\n}\n.lg\\:bg-secondary[data-v-1f48d8cb] {\n    background-color: #5a308c;\n}\n.lg\\:bg-highlight[data-v-1f48d8cb] {\n    background-color: #e60099;\n}\n.lg\\:bg-light[data-v-1f48d8cb] {\n    background-color: #f6f6f6;\n}\n.lg\\:bg-dark[data-v-1f48d8cb] {\n    background-color: #1d1d1d;\n}\n.lg\\:text-primary[data-v-1f48d8cb] {\n    color: #330b53;\n}\n.lg\\:text-secondary[data-v-1f48d8cb] {\n    color: #5a308c;\n}\n.lg\\:text-highlight[data-v-1f48d8cb] {\n    color: #e60099;\n}\n.lg\\:text-light[data-v-1f48d8cb] {\n    color: #f6f6f6;\n}\n.lg\\:text-dark[data-v-1f48d8cb] {\n    color: #1d1d1d;\n}\n.lg\\:font-primary[data-v-1f48d8cb] {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.lg\\:font-secondary[data-v-1f48d8cb] {\n    font-family: \"Orbitron\", sans-serif;\n}\n.lg\\:odd\\:bg-primary[data-v-1f48d8cb]:nth-child(odd) {\n    background-color: #330b53;\n}\n.lg\\:odd\\:bg-secondary[data-v-1f48d8cb]:nth-child(odd) {\n    background-color: #5a308c;\n}\n.lg\\:odd\\:bg-highlight[data-v-1f48d8cb]:nth-child(odd) {\n    background-color: #e60099;\n}\n.lg\\:odd\\:bg-light[data-v-1f48d8cb]:nth-child(odd) {\n    background-color: #f6f6f6;\n}\n.lg\\:odd\\:bg-dark[data-v-1f48d8cb]:nth-child(odd) {\n    background-color: #1d1d1d;\n}\n.lg\\:odd\\:text-primary[data-v-1f48d8cb]:nth-child(odd) {\n    color: #330b53;\n}\n.lg\\:odd\\:text-secondary[data-v-1f48d8cb]:nth-child(odd) {\n    color: #5a308c;\n}\n.lg\\:odd\\:text-highlight[data-v-1f48d8cb]:nth-child(odd) {\n    color: #e60099;\n}\n.lg\\:odd\\:text-light[data-v-1f48d8cb]:nth-child(odd) {\n    color: #f6f6f6;\n}\n.lg\\:odd\\:text-dark[data-v-1f48d8cb]:nth-child(odd) {\n    color: #1d1d1d;\n}\n.lg\\:odd\\:font-primary[data-v-1f48d8cb]:nth-child(odd) {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.lg\\:odd\\:font-secondary[data-v-1f48d8cb]:nth-child(odd) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.lg\\:even\\:bg-primary[data-v-1f48d8cb]:nth-child(even) {\n    background-color: #330b53;\n}\n.lg\\:even\\:bg-secondary[data-v-1f48d8cb]:nth-child(even) {\n    background-color: #5a308c;\n}\n.lg\\:even\\:bg-highlight[data-v-1f48d8cb]:nth-child(even) {\n    background-color: #e60099;\n}\n.lg\\:even\\:bg-light[data-v-1f48d8cb]:nth-child(even) {\n    background-color: #f6f6f6;\n}\n.lg\\:even\\:bg-dark[data-v-1f48d8cb]:nth-child(even) {\n    background-color: #1d1d1d;\n}\n.lg\\:even\\:text-primary[data-v-1f48d8cb]:nth-child(even) {\n    color: #330b53;\n}\n.lg\\:even\\:text-secondary[data-v-1f48d8cb]:nth-child(even) {\n    color: #5a308c;\n}\n.lg\\:even\\:text-highlight[data-v-1f48d8cb]:nth-child(even) {\n    color: #e60099;\n}\n.lg\\:even\\:text-light[data-v-1f48d8cb]:nth-child(even) {\n    color: #f6f6f6;\n}\n.lg\\:even\\:text-dark[data-v-1f48d8cb]:nth-child(even) {\n    color: #1d1d1d;\n}\n.lg\\:even\\:font-primary[data-v-1f48d8cb]:nth-child(even) {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.lg\\:even\\:font-secondary[data-v-1f48d8cb]:nth-child(even) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.lg\\:hover\\:bg-primary[data-v-1f48d8cb]:hover {\n    background-color: #330b53;\n}\n.lg\\:hover\\:bg-secondary[data-v-1f48d8cb]:hover {\n    background-color: #5a308c;\n}\n.lg\\:hover\\:bg-highlight[data-v-1f48d8cb]:hover {\n    background-color: #e60099;\n}\n.lg\\:hover\\:bg-light[data-v-1f48d8cb]:hover {\n    background-color: #f6f6f6;\n}\n.lg\\:hover\\:bg-dark[data-v-1f48d8cb]:hover {\n    background-color: #1d1d1d;\n}\n.lg\\:hover\\:text-primary[data-v-1f48d8cb]:hover {\n    color: #330b53;\n}\n.lg\\:hover\\:text-secondary[data-v-1f48d8cb]:hover {\n    color: #5a308c;\n}\n.lg\\:hover\\:text-highlight[data-v-1f48d8cb]:hover {\n    color: #e60099;\n}\n.lg\\:hover\\:text-light[data-v-1f48d8cb]:hover {\n    color: #f6f6f6;\n}\n.lg\\:hover\\:text-dark[data-v-1f48d8cb]:hover {\n    color: #1d1d1d;\n}\n.lg\\:hover\\:font-primary[data-v-1f48d8cb]:hover {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.lg\\:hover\\:font-secondary[data-v-1f48d8cb]:hover {\n    font-family: \"Orbitron\", sans-serif;\n}\n.lg\\:h-72[data-v-1f48d8cb] {\n    height: 18rem;\n}\n.lg\\:h-80[data-v-1f48d8cb] {\n    height: 20rem;\n}\n.lg\\:h-88[data-v-1f48d8cb] {\n    height: 22rem;\n}\n.lg\\:h-96[data-v-1f48d8cb] {\n    height: 24rem;\n}\n.lg\\:h-104[data-v-1f48d8cb] {\n    height: 26rem;\n}\n.lg\\:w-72[data-v-1f48d8cb] {\n    width: 18rem;\n}\n.lg\\:w-80[data-v-1f48d8cb] {\n    width: 20rem;\n}\n.lg\\:w-88[data-v-1f48d8cb] {\n    width: 22rem;\n}\n.lg\\:w-max-88[data-v-1f48d8cb] {\n    max-width: 22rem;\n}\n.lg\\:w-96[data-v-1f48d8cb] {\n    width: 24rem;\n}\n.lg\\:w-max-96[data-v-1f48d8cb] {\n    max-width: 24rem;\n}\n.lg\\:w-104[data-v-1f48d8cb] {\n    width: 26rem;\n}\n}\n@media (min-width: 1280px) {\n.xl\\:bg-primary[data-v-1f48d8cb] {\n    background-color: #330b53;\n}\n.xl\\:bg-secondary[data-v-1f48d8cb] {\n    background-color: #5a308c;\n}\n.xl\\:bg-highlight[data-v-1f48d8cb] {\n    background-color: #e60099;\n}\n.xl\\:bg-light[data-v-1f48d8cb] {\n    background-color: #f6f6f6;\n}\n.xl\\:bg-dark[data-v-1f48d8cb] {\n    background-color: #1d1d1d;\n}\n.xl\\:text-primary[data-v-1f48d8cb] {\n    color: #330b53;\n}\n.xl\\:text-secondary[data-v-1f48d8cb] {\n    color: #5a308c;\n}\n.xl\\:text-highlight[data-v-1f48d8cb] {\n    color: #e60099;\n}\n.xl\\:text-light[data-v-1f48d8cb] {\n    color: #f6f6f6;\n}\n.xl\\:text-dark[data-v-1f48d8cb] {\n    color: #1d1d1d;\n}\n.xl\\:font-primary[data-v-1f48d8cb] {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.xl\\:font-secondary[data-v-1f48d8cb] {\n    font-family: \"Orbitron\", sans-serif;\n}\n.xl\\:odd\\:bg-primary[data-v-1f48d8cb]:nth-child(odd) {\n    background-color: #330b53;\n}\n.xl\\:odd\\:bg-secondary[data-v-1f48d8cb]:nth-child(odd) {\n    background-color: #5a308c;\n}\n.xl\\:odd\\:bg-highlight[data-v-1f48d8cb]:nth-child(odd) {\n    background-color: #e60099;\n}\n.xl\\:odd\\:bg-light[data-v-1f48d8cb]:nth-child(odd) {\n    background-color: #f6f6f6;\n}\n.xl\\:odd\\:bg-dark[data-v-1f48d8cb]:nth-child(odd) {\n    background-color: #1d1d1d;\n}\n.xl\\:odd\\:text-primary[data-v-1f48d8cb]:nth-child(odd) {\n    color: #330b53;\n}\n.xl\\:odd\\:text-secondary[data-v-1f48d8cb]:nth-child(odd) {\n    color: #5a308c;\n}\n.xl\\:odd\\:text-highlight[data-v-1f48d8cb]:nth-child(odd) {\n    color: #e60099;\n}\n.xl\\:odd\\:text-light[data-v-1f48d8cb]:nth-child(odd) {\n    color: #f6f6f6;\n}\n.xl\\:odd\\:text-dark[data-v-1f48d8cb]:nth-child(odd) {\n    color: #1d1d1d;\n}\n.xl\\:odd\\:font-primary[data-v-1f48d8cb]:nth-child(odd) {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.xl\\:odd\\:font-secondary[data-v-1f48d8cb]:nth-child(odd) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.xl\\:even\\:bg-primary[data-v-1f48d8cb]:nth-child(even) {\n    background-color: #330b53;\n}\n.xl\\:even\\:bg-secondary[data-v-1f48d8cb]:nth-child(even) {\n    background-color: #5a308c;\n}\n.xl\\:even\\:bg-highlight[data-v-1f48d8cb]:nth-child(even) {\n    background-color: #e60099;\n}\n.xl\\:even\\:bg-light[data-v-1f48d8cb]:nth-child(even) {\n    background-color: #f6f6f6;\n}\n.xl\\:even\\:bg-dark[data-v-1f48d8cb]:nth-child(even) {\n    background-color: #1d1d1d;\n}\n.xl\\:even\\:text-primary[data-v-1f48d8cb]:nth-child(even) {\n    color: #330b53;\n}\n.xl\\:even\\:text-secondary[data-v-1f48d8cb]:nth-child(even) {\n    color: #5a308c;\n}\n.xl\\:even\\:text-highlight[data-v-1f48d8cb]:nth-child(even) {\n    color: #e60099;\n}\n.xl\\:even\\:text-light[data-v-1f48d8cb]:nth-child(even) {\n    color: #f6f6f6;\n}\n.xl\\:even\\:text-dark[data-v-1f48d8cb]:nth-child(even) {\n    color: #1d1d1d;\n}\n.xl\\:even\\:font-primary[data-v-1f48d8cb]:nth-child(even) {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.xl\\:even\\:font-secondary[data-v-1f48d8cb]:nth-child(even) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.xl\\:hover\\:bg-primary[data-v-1f48d8cb]:hover {\n    background-color: #330b53;\n}\n.xl\\:hover\\:bg-secondary[data-v-1f48d8cb]:hover {\n    background-color: #5a308c;\n}\n.xl\\:hover\\:bg-highlight[data-v-1f48d8cb]:hover {\n    background-color: #e60099;\n}\n.xl\\:hover\\:bg-light[data-v-1f48d8cb]:hover {\n    background-color: #f6f6f6;\n}\n.xl\\:hover\\:bg-dark[data-v-1f48d8cb]:hover {\n    background-color: #1d1d1d;\n}\n.xl\\:hover\\:text-primary[data-v-1f48d8cb]:hover {\n    color: #330b53;\n}\n.xl\\:hover\\:text-secondary[data-v-1f48d8cb]:hover {\n    color: #5a308c;\n}\n.xl\\:hover\\:text-highlight[data-v-1f48d8cb]:hover {\n    color: #e60099;\n}\n.xl\\:hover\\:text-light[data-v-1f48d8cb]:hover {\n    color: #f6f6f6;\n}\n.xl\\:hover\\:text-dark[data-v-1f48d8cb]:hover {\n    color: #1d1d1d;\n}\n.xl\\:hover\\:font-primary[data-v-1f48d8cb]:hover {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.xl\\:hover\\:font-secondary[data-v-1f48d8cb]:hover {\n    font-family: \"Orbitron\", sans-serif;\n}\n.xl\\:h-72[data-v-1f48d8cb] {\n    height: 18rem;\n}\n.xl\\:h-80[data-v-1f48d8cb] {\n    height: 20rem;\n}\n.xl\\:h-88[data-v-1f48d8cb] {\n    height: 22rem;\n}\n.xl\\:h-96[data-v-1f48d8cb] {\n    height: 24rem;\n}\n.xl\\:h-104[data-v-1f48d8cb] {\n    height: 26rem;\n}\n.xl\\:w-72[data-v-1f48d8cb] {\n    width: 18rem;\n}\n.xl\\:w-80[data-v-1f48d8cb] {\n    width: 20rem;\n}\n.xl\\:w-88[data-v-1f48d8cb] {\n    width: 22rem;\n}\n.xl\\:w-max-88[data-v-1f48d8cb] {\n    max-width: 22rem;\n}\n.xl\\:w-96[data-v-1f48d8cb] {\n    width: 24rem;\n}\n.xl\\:w-max-96[data-v-1f48d8cb] {\n    max-width: 24rem;\n}\n.xl\\:w-104[data-v-1f48d8cb] {\n    width: 26rem;\n}\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Portal/Schedule.vue?vue&type=style&index=0&id=1c90d53e&lang=scss&scoped=true&":
 /*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Portal/Schedule.vue?vue&type=style&index=0&id=1c90d53e&lang=scss&scoped=true& ***!
@@ -9111,7 +9378,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".bg-primary[data-v-1c90d53e] {\n  background-color: #330b53;\n}\n.bg-secondary[data-v-1c90d53e] {\n  background-color: #5a308c;\n}\n.bg-highlight[data-v-1c90d53e] {\n  background-color: #e60099;\n}\n.bg-light[data-v-1c90d53e] {\n  background-color: #f6f6f6;\n}\n.bg-dark[data-v-1c90d53e] {\n  background-color: #1d1d1d;\n}\n.text-primary[data-v-1c90d53e] {\n  color: #330b53;\n}\n.text-secondary[data-v-1c90d53e] {\n  color: #5a308c;\n}\n.text-highlight[data-v-1c90d53e] {\n  color: #e60099;\n}\n.text-light[data-v-1c90d53e] {\n  color: #f6f6f6;\n}\n.text-dark[data-v-1c90d53e] {\n  color: #1d1d1d;\n}\n.font-primary[data-v-1c90d53e] {\n  font-family: \"Nunito Sans\", sans-serif;\n}\n.font-secondary[data-v-1c90d53e] {\n  font-family: \"Orbitron\", sans-serif;\n}\n.odd\\:bg-primary[data-v-1c90d53e]:nth-child(odd) {\n  background-color: #330b53;\n}\n.odd\\:bg-secondary[data-v-1c90d53e]:nth-child(odd) {\n  background-color: #5a308c;\n}\n.odd\\:bg-highlight[data-v-1c90d53e]:nth-child(odd) {\n  background-color: #e60099;\n}\n.odd\\:bg-light[data-v-1c90d53e]:nth-child(odd) {\n  background-color: #f6f6f6;\n}\n.odd\\:bg-dark[data-v-1c90d53e]:nth-child(odd) {\n  background-color: #1d1d1d;\n}\n.odd\\:text-primary[data-v-1c90d53e]:nth-child(odd) {\n  color: #330b53;\n}\n.odd\\:text-secondary[data-v-1c90d53e]:nth-child(odd) {\n  color: #5a308c;\n}\n.odd\\:text-highlight[data-v-1c90d53e]:nth-child(odd) {\n  color: #e60099;\n}\n.odd\\:text-light[data-v-1c90d53e]:nth-child(odd) {\n  color: #f6f6f6;\n}\n.odd\\:text-dark[data-v-1c90d53e]:nth-child(odd) {\n  color: #1d1d1d;\n}\n.odd\\:font-primary[data-v-1c90d53e]:nth-child(odd) {\n  font-family: \"Nunito Sans\", sans-serif;\n}\n.odd\\:font-secondary[data-v-1c90d53e]:nth-child(odd) {\n  font-family: \"Orbitron\", sans-serif;\n}\n.even\\:bg-primary[data-v-1c90d53e]:nth-child(even) {\n  background-color: #330b53;\n}\n.even\\:bg-secondary[data-v-1c90d53e]:nth-child(even) {\n  background-color: #5a308c;\n}\n.even\\:bg-highlight[data-v-1c90d53e]:nth-child(even) {\n  background-color: #e60099;\n}\n.even\\:bg-light[data-v-1c90d53e]:nth-child(even) {\n  background-color: #f6f6f6;\n}\n.even\\:bg-dark[data-v-1c90d53e]:nth-child(even) {\n  background-color: #1d1d1d;\n}\n.even\\:text-primary[data-v-1c90d53e]:nth-child(even) {\n  color: #330b53;\n}\n.even\\:text-secondary[data-v-1c90d53e]:nth-child(even) {\n  color: #5a308c;\n}\n.even\\:text-highlight[data-v-1c90d53e]:nth-child(even) {\n  color: #e60099;\n}\n.even\\:text-light[data-v-1c90d53e]:nth-child(even) {\n  color: #f6f6f6;\n}\n.even\\:text-dark[data-v-1c90d53e]:nth-child(even) {\n  color: #1d1d1d;\n}\n.even\\:font-primary[data-v-1c90d53e]:nth-child(even) {\n  font-family: \"Nunito Sans\", sans-serif;\n}\n.even\\:font-secondary[data-v-1c90d53e]:nth-child(even) {\n  font-family: \"Orbitron\", sans-serif;\n}\n.hover\\:bg-primary[data-v-1c90d53e]:hover {\n  background-color: #330b53;\n}\n.hover\\:bg-secondary[data-v-1c90d53e]:hover {\n  background-color: #5a308c;\n}\n.hover\\:bg-highlight[data-v-1c90d53e]:hover {\n  background-color: #e60099;\n}\n.hover\\:bg-light[data-v-1c90d53e]:hover {\n  background-color: #f6f6f6;\n}\n.hover\\:bg-dark[data-v-1c90d53e]:hover {\n  background-color: #1d1d1d;\n}\n.hover\\:text-primary[data-v-1c90d53e]:hover {\n  color: #330b53;\n}\n.hover\\:text-secondary[data-v-1c90d53e]:hover {\n  color: #5a308c;\n}\n.hover\\:text-highlight[data-v-1c90d53e]:hover {\n  color: #e60099;\n}\n.hover\\:text-light[data-v-1c90d53e]:hover {\n  color: #f6f6f6;\n}\n.hover\\:text-dark[data-v-1c90d53e]:hover {\n  color: #1d1d1d;\n}\n.hover\\:font-primary[data-v-1c90d53e]:hover {\n  font-family: \"Nunito Sans\", sans-serif;\n}\n.hover\\:font-secondary[data-v-1c90d53e]:hover {\n  font-family: \"Orbitron\", sans-serif;\n}\n.h-72[data-v-1c90d53e] {\n  height: 18rem;\n}\n.h-80[data-v-1c90d53e] {\n  height: 20rem;\n}\n.h-88[data-v-1c90d53e] {\n  height: 22rem;\n}\n.h-96[data-v-1c90d53e] {\n  height: 24rem;\n}\n.h-104[data-v-1c90d53e] {\n  height: 26rem;\n}\n.w-72[data-v-1c90d53e] {\n  width: 18rem;\n}\n.w-80[data-v-1c90d53e] {\n  width: 20rem;\n}\n.w-88[data-v-1c90d53e] {\n  width: 22rem;\n}\n.w-max-88[data-v-1c90d53e] {\n  max-width: 22rem;\n}\n.w-96[data-v-1c90d53e] {\n  width: 24rem;\n}\n.w-max-96[data-v-1c90d53e] {\n  max-width: 24rem;\n}\n.w-104[data-v-1c90d53e] {\n  width: 26rem;\n}\n.card[data-v-1c90d53e] {\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n  --bg-opacity: 1;\n  background-color: #ffffff;\n  background-color: rgba(255, 255, 255, var(--bg-opacity));\n  padding: 2rem;\n  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);\n}\n.card[data-v-1c90d53e]:not(:first-child) {\n  margin-top: 2rem;\n}\n.card .title[data-v-1c90d53e] {\n  font-family: \"Nunito Sans\", sans-serif;\n  font-weight: 700;\n  color: #330b53;\n  font-size: 1.25rem;\n}\n.card table[data-v-1c90d53e] {\n  width: 100%;\n  margin-top: 1rem;\n}\n.card table tr[data-v-1c90d53e] {\n  width: 100%;\n  padding: 0.5rem;\n  display: grid;\n  grid-template-columns: repeat(8, minmax(0, 1fr));\n  border-bottom-width: 1px;\n  --border-opacity: 1;\n  border-color: #f4f5f7;\n  border-color: rgba(244, 245, 247, var(--border-opacity));\n  flex-direction: column;\n  align-items: center;\n}\n.card table tr[data-v-1c90d53e]:first-child {\n  --border-opacity: 1;\n  border-color: #d2d6dc;\n  border-color: rgba(210, 214, 220, var(--border-opacity));\n}\n.card table tr th[data-v-1c90d53e] {\n  text-align: left;\n  font-family: \"Nunito Sans\", sans-serif;\n  font-weight: 600;\n  font-size: 1rem;\n  color: #1d1d1d;\n}\n.card table tr th[data-v-1c90d53e]:nth-child(4) {\n  grid-column: span 4 / span 4;\n}\n.card table tr td[data-v-1c90d53e] {\n  text-align: left;\n  font-family: \"Nunito Sans\", sans-serif;\n  font-weight: 400;\n  font-size: 1rem;\n  color: #1d1d1d;\n}\n.card table tr td[data-v-1c90d53e]:nth-child(4) {\n  grid-column: span 4 / span 4;\n}\n.card table tr td .button[data-v-1c90d53e] {\n  display: inline-block;\n  padding-left: 1rem;\n  padding-right: 1rem;\n  padding-top: 0.25rem;\n  padding-bottom: 0.25rem;\n  background-color: #330b53;\n  border-radius: 0.25rem;\n  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);\n  font-family: \"Nunito Sans\", sans-serif;\n  font-weight: 400;\n  font-size: 1rem;\n  color: #f6f6f6;\n}\n.card table tr td .button[data-v-1c90d53e]:hover {\n  background-color: #5a308c;\n}\n.card table tr td .disabled[data-v-1c90d53e] {\n  --bg-opacity: 1;\n  background-color: #e5e7eb;\n  background-color: rgba(229, 231, 235, var(--bg-opacity));\n  --text-opacity: 1;\n  color: #ffffff;\n  color: rgba(255, 255, 255, var(--text-opacity));\n}\n.card table tr td .disabled[data-v-1c90d53e]:hover {\n  --bg-opacity: 1;\n  background-color: #e5e7eb;\n  background-color: rgba(229, 231, 235, var(--bg-opacity));\n}\n.card table .archived[data-v-1c90d53e] {\n  text-decoration: line-through;\n}\n.right[data-v-1c90d53e] {\n  display: flex;\n  justify-content: flex-end;\n}\n.select[data-v-1c90d53e] {\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none;\n  background-image: url(\"data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='chevron-down' class='svg-inline--fa fa-chevron-down fa-w-14' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23a0aec0' d='M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z'%3E%3C/path%3E%3C/svg%3E\");\n  background-repeat: no-repeat;\n  background-position: center right 1rem;\n  background-size: 1rem;\n  padding-top: 0.25rem;\n  padding-bottom: 0.25rem;\n  padding-left: 0.75rem;\n  padding-right: 2.5rem;\n  font-size: 1rem;\n  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);\n}\n.select[data-v-1c90d53e]:focus {\n  border-width: 0;\n  outline: 0;\n  background-image: url(\"data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='chevron-down' class='svg-inline--fa fa-chevron-down fa-w-14' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23330b53' d='M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z'%3E%3C/path%3E%3C/svg%3E\");\n}\n.label[data-v-1c90d53e] {\n  display: block;\n  padding-top: 0.25rem;\n  padding-bottom: 0.25rem;\n  padding-left: 0.75rem;\n  padding-right: 0.75rem;\n  background-color: #330b53;\n  font-weight: 400;\n  color: #f6f6f6;\n  font-size: 1rem;\n  font-family: \"Nunito Sans\", sans-serif;\n  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);\n}\n@media (min-width: 640px) {\n.sm\\:bg-primary[data-v-1c90d53e] {\n    background-color: #330b53;\n}\n.sm\\:bg-secondary[data-v-1c90d53e] {\n    background-color: #5a308c;\n}\n.sm\\:bg-highlight[data-v-1c90d53e] {\n    background-color: #e60099;\n}\n.sm\\:bg-light[data-v-1c90d53e] {\n    background-color: #f6f6f6;\n}\n.sm\\:bg-dark[data-v-1c90d53e] {\n    background-color: #1d1d1d;\n}\n.sm\\:text-primary[data-v-1c90d53e] {\n    color: #330b53;\n}\n.sm\\:text-secondary[data-v-1c90d53e] {\n    color: #5a308c;\n}\n.sm\\:text-highlight[data-v-1c90d53e] {\n    color: #e60099;\n}\n.sm\\:text-light[data-v-1c90d53e] {\n    color: #f6f6f6;\n}\n.sm\\:text-dark[data-v-1c90d53e] {\n    color: #1d1d1d;\n}\n.sm\\:font-primary[data-v-1c90d53e] {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.sm\\:font-secondary[data-v-1c90d53e] {\n    font-family: \"Orbitron\", sans-serif;\n}\n.sm\\:odd\\:bg-primary[data-v-1c90d53e]:nth-child(odd) {\n    background-color: #330b53;\n}\n.sm\\:odd\\:bg-secondary[data-v-1c90d53e]:nth-child(odd) {\n    background-color: #5a308c;\n}\n.sm\\:odd\\:bg-highlight[data-v-1c90d53e]:nth-child(odd) {\n    background-color: #e60099;\n}\n.sm\\:odd\\:bg-light[data-v-1c90d53e]:nth-child(odd) {\n    background-color: #f6f6f6;\n}\n.sm\\:odd\\:bg-dark[data-v-1c90d53e]:nth-child(odd) {\n    background-color: #1d1d1d;\n}\n.sm\\:odd\\:text-primary[data-v-1c90d53e]:nth-child(odd) {\n    color: #330b53;\n}\n.sm\\:odd\\:text-secondary[data-v-1c90d53e]:nth-child(odd) {\n    color: #5a308c;\n}\n.sm\\:odd\\:text-highlight[data-v-1c90d53e]:nth-child(odd) {\n    color: #e60099;\n}\n.sm\\:odd\\:text-light[data-v-1c90d53e]:nth-child(odd) {\n    color: #f6f6f6;\n}\n.sm\\:odd\\:text-dark[data-v-1c90d53e]:nth-child(odd) {\n    color: #1d1d1d;\n}\n.sm\\:odd\\:font-primary[data-v-1c90d53e]:nth-child(odd) {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.sm\\:odd\\:font-secondary[data-v-1c90d53e]:nth-child(odd) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.sm\\:even\\:bg-primary[data-v-1c90d53e]:nth-child(even) {\n    background-color: #330b53;\n}\n.sm\\:even\\:bg-secondary[data-v-1c90d53e]:nth-child(even) {\n    background-color: #5a308c;\n}\n.sm\\:even\\:bg-highlight[data-v-1c90d53e]:nth-child(even) {\n    background-color: #e60099;\n}\n.sm\\:even\\:bg-light[data-v-1c90d53e]:nth-child(even) {\n    background-color: #f6f6f6;\n}\n.sm\\:even\\:bg-dark[data-v-1c90d53e]:nth-child(even) {\n    background-color: #1d1d1d;\n}\n.sm\\:even\\:text-primary[data-v-1c90d53e]:nth-child(even) {\n    color: #330b53;\n}\n.sm\\:even\\:text-secondary[data-v-1c90d53e]:nth-child(even) {\n    color: #5a308c;\n}\n.sm\\:even\\:text-highlight[data-v-1c90d53e]:nth-child(even) {\n    color: #e60099;\n}\n.sm\\:even\\:text-light[data-v-1c90d53e]:nth-child(even) {\n    color: #f6f6f6;\n}\n.sm\\:even\\:text-dark[data-v-1c90d53e]:nth-child(even) {\n    color: #1d1d1d;\n}\n.sm\\:even\\:font-primary[data-v-1c90d53e]:nth-child(even) {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.sm\\:even\\:font-secondary[data-v-1c90d53e]:nth-child(even) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.sm\\:hover\\:bg-primary[data-v-1c90d53e]:hover {\n    background-color: #330b53;\n}\n.sm\\:hover\\:bg-secondary[data-v-1c90d53e]:hover {\n    background-color: #5a308c;\n}\n.sm\\:hover\\:bg-highlight[data-v-1c90d53e]:hover {\n    background-color: #e60099;\n}\n.sm\\:hover\\:bg-light[data-v-1c90d53e]:hover {\n    background-color: #f6f6f6;\n}\n.sm\\:hover\\:bg-dark[data-v-1c90d53e]:hover {\n    background-color: #1d1d1d;\n}\n.sm\\:hover\\:text-primary[data-v-1c90d53e]:hover {\n    color: #330b53;\n}\n.sm\\:hover\\:text-secondary[data-v-1c90d53e]:hover {\n    color: #5a308c;\n}\n.sm\\:hover\\:text-highlight[data-v-1c90d53e]:hover {\n    color: #e60099;\n}\n.sm\\:hover\\:text-light[data-v-1c90d53e]:hover {\n    color: #f6f6f6;\n}\n.sm\\:hover\\:text-dark[data-v-1c90d53e]:hover {\n    color: #1d1d1d;\n}\n.sm\\:hover\\:font-primary[data-v-1c90d53e]:hover {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.sm\\:hover\\:font-secondary[data-v-1c90d53e]:hover {\n    font-family: \"Orbitron\", sans-serif;\n}\n.sm\\:h-72[data-v-1c90d53e] {\n    height: 18rem;\n}\n.sm\\:h-80[data-v-1c90d53e] {\n    height: 20rem;\n}\n.sm\\:h-88[data-v-1c90d53e] {\n    height: 22rem;\n}\n.sm\\:h-96[data-v-1c90d53e] {\n    height: 24rem;\n}\n.sm\\:h-104[data-v-1c90d53e] {\n    height: 26rem;\n}\n.sm\\:w-72[data-v-1c90d53e] {\n    width: 18rem;\n}\n.sm\\:w-80[data-v-1c90d53e] {\n    width: 20rem;\n}\n.sm\\:w-88[data-v-1c90d53e] {\n    width: 22rem;\n}\n.sm\\:w-max-88[data-v-1c90d53e] {\n    max-width: 22rem;\n}\n.sm\\:w-96[data-v-1c90d53e] {\n    width: 24rem;\n}\n.sm\\:w-max-96[data-v-1c90d53e] {\n    max-width: 24rem;\n}\n.sm\\:w-104[data-v-1c90d53e] {\n    width: 26rem;\n}\n}\n@media (min-width: 768px) {\n.md\\:bg-primary[data-v-1c90d53e] {\n    background-color: #330b53;\n}\n.md\\:bg-secondary[data-v-1c90d53e] {\n    background-color: #5a308c;\n}\n.md\\:bg-highlight[data-v-1c90d53e] {\n    background-color: #e60099;\n}\n.md\\:bg-light[data-v-1c90d53e] {\n    background-color: #f6f6f6;\n}\n.md\\:bg-dark[data-v-1c90d53e] {\n    background-color: #1d1d1d;\n}\n.md\\:text-primary[data-v-1c90d53e] {\n    color: #330b53;\n}\n.md\\:text-secondary[data-v-1c90d53e] {\n    color: #5a308c;\n}\n.md\\:text-highlight[data-v-1c90d53e] {\n    color: #e60099;\n}\n.md\\:text-light[data-v-1c90d53e] {\n    color: #f6f6f6;\n}\n.md\\:text-dark[data-v-1c90d53e] {\n    color: #1d1d1d;\n}\n.md\\:font-primary[data-v-1c90d53e] {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.md\\:font-secondary[data-v-1c90d53e] {\n    font-family: \"Orbitron\", sans-serif;\n}\n.md\\:odd\\:bg-primary[data-v-1c90d53e]:nth-child(odd) {\n    background-color: #330b53;\n}\n.md\\:odd\\:bg-secondary[data-v-1c90d53e]:nth-child(odd) {\n    background-color: #5a308c;\n}\n.md\\:odd\\:bg-highlight[data-v-1c90d53e]:nth-child(odd) {\n    background-color: #e60099;\n}\n.md\\:odd\\:bg-light[data-v-1c90d53e]:nth-child(odd) {\n    background-color: #f6f6f6;\n}\n.md\\:odd\\:bg-dark[data-v-1c90d53e]:nth-child(odd) {\n    background-color: #1d1d1d;\n}\n.md\\:odd\\:text-primary[data-v-1c90d53e]:nth-child(odd) {\n    color: #330b53;\n}\n.md\\:odd\\:text-secondary[data-v-1c90d53e]:nth-child(odd) {\n    color: #5a308c;\n}\n.md\\:odd\\:text-highlight[data-v-1c90d53e]:nth-child(odd) {\n    color: #e60099;\n}\n.md\\:odd\\:text-light[data-v-1c90d53e]:nth-child(odd) {\n    color: #f6f6f6;\n}\n.md\\:odd\\:text-dark[data-v-1c90d53e]:nth-child(odd) {\n    color: #1d1d1d;\n}\n.md\\:odd\\:font-primary[data-v-1c90d53e]:nth-child(odd) {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.md\\:odd\\:font-secondary[data-v-1c90d53e]:nth-child(odd) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.md\\:even\\:bg-primary[data-v-1c90d53e]:nth-child(even) {\n    background-color: #330b53;\n}\n.md\\:even\\:bg-secondary[data-v-1c90d53e]:nth-child(even) {\n    background-color: #5a308c;\n}\n.md\\:even\\:bg-highlight[data-v-1c90d53e]:nth-child(even) {\n    background-color: #e60099;\n}\n.md\\:even\\:bg-light[data-v-1c90d53e]:nth-child(even) {\n    background-color: #f6f6f6;\n}\n.md\\:even\\:bg-dark[data-v-1c90d53e]:nth-child(even) {\n    background-color: #1d1d1d;\n}\n.md\\:even\\:text-primary[data-v-1c90d53e]:nth-child(even) {\n    color: #330b53;\n}\n.md\\:even\\:text-secondary[data-v-1c90d53e]:nth-child(even) {\n    color: #5a308c;\n}\n.md\\:even\\:text-highlight[data-v-1c90d53e]:nth-child(even) {\n    color: #e60099;\n}\n.md\\:even\\:text-light[data-v-1c90d53e]:nth-child(even) {\n    color: #f6f6f6;\n}\n.md\\:even\\:text-dark[data-v-1c90d53e]:nth-child(even) {\n    color: #1d1d1d;\n}\n.md\\:even\\:font-primary[data-v-1c90d53e]:nth-child(even) {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.md\\:even\\:font-secondary[data-v-1c90d53e]:nth-child(even) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.md\\:hover\\:bg-primary[data-v-1c90d53e]:hover {\n    background-color: #330b53;\n}\n.md\\:hover\\:bg-secondary[data-v-1c90d53e]:hover {\n    background-color: #5a308c;\n}\n.md\\:hover\\:bg-highlight[data-v-1c90d53e]:hover {\n    background-color: #e60099;\n}\n.md\\:hover\\:bg-light[data-v-1c90d53e]:hover {\n    background-color: #f6f6f6;\n}\n.md\\:hover\\:bg-dark[data-v-1c90d53e]:hover {\n    background-color: #1d1d1d;\n}\n.md\\:hover\\:text-primary[data-v-1c90d53e]:hover {\n    color: #330b53;\n}\n.md\\:hover\\:text-secondary[data-v-1c90d53e]:hover {\n    color: #5a308c;\n}\n.md\\:hover\\:text-highlight[data-v-1c90d53e]:hover {\n    color: #e60099;\n}\n.md\\:hover\\:text-light[data-v-1c90d53e]:hover {\n    color: #f6f6f6;\n}\n.md\\:hover\\:text-dark[data-v-1c90d53e]:hover {\n    color: #1d1d1d;\n}\n.md\\:hover\\:font-primary[data-v-1c90d53e]:hover {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.md\\:hover\\:font-secondary[data-v-1c90d53e]:hover {\n    font-family: \"Orbitron\", sans-serif;\n}\n.md\\:h-72[data-v-1c90d53e] {\n    height: 18rem;\n}\n.md\\:h-80[data-v-1c90d53e] {\n    height: 20rem;\n}\n.md\\:h-88[data-v-1c90d53e] {\n    height: 22rem;\n}\n.md\\:h-96[data-v-1c90d53e] {\n    height: 24rem;\n}\n.md\\:h-104[data-v-1c90d53e] {\n    height: 26rem;\n}\n.md\\:w-72[data-v-1c90d53e] {\n    width: 18rem;\n}\n.md\\:w-80[data-v-1c90d53e] {\n    width: 20rem;\n}\n.md\\:w-88[data-v-1c90d53e] {\n    width: 22rem;\n}\n.md\\:w-max-88[data-v-1c90d53e] {\n    max-width: 22rem;\n}\n.md\\:w-96[data-v-1c90d53e] {\n    width: 24rem;\n}\n.md\\:w-max-96[data-v-1c90d53e] {\n    max-width: 24rem;\n}\n.md\\:w-104[data-v-1c90d53e] {\n    width: 26rem;\n}\n}\n@media (min-width: 1024px) {\n.lg\\:bg-primary[data-v-1c90d53e] {\n    background-color: #330b53;\n}\n.lg\\:bg-secondary[data-v-1c90d53e] {\n    background-color: #5a308c;\n}\n.lg\\:bg-highlight[data-v-1c90d53e] {\n    background-color: #e60099;\n}\n.lg\\:bg-light[data-v-1c90d53e] {\n    background-color: #f6f6f6;\n}\n.lg\\:bg-dark[data-v-1c90d53e] {\n    background-color: #1d1d1d;\n}\n.lg\\:text-primary[data-v-1c90d53e] {\n    color: #330b53;\n}\n.lg\\:text-secondary[data-v-1c90d53e] {\n    color: #5a308c;\n}\n.lg\\:text-highlight[data-v-1c90d53e] {\n    color: #e60099;\n}\n.lg\\:text-light[data-v-1c90d53e] {\n    color: #f6f6f6;\n}\n.lg\\:text-dark[data-v-1c90d53e] {\n    color: #1d1d1d;\n}\n.lg\\:font-primary[data-v-1c90d53e] {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.lg\\:font-secondary[data-v-1c90d53e] {\n    font-family: \"Orbitron\", sans-serif;\n}\n.lg\\:odd\\:bg-primary[data-v-1c90d53e]:nth-child(odd) {\n    background-color: #330b53;\n}\n.lg\\:odd\\:bg-secondary[data-v-1c90d53e]:nth-child(odd) {\n    background-color: #5a308c;\n}\n.lg\\:odd\\:bg-highlight[data-v-1c90d53e]:nth-child(odd) {\n    background-color: #e60099;\n}\n.lg\\:odd\\:bg-light[data-v-1c90d53e]:nth-child(odd) {\n    background-color: #f6f6f6;\n}\n.lg\\:odd\\:bg-dark[data-v-1c90d53e]:nth-child(odd) {\n    background-color: #1d1d1d;\n}\n.lg\\:odd\\:text-primary[data-v-1c90d53e]:nth-child(odd) {\n    color: #330b53;\n}\n.lg\\:odd\\:text-secondary[data-v-1c90d53e]:nth-child(odd) {\n    color: #5a308c;\n}\n.lg\\:odd\\:text-highlight[data-v-1c90d53e]:nth-child(odd) {\n    color: #e60099;\n}\n.lg\\:odd\\:text-light[data-v-1c90d53e]:nth-child(odd) {\n    color: #f6f6f6;\n}\n.lg\\:odd\\:text-dark[data-v-1c90d53e]:nth-child(odd) {\n    color: #1d1d1d;\n}\n.lg\\:odd\\:font-primary[data-v-1c90d53e]:nth-child(odd) {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.lg\\:odd\\:font-secondary[data-v-1c90d53e]:nth-child(odd) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.lg\\:even\\:bg-primary[data-v-1c90d53e]:nth-child(even) {\n    background-color: #330b53;\n}\n.lg\\:even\\:bg-secondary[data-v-1c90d53e]:nth-child(even) {\n    background-color: #5a308c;\n}\n.lg\\:even\\:bg-highlight[data-v-1c90d53e]:nth-child(even) {\n    background-color: #e60099;\n}\n.lg\\:even\\:bg-light[data-v-1c90d53e]:nth-child(even) {\n    background-color: #f6f6f6;\n}\n.lg\\:even\\:bg-dark[data-v-1c90d53e]:nth-child(even) {\n    background-color: #1d1d1d;\n}\n.lg\\:even\\:text-primary[data-v-1c90d53e]:nth-child(even) {\n    color: #330b53;\n}\n.lg\\:even\\:text-secondary[data-v-1c90d53e]:nth-child(even) {\n    color: #5a308c;\n}\n.lg\\:even\\:text-highlight[data-v-1c90d53e]:nth-child(even) {\n    color: #e60099;\n}\n.lg\\:even\\:text-light[data-v-1c90d53e]:nth-child(even) {\n    color: #f6f6f6;\n}\n.lg\\:even\\:text-dark[data-v-1c90d53e]:nth-child(even) {\n    color: #1d1d1d;\n}\n.lg\\:even\\:font-primary[data-v-1c90d53e]:nth-child(even) {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.lg\\:even\\:font-secondary[data-v-1c90d53e]:nth-child(even) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.lg\\:hover\\:bg-primary[data-v-1c90d53e]:hover {\n    background-color: #330b53;\n}\n.lg\\:hover\\:bg-secondary[data-v-1c90d53e]:hover {\n    background-color: #5a308c;\n}\n.lg\\:hover\\:bg-highlight[data-v-1c90d53e]:hover {\n    background-color: #e60099;\n}\n.lg\\:hover\\:bg-light[data-v-1c90d53e]:hover {\n    background-color: #f6f6f6;\n}\n.lg\\:hover\\:bg-dark[data-v-1c90d53e]:hover {\n    background-color: #1d1d1d;\n}\n.lg\\:hover\\:text-primary[data-v-1c90d53e]:hover {\n    color: #330b53;\n}\n.lg\\:hover\\:text-secondary[data-v-1c90d53e]:hover {\n    color: #5a308c;\n}\n.lg\\:hover\\:text-highlight[data-v-1c90d53e]:hover {\n    color: #e60099;\n}\n.lg\\:hover\\:text-light[data-v-1c90d53e]:hover {\n    color: #f6f6f6;\n}\n.lg\\:hover\\:text-dark[data-v-1c90d53e]:hover {\n    color: #1d1d1d;\n}\n.lg\\:hover\\:font-primary[data-v-1c90d53e]:hover {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.lg\\:hover\\:font-secondary[data-v-1c90d53e]:hover {\n    font-family: \"Orbitron\", sans-serif;\n}\n.lg\\:h-72[data-v-1c90d53e] {\n    height: 18rem;\n}\n.lg\\:h-80[data-v-1c90d53e] {\n    height: 20rem;\n}\n.lg\\:h-88[data-v-1c90d53e] {\n    height: 22rem;\n}\n.lg\\:h-96[data-v-1c90d53e] {\n    height: 24rem;\n}\n.lg\\:h-104[data-v-1c90d53e] {\n    height: 26rem;\n}\n.lg\\:w-72[data-v-1c90d53e] {\n    width: 18rem;\n}\n.lg\\:w-80[data-v-1c90d53e] {\n    width: 20rem;\n}\n.lg\\:w-88[data-v-1c90d53e] {\n    width: 22rem;\n}\n.lg\\:w-max-88[data-v-1c90d53e] {\n    max-width: 22rem;\n}\n.lg\\:w-96[data-v-1c90d53e] {\n    width: 24rem;\n}\n.lg\\:w-max-96[data-v-1c90d53e] {\n    max-width: 24rem;\n}\n.lg\\:w-104[data-v-1c90d53e] {\n    width: 26rem;\n}\n}\n@media (min-width: 1280px) {\n.xl\\:bg-primary[data-v-1c90d53e] {\n    background-color: #330b53;\n}\n.xl\\:bg-secondary[data-v-1c90d53e] {\n    background-color: #5a308c;\n}\n.xl\\:bg-highlight[data-v-1c90d53e] {\n    background-color: #e60099;\n}\n.xl\\:bg-light[data-v-1c90d53e] {\n    background-color: #f6f6f6;\n}\n.xl\\:bg-dark[data-v-1c90d53e] {\n    background-color: #1d1d1d;\n}\n.xl\\:text-primary[data-v-1c90d53e] {\n    color: #330b53;\n}\n.xl\\:text-secondary[data-v-1c90d53e] {\n    color: #5a308c;\n}\n.xl\\:text-highlight[data-v-1c90d53e] {\n    color: #e60099;\n}\n.xl\\:text-light[data-v-1c90d53e] {\n    color: #f6f6f6;\n}\n.xl\\:text-dark[data-v-1c90d53e] {\n    color: #1d1d1d;\n}\n.xl\\:font-primary[data-v-1c90d53e] {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.xl\\:font-secondary[data-v-1c90d53e] {\n    font-family: \"Orbitron\", sans-serif;\n}\n.xl\\:odd\\:bg-primary[data-v-1c90d53e]:nth-child(odd) {\n    background-color: #330b53;\n}\n.xl\\:odd\\:bg-secondary[data-v-1c90d53e]:nth-child(odd) {\n    background-color: #5a308c;\n}\n.xl\\:odd\\:bg-highlight[data-v-1c90d53e]:nth-child(odd) {\n    background-color: #e60099;\n}\n.xl\\:odd\\:bg-light[data-v-1c90d53e]:nth-child(odd) {\n    background-color: #f6f6f6;\n}\n.xl\\:odd\\:bg-dark[data-v-1c90d53e]:nth-child(odd) {\n    background-color: #1d1d1d;\n}\n.xl\\:odd\\:text-primary[data-v-1c90d53e]:nth-child(odd) {\n    color: #330b53;\n}\n.xl\\:odd\\:text-secondary[data-v-1c90d53e]:nth-child(odd) {\n    color: #5a308c;\n}\n.xl\\:odd\\:text-highlight[data-v-1c90d53e]:nth-child(odd) {\n    color: #e60099;\n}\n.xl\\:odd\\:text-light[data-v-1c90d53e]:nth-child(odd) {\n    color: #f6f6f6;\n}\n.xl\\:odd\\:text-dark[data-v-1c90d53e]:nth-child(odd) {\n    color: #1d1d1d;\n}\n.xl\\:odd\\:font-primary[data-v-1c90d53e]:nth-child(odd) {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.xl\\:odd\\:font-secondary[data-v-1c90d53e]:nth-child(odd) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.xl\\:even\\:bg-primary[data-v-1c90d53e]:nth-child(even) {\n    background-color: #330b53;\n}\n.xl\\:even\\:bg-secondary[data-v-1c90d53e]:nth-child(even) {\n    background-color: #5a308c;\n}\n.xl\\:even\\:bg-highlight[data-v-1c90d53e]:nth-child(even) {\n    background-color: #e60099;\n}\n.xl\\:even\\:bg-light[data-v-1c90d53e]:nth-child(even) {\n    background-color: #f6f6f6;\n}\n.xl\\:even\\:bg-dark[data-v-1c90d53e]:nth-child(even) {\n    background-color: #1d1d1d;\n}\n.xl\\:even\\:text-primary[data-v-1c90d53e]:nth-child(even) {\n    color: #330b53;\n}\n.xl\\:even\\:text-secondary[data-v-1c90d53e]:nth-child(even) {\n    color: #5a308c;\n}\n.xl\\:even\\:text-highlight[data-v-1c90d53e]:nth-child(even) {\n    color: #e60099;\n}\n.xl\\:even\\:text-light[data-v-1c90d53e]:nth-child(even) {\n    color: #f6f6f6;\n}\n.xl\\:even\\:text-dark[data-v-1c90d53e]:nth-child(even) {\n    color: #1d1d1d;\n}\n.xl\\:even\\:font-primary[data-v-1c90d53e]:nth-child(even) {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.xl\\:even\\:font-secondary[data-v-1c90d53e]:nth-child(even) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.xl\\:hover\\:bg-primary[data-v-1c90d53e]:hover {\n    background-color: #330b53;\n}\n.xl\\:hover\\:bg-secondary[data-v-1c90d53e]:hover {\n    background-color: #5a308c;\n}\n.xl\\:hover\\:bg-highlight[data-v-1c90d53e]:hover {\n    background-color: #e60099;\n}\n.xl\\:hover\\:bg-light[data-v-1c90d53e]:hover {\n    background-color: #f6f6f6;\n}\n.xl\\:hover\\:bg-dark[data-v-1c90d53e]:hover {\n    background-color: #1d1d1d;\n}\n.xl\\:hover\\:text-primary[data-v-1c90d53e]:hover {\n    color: #330b53;\n}\n.xl\\:hover\\:text-secondary[data-v-1c90d53e]:hover {\n    color: #5a308c;\n}\n.xl\\:hover\\:text-highlight[data-v-1c90d53e]:hover {\n    color: #e60099;\n}\n.xl\\:hover\\:text-light[data-v-1c90d53e]:hover {\n    color: #f6f6f6;\n}\n.xl\\:hover\\:text-dark[data-v-1c90d53e]:hover {\n    color: #1d1d1d;\n}\n.xl\\:hover\\:font-primary[data-v-1c90d53e]:hover {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.xl\\:hover\\:font-secondary[data-v-1c90d53e]:hover {\n    font-family: \"Orbitron\", sans-serif;\n}\n.xl\\:h-72[data-v-1c90d53e] {\n    height: 18rem;\n}\n.xl\\:h-80[data-v-1c90d53e] {\n    height: 20rem;\n}\n.xl\\:h-88[data-v-1c90d53e] {\n    height: 22rem;\n}\n.xl\\:h-96[data-v-1c90d53e] {\n    height: 24rem;\n}\n.xl\\:h-104[data-v-1c90d53e] {\n    height: 26rem;\n}\n.xl\\:w-72[data-v-1c90d53e] {\n    width: 18rem;\n}\n.xl\\:w-80[data-v-1c90d53e] {\n    width: 20rem;\n}\n.xl\\:w-88[data-v-1c90d53e] {\n    width: 22rem;\n}\n.xl\\:w-max-88[data-v-1c90d53e] {\n    max-width: 22rem;\n}\n.xl\\:w-96[data-v-1c90d53e] {\n    width: 24rem;\n}\n.xl\\:w-max-96[data-v-1c90d53e] {\n    max-width: 24rem;\n}\n.xl\\:w-104[data-v-1c90d53e] {\n    width: 26rem;\n}\n}", ""]);
+exports.push([module.i, ".bg-primary[data-v-1c90d53e] {\n  background-color: #330b53;\n}\n.bg-secondary[data-v-1c90d53e] {\n  background-color: #5a308c;\n}\n.bg-highlight[data-v-1c90d53e] {\n  background-color: #e60099;\n}\n.bg-light[data-v-1c90d53e] {\n  background-color: #f6f6f6;\n}\n.bg-dark[data-v-1c90d53e] {\n  background-color: #1d1d1d;\n}\n.text-primary[data-v-1c90d53e] {\n  color: #330b53;\n}\n.text-secondary[data-v-1c90d53e] {\n  color: #5a308c;\n}\n.text-highlight[data-v-1c90d53e] {\n  color: #e60099;\n}\n.text-light[data-v-1c90d53e] {\n  color: #f6f6f6;\n}\n.text-dark[data-v-1c90d53e] {\n  color: #1d1d1d;\n}\n.font-primary[data-v-1c90d53e] {\n  font-family: \"Nunito Sans\", sans-serif;\n}\n.font-secondary[data-v-1c90d53e] {\n  font-family: \"Orbitron\", sans-serif;\n}\n.odd\\:bg-primary[data-v-1c90d53e]:nth-child(odd) {\n  background-color: #330b53;\n}\n.odd\\:bg-secondary[data-v-1c90d53e]:nth-child(odd) {\n  background-color: #5a308c;\n}\n.odd\\:bg-highlight[data-v-1c90d53e]:nth-child(odd) {\n  background-color: #e60099;\n}\n.odd\\:bg-light[data-v-1c90d53e]:nth-child(odd) {\n  background-color: #f6f6f6;\n}\n.odd\\:bg-dark[data-v-1c90d53e]:nth-child(odd) {\n  background-color: #1d1d1d;\n}\n.odd\\:text-primary[data-v-1c90d53e]:nth-child(odd) {\n  color: #330b53;\n}\n.odd\\:text-secondary[data-v-1c90d53e]:nth-child(odd) {\n  color: #5a308c;\n}\n.odd\\:text-highlight[data-v-1c90d53e]:nth-child(odd) {\n  color: #e60099;\n}\n.odd\\:text-light[data-v-1c90d53e]:nth-child(odd) {\n  color: #f6f6f6;\n}\n.odd\\:text-dark[data-v-1c90d53e]:nth-child(odd) {\n  color: #1d1d1d;\n}\n.odd\\:font-primary[data-v-1c90d53e]:nth-child(odd) {\n  font-family: \"Nunito Sans\", sans-serif;\n}\n.odd\\:font-secondary[data-v-1c90d53e]:nth-child(odd) {\n  font-family: \"Orbitron\", sans-serif;\n}\n.even\\:bg-primary[data-v-1c90d53e]:nth-child(even) {\n  background-color: #330b53;\n}\n.even\\:bg-secondary[data-v-1c90d53e]:nth-child(even) {\n  background-color: #5a308c;\n}\n.even\\:bg-highlight[data-v-1c90d53e]:nth-child(even) {\n  background-color: #e60099;\n}\n.even\\:bg-light[data-v-1c90d53e]:nth-child(even) {\n  background-color: #f6f6f6;\n}\n.even\\:bg-dark[data-v-1c90d53e]:nth-child(even) {\n  background-color: #1d1d1d;\n}\n.even\\:text-primary[data-v-1c90d53e]:nth-child(even) {\n  color: #330b53;\n}\n.even\\:text-secondary[data-v-1c90d53e]:nth-child(even) {\n  color: #5a308c;\n}\n.even\\:text-highlight[data-v-1c90d53e]:nth-child(even) {\n  color: #e60099;\n}\n.even\\:text-light[data-v-1c90d53e]:nth-child(even) {\n  color: #f6f6f6;\n}\n.even\\:text-dark[data-v-1c90d53e]:nth-child(even) {\n  color: #1d1d1d;\n}\n.even\\:font-primary[data-v-1c90d53e]:nth-child(even) {\n  font-family: \"Nunito Sans\", sans-serif;\n}\n.even\\:font-secondary[data-v-1c90d53e]:nth-child(even) {\n  font-family: \"Orbitron\", sans-serif;\n}\n.hover\\:bg-primary[data-v-1c90d53e]:hover {\n  background-color: #330b53;\n}\n.hover\\:bg-secondary[data-v-1c90d53e]:hover {\n  background-color: #5a308c;\n}\n.hover\\:bg-highlight[data-v-1c90d53e]:hover {\n  background-color: #e60099;\n}\n.hover\\:bg-light[data-v-1c90d53e]:hover {\n  background-color: #f6f6f6;\n}\n.hover\\:bg-dark[data-v-1c90d53e]:hover {\n  background-color: #1d1d1d;\n}\n.hover\\:text-primary[data-v-1c90d53e]:hover {\n  color: #330b53;\n}\n.hover\\:text-secondary[data-v-1c90d53e]:hover {\n  color: #5a308c;\n}\n.hover\\:text-highlight[data-v-1c90d53e]:hover {\n  color: #e60099;\n}\n.hover\\:text-light[data-v-1c90d53e]:hover {\n  color: #f6f6f6;\n}\n.hover\\:text-dark[data-v-1c90d53e]:hover {\n  color: #1d1d1d;\n}\n.hover\\:font-primary[data-v-1c90d53e]:hover {\n  font-family: \"Nunito Sans\", sans-serif;\n}\n.hover\\:font-secondary[data-v-1c90d53e]:hover {\n  font-family: \"Orbitron\", sans-serif;\n}\n.h-72[data-v-1c90d53e] {\n  height: 18rem;\n}\n.h-80[data-v-1c90d53e] {\n  height: 20rem;\n}\n.h-88[data-v-1c90d53e] {\n  height: 22rem;\n}\n.h-96[data-v-1c90d53e] {\n  height: 24rem;\n}\n.h-104[data-v-1c90d53e] {\n  height: 26rem;\n}\n.w-72[data-v-1c90d53e] {\n  width: 18rem;\n}\n.w-80[data-v-1c90d53e] {\n  width: 20rem;\n}\n.w-88[data-v-1c90d53e] {\n  width: 22rem;\n}\n.w-max-88[data-v-1c90d53e] {\n  max-width: 22rem;\n}\n.w-96[data-v-1c90d53e] {\n  width: 24rem;\n}\n.w-max-96[data-v-1c90d53e] {\n  max-width: 24rem;\n}\n.w-104[data-v-1c90d53e] {\n  width: 26rem;\n}\n.card[data-v-1c90d53e] {\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n  --bg-opacity: 1;\n  background-color: #ffffff;\n  background-color: rgba(255, 255, 255, var(--bg-opacity));\n  padding: 2rem;\n  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);\n}\n.card[data-v-1c90d53e]:not(:first-child) {\n  margin-top: 2rem;\n}\n.card .title[data-v-1c90d53e] {\n  font-family: \"Nunito Sans\", sans-serif;\n  font-weight: 700;\n  color: #330b53;\n  font-size: 1.25rem;\n}\n.card table[data-v-1c90d53e] {\n  width: 100%;\n  margin-top: 1rem;\n}\n.card table tr[data-v-1c90d53e] {\n  width: 100%;\n  padding: 0.5rem;\n  display: grid;\n  grid-template-columns: repeat(8, minmax(0, 1fr));\n  border-bottom-width: 1px;\n  --border-opacity: 1;\n  border-color: #f4f5f7;\n  border-color: rgba(244, 245, 247, var(--border-opacity));\n  flex-direction: column;\n  align-items: center;\n}\n.card table tr[data-v-1c90d53e]:first-child {\n  --border-opacity: 1;\n  border-color: #d2d6dc;\n  border-color: rgba(210, 214, 220, var(--border-opacity));\n}\n.card table tr th[data-v-1c90d53e] {\n  text-align: left;\n  font-family: \"Nunito Sans\", sans-serif;\n  font-weight: 600;\n  font-size: 1rem;\n  color: #1d1d1d;\n}\n.card table tr th[data-v-1c90d53e]:nth-child(4) {\n  grid-column: span 4 / span 4;\n}\n.card table tr td[data-v-1c90d53e] {\n  text-align: left;\n  font-family: \"Nunito Sans\", sans-serif;\n  font-weight: 400;\n  font-size: 1rem;\n  color: #1d1d1d;\n}\n.card table tr td[data-v-1c90d53e]:nth-child(4) {\n  grid-column: span 4 / span 4;\n}\n.card table tr td .button[data-v-1c90d53e] {\n  display: inline-block;\n  padding-left: 1rem;\n  padding-right: 1rem;\n  padding-top: 0.25rem;\n  padding-bottom: 0.25rem;\n  background-color: #330b53;\n  border-radius: 0.25rem;\n  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);\n  font-family: \"Nunito Sans\", sans-serif;\n  font-weight: 400;\n  font-size: 1rem;\n  color: #f6f6f6;\n}\n.card table tr td .button[data-v-1c90d53e]:hover {\n  background-color: #5a308c;\n}\n.card table tr td .disabled[data-v-1c90d53e] {\n  --bg-opacity: 1;\n  background-color: #e5e7eb;\n  background-color: rgba(229, 231, 235, var(--bg-opacity));\n  --text-opacity: 1;\n  color: #ffffff;\n  color: rgba(255, 255, 255, var(--text-opacity));\n}\n.card table tr td .disabled[data-v-1c90d53e]:hover {\n  cursor: not-allowed;\n  --bg-opacity: 1;\n  background-color: #e5e7eb;\n  background-color: rgba(229, 231, 235, var(--bg-opacity));\n}\n.card table .archived[data-v-1c90d53e] {\n  text-decoration: line-through;\n}\n.right[data-v-1c90d53e] {\n  display: flex;\n  justify-content: flex-end;\n}\n.select[data-v-1c90d53e] {\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none;\n  background-image: url(\"data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='chevron-down' class='svg-inline--fa fa-chevron-down fa-w-14' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23a0aec0' d='M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z'%3E%3C/path%3E%3C/svg%3E\");\n  background-repeat: no-repeat;\n  background-position: center right 1rem;\n  background-size: 1rem;\n  padding-top: 0.25rem;\n  padding-bottom: 0.25rem;\n  padding-left: 0.75rem;\n  padding-right: 2.5rem;\n  font-size: 1rem;\n  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);\n}\n.select[data-v-1c90d53e]:focus {\n  border-width: 0;\n  outline: 0;\n  background-image: url(\"data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='chevron-down' class='svg-inline--fa fa-chevron-down fa-w-14' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23330b53' d='M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z'%3E%3C/path%3E%3C/svg%3E\");\n}\n.label[data-v-1c90d53e] {\n  display: block;\n  padding-top: 0.25rem;\n  padding-bottom: 0.25rem;\n  padding-left: 0.75rem;\n  padding-right: 0.75rem;\n  background-color: #330b53;\n  font-weight: 400;\n  color: #f6f6f6;\n  font-size: 1rem;\n  font-family: \"Nunito Sans\", sans-serif;\n  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);\n}\n@media (min-width: 640px) {\n.sm\\:bg-primary[data-v-1c90d53e] {\n    background-color: #330b53;\n}\n.sm\\:bg-secondary[data-v-1c90d53e] {\n    background-color: #5a308c;\n}\n.sm\\:bg-highlight[data-v-1c90d53e] {\n    background-color: #e60099;\n}\n.sm\\:bg-light[data-v-1c90d53e] {\n    background-color: #f6f6f6;\n}\n.sm\\:bg-dark[data-v-1c90d53e] {\n    background-color: #1d1d1d;\n}\n.sm\\:text-primary[data-v-1c90d53e] {\n    color: #330b53;\n}\n.sm\\:text-secondary[data-v-1c90d53e] {\n    color: #5a308c;\n}\n.sm\\:text-highlight[data-v-1c90d53e] {\n    color: #e60099;\n}\n.sm\\:text-light[data-v-1c90d53e] {\n    color: #f6f6f6;\n}\n.sm\\:text-dark[data-v-1c90d53e] {\n    color: #1d1d1d;\n}\n.sm\\:font-primary[data-v-1c90d53e] {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.sm\\:font-secondary[data-v-1c90d53e] {\n    font-family: \"Orbitron\", sans-serif;\n}\n.sm\\:odd\\:bg-primary[data-v-1c90d53e]:nth-child(odd) {\n    background-color: #330b53;\n}\n.sm\\:odd\\:bg-secondary[data-v-1c90d53e]:nth-child(odd) {\n    background-color: #5a308c;\n}\n.sm\\:odd\\:bg-highlight[data-v-1c90d53e]:nth-child(odd) {\n    background-color: #e60099;\n}\n.sm\\:odd\\:bg-light[data-v-1c90d53e]:nth-child(odd) {\n    background-color: #f6f6f6;\n}\n.sm\\:odd\\:bg-dark[data-v-1c90d53e]:nth-child(odd) {\n    background-color: #1d1d1d;\n}\n.sm\\:odd\\:text-primary[data-v-1c90d53e]:nth-child(odd) {\n    color: #330b53;\n}\n.sm\\:odd\\:text-secondary[data-v-1c90d53e]:nth-child(odd) {\n    color: #5a308c;\n}\n.sm\\:odd\\:text-highlight[data-v-1c90d53e]:nth-child(odd) {\n    color: #e60099;\n}\n.sm\\:odd\\:text-light[data-v-1c90d53e]:nth-child(odd) {\n    color: #f6f6f6;\n}\n.sm\\:odd\\:text-dark[data-v-1c90d53e]:nth-child(odd) {\n    color: #1d1d1d;\n}\n.sm\\:odd\\:font-primary[data-v-1c90d53e]:nth-child(odd) {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.sm\\:odd\\:font-secondary[data-v-1c90d53e]:nth-child(odd) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.sm\\:even\\:bg-primary[data-v-1c90d53e]:nth-child(even) {\n    background-color: #330b53;\n}\n.sm\\:even\\:bg-secondary[data-v-1c90d53e]:nth-child(even) {\n    background-color: #5a308c;\n}\n.sm\\:even\\:bg-highlight[data-v-1c90d53e]:nth-child(even) {\n    background-color: #e60099;\n}\n.sm\\:even\\:bg-light[data-v-1c90d53e]:nth-child(even) {\n    background-color: #f6f6f6;\n}\n.sm\\:even\\:bg-dark[data-v-1c90d53e]:nth-child(even) {\n    background-color: #1d1d1d;\n}\n.sm\\:even\\:text-primary[data-v-1c90d53e]:nth-child(even) {\n    color: #330b53;\n}\n.sm\\:even\\:text-secondary[data-v-1c90d53e]:nth-child(even) {\n    color: #5a308c;\n}\n.sm\\:even\\:text-highlight[data-v-1c90d53e]:nth-child(even) {\n    color: #e60099;\n}\n.sm\\:even\\:text-light[data-v-1c90d53e]:nth-child(even) {\n    color: #f6f6f6;\n}\n.sm\\:even\\:text-dark[data-v-1c90d53e]:nth-child(even) {\n    color: #1d1d1d;\n}\n.sm\\:even\\:font-primary[data-v-1c90d53e]:nth-child(even) {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.sm\\:even\\:font-secondary[data-v-1c90d53e]:nth-child(even) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.sm\\:hover\\:bg-primary[data-v-1c90d53e]:hover {\n    background-color: #330b53;\n}\n.sm\\:hover\\:bg-secondary[data-v-1c90d53e]:hover {\n    background-color: #5a308c;\n}\n.sm\\:hover\\:bg-highlight[data-v-1c90d53e]:hover {\n    background-color: #e60099;\n}\n.sm\\:hover\\:bg-light[data-v-1c90d53e]:hover {\n    background-color: #f6f6f6;\n}\n.sm\\:hover\\:bg-dark[data-v-1c90d53e]:hover {\n    background-color: #1d1d1d;\n}\n.sm\\:hover\\:text-primary[data-v-1c90d53e]:hover {\n    color: #330b53;\n}\n.sm\\:hover\\:text-secondary[data-v-1c90d53e]:hover {\n    color: #5a308c;\n}\n.sm\\:hover\\:text-highlight[data-v-1c90d53e]:hover {\n    color: #e60099;\n}\n.sm\\:hover\\:text-light[data-v-1c90d53e]:hover {\n    color: #f6f6f6;\n}\n.sm\\:hover\\:text-dark[data-v-1c90d53e]:hover {\n    color: #1d1d1d;\n}\n.sm\\:hover\\:font-primary[data-v-1c90d53e]:hover {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.sm\\:hover\\:font-secondary[data-v-1c90d53e]:hover {\n    font-family: \"Orbitron\", sans-serif;\n}\n.sm\\:h-72[data-v-1c90d53e] {\n    height: 18rem;\n}\n.sm\\:h-80[data-v-1c90d53e] {\n    height: 20rem;\n}\n.sm\\:h-88[data-v-1c90d53e] {\n    height: 22rem;\n}\n.sm\\:h-96[data-v-1c90d53e] {\n    height: 24rem;\n}\n.sm\\:h-104[data-v-1c90d53e] {\n    height: 26rem;\n}\n.sm\\:w-72[data-v-1c90d53e] {\n    width: 18rem;\n}\n.sm\\:w-80[data-v-1c90d53e] {\n    width: 20rem;\n}\n.sm\\:w-88[data-v-1c90d53e] {\n    width: 22rem;\n}\n.sm\\:w-max-88[data-v-1c90d53e] {\n    max-width: 22rem;\n}\n.sm\\:w-96[data-v-1c90d53e] {\n    width: 24rem;\n}\n.sm\\:w-max-96[data-v-1c90d53e] {\n    max-width: 24rem;\n}\n.sm\\:w-104[data-v-1c90d53e] {\n    width: 26rem;\n}\n}\n@media (min-width: 768px) {\n.md\\:bg-primary[data-v-1c90d53e] {\n    background-color: #330b53;\n}\n.md\\:bg-secondary[data-v-1c90d53e] {\n    background-color: #5a308c;\n}\n.md\\:bg-highlight[data-v-1c90d53e] {\n    background-color: #e60099;\n}\n.md\\:bg-light[data-v-1c90d53e] {\n    background-color: #f6f6f6;\n}\n.md\\:bg-dark[data-v-1c90d53e] {\n    background-color: #1d1d1d;\n}\n.md\\:text-primary[data-v-1c90d53e] {\n    color: #330b53;\n}\n.md\\:text-secondary[data-v-1c90d53e] {\n    color: #5a308c;\n}\n.md\\:text-highlight[data-v-1c90d53e] {\n    color: #e60099;\n}\n.md\\:text-light[data-v-1c90d53e] {\n    color: #f6f6f6;\n}\n.md\\:text-dark[data-v-1c90d53e] {\n    color: #1d1d1d;\n}\n.md\\:font-primary[data-v-1c90d53e] {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.md\\:font-secondary[data-v-1c90d53e] {\n    font-family: \"Orbitron\", sans-serif;\n}\n.md\\:odd\\:bg-primary[data-v-1c90d53e]:nth-child(odd) {\n    background-color: #330b53;\n}\n.md\\:odd\\:bg-secondary[data-v-1c90d53e]:nth-child(odd) {\n    background-color: #5a308c;\n}\n.md\\:odd\\:bg-highlight[data-v-1c90d53e]:nth-child(odd) {\n    background-color: #e60099;\n}\n.md\\:odd\\:bg-light[data-v-1c90d53e]:nth-child(odd) {\n    background-color: #f6f6f6;\n}\n.md\\:odd\\:bg-dark[data-v-1c90d53e]:nth-child(odd) {\n    background-color: #1d1d1d;\n}\n.md\\:odd\\:text-primary[data-v-1c90d53e]:nth-child(odd) {\n    color: #330b53;\n}\n.md\\:odd\\:text-secondary[data-v-1c90d53e]:nth-child(odd) {\n    color: #5a308c;\n}\n.md\\:odd\\:text-highlight[data-v-1c90d53e]:nth-child(odd) {\n    color: #e60099;\n}\n.md\\:odd\\:text-light[data-v-1c90d53e]:nth-child(odd) {\n    color: #f6f6f6;\n}\n.md\\:odd\\:text-dark[data-v-1c90d53e]:nth-child(odd) {\n    color: #1d1d1d;\n}\n.md\\:odd\\:font-primary[data-v-1c90d53e]:nth-child(odd) {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.md\\:odd\\:font-secondary[data-v-1c90d53e]:nth-child(odd) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.md\\:even\\:bg-primary[data-v-1c90d53e]:nth-child(even) {\n    background-color: #330b53;\n}\n.md\\:even\\:bg-secondary[data-v-1c90d53e]:nth-child(even) {\n    background-color: #5a308c;\n}\n.md\\:even\\:bg-highlight[data-v-1c90d53e]:nth-child(even) {\n    background-color: #e60099;\n}\n.md\\:even\\:bg-light[data-v-1c90d53e]:nth-child(even) {\n    background-color: #f6f6f6;\n}\n.md\\:even\\:bg-dark[data-v-1c90d53e]:nth-child(even) {\n    background-color: #1d1d1d;\n}\n.md\\:even\\:text-primary[data-v-1c90d53e]:nth-child(even) {\n    color: #330b53;\n}\n.md\\:even\\:text-secondary[data-v-1c90d53e]:nth-child(even) {\n    color: #5a308c;\n}\n.md\\:even\\:text-highlight[data-v-1c90d53e]:nth-child(even) {\n    color: #e60099;\n}\n.md\\:even\\:text-light[data-v-1c90d53e]:nth-child(even) {\n    color: #f6f6f6;\n}\n.md\\:even\\:text-dark[data-v-1c90d53e]:nth-child(even) {\n    color: #1d1d1d;\n}\n.md\\:even\\:font-primary[data-v-1c90d53e]:nth-child(even) {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.md\\:even\\:font-secondary[data-v-1c90d53e]:nth-child(even) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.md\\:hover\\:bg-primary[data-v-1c90d53e]:hover {\n    background-color: #330b53;\n}\n.md\\:hover\\:bg-secondary[data-v-1c90d53e]:hover {\n    background-color: #5a308c;\n}\n.md\\:hover\\:bg-highlight[data-v-1c90d53e]:hover {\n    background-color: #e60099;\n}\n.md\\:hover\\:bg-light[data-v-1c90d53e]:hover {\n    background-color: #f6f6f6;\n}\n.md\\:hover\\:bg-dark[data-v-1c90d53e]:hover {\n    background-color: #1d1d1d;\n}\n.md\\:hover\\:text-primary[data-v-1c90d53e]:hover {\n    color: #330b53;\n}\n.md\\:hover\\:text-secondary[data-v-1c90d53e]:hover {\n    color: #5a308c;\n}\n.md\\:hover\\:text-highlight[data-v-1c90d53e]:hover {\n    color: #e60099;\n}\n.md\\:hover\\:text-light[data-v-1c90d53e]:hover {\n    color: #f6f6f6;\n}\n.md\\:hover\\:text-dark[data-v-1c90d53e]:hover {\n    color: #1d1d1d;\n}\n.md\\:hover\\:font-primary[data-v-1c90d53e]:hover {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.md\\:hover\\:font-secondary[data-v-1c90d53e]:hover {\n    font-family: \"Orbitron\", sans-serif;\n}\n.md\\:h-72[data-v-1c90d53e] {\n    height: 18rem;\n}\n.md\\:h-80[data-v-1c90d53e] {\n    height: 20rem;\n}\n.md\\:h-88[data-v-1c90d53e] {\n    height: 22rem;\n}\n.md\\:h-96[data-v-1c90d53e] {\n    height: 24rem;\n}\n.md\\:h-104[data-v-1c90d53e] {\n    height: 26rem;\n}\n.md\\:w-72[data-v-1c90d53e] {\n    width: 18rem;\n}\n.md\\:w-80[data-v-1c90d53e] {\n    width: 20rem;\n}\n.md\\:w-88[data-v-1c90d53e] {\n    width: 22rem;\n}\n.md\\:w-max-88[data-v-1c90d53e] {\n    max-width: 22rem;\n}\n.md\\:w-96[data-v-1c90d53e] {\n    width: 24rem;\n}\n.md\\:w-max-96[data-v-1c90d53e] {\n    max-width: 24rem;\n}\n.md\\:w-104[data-v-1c90d53e] {\n    width: 26rem;\n}\n}\n@media (min-width: 1024px) {\n.lg\\:bg-primary[data-v-1c90d53e] {\n    background-color: #330b53;\n}\n.lg\\:bg-secondary[data-v-1c90d53e] {\n    background-color: #5a308c;\n}\n.lg\\:bg-highlight[data-v-1c90d53e] {\n    background-color: #e60099;\n}\n.lg\\:bg-light[data-v-1c90d53e] {\n    background-color: #f6f6f6;\n}\n.lg\\:bg-dark[data-v-1c90d53e] {\n    background-color: #1d1d1d;\n}\n.lg\\:text-primary[data-v-1c90d53e] {\n    color: #330b53;\n}\n.lg\\:text-secondary[data-v-1c90d53e] {\n    color: #5a308c;\n}\n.lg\\:text-highlight[data-v-1c90d53e] {\n    color: #e60099;\n}\n.lg\\:text-light[data-v-1c90d53e] {\n    color: #f6f6f6;\n}\n.lg\\:text-dark[data-v-1c90d53e] {\n    color: #1d1d1d;\n}\n.lg\\:font-primary[data-v-1c90d53e] {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.lg\\:font-secondary[data-v-1c90d53e] {\n    font-family: \"Orbitron\", sans-serif;\n}\n.lg\\:odd\\:bg-primary[data-v-1c90d53e]:nth-child(odd) {\n    background-color: #330b53;\n}\n.lg\\:odd\\:bg-secondary[data-v-1c90d53e]:nth-child(odd) {\n    background-color: #5a308c;\n}\n.lg\\:odd\\:bg-highlight[data-v-1c90d53e]:nth-child(odd) {\n    background-color: #e60099;\n}\n.lg\\:odd\\:bg-light[data-v-1c90d53e]:nth-child(odd) {\n    background-color: #f6f6f6;\n}\n.lg\\:odd\\:bg-dark[data-v-1c90d53e]:nth-child(odd) {\n    background-color: #1d1d1d;\n}\n.lg\\:odd\\:text-primary[data-v-1c90d53e]:nth-child(odd) {\n    color: #330b53;\n}\n.lg\\:odd\\:text-secondary[data-v-1c90d53e]:nth-child(odd) {\n    color: #5a308c;\n}\n.lg\\:odd\\:text-highlight[data-v-1c90d53e]:nth-child(odd) {\n    color: #e60099;\n}\n.lg\\:odd\\:text-light[data-v-1c90d53e]:nth-child(odd) {\n    color: #f6f6f6;\n}\n.lg\\:odd\\:text-dark[data-v-1c90d53e]:nth-child(odd) {\n    color: #1d1d1d;\n}\n.lg\\:odd\\:font-primary[data-v-1c90d53e]:nth-child(odd) {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.lg\\:odd\\:font-secondary[data-v-1c90d53e]:nth-child(odd) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.lg\\:even\\:bg-primary[data-v-1c90d53e]:nth-child(even) {\n    background-color: #330b53;\n}\n.lg\\:even\\:bg-secondary[data-v-1c90d53e]:nth-child(even) {\n    background-color: #5a308c;\n}\n.lg\\:even\\:bg-highlight[data-v-1c90d53e]:nth-child(even) {\n    background-color: #e60099;\n}\n.lg\\:even\\:bg-light[data-v-1c90d53e]:nth-child(even) {\n    background-color: #f6f6f6;\n}\n.lg\\:even\\:bg-dark[data-v-1c90d53e]:nth-child(even) {\n    background-color: #1d1d1d;\n}\n.lg\\:even\\:text-primary[data-v-1c90d53e]:nth-child(even) {\n    color: #330b53;\n}\n.lg\\:even\\:text-secondary[data-v-1c90d53e]:nth-child(even) {\n    color: #5a308c;\n}\n.lg\\:even\\:text-highlight[data-v-1c90d53e]:nth-child(even) {\n    color: #e60099;\n}\n.lg\\:even\\:text-light[data-v-1c90d53e]:nth-child(even) {\n    color: #f6f6f6;\n}\n.lg\\:even\\:text-dark[data-v-1c90d53e]:nth-child(even) {\n    color: #1d1d1d;\n}\n.lg\\:even\\:font-primary[data-v-1c90d53e]:nth-child(even) {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.lg\\:even\\:font-secondary[data-v-1c90d53e]:nth-child(even) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.lg\\:hover\\:bg-primary[data-v-1c90d53e]:hover {\n    background-color: #330b53;\n}\n.lg\\:hover\\:bg-secondary[data-v-1c90d53e]:hover {\n    background-color: #5a308c;\n}\n.lg\\:hover\\:bg-highlight[data-v-1c90d53e]:hover {\n    background-color: #e60099;\n}\n.lg\\:hover\\:bg-light[data-v-1c90d53e]:hover {\n    background-color: #f6f6f6;\n}\n.lg\\:hover\\:bg-dark[data-v-1c90d53e]:hover {\n    background-color: #1d1d1d;\n}\n.lg\\:hover\\:text-primary[data-v-1c90d53e]:hover {\n    color: #330b53;\n}\n.lg\\:hover\\:text-secondary[data-v-1c90d53e]:hover {\n    color: #5a308c;\n}\n.lg\\:hover\\:text-highlight[data-v-1c90d53e]:hover {\n    color: #e60099;\n}\n.lg\\:hover\\:text-light[data-v-1c90d53e]:hover {\n    color: #f6f6f6;\n}\n.lg\\:hover\\:text-dark[data-v-1c90d53e]:hover {\n    color: #1d1d1d;\n}\n.lg\\:hover\\:font-primary[data-v-1c90d53e]:hover {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.lg\\:hover\\:font-secondary[data-v-1c90d53e]:hover {\n    font-family: \"Orbitron\", sans-serif;\n}\n.lg\\:h-72[data-v-1c90d53e] {\n    height: 18rem;\n}\n.lg\\:h-80[data-v-1c90d53e] {\n    height: 20rem;\n}\n.lg\\:h-88[data-v-1c90d53e] {\n    height: 22rem;\n}\n.lg\\:h-96[data-v-1c90d53e] {\n    height: 24rem;\n}\n.lg\\:h-104[data-v-1c90d53e] {\n    height: 26rem;\n}\n.lg\\:w-72[data-v-1c90d53e] {\n    width: 18rem;\n}\n.lg\\:w-80[data-v-1c90d53e] {\n    width: 20rem;\n}\n.lg\\:w-88[data-v-1c90d53e] {\n    width: 22rem;\n}\n.lg\\:w-max-88[data-v-1c90d53e] {\n    max-width: 22rem;\n}\n.lg\\:w-96[data-v-1c90d53e] {\n    width: 24rem;\n}\n.lg\\:w-max-96[data-v-1c90d53e] {\n    max-width: 24rem;\n}\n.lg\\:w-104[data-v-1c90d53e] {\n    width: 26rem;\n}\n}\n@media (min-width: 1280px) {\n.xl\\:bg-primary[data-v-1c90d53e] {\n    background-color: #330b53;\n}\n.xl\\:bg-secondary[data-v-1c90d53e] {\n    background-color: #5a308c;\n}\n.xl\\:bg-highlight[data-v-1c90d53e] {\n    background-color: #e60099;\n}\n.xl\\:bg-light[data-v-1c90d53e] {\n    background-color: #f6f6f6;\n}\n.xl\\:bg-dark[data-v-1c90d53e] {\n    background-color: #1d1d1d;\n}\n.xl\\:text-primary[data-v-1c90d53e] {\n    color: #330b53;\n}\n.xl\\:text-secondary[data-v-1c90d53e] {\n    color: #5a308c;\n}\n.xl\\:text-highlight[data-v-1c90d53e] {\n    color: #e60099;\n}\n.xl\\:text-light[data-v-1c90d53e] {\n    color: #f6f6f6;\n}\n.xl\\:text-dark[data-v-1c90d53e] {\n    color: #1d1d1d;\n}\n.xl\\:font-primary[data-v-1c90d53e] {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.xl\\:font-secondary[data-v-1c90d53e] {\n    font-family: \"Orbitron\", sans-serif;\n}\n.xl\\:odd\\:bg-primary[data-v-1c90d53e]:nth-child(odd) {\n    background-color: #330b53;\n}\n.xl\\:odd\\:bg-secondary[data-v-1c90d53e]:nth-child(odd) {\n    background-color: #5a308c;\n}\n.xl\\:odd\\:bg-highlight[data-v-1c90d53e]:nth-child(odd) {\n    background-color: #e60099;\n}\n.xl\\:odd\\:bg-light[data-v-1c90d53e]:nth-child(odd) {\n    background-color: #f6f6f6;\n}\n.xl\\:odd\\:bg-dark[data-v-1c90d53e]:nth-child(odd) {\n    background-color: #1d1d1d;\n}\n.xl\\:odd\\:text-primary[data-v-1c90d53e]:nth-child(odd) {\n    color: #330b53;\n}\n.xl\\:odd\\:text-secondary[data-v-1c90d53e]:nth-child(odd) {\n    color: #5a308c;\n}\n.xl\\:odd\\:text-highlight[data-v-1c90d53e]:nth-child(odd) {\n    color: #e60099;\n}\n.xl\\:odd\\:text-light[data-v-1c90d53e]:nth-child(odd) {\n    color: #f6f6f6;\n}\n.xl\\:odd\\:text-dark[data-v-1c90d53e]:nth-child(odd) {\n    color: #1d1d1d;\n}\n.xl\\:odd\\:font-primary[data-v-1c90d53e]:nth-child(odd) {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.xl\\:odd\\:font-secondary[data-v-1c90d53e]:nth-child(odd) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.xl\\:even\\:bg-primary[data-v-1c90d53e]:nth-child(even) {\n    background-color: #330b53;\n}\n.xl\\:even\\:bg-secondary[data-v-1c90d53e]:nth-child(even) {\n    background-color: #5a308c;\n}\n.xl\\:even\\:bg-highlight[data-v-1c90d53e]:nth-child(even) {\n    background-color: #e60099;\n}\n.xl\\:even\\:bg-light[data-v-1c90d53e]:nth-child(even) {\n    background-color: #f6f6f6;\n}\n.xl\\:even\\:bg-dark[data-v-1c90d53e]:nth-child(even) {\n    background-color: #1d1d1d;\n}\n.xl\\:even\\:text-primary[data-v-1c90d53e]:nth-child(even) {\n    color: #330b53;\n}\n.xl\\:even\\:text-secondary[data-v-1c90d53e]:nth-child(even) {\n    color: #5a308c;\n}\n.xl\\:even\\:text-highlight[data-v-1c90d53e]:nth-child(even) {\n    color: #e60099;\n}\n.xl\\:even\\:text-light[data-v-1c90d53e]:nth-child(even) {\n    color: #f6f6f6;\n}\n.xl\\:even\\:text-dark[data-v-1c90d53e]:nth-child(even) {\n    color: #1d1d1d;\n}\n.xl\\:even\\:font-primary[data-v-1c90d53e]:nth-child(even) {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.xl\\:even\\:font-secondary[data-v-1c90d53e]:nth-child(even) {\n    font-family: \"Orbitron\", sans-serif;\n}\n.xl\\:hover\\:bg-primary[data-v-1c90d53e]:hover {\n    background-color: #330b53;\n}\n.xl\\:hover\\:bg-secondary[data-v-1c90d53e]:hover {\n    background-color: #5a308c;\n}\n.xl\\:hover\\:bg-highlight[data-v-1c90d53e]:hover {\n    background-color: #e60099;\n}\n.xl\\:hover\\:bg-light[data-v-1c90d53e]:hover {\n    background-color: #f6f6f6;\n}\n.xl\\:hover\\:bg-dark[data-v-1c90d53e]:hover {\n    background-color: #1d1d1d;\n}\n.xl\\:hover\\:text-primary[data-v-1c90d53e]:hover {\n    color: #330b53;\n}\n.xl\\:hover\\:text-secondary[data-v-1c90d53e]:hover {\n    color: #5a308c;\n}\n.xl\\:hover\\:text-highlight[data-v-1c90d53e]:hover {\n    color: #e60099;\n}\n.xl\\:hover\\:text-light[data-v-1c90d53e]:hover {\n    color: #f6f6f6;\n}\n.xl\\:hover\\:text-dark[data-v-1c90d53e]:hover {\n    color: #1d1d1d;\n}\n.xl\\:hover\\:font-primary[data-v-1c90d53e]:hover {\n    font-family: \"Nunito Sans\", sans-serif;\n}\n.xl\\:hover\\:font-secondary[data-v-1c90d53e]:hover {\n    font-family: \"Orbitron\", sans-serif;\n}\n.xl\\:h-72[data-v-1c90d53e] {\n    height: 18rem;\n}\n.xl\\:h-80[data-v-1c90d53e] {\n    height: 20rem;\n}\n.xl\\:h-88[data-v-1c90d53e] {\n    height: 22rem;\n}\n.xl\\:h-96[data-v-1c90d53e] {\n    height: 24rem;\n}\n.xl\\:h-104[data-v-1c90d53e] {\n    height: 26rem;\n}\n.xl\\:w-72[data-v-1c90d53e] {\n    width: 18rem;\n}\n.xl\\:w-80[data-v-1c90d53e] {\n    width: 20rem;\n}\n.xl\\:w-88[data-v-1c90d53e] {\n    width: 22rem;\n}\n.xl\\:w-max-88[data-v-1c90d53e] {\n    max-width: 22rem;\n}\n.xl\\:w-96[data-v-1c90d53e] {\n    width: 24rem;\n}\n.xl\\:w-max-96[data-v-1c90d53e] {\n    max-width: 24rem;\n}\n.xl\\:w-104[data-v-1c90d53e] {\n    width: 26rem;\n}\n}", ""]);
 
 // exports
 
@@ -40999,6 +41266,36 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Portal/Resources.vue?vue&type=style&index=0&id=1f48d8cb&lang=scss&scoped=true&":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Portal/Resources.vue?vue&type=style&index=0&id=1f48d8cb&lang=scss&scoped=true& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../node_modules/vue-loader/lib??vue-loader-options!./Resources.vue?vue&type=style&index=0&id=1f48d8cb&lang=scss&scoped=true& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Portal/Resources.vue?vue&type=style&index=0&id=1f48d8cb&lang=scss&scoped=true&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Portal/Schedule.vue?vue&type=style&index=0&id=1c90d53e&lang=scss&scoped=true&":
 /*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Portal/Schedule.vue?vue&type=style&index=0&id=1c90d53e&lang=scss&scoped=true& ***!
@@ -53954,10 +54251,7 @@ var render = function() {
             [
               _c(
                 "inertia-link",
-                {
-                  staticClass: "nav-links",
-                  attrs: { href: "/portal/schedule" }
-                },
+                { staticClass: "nav-links", attrs: { href: "/schedule" } },
                 [_vm._v("\n            Schedule\n          ")]
               )
             ],
@@ -53970,10 +54264,7 @@ var render = function() {
             [
               _c(
                 "inertia-link",
-                {
-                  staticClass: "nav-links",
-                  attrs: { href: "/portal/resources" }
-                },
+                { staticClass: "nav-links", attrs: { href: "/resources" } },
                 [_vm._v("\n            Resources\n          ")]
               )
             ],
@@ -53989,8 +54280,8 @@ var render = function() {
               "inertia-link",
               {
                 staticClass:
-                  "flex justify-center items-center w-14 h-14 rounded-full px-1 py-1 mt-3 text-center transition duration-300 rounded shadow-md bg-secondary text-light hover:bg-light hover:text-dark",
-                attrs: { href: "/user/profile" }
+                  "flex justify-center items-center w-14 h-14 rounded-full px-1 py-1 mt-3 text-center transition duration-300 rounded shadow-md bg-secondary text-light hover:bg-light hover:text-dark cursor-not-allowed",
+                attrs: { href: "#" }
               },
               [
                 _c("user-icon", {
@@ -59484,7 +59775,7 @@ var render = function() {
           "div",
           {
             staticClass:
-              "my-8 md:my-16 grid grid-cols-1 md:grid-cols-2 grid-flow-row gap-6"
+              "mt-8 md:mt-16 grid grid-cols-1 md:grid-cols-2 grid-flow-row gap-6"
           },
           [
             _c("article", { staticClass: "card" }, [
@@ -61590,6 +61881,463 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Portal/Resources.vue?vue&type=template&id=1f48d8cb&scoped=true&":
+/*!**************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Portal/Resources.vue?vue&type=template&id=1f48d8cb&scoped=true& ***!
+  \**************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "portal-layout",
+    {
+      scopedSlots: _vm._u([
+        {
+          key: "page-title",
+          fn: function() {
+            return [_vm._v("\n    Resources\n  ")]
+          },
+          proxy: true
+        }
+      ])
+    },
+    [
+      _vm._v(" "),
+      _c("section", { staticClass: "container mx-auto" }, [
+        _c("div", { staticClass: "mt-8 md:mt-16" }, [
+          _c("article", { staticClass: "card" }, [
+            _c("h2", { staticClass: "title" }, [
+              _vm._v(
+                "\n          Welcome to the Carolina Data Challenge!\n        "
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "text" }, [
+              _vm._v(
+                "\n          We’re so excited to have you at the 2020 Carolina Data Challenge!\n        "
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "text" }, [
+              _vm._v(
+                "\n          We have a lot of awesome things planned for you, but to make sure you have the best experience possible, here’s some information that will help you navigate the schedule, logistics, and all the fun stuff in between.\n        "
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "text" }, [
+              _vm._v(
+                "\n          For any questions not answered by these resources, please email us at "
+              ),
+              _c(
+                "a",
+                {
+                  staticClass: "link",
+                  attrs: { href: "mailto:hello@cdcunc.com" }
+                },
+                [_vm._v("hello@cdcunc.com.")]
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("article", { staticClass: "card" }, [
+            _c("h2", { staticClass: "title" }, [
+              _vm._v("\n          Communication\n        ")
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "text" }, [
+              _vm._v(
+                "\n          Discord will be used to communicate official announcements throughout the event, to connect with mentors for help on your projects, to meet and socialize with other hackers, and much more. To make sure you don't miss out, be sure to "
+              ),
+              _c("a", { staticClass: "link", attrs: { href: "" } }, [
+                _vm._v("join!")
+              ])
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "text" }, [
+              _vm._v(
+                "\n          Cisco WebEx will be used to conduct our opening ceremony, closing ceremony, and all the workshops and fun events in between.\n        "
+              )
+            ]),
+            _vm._v(" "),
+            _c(
+              "p",
+              { staticClass: "text" },
+              [
+                _vm._v(
+                  "\n          The event portal (the site you're reading this on right now) is your one-stop-shop for information about this years event. Right now you can only access important "
+                ),
+                _c(
+                  "inertia-link",
+                  { staticClass: "link", attrs: { href: "/next-steps" } },
+                  [_vm._v("next steps")]
+                ),
+                _vm._v(" you should take before the event, the event "),
+                _c(
+                  "inertia-link",
+                  { staticClass: "link", attrs: { href: "/schedule" } },
+                  [_vm._v("schedule")]
+                ),
+                _vm._v(
+                  ", and these resources. However, on the day of the event you'll be granted additional functionality that will allow you to earn points for participation, create your team, submit your project, and much more.\n        "
+                )
+              ],
+              1
+            )
+          ]),
+          _vm._v(" "),
+          _c("article", { staticClass: "card" }, [
+            _c("h2", { staticClass: "title" }, [
+              _vm._v("\n          Sponsorship Fair\n        ")
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "text" }, [
+              _vm._v(
+                "\n          We will be utilizing Brazen for our virtual Carolina Data Challenge Sponsorship Fair and resume database this year. We have included resources below so you can familiarize yourself with the Brazen platform prior to the live event\n        "
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "text" }, [
+              _vm._v("\n          Make sure to visit the "),
+              _c(
+                "a",
+                {
+                  staticClass: "link",
+                  attrs: {
+                    href:
+                      "https://app.brazenconnect.com/a/unc-computer-sceince-dept/e/k63NW"
+                  }
+                },
+                [_vm._v("Sponsorship Fair landing page")]
+              ),
+              _vm._v(
+                " to register for the event. Once you have completed your registration, review this "
+              ),
+              _c(
+                "a",
+                {
+                  staticClass: "link",
+                  attrs: {
+                    href:
+                      "https://support.brazenconnect.com/hc/en-us/articles/215521267-Attending-an-event"
+                  }
+                },
+                [_vm._v("resource")]
+              ),
+              _vm._v(
+                " for details on how to attend the event as a participant.\n        "
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "text" }, [
+              _vm._v(
+                "\n          Sponsors are prepared to use video chat during the fair. Each one-on-one text/video chat session is set for 10 minutes. Please be sure to complete the recommended Brazen technical checks ("
+              ),
+              _c(
+                "a",
+                {
+                  staticClass: "link",
+                  attrs: {
+                    href:
+                      "https://app.brazenconnect.com/cc/service-check#!service-check"
+                  }
+                },
+                [_vm._v("Brazen Service Check")]
+              ),
+              _vm._v(" and "),
+              _c(
+                "a",
+                {
+                  staticClass: "link",
+                  attrs: {
+                    href:
+                      "https://support.brazenconnect.com/hc/en-us/articles/360045767633-BrazenLive-Video-Broadcast-and-1-on-1-Video-Technical-Requirements"
+                  }
+                },
+                [_vm._v("Video Requirements - Domains They Need to Whitelist")]
+              ),
+              _vm._v(
+                ") to mitigate technical issues prior to the start of the event.\n        "
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "text" }, [
+              _vm._v(
+                "\n          If all of the sponsor reps in one booth are currently chatting with other participants, you can hop in another sponsor booth to find an available rep. If all reps are busy, you can simply get in line at various sponsor booths. You may get in as many wait lines as you would like. While you wait, you can visit the various sponsor booths to explore all of the content readily available as well as chat with Carolina Data Challenge leaders in the live broadcasting booth.\n        "
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("article", { staticClass: "card" }, [
+            _c("h2", { staticClass: "title" }, [
+              _vm._v("\n          Diversity Panel Fireside Chat\n        ")
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "text" }, [
+              _vm._v(
+                "\n          Join representatives from various companies for a panel about diversity in data. Please "
+              ),
+              _c(
+                "a",
+                {
+                  staticClass: "link",
+                  attrs: { href: "https://tinyurl.com/cdcdiversitypanel" }
+                },
+                [_vm._v("submit your questions")]
+              ),
+              _vm._v(
+                " prior to the start of the panel. Everyone is encouraged to attend!\n        "
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("article", { staticClass: "card" }, [
+            _c("h2", { staticClass: "title" }, [
+              _vm._v("\n          Recruiting Panel\n        ")
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "text" }, [
+              _vm._v("\n          More info coming soon.\n        ")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("article", { staticClass: "card" }, [
+            _c("h2", { staticClass: "title" }, [
+              _vm._v("\n          Mini-Events\n        ")
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "text" }, [
+              _vm._v(
+                "\n          It’s good to take breaks, so we have some chill things planned for the night to help you unwind! In our Wikipedia Race you’ll have to find the quickest route from one Wikipedia page to another! During our Midnight Check-In you can meet and chat with your fellow hackers in a casual check-in.\n        "
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "text" }, [
+              _vm._v(
+                "\n          Enjoy Skribbl.io where one person draws an image and everyone tries to guess it as fast as they can. And in the game Codewords all but one person will be assigned to a location where their job is to find the spy before the spy deciphers the location.\n        "
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("article", { staticClass: "card" }, [
+            _c("h2", { staticClass: "title" }, [
+              _vm._v("\n          Recommended Software\n        ")
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "text" }, [
+              _vm._v(
+                "\n          No data science experience? No worries! Here are a couple of things you can download ahead of time that’ll help you hit the ground running!\n        "
+              )
+            ]),
+            _vm._v(" "),
+            _c("h3", { staticClass: "sub-title" }, [
+              _vm._v("\n          Python (Anaconda)\n        ")
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "text text-sub-title" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "link",
+                  attrs: {
+                    href: "https://www.anaconda.com/products/individual"
+                  }
+                },
+                [_vm._v("Anaconda")]
+              ),
+              _vm._v(
+                " is an open source distribution of Python and R for scientific computing and data science. It comes with many pre-installed packages that you’ll find useful for Data Science and Machine Learning.\n        "
+              )
+            ]),
+            _vm._v(" "),
+            _c("h3", { staticClass: "sub-title" }, [
+              _vm._v("\n          R (RStudio)\n        ")
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "text text-sub-title" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "link",
+                  attrs: {
+                    href: "https://rstudio.com/products/rstudio/download/"
+                  }
+                },
+                [_vm._v("RStudio")]
+              ),
+              _vm._v(
+                " is a popular IDE for statistical computing in R. It allows you to have multiple panes for managing files, code, a terminal, and creating data visualizations. This is the preferred IDE for Data Scientists who use R.\n        "
+              )
+            ]),
+            _vm._v(" "),
+            _c("h3", { staticClass: "sub-title" }, [
+              _vm._v("\n          Tableau\n        ")
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "text text-sub-title" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "link",
+                  attrs: { href: "https://public.tableau.com/s/" }
+                },
+                [_vm._v("Tableau")]
+              ),
+              _vm._v(
+                "  is a code-free data visualization tool that allows you to create interactive graphs, maps, and dashboards. You can pull in data from multiple sources and customize the look of your visualizations. In addition to the free public download available at the link above, your university may also provide a license for the desktop version.\n        "
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("article", { staticClass: "card" }, [
+            _c("h2", { staticClass: "title" }, [
+              _vm._v("\n          Frequently Asked Questions\n        ")
+            ]),
+            _vm._v(" "),
+            _c("h3", { staticClass: "sub-title" }, [
+              _vm._v(
+                "\n          What should I expect to do at the Data Challenge?\n        "
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "text text-sub-title" }, [
+              _vm._v(
+                "\n          While the primary purpose of a datathon is for participants to create cool things from datasets, we hope that you’ll also take advantage of the networking opportunities, workshops, and fun events that’ll be happening!\n        "
+              )
+            ]),
+            _vm._v(" "),
+            _c("h3", { staticClass: "sub-title" }, [
+              _vm._v(
+                "\n          I have no data science experience, so should I still attend?\n        "
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "text text-sub-title" }, [
+              _vm._v(
+                "\n          Absolutely! We don’t expect participants to have any experience when you show up so, in addition to some workshops that’ll help you build your skill set, we’ve got mentors to help you out along the way. You can check out the list of recommended software and tutorials under the references section if you want to skip the install time when hacking’s actually started.\n        "
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "text text-sub-title" }, [
+              _vm._v(
+                "\n          We’ll be hosting a week of workshops Monday September 28th through October 1st to help you get the skills and experience you need to be successful at the data challenge.\n        "
+              )
+            ]),
+            _vm._v(" "),
+            _c("h3", { staticClass: "sub-title" }, [
+              _vm._v("\n          How do I find a team?\n        ")
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "text text-sub-title" }, [
+              _vm._v(
+                "\n          You’re welcome to come with teammates, but if you don’t have any yet, there will be a team matching event the day before the event, October 2nd, where you can find your perfect teammates.\n        "
+              )
+            ]),
+            _vm._v(" "),
+            _c("h3", { staticClass: "sub-title" }, [
+              _vm._v("\n          What can I win?\n        ")
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "text text-sub-title" }, [
+              _vm._v(
+                "\n          There will be prizes for each of the four tracks: health & sciences, finance, humanities, and popular culture, as well as an overall prize for the best project. Additionally, there will be other prizes courtesy of our generous sponsors. For further details about what prizes and swag you'll get to take home, check the event portal (this site) on the day of the event.\n        "
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("article", { staticClass: "card" }, [
+            _c("h2", { staticClass: "title" }, [
+              _vm._v("\n          Contact Us\n        ")
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "text" }, [
+              _vm._v(
+                "\n          We know you’re as pumped as we are about the Carolina Data Challenge, so we want to keep in touch! Make sure to keep tabs on all of our social media!\n        "
+              )
+            ]),
+            _vm._v(" "),
+            _c("h3", { staticClass: "sub-title" }, [
+              _vm._v("\n          Social Media\n        ")
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "text" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "link",
+                  attrs: { href: "https://www.facebook.com/uncads/" }
+                },
+                [_vm._v("Facebook")]
+              ),
+              _vm._v(",\n          "),
+              _c(
+                "a",
+                {
+                  staticClass: "link",
+                  attrs: {
+                    href: "https://www.facebook.com/events/1178713572485304/"
+                  }
+                },
+                [_vm._v("Facebook Event Page")]
+              ),
+              _vm._v(",\n          "),
+              _c(
+                "a",
+                {
+                  staticClass: "link",
+                  attrs: {
+                    href: "https://www.instagram.com/carolinadatascience/?hl=en"
+                  }
+                },
+                [_vm._v("Instagram")]
+              ),
+              _vm._v(",\n          "),
+              _c(
+                "a",
+                {
+                  staticClass: "link",
+                  attrs: {
+                    href:
+                      "https://www.linkedin.com/company/carolinadatachallenge/"
+                  }
+                },
+                [_vm._v("LinkedIn")]
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "text" }, [
+              _vm._v(
+                "\n          If you have any additional questions, comments, or suggestions, don’t hesitate to reach us at our email at "
+              ),
+              _c(
+                "a",
+                {
+                  staticClass: "link",
+                  attrs: { href: "mailto:hello@cdcunc.com" }
+                },
+                [_vm._v("hello@cdcunc.com.")]
+              )
+            ])
+          ])
+        ])
+      ])
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Portal/Schedule.vue?vue&type=template&id=1c90d53e&scoped=true&":
 /*!*************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/Portal/Schedule.vue?vue&type=template&id=1c90d53e&scoped=true& ***!
@@ -61623,7 +62371,7 @@ var render = function() {
       _c("section", { staticClass: "container mx-auto" }, [
         _c(
           "div",
-          { staticClass: "my-8 md:my-16" },
+          { staticClass: "mt-8 md:mt-16" },
           [
             _c("div", {}, [
               _c("div", { staticClass: "right" }, [
@@ -61676,69 +62424,126 @@ var render = function() {
               ])
             ]),
             _vm._v(" "),
-            _vm._l(Object.keys(_vm.events), function(date) {
-              return _c("article", { key: date, staticClass: "card" }, [
-                _c("h2", { staticClass: "title" }, [
-                  _vm._v("\n          " + _vm._s(date) + "\n        ")
-                ]),
-                _vm._v(" "),
-                _c(
-                  "table",
-                  [
-                    _c("tr", [
-                      _c("th", [_vm._v("Start")]),
-                      _vm._v(" "),
-                      _c("th", [_vm._v("End")]),
-                      _vm._v(" "),
-                      _c("th", [_vm._v("Type")]),
-                      _vm._v(" "),
-                      _c("th", [_vm._v("Event")])
+            _vm._l(Object.keys(_vm.eventsLocal), function(date) {
+              return _vm.displayTimeZone !== "EST"
+                ? _c("article", { key: date + "local", staticClass: "card" }, [
+                    _c("h2", { staticClass: "title" }, [
+                      _vm._v("\n          " + _vm._s(date) + "\n        ")
                     ]),
                     _vm._v(" "),
-                    _vm._l(_vm.events[date], function(event) {
-                      return _c("tr", { key: event.event }, [
-                        _vm.displayTimeZone !== "EST"
-                          ? _c("td", [_vm._v(_vm._s(event.startLocal))])
-                          : _vm._e(),
+                    _c(
+                      "table",
+                      [
+                        _c("tr", [
+                          _c("th", [_vm._v("Start")]),
+                          _vm._v(" "),
+                          _c("th", [_vm._v("End")]),
+                          _vm._v(" "),
+                          _c("th", [_vm._v("Type")]),
+                          _vm._v(" "),
+                          _c("th", [_vm._v("Event")])
+                        ]),
                         _vm._v(" "),
-                        _vm.displayTimeZone === "EST"
-                          ? _c("td", [_vm._v(_vm._s(event.startEST))])
-                          : _vm._e(),
+                        _vm._l(_vm.eventsLocal[date], function(event, index) {
+                          return _c(
+                            "tr",
+                            { key: event.event + index + "local" },
+                            [
+                              _c("td", [_vm._v(_vm._s(event.start))]),
+                              _vm._v(" "),
+                              _c("td", [_vm._v(_vm._s(event.end))]),
+                              _vm._v(" "),
+                              _c("td", [_vm._v(_vm._s(event.type))]),
+                              _vm._v(" "),
+                              _c("td", [_vm._v(_vm._s(event.event))]),
+                              _vm._v(" "),
+                              _c("td", [
+                                _c("div", { staticClass: "right" }, [
+                                  event.url !== "#"
+                                    ? _c(
+                                        "a",
+                                        {
+                                          staticClass: "button disabled",
+                                          attrs: { href: event.url }
+                                        },
+                                        [
+                                          _vm._v(
+                                            "\n                  Attend\n                "
+                                          )
+                                        ]
+                                      )
+                                    : _vm._e()
+                                ])
+                              ])
+                            ]
+                          )
+                        })
+                      ],
+                      2
+                    )
+                  ])
+                : _vm._e()
+            }),
+            _vm._v(" "),
+            _vm._l(Object.keys(_vm.eventsEST), function(date) {
+              return _vm.displayTimeZone === "EST"
+                ? _c("article", { key: date + "EST", staticClass: "card" }, [
+                    _c("h2", { staticClass: "title" }, [
+                      _vm._v("\n          " + _vm._s(date) + "\n        ")
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "table",
+                      [
+                        _c("tr", [
+                          _c("th", [_vm._v("Start")]),
+                          _vm._v(" "),
+                          _c("th", [_vm._v("End")]),
+                          _vm._v(" "),
+                          _c("th", [_vm._v("Type")]),
+                          _vm._v(" "),
+                          _c("th", [_vm._v("Event")])
+                        ]),
                         _vm._v(" "),
-                        _vm.displayTimeZone !== "EST"
-                          ? _c("td", [_vm._v(_vm._s(event.endLocal))])
-                          : _vm._e(),
-                        _vm._v(" "),
-                        _vm.displayTimeZone === "EST"
-                          ? _c("td", [_vm._v(_vm._s(event.endEST))])
-                          : _vm._e(),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(event.type))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(event.event))]),
-                        _vm._v(" "),
-                        _c("td", [
-                          _c("div", { staticClass: "right" }, [
-                            _c(
-                              "a",
-                              {
-                                staticClass: "button disabled",
-                                attrs: { href: event.url }
-                              },
-                              [
-                                _vm._v(
-                                  "\n                  Attend\n                "
-                                )
-                              ]
-                            )
-                          ])
-                        ])
-                      ])
-                    })
-                  ],
-                  2
-                )
-              ])
+                        _vm._l(_vm.eventsEST[date], function(event, index) {
+                          return _c(
+                            "tr",
+                            { key: event.event + index + "EST" },
+                            [
+                              _c("td", [_vm._v(_vm._s(event.start))]),
+                              _vm._v(" "),
+                              _c("td", [_vm._v(_vm._s(event.end))]),
+                              _vm._v(" "),
+                              _c("td", [_vm._v(_vm._s(event.type))]),
+                              _vm._v(" "),
+                              _c("td", [_vm._v(_vm._s(event.event))]),
+                              _vm._v(" "),
+                              _c("td", [
+                                _c("div", { staticClass: "right" }, [
+                                  event.url !== "#"
+                                    ? _c(
+                                        "a",
+                                        {
+                                          staticClass: "button disabled",
+                                          attrs: { href: event.url }
+                                        },
+                                        [
+                                          _vm._v(
+                                            "\n                  Attend\n                "
+                                          )
+                                        ]
+                                      )
+                                    : _vm._e()
+                                ])
+                              ])
+                            ]
+                          )
+                        })
+                      ],
+                      2
+                    )
+                  ])
+                : _vm._e()
             })
           ],
           2
@@ -80419,6 +81224,8 @@ var map = {
 	"./Portal/Profile/PersonalDetails.vue": "./resources/js/Pages/Portal/Profile/PersonalDetails.vue",
 	"./Portal/Profile/ShippingDetails": "./resources/js/Pages/Portal/Profile/ShippingDetails.vue",
 	"./Portal/Profile/ShippingDetails.vue": "./resources/js/Pages/Portal/Profile/ShippingDetails.vue",
+	"./Portal/Resources": "./resources/js/Pages/Portal/Resources.vue",
+	"./Portal/Resources.vue": "./resources/js/Pages/Portal/Resources.vue",
 	"./Portal/Schedule": "./resources/js/Pages/Portal/Schedule.vue",
 	"./Portal/Schedule.vue": "./resources/js/Pages/Portal/Schedule.vue",
 	"./Profile/DeleteUserForm": "./resources/js/Pages/Profile/DeleteUserForm.vue",
@@ -81520,6 +82327,93 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ShippingDetails_vue_vue_type_template_id_6a7b1458_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ShippingDetails_vue_vue_type_template_id_6a7b1458_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Portal/Resources.vue":
+/*!*************************************************!*\
+  !*** ./resources/js/Pages/Portal/Resources.vue ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Resources_vue_vue_type_template_id_1f48d8cb_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Resources.vue?vue&type=template&id=1f48d8cb&scoped=true& */ "./resources/js/Pages/Portal/Resources.vue?vue&type=template&id=1f48d8cb&scoped=true&");
+/* harmony import */ var _Resources_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Resources.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Portal/Resources.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _Resources_vue_vue_type_style_index_0_id_1f48d8cb_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Resources.vue?vue&type=style&index=0&id=1f48d8cb&lang=scss&scoped=true& */ "./resources/js/Pages/Portal/Resources.vue?vue&type=style&index=0&id=1f48d8cb&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _Resources_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Resources_vue_vue_type_template_id_1f48d8cb_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Resources_vue_vue_type_template_id_1f48d8cb_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "1f48d8cb",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Pages/Portal/Resources.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Portal/Resources.vue?vue&type=script&lang=js&":
+/*!**************************************************************************!*\
+  !*** ./resources/js/Pages/Portal/Resources.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Resources_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./Resources.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Portal/Resources.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Resources_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Portal/Resources.vue?vue&type=style&index=0&id=1f48d8cb&lang=scss&scoped=true&":
+/*!***********************************************************************************************************!*\
+  !*** ./resources/js/Pages/Portal/Resources.vue?vue&type=style&index=0&id=1f48d8cb&lang=scss&scoped=true& ***!
+  \***********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Resources_vue_vue_type_style_index_0_id_1f48d8cb_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader!../../../../node_modules/css-loader!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../node_modules/vue-loader/lib??vue-loader-options!./Resources.vue?vue&type=style&index=0&id=1f48d8cb&lang=scss&scoped=true& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Portal/Resources.vue?vue&type=style&index=0&id=1f48d8cb&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Resources_vue_vue_type_style_index_0_id_1f48d8cb_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Resources_vue_vue_type_style_index_0_id_1f48d8cb_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Resources_vue_vue_type_style_index_0_id_1f48d8cb_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Resources_vue_vue_type_style_index_0_id_1f48d8cb_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Resources_vue_vue_type_style_index_0_id_1f48d8cb_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Portal/Resources.vue?vue&type=template&id=1f48d8cb&scoped=true&":
+/*!********************************************************************************************!*\
+  !*** ./resources/js/Pages/Portal/Resources.vue?vue&type=template&id=1f48d8cb&scoped=true& ***!
+  \********************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Resources_vue_vue_type_template_id_1f48d8cb_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./Resources.vue?vue&type=template&id=1f48d8cb&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/Portal/Resources.vue?vue&type=template&id=1f48d8cb&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Resources_vue_vue_type_template_id_1f48d8cb_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Resources_vue_vue_type_template_id_1f48d8cb_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

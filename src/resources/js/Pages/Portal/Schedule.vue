@@ -4,7 +4,7 @@
       Schedule
     </template>
     <section class="container mx-auto">
-      <div class="my-8 md:my-16">
+      <div class="mt-8 md:mt-16">
         <div class="">
           <div class="right">
             <label
@@ -23,10 +23,12 @@
             </select>
           </div>
         </div>
+        <!-- Render Local Schedule -->
         <article
           class="card"
-          v-for="date in Object.keys(events)"
-          :key="date"
+          v-for="date in Object.keys(eventsLocal)"
+          :key="date + 'local'"
+          v-if="displayTimeZone !== 'EST'"
         >
           <h2 class="title">
             {{ date }}
@@ -39,13 +41,11 @@
               <th>Event</th>
             </tr>
             <tr
-              v-for="event in events[date]"
-              :key="event.event"
+              v-for="(event, index) in eventsLocal[date]"
+              :key="event.event + index + 'local'"
             >
-              <td v-if="displayTimeZone !== 'EST'">{{ event.startLocal }}</td>
-              <td v-if="displayTimeZone === 'EST'">{{ event.startEST }}</td>
-              <td v-if="displayTimeZone !== 'EST'">{{ event.endLocal }}</td>
-              <td v-if="displayTimeZone === 'EST'">{{ event.endEST }}</td>
+              <td>{{ event.start }}</td>
+              <td>{{ event.end }}</td>
               <td>{{ event.type }}</td>
               <td>{{ event.event }}</td>
               <td>
@@ -53,6 +53,46 @@
                   <a
                     :href="event.url"
                     class="button disabled"
+                    v-if="event.url !== '#'"
+                  >
+                    Attend
+                  </a>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </article>
+        <!-- Render EST Schedule -->
+        <article
+          class="card"
+          v-for="date in Object.keys(eventsEST)"
+          :key="date + 'EST'"
+          v-if="displayTimeZone === 'EST'"
+        >
+          <h2 class="title">
+            {{ date }}
+          </h2>
+          <table>
+            <tr>
+              <th>Start</th>
+              <th>End</th>
+              <th>Type</th>
+              <th>Event</th>
+            </tr>
+            <tr
+              v-for="(event, index) in eventsEST[date]"
+              :key="event.event + index + 'EST'"
+            >
+              <td>{{ event.start }}</td>
+              <td>{{ event.end }}</td>
+              <td>{{ event.type }}</td>
+              <td>{{ event.event }}</td>
+              <td>
+                <div class="right">
+                  <a
+                    :href="event.url"
+                    class="button disabled"
+                    v-if="event.url !== '#'"
                   >
                     Attend
                   </a>
@@ -89,11 +129,14 @@ export default {
     }
   },
   computed: {
-    events: function() {
+    eventsLocal: function() {
       // Get the distinct event dates
       let events = {};
       this.$props.schedule.forEach((event) => {
-        let date = DateTime.fromSQL(event.date)
+        let date = DateTime.fromSQL(event.date + ' ' + event.start, {
+          zone: 'America/New_York',
+        })
+          .setZone('local')
           .toLocaleString({
             weekday: 'long',
             month: 'long',
@@ -103,7 +146,7 @@ export default {
           events[date] = [];
         }
         events[date].push({
-          startLocal: DateTime.fromSQL(event.date + ' ' + event.start, {
+          start: DateTime.fromSQL(event.date + ' ' + event.start, {
             zone: 'America/New_York',
           })
             .setZone('local')
@@ -112,15 +155,7 @@ export default {
               minute: '2-digit',
               hour12: true,
             }),
-          startEST: DateTime.fromSQL(event.date + ' ' + event.start, {
-            zone: 'America/New_York',
-          })
-            .toLocaleString({
-              hour: '2-digit',
-              minute: '2-digit',
-              hour12: true,
-            }),
-          endLocal: DateTime.fromSQL(event.date + ' ' + event.end, {
+          end: DateTime.fromSQL(event.date + ' ' + event.end, {
             zone: 'America/New_York',
           })
             .setZone('local')
@@ -129,7 +164,38 @@ export default {
               minute: '2-digit',
               hour12: true,
             }),
-          endEST: DateTime.fromSQL(event.date + ' ' + event.end, {
+          type: event.type,
+          event: event.event,
+          url: event.url,
+        });
+      });
+      return events;
+    },
+    eventsEST: function() {
+      // Get the distinct event dates
+      let events = {};
+      this.$props.schedule.forEach((event) => {
+        let date = DateTime.fromSQL(event.date + ' ' + event.start, {
+          zone: 'America/New_York',
+        })
+          .toLocaleString({
+            weekday: 'long',
+            month: 'long',
+            day: '2-digit',
+          });
+        if(!events.hasOwnProperty(date)) {
+          events[date] = [];
+        }
+        events[date].push({
+          start: DateTime.fromSQL(event.date + ' ' + event.start, {
+            zone: 'America/New_York',
+          })
+            .toLocaleString({
+              hour: '2-digit',
+              minute: '2-digit',
+              hour12: true,
+            }),
+          end: DateTime.fromSQL(event.date + ' ' + event.end, {
             zone: 'America/New_York',
           })
             .toLocaleString({
@@ -185,6 +251,7 @@ export default {
         .disabled {
           @apply bg-gray-200 text-white;
           &:hover {
+            cursor: not-allowed;
             @apply bg-gray-200;
           }
         }

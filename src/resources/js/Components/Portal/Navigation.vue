@@ -15,7 +15,7 @@
         </li>
         <li class="nav-li">
           <inertia-link
-            href="/portal/schedule"
+            href="/schedule"
             class="nav-links"
           >
             Schedule
@@ -47,7 +47,7 @@
 <!--        </li>-->
         <li class="nav-li">
           <inertia-link
-            href="/portal/resources"
+            href="/resources"
             class="nav-links"
           >
             Resources
@@ -56,8 +56,8 @@
       </ul>
       <div class="flex flex-col mb-6 px-4 w-full items-center">
         <inertia-link
-          href="/user/profile"
-          class="flex justify-center items-center w-14 h-14 rounded-full px-1 py-1 mt-3 text-center transition duration-300 rounded shadow-md bg-secondary text-light hover:bg-light hover:text-dark"
+          href="#"
+          class="flex justify-center items-center w-14 h-14 rounded-full px-1 py-1 mt-3 text-center transition duration-300 rounded shadow-md bg-secondary text-light hover:bg-light hover:text-dark cursor-not-allowed"
         >
           <user-icon
             id="profileMenuIcon"

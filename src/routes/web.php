@@ -120,3 +120,12 @@ Route::middleware(['auth:sanctum', 'details.personal', 'details.academic'])
 Route::middleware(['auth:sanctum', 'registered'])
     ->get('/schedule', [ScheduleController::class, 'show'])
     ->name('schedule');
+
+/**
+ * Resources
+ */
+Route::middleware(['auth:sanctum', 'registered'])
+    ->get('/resources', function() {
+        return \Inertia\Inertia::render('Portal/Resources');
+    })
+    ->name('resources');
