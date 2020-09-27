@@ -1,50 +1,61 @@
-## laravel-docker
-My simple Docker Compose framework for developing Laravel applications on a LEMP stack. Original inspired by [Andrew Schmelyun's repo](https://github.com/aschmelyun/docker-compose-laravel).
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-### Initial Setup
-To initialize the cloned repository for use locally, run the `init.sh` script.
+<p align="center">
+<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
+</p>
 
-This script removes the `.git` repository directory and the `src/README.md` file to allow for a new Git repository for the Laravel project.
+## About Laravel
 
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-### How it Works
-[Docker](https://docs.docker.com/docker-for-windows/install/) must be installed to utilize this repository. 
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-I am running Docker for Windows 10 on a WSL2 Ubuntu 20.04 backend. More information regarding my Docker environment can be found [here](https://docs.docker.com/docker-for-windows/wsl/).
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-Once Docker has been installed, clone this repository to your local file system and start the Docker containers with the following command:
-```shell script
-docker-compose up -d --build site
-```
+## Learning Laravel
 
-Next, navigate to the `src` directory and add the Laravel project. For more information on how to clone an existing Laravel project or create a fresh one, reference the `src/README.md` file.
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-By specifying that Docker Compose start the container network with `site` rather than `up`, we prevent the command containers (composer, npm, artisan, etc.) from being unnecessarily started.
+If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-By default, the following containers, and corresponding exposed ports, are built when starting the web server:
+## Laravel Sponsors
 
-Container | Exposed Port(s)
---- | ---
-nginx | `8080 -> 80`
-mysql | `3306 -> 3306`
-php | `9000 -> 9000`
+We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-Additionally, to eliminate the necessity for command line tools to be installed on the local machine, the following command containers are included:
+### Premium Partners
 
-Local | Container
---- | ---
-`composer ...` | `docker-compose run --rm composer ...`
-`npm ...` | `docker-compose run --rm npm ...`
-`php artisan ...` | `docker-compose run --rm artisan ...`
+- **[Vehikl](https://vehikl.com/)**
+- **[Tighten Co.](https://tighten.co)**
+- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+- **[64 Robots](https://64robots.com)**
+- **[Cubet Techno Labs](https://cubettech.com)**
+- **[Cyber-Duck](https://cyber-duck.co.uk)**
+- **[Many](https://www.many.co.uk)**
+- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
+- **[DevSquad](https://devsquad.com)**
+- **[OP.GG](https://op.gg)**
 
-### MySQL
-When configuring the Laravel application's `.env` file, use each service's Docker container name in place of an IP address. For example:
+## Contributing
 
-```dotenv
-DB_CONNECTION=mysql
-DB_HOST=mysql # container name instead of localhost
-DB_PORT=3306
-DB_DATABASE=laravel
-DB_USERBNAME=docker
-DB_PASSWORD=secret
-```
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+
+## Code of Conduct
+
+In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+
+## Security Vulnerabilities
+
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+
+## License
+
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
