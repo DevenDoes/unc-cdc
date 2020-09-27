@@ -20,8 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0f32ae6-be69-4424-8533-c02c8728dd60" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/Load_Typeform_Data.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/Load_Typeform_Data.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,6 +223,7 @@
       <workItem from="1601065404381" duration="48199000" />
       <workItem from="1601175818536" duration="8066000" />
       <workItem from="1601187789878" duration="95000" />
+      <workItem from="1601187962820" duration="106000" />
     </task>
     <servers />
   </component>

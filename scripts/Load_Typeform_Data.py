@@ -2,7 +2,7 @@ import mysql.connector
 import pandas as pd
 import numpy as np
 
-rawData = pd.read_csv('./Data/typeform.csv')
+rawData = pd.read_csv('./typeform.csv')
 
 email_col = 3
 country_col = 4
@@ -133,8 +133,8 @@ cursor = db.cursor()
 for index, row in processedData.iterrows():
 
     sql = """
-    INSERT INTO 
-        typeform (email, gender, country, state, prize_consent, shirt_size, address_country, address_state, address_street, address_city, address_zip, school, school_level, primary_major, secondary_major, minor, graduation_year) 
+    INSERT INTO
+        typeform (email, gender, country, state, prize_consent, shirt_size, address_country, address_state, address_street, address_city, address_zip, school, school_level, primary_major, secondary_major, minor, graduation_year)
         VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"""
 
     val = (row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7], row[8], row[9], row[10], row[11], row[12], row[13], row[14], row[15], row[16])
