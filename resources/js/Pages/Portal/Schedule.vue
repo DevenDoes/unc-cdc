@@ -52,6 +52,7 @@
                 <div class="right">
                   <a
                     :href="event.url"
+                    target="_blank"
                     class="button disabled"
                     v-if="event.url !== '#'"
                   >

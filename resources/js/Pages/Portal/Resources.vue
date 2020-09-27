@@ -41,10 +41,10 @@
             We will be utilizing Brazen for our virtual Carolina Data Challenge Sponsorship Fair and resume database this year. We have included resources below so you can familiarize yourself with the Brazen platform prior to the live event
           </p>
           <p class="text">
-            Make sure to visit the <a href="https://app.brazenconnect.com/a/unc-computer-sceince-dept/e/k63NW" class="link">Sponsorship Fair landing page</a> to register for the event. Once you have completed your registration, review this <a href="https://support.brazenconnect.com/hc/en-us/articles/215521267-Attending-an-event" class="link">resource</a> for details on how to attend the event as a participant.
+            Make sure to visit the <a href="https://app.brazenconnect.com/a/unc-computer-sceince-dept/e/k63NW" target="_blank" class="link">Sponsorship Fair landing page</a> to register for the event. Once you have completed your registration, review this <a href="https://support.brazenconnect.com/hc/en-us/articles/215521267-Attending-an-event" target="_blank" class="link">resource</a> for details on how to attend the event as a participant.
           </p>
           <p class="text">
-            Sponsors are prepared to use video chat during the fair. Each one-on-one text/video chat session is set for 10 minutes. Please be sure to complete the recommended Brazen technical checks (<a href="https://app.brazenconnect.com/cc/service-check#!service-check" class="link">Brazen Service Check</a> and <a href="https://support.brazenconnect.com/hc/en-us/articles/360045767633-BrazenLive-Video-Broadcast-and-1-on-1-Video-Technical-Requirements" class="link">Video Requirements - Domains They Need to Whitelist</a>) to mitigate technical issues prior to the start of the event.
+            Sponsors are prepared to use video chat during the fair. Each one-on-one text/video chat session is set for 10 minutes. Please be sure to complete the recommended Brazen technical checks (<a href="https://app.brazenconnect.com/cc/service-check#!service-check" target="_blank" class="link">Brazen Service Check</a> and <a href="https://support.brazenconnect.com/hc/en-us/articles/360045767633-BrazenLive-Video-Broadcast-and-1-on-1-Video-Technical-Requirements" target="_blank" class="link">Video Requirements - Domains They Need to Whitelist</a>) to mitigate technical issues prior to the start of the event.
           </p>
           <p class="text">
             If all of the sponsor reps in one booth are currently chatting with other participants, you can hop in another sponsor booth to find an available rep. If all reps are busy, you can simply get in line at various sponsor booths. You may get in as many wait lines as you would like. While you wait, you can visit the various sponsor booths to explore all of the content readily available as well as chat with Carolina Data Challenge leaders in the live broadcasting booth.
@@ -55,7 +55,7 @@
             Diversity Panel Fireside Chat
           </h2>
           <p class="text">
-            Join representatives from various companies for a panel about diversity in data. Please <a href="https://tinyurl.com/cdcdiversitypanel" class="link">submit your questions</a> prior to the start of the panel. Everyone is encouraged to attend!
+            Join representatives from various companies for a panel about diversity in data. Please <a href="https://tinyurl.com/cdcdiversitypanel" target="_blank" class="link">submit your questions</a> prior to the start of the panel. Everyone is encouraged to attend!
           </p>
         </article>
         <article class="card">
@@ -88,19 +88,19 @@
             Python (Anaconda)
           </h3>
           <p class="text text-sub-title">
-            <a href="https://www.anaconda.com/products/individual" class="link">Anaconda</a> is an open source distribution of Python and R for scientific computing and data science. It comes with many pre-installed packages that you’ll find useful for Data Science and Machine Learning.
+            <a href="https://www.anaconda.com/products/individual" target="_blank" class="link">Anaconda</a> is an open source distribution of Python and R for scientific computing and data science. It comes with many pre-installed packages that you’ll find useful for Data Science and Machine Learning.
           </p>
           <h3 class="sub-title">
             R (RStudio)
           </h3>
           <p class="text text-sub-title">
-            <a href="https://rstudio.com/products/rstudio/download/" class="link">RStudio</a> is a popular IDE for statistical computing in R. It allows you to have multiple panes for managing files, code, a terminal, and creating data visualizations. This is the preferred IDE for Data Scientists who use R.
+            <a href="https://rstudio.com/products/rstudio/download/" target="_blank" class="link">RStudio</a> is a popular IDE for statistical computing in R. It allows you to have multiple panes for managing files, code, a terminal, and creating data visualizations. This is the preferred IDE for Data Scientists who use R.
           </p>
           <h3 class="sub-title">
             Tableau
           </h3>
           <p class="text text-sub-title">
-            <a href="https://public.tableau.com/s/" class="link">Tableau</a>  is a code-free data visualization tool that allows you to create interactive graphs, maps, and dashboards. You can pull in data from multiple sources and customize the look of your visualizations. In addition to the free public download available at the link above, your university may also provide a license for the desktop version.
+            <a href="https://public.tableau.com/s/" target="_blank" class="link">Tableau</a>  is a code-free data visualization tool that allows you to create interactive graphs, maps, and dashboards. You can pull in data from multiple sources and customize the look of your visualizations. In addition to the free public download available at the link above, your university may also provide a license for the desktop version.
           </p>
         </article>
         <article class="card">
@@ -146,10 +146,10 @@
             Social Media
           </h3>
           <p class="text">
-            <a href="https://www.facebook.com/uncads/" class="link">Facebook</a>,
-            <a href="https://www.facebook.com/events/1178713572485304/" class="link">Facebook Event Page</a>,
-            <a href="https://www.instagram.com/carolinadatascience/?hl=en" class="link">Instagram</a>,
-            <a href="https://www.linkedin.com/company/carolinadatachallenge/" class="link">LinkedIn</a>
+            <a href="https://www.facebook.com/uncads/" target="_blank" class="link">Facebook</a>,
+            <a href="https://www.facebook.com/events/1178713572485304/" target="_blank" class="link">Facebook Event Page</a>,
+            <a href="https://www.instagram.com/carolinadatascience/?hl=en" target="_blank" class="link">Instagram</a>,
+            <a href="https://www.linkedin.com/company/carolinadatachallenge/" target="_blank" class="link">LinkedIn</a>
           </p>
           <p class="text">
             If you have any additional questions, comments, or suggestions, don’t hesitate to reach us at our email at <a href="mailto:hello@cdcunc.com" class="link">hello@cdcunc.com.</a>

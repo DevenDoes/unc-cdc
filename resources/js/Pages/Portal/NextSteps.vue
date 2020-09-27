@@ -15,6 +15,7 @@
           <div class="right">
             <a
               href="https://discord.gg/phuhxAp"
+              target="_blank"
               class="button"
             >
               Join our Discord
@@ -31,6 +32,7 @@
           <div class="right">
             <a
               href="https://app.brazenconnect.com/a/unc-computer-sceince-dept/e/k63NW"
+              target="_blank"
               class="button"
             >
               Reserve your Spot

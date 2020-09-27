@@ -30,6 +30,7 @@
         <!-- Newsletter button -->
         <a
           href="http://eepurl.com/gFzI4n"
+          target="_blank"
           class="ml-2 text-lg font-normal shadow-lg button bg-secondary text-light font-primary"
         >
           Newsletter
@@ -440,7 +441,7 @@
           </template>
           <template v-slot:answer>
             <p>
-              Registration for the Carolina Data Challenge is now open! You can register <a href="https://carolinadatachallenge.typeform.com/to/pagD5j" class="registration-link text-highlight hover:underline">here</a>!
+              Registration for the Carolina Data Challenge is now open! You can register <inertia-link href="/register" class="registration-link text-highlight hover:underline">here</inertia-link>!
             </p>
           </template>
         </question-answer>
@@ -482,6 +483,7 @@
         <!-- CapTech -->
         <a
           href="https://www.captechconsulting.com/"
+          target="_blank"
           class="sponsor grid-item"
         >
           <div class="sponsor-img">
@@ -499,6 +501,7 @@
         <!-- EY -->
         <a
           href="https://www.ey.com/en_us"
+          target="_blank"
           class="sponsor grid-item"
         >
           <div class="sponsor-img">
@@ -516,6 +519,7 @@
         <!-- IAA -->
         <a
           href="https://analytics.ncsu.edu/"
+          target="_blank"
           class="sponsor grid-item"
         >
           <div class="sponsor-img">
@@ -533,11 +537,13 @@
         <!-- MetLife -->
         <a
           href="https://www.metlife.com/"
+          target="_blank"
           class="sponsor grid-item"
         >
           <div class="sponsor-img">
             <img
               src="/img/sponsors/metlife.jpg"
+              target="_blank"
               alt="MetLife logo"
             >
           </div>
@@ -550,6 +556,7 @@
         <!-- SAS -->
         <a
           href="https://www.sas.com/en_us/home.html"
+          target="_blank"
           class="sponsor grid-item"
         >
           <div class="sponsor-img">
@@ -567,6 +574,7 @@
         <!-- UNC CS -->
         <a
           href="https://cs.unc.edu/"
+          target="_blank"
           class="sponsor grid-item"
         >
           <div class="sponsor-img">
@@ -584,6 +592,7 @@
         <!-- VisualDataTools -->
         <a
           href="http://www.visualdatatools.com/"
+          target="_blank"
           class="sponsor grid-item"
         >
           <div class="sponsor-img">
