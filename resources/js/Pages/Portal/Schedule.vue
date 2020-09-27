@@ -19,7 +19,7 @@
               v-model="displayTimeZone"
             >
               <option>{{ localTimeZone }}</option>
-              <option v-if="localTimeZone !== 'EST'">EST</option>
+              <option v-if="localTimeZone !== 'EDT'">EST</option>
             </select>
           </div>
         </div>
