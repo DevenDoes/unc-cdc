@@ -206,7 +206,7 @@ class User extends Authenticatable implements MustVerifyEmail
     public function typeformShipping()
     {
         $data = DB::table('typeform')
-            ->select('address_country', 'address_state', 'address_street', 'address_city', 'address_zip', 'prize_consent')
+            ->select('address_country', 'address_state', 'address_street', 'address_city', 'address_zip', 'prize_consent', 'shirt_size')
             ->where('email', $this->email)
             ->first();
         if(!$data) {
@@ -217,6 +217,7 @@ class User extends Authenticatable implements MustVerifyEmail
                 'street' => '',
                 'zip' => '',
                 'consent' => '',
+                'shirt_size' => '',
             ];
         }
         return [
@@ -226,6 +227,7 @@ class User extends Authenticatable implements MustVerifyEmail
             'street' => $data->address_street,
             'zip' => $data->address_zip,
             'consent' => $data->prize_consent,
+            'shirt_size' => $data->shirt_size,
         ];
     }
 

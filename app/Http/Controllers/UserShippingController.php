@@ -36,6 +36,7 @@ class UserShippingController extends Controller
             'street' => $userData['street'],
             'zip' => $userData['zip'],
             'consent' => $userData['consent'],
+            'shirt_size' => $userData['shirt_size'],
         ]);
     }
 
@@ -54,6 +55,7 @@ class UserShippingController extends Controller
             'street' => 'nullable|max:255',
             'zip' => 'nullable|numeric',
             'consent' => 'required|boolean',
+            'shirt_size' => 'nullable|max:255',
         ]);
 
         Auth::user()->shipping()->create([
@@ -63,6 +65,7 @@ class UserShippingController extends Controller
             'street' => $validated['street'],
             'zip' => $validated['zip'],
             'has_consented' => $validated['consent'],
+            'shirt_size' => $validated['shirt_size'],
         ]);
 
         return Redirect::route('dashboard');

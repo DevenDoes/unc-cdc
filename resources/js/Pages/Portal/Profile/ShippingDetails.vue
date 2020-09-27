@@ -55,6 +55,33 @@
               />
             </div>
             <div v-if="form.consent === 1">
+              <!-- Shirt Size -->
+              <div class="flex flex-col mt-6">
+                <label
+                  for="shirt-select"
+                  class="label"
+                >
+                  What is your shirt size?
+                </label>
+                <select
+                  id="shirt-select"
+                  class="select"
+                  v-model="form.shirt_size"
+                  required
+                >
+                  <option disabled value="">Please select one</option>
+                  <option>XS</option>
+                  <option>Small</option>
+                  <option>Medium</option>
+                  <option>Large</option>
+                  <option>XL</option>
+                  <option>XXL</option>
+                </select>
+                <jet-input-error
+                  :message="form.error('shirt_size')"
+                  class="error"
+                />
+              </div>
               <!-- Street -->
               <div class="flex flex-col mt-6">
                 <label
@@ -265,6 +292,10 @@ export default {
       type: Number,
       default: '',
     },
+    'shirt_size': {
+      type: String,
+      default: '',
+    }
   },
   data: function() {
     return {
@@ -275,6 +306,7 @@ export default {
         street: this.$props.street,
         zip: this.$props.zip,
         consent: this.$props.consent,
+        shirt_size: this.$props.shirt_size,
       },{
         bag: 'default',
         resetOnSuccess: false,

@@ -7108,6 +7108,33 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -7146,6 +7173,10 @@ __webpack_require__.r(__webpack_exports__);
     'consent': {
       type: Number,
       "default": ''
+    },
+    'shirt_size': {
+      type: String,
+      "default": ''
     }
   },
   data: function data() {
@@ -7156,7 +7187,8 @@ __webpack_require__.r(__webpack_exports__);
         city: this.$props.city,
         street: this.$props.street,
         zip: this.$props.zip,
-        consent: this.$props.consent
+        consent: this.$props.consent,
+        shirt_size: this.$props.shirt_size
       }, {
         bag: 'default',
         resetOnSuccess: false
@@ -61464,6 +61496,86 @@ var render = function() {
                 _vm._v(" "),
                 _vm.form.consent === 1
                   ? _c("div", [
+                      _c(
+                        "div",
+                        { staticClass: "flex flex-col mt-6" },
+                        [
+                          _c(
+                            "label",
+                            {
+                              staticClass: "label",
+                              attrs: { for: "shirt-select" }
+                            },
+                            [
+                              _vm._v(
+                                "\n                What is your shirt size?\n              "
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "select",
+                            {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.shirt_size,
+                                  expression: "form.shirt_size"
+                                }
+                              ],
+                              staticClass: "select",
+                              attrs: { id: "shirt-select", required: "" },
+                              on: {
+                                change: function($event) {
+                                  var $$selectedVal = Array.prototype.filter
+                                    .call($event.target.options, function(o) {
+                                      return o.selected
+                                    })
+                                    .map(function(o) {
+                                      var val =
+                                        "_value" in o ? o._value : o.value
+                                      return val
+                                    })
+                                  _vm.$set(
+                                    _vm.form,
+                                    "shirt_size",
+                                    $event.target.multiple
+                                      ? $$selectedVal
+                                      : $$selectedVal[0]
+                                  )
+                                }
+                              }
+                            },
+                            [
+                              _c(
+                                "option",
+                                { attrs: { disabled: "", value: "" } },
+                                [_vm._v("Please select one")]
+                              ),
+                              _vm._v(" "),
+                              _c("option", [_vm._v("XS")]),
+                              _vm._v(" "),
+                              _c("option", [_vm._v("Small")]),
+                              _vm._v(" "),
+                              _c("option", [_vm._v("Medium")]),
+                              _vm._v(" "),
+                              _c("option", [_vm._v("Large")]),
+                              _vm._v(" "),
+                              _c("option", [_vm._v("XL")]),
+                              _vm._v(" "),
+                              _c("option", [_vm._v("XXL")])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("jet-input-error", {
+                            staticClass: "error",
+                            attrs: { message: _vm.form.error("shirt_size") }
+                          })
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
                       _c(
                         "div",
                         { staticClass: "flex flex-col mt-6" },
