@@ -30,7 +30,7 @@ class UserDetailsController extends Controller
     {
         $userData = $request->user()->typeformPersonal();
 
-        return \Inertia\Inertia::render('Portal/Profile/PersonalDetails.vue', [
+        return \Inertia\Inertia::render('Portal/Profile/PersonalDetails', [
             'gender' => $userData['gender'],
             'country' => $userData['country'],
             'state' => $userData['state'],

@@ -29,7 +29,7 @@ class UserAcademicsController extends Controller
     {
         $userData = $request->user()->typeformAcademic();
 
-        return Inertia::render('Portal/Profile/AcademicDetails.vue', [
+        return Inertia::render('Portal/Profile/AcademicDetails', [
             'school' => $userData['school'],
             'school_level' => $userData['school_level'],
             'primary_major' => $userData['primary_major'],

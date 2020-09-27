@@ -104,11 +104,4 @@ export default {
     }
   }
 }
-
-.header {
-  @apply col-span-1 py-4 bg-primary;
-  .title {
-    @apply font-primary font-bold text-light text-2xl;
-  }
-}
 </style>

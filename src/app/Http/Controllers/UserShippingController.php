@@ -29,7 +29,7 @@ class UserShippingController extends Controller
     {
         $userData = $request->user()->typeformShipping();
 
-        return Inertia::render('Portal/Profile/ShippingDetails.vue', [
+        return Inertia::render('Portal/Profile/ShippingDetails', [
             'country' => $userData['country'],
             'state' => $userData['state'],
             'city' => $userData['city'],

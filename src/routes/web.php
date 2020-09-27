@@ -1,10 +1,10 @@
 <?php
 
+use App\Http\Controllers\ScheduleController;
 use App\Http\Controllers\UserAcademicsController;
 use App\Http\Controllers\UserDetailsController;
 use App\Http\Controllers\UserShippingController;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -113,3 +113,10 @@ Route::middleware(['auth:sanctum', 'details.personal', 'details.academic'])
     ->name('details.shipping');
 Route::middleware(['auth:sanctum', 'details.personal', 'details.academic'])
     ->post('/profile/shipping-details', [UserShippingController::class, 'store']);
+
+/**
+ * Schedule
+ */
+Route::middleware(['auth:sanctum', 'registered'])
+    ->get('/schedule', [ScheduleController::class, 'show'])
+    ->name('schedule');
