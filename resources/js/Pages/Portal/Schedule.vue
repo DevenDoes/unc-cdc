@@ -136,37 +136,63 @@ export default {
       // Get the distinct event dates
       let events = {};
       this.$props.schedule.forEach((event) => {
-        let date = DateTime.fromSQL(event.date + ' ' + event.start, {
-          zone: 'America/New_York',
-        })
-          .setZone('local')
-          .toLocaleString({
-            weekday: 'long',
-            month: 'long',
-            day: '2-digit',
-          });
+        let date;
+        if (event.start !== null) {
+          date = DateTime.fromSQL(event.date + ' ' + event.start, {
+            zone: 'America/New_York',
+          })
+            .setZone('local')
+            .toLocaleString({
+              weekday: 'long',
+              month: 'long',
+              day: '2-digit',
+            });
+        } else {
+          date = DateTime.fromSQL(event.date + ' ' + event.end, {
+            zone: 'America/New_York',
+          })
+            .setZone('local')
+            .toLocaleString({
+              weekday: 'long',
+              month: 'long',
+              day: '2-digit',
+            });
+        }
+
         if(!events.hasOwnProperty(date)) {
           events[date] = [];
         }
+        let startDateTime;
+        if(event.start === null) {
+          startDateTime = '';
+        } else {
+          startDateTime = DateTime.fromSQL(event.date + ' ' + event.start, {
+            zone: 'America/New_York',
+          })
+            .setZone('local')
+            .toLocaleString({
+              hour: '2-digit',
+              minute: '2-digit',
+              hour12: true,
+            });
+        }
+        let endDateTime;
+        if(event.end === null) {
+          endDateTime = '';
+        } else {
+          endDateTime = DateTime.fromSQL(event.date + ' ' + event.end, {
+            zone: 'America/New_York',
+          })
+            .setZone('local')
+            .toLocaleString({
+              hour: '2-digit',
+              minute: '2-digit',
+              hour12: true,
+            });
+        }
         events[date].push({
-          start: DateTime.fromSQL(event.date + ' ' + event.start, {
-            zone: 'America/New_York',
-          })
-            .setZone('local')
-            .toLocaleString({
-              hour: '2-digit',
-              minute: '2-digit',
-              hour12: true,
-            }),
-          end: DateTime.fromSQL(event.date + ' ' + event.end, {
-            zone: 'America/New_York',
-          })
-            .setZone('local')
-            .toLocaleString({
-              hour: '2-digit',
-              minute: '2-digit',
-              hour12: true,
-            }),
+          start: startDateTime,
+          end: endDateTime,
           type: event.type,
           event: event.event,
           url: event.url,
@@ -178,34 +204,60 @@ export default {
       // Get the distinct event dates
       let events = {};
       this.$props.schedule.forEach((event) => {
-        let date = DateTime.fromSQL(event.date + ' ' + event.start, {
-          zone: 'America/New_York',
-        })
-          .toLocaleString({
-            weekday: 'long',
-            month: 'long',
-            day: '2-digit',
-          });
+        let date;
+        if (event.start !== null) {
+          date = DateTime.fromSQL(event.date + ' ' + event.start, {
+            zone: 'America/New_York',
+          })
+            .setZone('local')
+            .toLocaleString({
+              weekday: 'long',
+              month: 'long',
+              day: '2-digit',
+            });
+        } else {
+          date = DateTime.fromSQL(event.date + ' ' + event.end, {
+            zone: 'America/New_York',
+          })
+            .setZone('local')
+            .toLocaleString({
+              weekday: 'long',
+              month: 'long',
+              day: '2-digit',
+            });
+        }
         if(!events.hasOwnProperty(date)) {
           events[date] = [];
         }
+        let startDateTime;
+        if(event.start === null) {
+          startDateTime = '';
+        } else {
+          startDateTime = DateTime.fromSQL(event.date + ' ' + event.start, {
+            zone: 'America/New_York',
+          })
+            .toLocaleString({
+              hour: '2-digit',
+              minute: '2-digit',
+              hour12: true,
+            });
+        }
+        let endDateTime;
+        if(event.end === null) {
+          endDateTime = '';
+        } else {
+          endDateTime = DateTime.fromSQL(event.date + ' ' + event.end, {
+            zone: 'America/New_York',
+          })
+            .toLocaleString({
+              hour: '2-digit',
+              minute: '2-digit',
+              hour12: true,
+            });
+        }
         events[date].push({
-          start: DateTime.fromSQL(event.date + ' ' + event.start, {
-            zone: 'America/New_York',
-          })
-            .toLocaleString({
-              hour: '2-digit',
-              minute: '2-digit',
-              hour12: true,
-            }),
-          end: DateTime.fromSQL(event.date + ' ' + event.end, {
-            zone: 'America/New_York',
-          })
-            .toLocaleString({
-              hour: '2-digit',
-              minute: '2-digit',
-              hour12: true,
-            }),
+          start: startDateTime,
+          end: endDateTime,
           type: event.type,
           event: event.event,
           url: event.url,
