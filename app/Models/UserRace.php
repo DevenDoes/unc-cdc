@@ -6,23 +6,24 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class UserDetails extends Model
+class UserRace extends Model
 {
     use HasFactory;
     use SoftDeletes;
 
     protected $fillable = [
         'user_id',
-        'gender',
-        'country',
-        'state',
+        'race',
     ];
 
     /**
      * Get the user
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function user() {
-        return $this->belongsTo('\App\Models\User');
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User');
     }
 
 }

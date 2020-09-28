@@ -47,17 +47,23 @@ class UserDetailsController extends Controller
     {
         $validated = $request->validate([
            'gender' => 'required|max:255',
-           'race' => 'required|max:255',
+           'race' => 'required|array',
+           'race.*' => 'max:255',
            'country' => 'required|max:255',
            'state' => 'required|max:255',
         ]);
 
         Auth::user()->details()->create([
             'gender' => $validated['gender'],
-            'race' => $validated['race'],
             'country' => $validated['country'],
             'state' => $validated['state'],
         ]);
+
+        foreach ($validated['race'] as $race) {
+            Auth::user()->race()->create([
+               'race' => $race,
+            ]);
+        }
 
         return Redirect::route('details.academic');
     }

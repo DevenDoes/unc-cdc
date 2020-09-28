@@ -15,12 +15,12 @@ class CreateUserDetailsTable extends Migration
     {
         Schema::create('user_details', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained('users');
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');;
             $table->string('gender');
-            $table->string('race');
             $table->string('country');
             $table->string('state');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

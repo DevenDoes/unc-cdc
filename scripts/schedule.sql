@@ -1,11 +1,11 @@
 INSERT INTO `homestead`.`schedules`   
 	(`date`, `start`, `end`, `type`, `event`, `url`, `created_at`)  
 VALUES   
-	('2020-09-28', '19:00:00', '20:00:00', 'Workshop', 'Introduction to R', '#', current_timestamp()),     
-	('2020-09-29', '18:00:00', '19:00:00', 'Workshop', 'Introduction to Tableau', '#', current_timestamp()),
-	('2020-09-30', '19:00:00', '20:00:00', 'Workshop', 'Introduction to Git and Github', '#', current_timestamp()),
-	('2020-10-01', '19:00:00', '20:00:00', 'Workshop', 'Introduction to Spatial Data', '#', current_timestamp()),
-	('2020-10-02', '19:00:00', '20:00:00', 'Mini-Event', 'Hacker Meet and Greet', '#', current_timestamp()),
+	('2020-09-28', '19:00:00', '20:00:00', 'Workshop', 'Introduction to R', 'https://unc-cs.webex.com/unc-cs/j.php?MTID=mb5e890f30fd2cbb61b609debd60a9fd4', current_timestamp()),     
+	('2020-09-29', '18:00:00', '19:00:00', 'Workshop', 'Introduction to Tableau', 'https://unc-cs.webex.com/unc-cs/j.php?MTID=m197c3917cb3075f8bed8bbff689bf86c', current_timestamp()),
+	('2020-09-30', '19:00:00', '20:00:00', 'Workshop', 'Introduction to Git and Github', 'https://unc-cs.webex.com/unc-cs/j.php?MTID=mb48df75c3a509c32403ea9f40dd966f3', current_timestamp()),
+	('2020-10-01', '19:00:00', '20:00:00', 'Workshop', 'Introduction to Spatial Data', 'https://unc-cs.webex.com/unc-cs/j.php?MTID=m13511204fa695456b512a19a882b2462', current_timestamp()),
+	('2020-10-02', '19:00:00', '20:00:00', 'Mini-Event', 'Hacker Meet and Greet', 'https://unc-cs.webex.com/unc-cs/j.php?MTID=mddf02f547bb5c8edf7617df28316a993', current_timestamp()),
 	('2020-10-03', '09:00:00', '10:00:00', 'Project', 'Team Matching', '#', current_timestamp()),
 	('2020-10-03', '10:00:00', '10:45:00', '', 'Opening Ceremony', '#', current_timestamp()),
 	('2020-10-03', '11:00:00', '11:15:00', 'Project', 'Begin Hacking', '#', current_timestamp()),

@@ -15,7 +15,7 @@ class CreateUserAcademicsTable extends Migration
     {
         Schema::create('user_academics', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained('users');
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');;
             $table->string('school');
             $table->string('school_level');
             $table->year('graduation_year');
@@ -23,6 +23,7 @@ class CreateUserAcademicsTable extends Migration
             $table->string('major_secondary')->nullable();
             $table->string('minor')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

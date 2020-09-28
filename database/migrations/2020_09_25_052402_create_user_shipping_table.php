@@ -15,7 +15,7 @@ class CreateUserShippingTable extends Migration
     {
         Schema::create('user_shipping', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained('users');
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');;
             $table->boolean('has_consented');
             $table->string('country')->nullable();
             $table->string('state')->nullable();
@@ -24,6 +24,7 @@ class CreateUserShippingTable extends Migration
             $table->integer('zip')->nullable();
             $table->string('shirt_size')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

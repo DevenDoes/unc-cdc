@@ -53,8 +53,8 @@
                   <a
                     :href="event.url"
                     target="_blank"
-                    class="button disabled"
-                    v-if="event.url !== '#'"
+                    class="button _disabled"
+                    v-if="/*eventActive(event)*/ event.url !== '#'"
                   >
                     Attend
                   </a>
@@ -92,8 +92,9 @@
                 <div class="right">
                   <a
                     :href="event.url"
-                    class="button disabled"
-                    v-if="event.url !== '#'"
+                    target="_blank"
+                    class="button _disabled"
+                    v-if="/*eventActive(event)*/ event.url !== '#'"
                   >
                     Attend
                   </a>
@@ -127,6 +128,7 @@ export default {
     return {
       localTimeZone: DateTime.local().offsetNameShort,
       displayTimeZone: DateTime.local().offsetNameShort,
+      curDateTime: DateTime.local().setZone('utc'),
     }
   },
   computed: {
@@ -211,6 +213,11 @@ export default {
       });
       return events;
     }
+  },
+  methods: {
+    eventActive: function(event) {
+
+    },
   }
 }
 </script>

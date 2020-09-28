@@ -23,7 +23,7 @@
           Shipping Details
         </h1>
         <p class="font-primary text-dark font-normal text-base mt-4">
-          Please provide us with your shipping details below. If you've already registered through Typeform, your answers will likely be auto populated to save you some time. Just be sure to check them over and update any answers that may have changed.
+          Please provide us with your shipping details below. <strong>We can only ship within the United States.</strong> If you've already registered through Typeform, your answers will likely be auto populated to save you some time. Just be sure to check them over and update any answers that may have changed.
         </p>
         <div class="h-1 max-w-full border-b border-gray-300 my-8"></div>
         <form-wrapper>
@@ -167,13 +167,11 @@
                       required
                     >
                       <option disabled value="">Please select one</option>
-                      <option>Other</option>
                       <option
                         v-for="state in stateList" :key="state.abbreviation"
                       >
                         {{ state.name }}
                       </option>
-                      <option>Other</option>
                     </select>
                   </div>
                   <div
@@ -211,11 +209,7 @@
                   required
                 >
                   <option disabled value="">Please select one</option>
-                  <option
-                    v-for="country in countryList" :key="country.code"
-                  >
-                    {{ country.name }}
-                  </option>
+                  <option>United States</option>
                 </select>
                 <jet-input-error
                   :message="form.error('country')"

@@ -22,6 +22,7 @@ class CreateSchedulesTable extends Migration
             $table->string('event');
             $table->string('url');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -6,9 +6,13 @@ use Laravel\Jetstream\Events\TeamCreated;
 use Laravel\Jetstream\Events\TeamDeleted;
 use Laravel\Jetstream\Events\TeamUpdated;
 use Laravel\Jetstream\Team as JetstreamTeam;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Team extends JetstreamTeam
 {
+
+    use SoftDeletes;
+
     /**
      * The attributes that should be cast to native types.
      *

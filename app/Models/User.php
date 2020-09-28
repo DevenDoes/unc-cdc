@@ -14,6 +14,8 @@ use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Jetstream\HasTeams;
 use Laravel\Sanctum\HasApiTokens;
 use PhpParser\Node\Expr\Array_;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Dyrynda\Database\Support\CascadeSoftDeletes;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
@@ -23,6 +25,8 @@ class User extends Authenticatable implements MustVerifyEmail
     use HasTeams;
     use Notifiable;
     use TwoFactorAuthenticatable;
+    use SoftDeletes;
+    use CascadeSoftDeletes;
 
     /**
      * The attributes that are mass assignable.
@@ -31,6 +35,18 @@ class User extends Authenticatable implements MustVerifyEmail
      */
     protected $fillable = [
         'name', 'email', 'password',
+    ];
+
+    /**
+     * The relationships to cascade soft delete
+     *
+     * @var string[]
+     */
+    protected $cascadeDeletes = [
+        'details',
+        'academics',
+        'shipping',
+        'race',
     ];
 
     /**
@@ -130,6 +146,16 @@ class User extends Authenticatable implements MustVerifyEmail
     public function shipping()
     {
         return $this->hasOne('App\Models\UserShipping');
+    }
+
+    /**
+     * Get the user's race.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function race()
+    {
+        return $this->hasMany('App\Models\UserRace');
     }
 
     /**

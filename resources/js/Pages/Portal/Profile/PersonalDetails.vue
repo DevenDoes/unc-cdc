@@ -65,28 +65,41 @@
               </label>
               <div class="flex flex-col w-full md:flex-row">
                 <div
-                  :class="{ 'w-full md:w-1/2 md:pr-2' : form.race === 'Other', 'w-full' : form.race !== 'Other' }"
+                  :class="{ 'w-full md:w-1/2 md:pr-2' : form.race.includes('Other'), 'w-full' : !form.race.includes('Other') }"
                 >
-                  <select
+                  <multiselect
                     id="race-select"
-                    class="select w-full"
+                    class="w-full mt-2"
                     v-model="form.race"
+                    :options="optionsRace"
+                    :multiple="true"
+                    :close-on-select="false"
+                    :clear-on-select="false"
+                    :allowEmpty="false"
+                    placeholder="Please select one or more"
+                    autocomplete="off"
                     required
-                  >
-                    <option disabled value="">Please select one</option>
-                    <option>American Indian / Alaskan Native</option>
-                    <option>Asian / Pacific Islander</option>
-                    <option>Black / African American</option>
-                    <option>Hispanic / Latinx</option>
-                    <option>Middle Eastern / North African</option>
-                    <option>White / Caucasian</option>
-                    <option>Prefer Not to Answer</option>
-                    <option>Other</option>
-                  </select>
+                  ></multiselect>
+<!--                  <select-->
+<!--                    id="race-select"-->
+<!--                    class="select w-full"-->
+<!--                    v-model="form.race"-->
+<!--                    required-->
+<!--                  >-->
+<!--                    <option disabled value="">Please select one</option>-->
+<!--                    <option>American Indian / Alaskan Native</option>-->
+<!--                    <option>Asian / Pacific Islander</option>-->
+<!--                    <option>Black / African American</option>-->
+<!--                    <option>Hispanic / Latinx</option>-->
+<!--                    <option>Middle Eastern / North African</option>-->
+<!--                    <option>White / Caucasian</option>-->
+<!--                    <option>Prefer Not to Answer</option>-->
+<!--                    <option>Other</option>-->
+<!--                  </select>-->
                 </div>
                 <div
                   class="w-full md:w-1/2 md:pl-2"
-                  v-if="form.race === 'Other'"
+                  v-if="form.race.includes('Other')"
                 >
                   <input
                     type="text"
@@ -129,7 +142,10 @@
               />
             </div>
             <!-- State -->
-            <div class="flex flex-col mt-6">
+            <div
+              class="flex flex-col mt-6"
+              v-if="form.country === 'United States'"
+            >
               <label
                 for="state-select"
                 class="label"
@@ -143,13 +159,11 @@
                 required
               >
                 <option disabled value="">Please select one</option>
-                <option>Not Applicable</option>
                 <option
                   v-for="state in stateList" :key="state.abbreviation"
                 >
                   {{ state.name }}
                 </option>
-                <option>Not Applicable</option>
               </select>
               <jet-input-error
                 :message="form.error('state')"
@@ -188,15 +202,18 @@
 import PortalLayout from "../../../Layouts/PortalLayout";
 import FormWrapper from "../../../Components/Portal/FormWrapper";
 import JetInputError from "../../../Jetstream/InputError";
+import Multiselect from 'vue-multiselect';
 import { HollowDotsSpinner } from 'epic-spinners';
-import { countries } from "../../../Data/Countries.js"
-import { states } from "../../../Data/States.js"
+import { countries } from "../../../Data/Countries.js";
+import { states } from "../../../Data/States.js";
+import 'vue-multiselect/dist/vue-multiselect.min.css';
 export default {
   name: "PersonalDetails.vue",
   components: {
     PortalLayout,
     FormWrapper,
     JetInputError,
+    Multiselect,
     HollowDotsSpinner,
   },
   props: {
@@ -227,12 +244,25 @@ export default {
       otherRace: '',
       countryList: countries,
       stateList: states,
+      optionsRace: [
+        'American Indian / Alaskan Native',
+        'Asian / Pacific Islander',
+        'Black / African American',
+        'Hispanic / Latinx',
+        'Middle Eastern / North African',
+        'White / Caucasian',
+        'Prefer Not to Answer',
+        'Other'
+      ]
     }
   },
   methods: {
     handleDetails: function() {
-      if (this.form.race === 'Other') {
-        this.form.race = this.otherRace;
+      if (this.form.race.includes('Other')) {
+        this.form.race[this.form.race.indexOf('Other')] = this.otherRace;
+      }
+      if (this.form.country !== 'United States') {
+        this.form.state = 'Not Applicable';
       }
       this.form.post('/profile/personal-details')
       .then(() => {
@@ -243,6 +273,77 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import '../../../../css/_utilities';
+
+.multiselect__tags {
+  @apply rounded-none border-t-0 border-r-0 border-l-0 border-b border-gray-300 mt-2 py-2 pl-2 pr-10;
+}
+
+.multiselect__placeholder {
+  @apply font-primary font-normal text-base text-dark m-0 p-0;
+}
+
+.multiselect__input {
+  @apply font-primary font-normal text-base text-dark p-0 m-0;
+}
+
+.multiselect__input::placeholder {
+  @apply font-primary font-normal text-base text-dark;
+}
+
+.multiselect__option--highlight {
+  @apply bg-highlight text-light;
+  &::after {
+    @apply bg-highlight text-light;
+  }
+}
+
+.multiselect__option--selected {
+  @apply bg-primary text-light;
+  &::after {
+    @apply bg-primary text-light;
+  }
+}
+
+.multiselect__option--selected.multiselect__option--highlight {
+  @apply bg-secondary text-light;
+  &::after {
+    @apply bg-secondary text-light;
+  }
+}
+
+.multiselect__select {
+  background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='chevron-down' class='svg-inline--fa fa-chevron-down fa-w-14' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23a0aec0' d='M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center right 1rem;
+  background-size: 1rem;
+  &::before {
+    content: none;
+  }
+}
+
+.multiselect--active .multiselect__select {
+  transform: none;
+  background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='chevron-down' class='svg-inline--fa fa-chevron-down fa-w-14' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23330b53' d='M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.multiselect__tags {
+  @apply mt-1;
+}
+
+.multiselect__tag {
+  @apply bg-primary text-light text-base font-normal font-primary m-0 mr-3 rounded-none py-1 pl-3 pr-7;
+}
+
+.multiselect__tag-icon {
+  @apply m-0 p-0 rounded-none;
+  &::after {
+    @apply text-light text-base;
+  }
+  &:hover, &:focus {
+    @apply bg-highlight;
+  }
+}
+
 </style>

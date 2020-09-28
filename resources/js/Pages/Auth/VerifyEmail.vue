@@ -4,7 +4,7 @@
       <strong>Account verification email sent!</strong>
     </p>
     <p class="text mt-2">
-      A verification email has been sent to the email address you created your new account with. Check you email and use the link to verify your account. If you don't seem to have received the email, try sending another.
+      A verification email has been sent to the email address you created your new account with. Check you email and use the link to verify your account. If you don't seem to have received the email, <strong>check your spam</strong> and then try sending another.
     </p>
     <div class="flex justify-end mt-8">
       <button
