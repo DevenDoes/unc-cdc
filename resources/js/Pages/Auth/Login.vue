@@ -88,7 +88,7 @@
         href="/forgot-password"
         class="link"
       >
-        Forgot you password?
+        Forgot your password?
       </inertia-link>
     </div>
   </auth-layout>
