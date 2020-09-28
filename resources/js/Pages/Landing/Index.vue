@@ -258,11 +258,6 @@
               </tr>
               <tr>
                 <td>Oct. 3rd</td>
-                <td>20:00 to 21:00</td>
-                <td>Workshop: Machine Learning Powered Applications</td>
-              </tr>
-              <tr>
-                <td>Oct. 3rd</td>
                 <td>22:00 to 22:30</td>
                 <td>Mini-Event: Wikipedia Race</td>
               </tr>
