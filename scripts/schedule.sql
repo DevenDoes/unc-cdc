@@ -19,7 +19,6 @@ VALUES
 	('2020-10-03', '17:00:00', '18:00:00', 'Workshop', 'Sponsor TBA', '#', current_timestamp()),
 	('2020-10-03', '18:00:00', '19:00:00', '', 'Diversity Panel', '#', current_timestamp()),
 	('2020-10-03', '19:00:00', '20:00:00', 'Workshop', 'Sponsor TBA', '#', current_timestamp()),
-	('2020-10-03', '20:00:00', '21:00:00', 'Workshop', 'Machine Learning Powered Applications', '#', current_timestamp()),
 	('2020-10-03', '22:00:00', '22:30:00', 'Mini-Event', 'Wikipedia Race', '#', current_timestamp()),
 	('2020-10-04', '00:00:00', '01:00:00', '', 'Midnight Check-in', '#', current_timestamp()),
 	('2020-10-04', '01:00:00', '02:00:00', 'Mini-Event', 'Codewords', '#', current_timestamp()),
