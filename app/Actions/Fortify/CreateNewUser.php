@@ -9,9 +9,13 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Laravel\Fortify\Contracts\CreatesNewUsers;
 use Laravel\Fortify\Rules\Password;
+use Spatie\Newsletter\NewsletterFacade as Newsletter;
 
 class CreateNewUser implements CreatesNewUsers
 {
+
+    //use Newsletter;
+
     /**
      * Create a newly registered user.
      *
@@ -32,7 +36,23 @@ class CreateNewUser implements CreatesNewUsers
                 'email' => $input['email'],
                 'password' => Hash::make($input['password']),
             ]), function (User $user) {
+                // Add user to personal team
                 $this->createTeam($user);
+                // Add to Mailchimp mailing list
+                $name = explode(" ", $user->name);
+                $lastName = end($name);
+                $firstName = '';
+                foreach ($name as $nameFragment) {
+                    if($nameFragment != end($name)) {
+                        $firstName .= $nameFragment . " ";
+                    }
+                }
+                print($firstName);
+                print($lastName);
+                Newsletter::subscribeOrUpdate($user->email, [
+                    'FNAME' => $firstName,
+                    'LNAME' => $lastName,
+                ]);
             });
         });
     }
@@ -49,6 +69,6 @@ class CreateNewUser implements CreatesNewUsers
             'user_id' => $user->id,
             'name' => explode(' ', $user->name, 2)[0]."'s Team",
             'personal_team' => true,
-        ]));
+        ], 'Carolina Data Challenge'));
     }
 }
