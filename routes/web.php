@@ -4,6 +4,7 @@ use App\Http\Controllers\ScheduleController;
 use App\Http\Controllers\UserAcademicsController;
 use App\Http\Controllers\UserDetailsController;
 use App\Http\Controllers\UserShippingController;
+use App\Models\Schedule;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -22,7 +23,10 @@ use Illuminate\Support\Facades\Route;
  * Landing Page
  */
 Route::get('/', function () {
-    return Inertia\Inertia::render('Landing/Index');
+    $schedule = Schedule::all();
+    return Inertia\Inertia::render('Landing/Index', [
+        'schedule' => $schedule,
+    ]);
 });
 
 /**

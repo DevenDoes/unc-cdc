@@ -161,150 +161,28 @@
             <thead>
               <tr>
                 <th>Date</th>
-                <th>Time</th>
+                <th>Start</th>
+                <th>End</th>
                 <th>Event</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Sep. 28th</td>
-                <td>19:00 to 20:00</td>
-                <td>Workshop: Introduction to R - R Series</td>
-              </tr>
-              <tr>
-                <td>Sep. 29th</td>
-                <td>18:00 to 19:00</td>
-                <td>Workshop: Introduction to Tableau</td>
-              </tr>
-              <tr>
-                <td>Sep. 30th</td>
-                <td>19:00 to 20:00</td>
-                <td>Workshop: Introduction to Git & Github</td>
-              </tr>
-              <tr>
-                <td>Oct. 1st</td>
-                <td>19:00 to 20:00</td>
-                <td>Workshop: Introduction to Spatial Data - R Series</td>
-              </tr>
-              <tr>
-                <td>Oct. 2nd</td>
-                <td>19:00 to 20:00</td>
-                <td>Meet and Greet</td>
-              </tr>
-              <tr>
-                <td>Oct. 3rd</td>
-                <td>09:00 to 10:00</td>
-                <td>Team Matching</td>
-              </tr>
-              <tr>
-                <td>Oct. 3rd</td>
-                <td>10:00 to 10:45</td>
-                <td>Opening Ceremony</td>
-              </tr>
-              <tr>
-                <td>Oct. 3rd</td>
-                <td>11:00</td>
-                <td>Hacking Begins</td>
-              </tr>
-              <tr>
-                <td>Oct. 3rd</td>
-                <td>11:00 to 11:30</td>
-                <td>Team Matching on Discord</td>
-              </tr>
-              <tr>
-                <td>Oct. 3rd</td>
-                <td>11:00 to 13:00</td>
-                <td>Sponsorship Fair</td>
-              </tr>
-              <tr>
-                <td>Oct. 3rd</td>
-                <td>13:15 to 14:00</td>
-                <td>Workshop: Introduction to R</td>
-              </tr>
-              <tr>
-                <td>Oct. 3rd</td>
-                <td>13:00 to 18:30</td>
-                <td>Mentor Lounge</td>
-              </tr>
-              <tr>
-                <td>Oct. 3rd</td>
-                <td>14:00 to 15:00</td>
-                <td>Workshop: Sponsor TBA</td>
-              </tr>
-              <tr>
-                <td>Oct. 3rd</td>
-                <td>15:00 to 16:00</td>
-                <td>Workshop: Text Processing</td>
-              </tr>
-              <tr>
-                <td>Oct. 3rd</td>
-                <td>16:00 to 17:00</td>
-                <td>Workshop: Sponsor TBA</td>
-              </tr>
-              <tr>
-                <td>Oct. 3rd</td>
-                <td>17:00 to 18:00</td>
-                <td>Workshop: Sponsor TBA</td>
-              </tr>
-              <tr>
-                <td>Oct. 3rd</td>
-                <td>18:00 to 19:00</td>
-                <td>Diversity Panel</td>
-              </tr>
-              <tr>
-                <td>Oct. 3rd</td>
-                <td>19:00 to 20:00</td>
-                <td>Workshop: Sponsor TBA</td>
-              </tr>
-              <tr>
-                <td>Oct. 3rd</td>
-                <td>22:00 to 22:30</td>
-                <td>Mini-Event: Wikipedia Race</td>
-              </tr>
-              <tr>
-                <td>Oct. 4th</td>
-                <td>00:00 to 1:00</td>
-                <td>Midnight Check-in</td>
-              </tr>
-              <tr>
-                <td>Oct. 4th</td>
-                <td>1:00 to 2:00</td>
-                <td>Mini-Event: CODEWORDS</td>
-              </tr>
-              <tr>
-                <td>Oct. 4th</td>
-                <td>9:00 to 11:00</td>
-                <td>Mentor Lounge</td>
-              </tr>
-              <tr>
-                <td>Oct. 4th</td>
-                <td>11:00</td>
-                <td>Hacking Ends</td>
-              </tr>
-              <tr>
-                <td>Oct. 4th</td>
-                <td>12:00</td>
-                <td>Presentation Submission Deadline</td>
-              </tr>
-              <tr>
-                <td>Oct. 4th</td>
-                <td>12:00 to 18:00</td>
-                <td>Judging</td>
-              </tr>
-              <tr>
-                <td>Oct. 4th</td>
-                <td>12:30 to 13:30</td>
-                <td>Data Science Recruiting Panel</td>
-              </tr>
-              <tr>
-                <td>Oct. 4th</td>
-                <td>14:00 to 14:30</td>
-                <td>Mini-Event: Skribbl.io</td>
-              </tr>
-              <tr>
-                <td>Oct. 4th</td>
-                <td>18:00 to 19:00</td>
-                <td>Closing Ceremony</td>
+              <tr
+                v-for="event in $props.schedule"
+                :key="event.event"
+              >
+                <td>
+                  {{ getDate(event) }}
+                </td>
+                <td>
+                  {{ getStart(event) }}
+                </td>
+                <td>
+                  {{ getEnd(event) }}
+                </td>
+                <td>
+                  {{ event.type.length > 0 ? event.type + ': ' + event.event : event.event }}
+                </td>
               </tr>
             </tbody>
           </table>
@@ -629,7 +507,14 @@ import HealthcareIcon from "./../../Components/Icons/HealthcareIcon"
 import FinanceIcon from "./../../Components/Icons/FinanceIcon"
 import PublicPolicyIcon from "./../../Components/Icons/PublicPolicyIcon"
 import EntertainmentIcon from "./../../Components/Icons/EntertainmentIcon"
+import { DateTime } from 'luxon';
 export default {
+  props: {
+    'schedule': {
+      type: Array,
+      default: []
+    }
+  },
   components: {
     LandingLayout,
     ResponsiveGrid,
@@ -641,6 +526,67 @@ export default {
     PublicPolicyIcon,
     EntertainmentIcon
   },
+  methods: {
+    getDate: function(event) {
+      let date;
+      if (event.start !== null) {
+        date = DateTime.fromSQL(event.date + ' ' + event.start, {
+          zone: 'America/New_York',
+        })
+          .setZone('local')
+          .toLocaleString({
+            month: 'short',
+            day: '2-digit',
+          });
+      } else {
+        date = DateTime.fromSQL(event.date + ' ' + event.end, {
+          zone: 'America/New_York',
+        })
+          .setZone('local')
+          .toLocaleString({
+            month: 'short',
+            day: '2-digit',
+          });
+      }
+      return date;
+    },
+    getStart: function(event) {
+      let startDateTime;
+      if(event.start === null) {
+        startDateTime = '';
+      }
+      else {
+        startDateTime = DateTime.fromSQL(event.date + ' ' + event.start, {
+          zone: 'America/New_York',
+        })
+          .setZone('local')
+          .toLocaleString({
+            hour: '2-digit',
+            minute: '2-digit',
+            hour12: true,
+          });
+      }
+      return startDateTime;
+    },
+    getEnd: function(event) {
+      let endDateTime;
+      if(event.end === null) {
+        endDateTime = '';
+      }
+      else {
+        endDateTime = DateTime.fromSQL(event.date + ' ' + event.end, {
+          zone: 'America/New_York',
+        })
+          .setZone('local')
+          .toLocaleString({
+            hour: '2-digit',
+            minute: '2-digit',
+            hour12: true,
+          });
+      }
+      return endDateTime;
+    }
+  }
 };
 </script>
 
@@ -702,13 +648,16 @@ export default {
       tr {
         @apply flex;
         th:first-child {
-          @apply font-primary font-normal text-light text-base py-4 ml-2 w-1/4 text-left;
+          @apply font-primary font-normal text-light text-base py-4 pr-1 ml-2 w-1/6 text-left;
         }
         th:nth-child(2) {
-          @apply font-primary font-normal text-light text-base py-4 w-1/4 text-left;
+          @apply font-primary font-normal text-light text-base py-4 px-1 w-1/6 text-left;
+        }
+        th:nth-child(3) {
+          @apply font-primary font-normal text-light text-base py-4 px-1 w-1/6 text-left;
         }
         th:last-child {
-          @apply font-primary font-normal text-light text-base py-4 w-2/4 flex-1 text-left;
+          @apply font-primary font-normal text-light text-base py-4 pl-1 w-3/6 flex-1 text-left;
         }
       }
     }
@@ -727,13 +676,16 @@ export default {
           background: $accent-highlight;
         }
         td:first-child {
-          @apply font-primary font-light text-light text-base py-4 ml-2 w-1/4 text-left;
+          @apply font-primary font-light text-light text-base py-4 pr-1 ml-2 w-1/6 text-left;
         }
         td:nth-child(2) {
-          @apply font-primary font-light text-light text-base py-4 w-1/4 text-left;
+          @apply font-primary font-light text-light text-base py-4 px-1 w-1/6 text-left;
+        }
+        td:nth-child(3) {
+          @apply font-primary font-light text-light text-base py-4 px-1 w-1/6 text-left;
         }
         td:last-child {
-          @apply font-primary font-light text-light text-base py-4 flex-1 w-2/4 text-left mr-2;
+          @apply font-primary font-light text-light text-base py-4 pl-1 flex-1 w-3/6 text-left mr-2;
         }
       }
     }
@@ -767,11 +719,14 @@ export default {
           th:first-child {
             @apply w-1/6 ml-4;
           }
-          th:nth-child(2) {
+          td:nth-child(2) {
+            @apply w-1/6;
+          }
+          td:nth-child(3) {
             @apply w-1/6;
           }
           th:last-child {
-            @apply w-4/6 mr-4;
+            @apply w-3/6 mr-4;
           }
         }
       }
@@ -783,8 +738,11 @@ export default {
           td:nth-child(2) {
             @apply w-1/6;
           }
+          td:nth-child(3) {
+            @apply w-1/6;
+          }
           td:last-child {
-            @apply w-4/6 mr-4;
+            @apply w-3/6 mr-4;
           }
         }
       }
