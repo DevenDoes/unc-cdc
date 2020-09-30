@@ -60,10 +60,10 @@ class CreateNewUser implements CreatesNewUsers
                 }
                 print($firstName);
                 print($lastName);
-//                Newsletter::subscribeOrUpdate($user->email, [
-//                    'FNAME' => $firstName,
-//                    'LNAME' => $lastName,
-//                ]);
+                Newsletter::subscribeOrUpdate($user->email, [
+                    'FNAME' => $firstName,
+                    'LNAME' => $lastName,
+                ]);
             });
         });
     }
