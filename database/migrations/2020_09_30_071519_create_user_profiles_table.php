@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUserShippingTable extends Migration
+class CreateUserProfilesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,17 @@ class CreateUserShippingTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_shipping', function (Blueprint $table) {
+        Schema::create('user_profiles', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
-            $table->boolean('has_consented');
-            $table->string('country')->nullable();
-            $table->string('state')->nullable();
-            $table->string('street')->nullable();
-            $table->string('city')->nullable();
-            $table->integer('zip')->nullable();
-            $table->string('shirt_size')->nullable();
+            $table->text('about');
+            $table->string('linkedin');
+            $table->string('github');
+            $table->string('discord');
+            $table->string('twitter');
+            $table->string('facebook');
+            $table->string('instagram');
+            $table->boolean('share_academics');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -35,6 +36,6 @@ class CreateUserShippingTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_shipping');
+        Schema::dropIfExists('user_profiles');
     }
 }

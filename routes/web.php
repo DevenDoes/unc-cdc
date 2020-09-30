@@ -3,6 +3,7 @@
 use App\Http\Controllers\ScheduleController;
 use App\Http\Controllers\UserAcademicsController;
 use App\Http\Controllers\UserDetailsController;
+use App\Http\Controllers\UserProfileController;
 use App\Http\Controllers\UserShippingController;
 use App\Models\Schedule;
 use Illuminate\Http\Request;
@@ -133,3 +134,10 @@ Route::middleware(['auth:sanctum', 'registered'])
         return \Inertia\Inertia::render('Portal/Resources');
     })
     ->name('resources');
+
+/**
+ * Profile
+ */
+Route::middleware(['auth:sanctum', 'registered'])
+    ->get('/user/profile/{user}', [UserProfileController::class, 'show'])
+    ->name('profile.show');

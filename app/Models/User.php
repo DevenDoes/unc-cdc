@@ -47,6 +47,7 @@ class User extends Authenticatable implements MustVerifyEmail
         'academics',
         'shipping',
         'race',
+        'profile',
     ];
 
     /**
@@ -156,6 +157,16 @@ class User extends Authenticatable implements MustVerifyEmail
     public function race()
     {
         return $this->hasMany('App\Models\UserRace');
+    }
+
+    /**
+     * Get the user's profile details.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function profile()
+    {
+        return $this->hasOne('App\Models\UserProfile');
     }
 
     /**
