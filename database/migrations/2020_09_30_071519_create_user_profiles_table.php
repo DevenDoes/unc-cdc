@@ -21,12 +21,22 @@ class CreateUserProfilesTable extends Migration
             $table->string('github');
             $table->string('discord');
             $table->string('twitter');
-            $table->string('facebook');
-            $table->string('instagram');
             $table->boolean('share_academics');
             $table->timestamps();
             $table->softDeletes();
         });
+
+        $users = \App\Models\User::all();
+        foreach ($users as $user) {
+            $user->profile()->create([
+                'about' => '',
+                'linkedin' => '',
+                'github' => '',
+                'discord' => '',
+                'twitter' => '',
+                'share_academics' => False,
+            ]);
+        }
     }
 
     /**

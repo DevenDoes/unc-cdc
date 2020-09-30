@@ -31,6 +31,7 @@
               </div>
               <a
                 :href="'https://www.linkedin.com/in/' + linkedin"
+                target="_blank"
                 class="social-link"
               >
                 {{ linkedin }}
@@ -50,6 +51,7 @@
               </div>
               <a
                 :href="'https://github.com/' + github"
+                target="_blank"
                 class="social-link"
               >
                 {{ github }}
@@ -69,6 +71,7 @@
               </div>
               <a
                 href="https://discord.gg/QgSpBAy"
+                target="_blank"
                 class="social-link"
               >
                 {{ discord }}
@@ -88,47 +91,10 @@
               </div>
               <a
                 :href="'https://twitter.com/' + twitter"
+                target="_blank"
                 class="social-link"
               >
                 {{ twitter }}
-              </a>
-            </div>
-            <!-- Facebook -->
-            <div
-              class="flex mt-4 items-center"
-              v-if="facebook"
-            >
-              <div class="w-8">
-                <facebook-icon
-                  id="facebook-icon"
-                  styles="social-icon"
-                  aria-title="Facebook Icon"
-                />
-              </div>
-              <a
-                :href="'https://www.facebook.com/' + facebook"
-                class="social-link"
-              >
-                {{ facebook }}
-              </a>
-            </div>
-            <!-- Instagram -->
-            <div
-              class="flex mt-4 items-center"
-              v-if="instagram"
-            >
-              <div class="w-8">
-                <instagram-icon
-                  id="instagram-icon"
-                  styles="social-icon"
-                  aria-title="Instagram Icon"
-                />
-              </div>
-              <a
-                :href="'https://www.instagram.com/' + instagram"
-                class="social-link"
-              >
-                {{ instagram }}
               </a>
             </div>
           </article>
@@ -139,7 +105,7 @@
               About
             </h2>
             <p class="font-primary font-normal text-base text-dark mt-4">
-              {{ about }}
+              {{ about === '' ? 'This attendee has not updated their profile yet...' : about }}
             </p>
           </article>
           <article
@@ -181,8 +147,8 @@
             v-if="isOwner"
           >
             <inertia-link
-              :href="'/profile/user/' + user.id + '/edit'"
-              class="block mt-8 px-3 py-1 bg-primary text-light hover:bg-secondary shadow-md"
+              :href="'/user/profile/' + user.id + '/edit'"
+              class="block mt-8 px-6 py-2 rounded shadow-sm font-primary font-normal text-base bg-purple-800 text-white hover:bg-purple-700"
             >
               Edit Profile
             </inertia-link>
@@ -246,14 +212,6 @@ export default {
       default: '',
     },
     'twitter': {
-      type: String,
-      default: '',
-    },
-    'facebook': {
-      type: String,
-      default: '',
-    },
-    'instagram': {
       type: String,
       default: '',
     },

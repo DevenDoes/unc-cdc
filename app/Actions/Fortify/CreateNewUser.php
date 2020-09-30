@@ -38,6 +38,17 @@ class CreateNewUser implements CreatesNewUsers
             ]), function (User $user) {
                 // Add user to personal team
                 $this->createTeam($user);
+                // Create user profile
+                $user->profile()->create([
+                    'about' => '',
+                    'linkedin' => '',
+                    'github' => '',
+                    'discord' => '',
+                    'twitter' => '',
+                    'facebook' => '',
+                    'instagram' => '',
+                    'share_academics' => False,
+                ]);
                 // Add to Mailchimp mailing list
                 $name = explode(" ", $user->name);
                 $lastName = end($name);
@@ -49,10 +60,10 @@ class CreateNewUser implements CreatesNewUsers
                 }
                 print($firstName);
                 print($lastName);
-                Newsletter::subscribeOrUpdate($user->email, [
-                    'FNAME' => $firstName,
-                    'LNAME' => $lastName,
-                ]);
+//                Newsletter::subscribeOrUpdate($user->email, [
+//                    'FNAME' => $firstName,
+//                    'LNAME' => $lastName,
+//                ]);
             });
         });
     }

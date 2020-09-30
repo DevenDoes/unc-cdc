@@ -141,3 +141,14 @@ Route::middleware(['auth:sanctum', 'registered'])
 Route::middleware(['auth:sanctum', 'registered'])
     ->get('/user/profile/{user}', [UserProfileController::class, 'show'])
     ->name('profile.show');
+Route::middleware(['auth:sanctum', 'registered'])
+    ->get('/user/profile/{user}/edit', [UserProfileController::class, 'edit'])
+    ->name('profile.edit');
+Route::middleware(['auth:sanctum', 'registered'])
+    ->put('/user/profile/personal', [UserProfileController::class, 'updatePersonal']);
+Route::middleware(['auth:sanctum', 'registered'])
+    ->put('/user/profile/about', [UserProfileController::class, 'updateAbout']);
+Route::middleware(['auth:sanctum', 'registered'])
+    ->put('/user/profile/social', [UserProfileController::class, 'updateSocial']);
+Route::middleware(['auth:sanctum', 'registered'])
+    ->put('/user/profile/academics', [UserProfileController::class, 'updateAcademics']);
