@@ -1,4 +1,4 @@
-INSERT INTO `forge`.`schedules`   
+INSERT INTO `homestead`.`schedules`   
 	(`date`, `start`, `end`, `type`, `event`, `url`, `created_at`)  
 VALUES   
 	('2020-09-28', '19:00:00', '20:00:00', 'Workshop', 'Introduction to R', 'https://unc-cs.webex.com/unc-cs/j.php?MTID=mb5e890f30fd2cbb61b609debd60a9fd4', current_timestamp()),     
@@ -10,22 +10,24 @@ VALUES
 	('2020-10-03', '10:00:00', '11:00:00', '', 'Opening Ceremony', '#', current_timestamp()),
 	('2020-10-03', '11:00:00', null, 'Project', 'Hacking Begins', '#', current_timestamp()),
 	('2020-10-03', '11:00:00', '11:30:00', 'Project', 'Team Matching on Discord', '#', current_timestamp()),
+    ('2020-10-03', '11:00:00', '12:00:00', 'Project', 'Hacking 101 and Q&A', '#', current_timestamp()),
 	('2020-10-03', '11:00:00', '13:00:00', '', 'Sponsorship Fair', '#', current_timestamp()),
-	('2020-10-03', '13:00:00', '14:00:00', 'Workshop', 'CapTech: Finding Meaning in Found Data', '#', current_timestamp()),
-	('2020-10-03', '13:00:00', '18:30:00', '', 'Mentor Lounge Open', '#', current_timestamp()),
+	('2020-10-03', '13:00:00', '18:30:00', '', 'Mentor Lounge', '#', current_timestamp()),
+	('2020-10-03', '13:00:00', '14:00:00', 'Workshop', 'CapTech: Intro to Data Visualization', '#', current_timestamp()),
 	('2020-10-03', '14:00:00', '15:00:00', 'Workshop', 'How to Understand Your Data with R', '#', current_timestamp()),
 	('2020-10-03', '15:00:00', '16:00:00', 'Workshop', 'Text Processing', '#', current_timestamp()),
-	('2020-10-03', '16:00:00', '17:00:00', 'Workshop', 'Sponsor TBA', '#', current_timestamp()),
+	('2020-10-03', '16:00:00', '17:00:00', 'Workshop', 'SAS: Finding Meaning in Found Data', '#', current_timestamp()),
 	('2020-10-03', '17:00:00', '18:00:00', 'Workshop', 'Sponsor TBA', '#', current_timestamp()),
 	('2020-10-03', '18:00:00', '19:00:00', '', 'Diversity Panel', '#', current_timestamp()),
     ('2020-10-03', '20:00:00', '21:00:00', 'Workshop', 'Machine Learning Powered Applications', '#', current_timestamp()),
-	('2020-10-03', '22:00:00', '22:30:00', 'Mini-Event', 'Wikipedia Race', '#', current_timestamp()),
+	('2020-10-03', '22:00:00', '23:00:00', 'Mini-Event', 'Wikipedia Race', '#', current_timestamp()),
 	('2020-10-04', '00:00:00', '01:00:00', '', 'Late Night Check-in', '#', current_timestamp()),
 	('2020-10-04', '01:00:00', '02:00:00', 'Mini-Event', 'Codewords', '#', current_timestamp()),
+    ('2020-10-04', '02:00:00', '03:00:00', '', 'Resume Review & Chat Drop-ins w/ Directors', '#', current_timestamp()),
 	('2020-10-04', '09:00:00', '11:00:00', 'Project', 'Mentor Lounge', '#', current_timestamp()),
 	('2020-10-04', null, '11:00:00', 'Project', 'Hacking Ends', '#', current_timestamp()),
-	('2020-10-04', '11:00:00', '12:00:00', 'Project', 'Submit Presentations', '#', current_timestamp()),
-	('2020-10-04', '11:00:00', '18:00:00', 'Project', 'Judging', '#', current_timestamp()),
+	('2020-10-04', '', '12:00:00', 'Project', 'Presentation Submission Due', '#', current_timestamp()),
+	('2020-10-04', '12:00:00', '18:00:00', 'Project', 'Judging', '#', current_timestamp()),
 	('2020-10-04', '12:30:00', '13:30:00', '', 'Data Science Recruiting Panel', '#', current_timestamp()),
 	('2020-10-04', '14:00:00', '15:00:00', 'Mini-Event', 'Skribbl.io', '#', current_timestamp()),
 	('2020-10-04', '18:00:00', '19:00:00', '', 'Closing Ceremony', '#', current_timestamp());

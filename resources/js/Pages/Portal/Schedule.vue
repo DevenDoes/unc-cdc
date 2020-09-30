@@ -209,7 +209,6 @@ export default {
           date = DateTime.fromSQL(event.date + ' ' + event.start, {
             zone: 'America/New_York',
           })
-            .setZone('local')
             .toLocaleString({
               weekday: 'long',
               month: 'long',
@@ -219,7 +218,6 @@ export default {
           date = DateTime.fromSQL(event.date + ' ' + event.end, {
             zone: 'America/New_York',
           })
-            .setZone('local')
             .toLocaleString({
               weekday: 'long',
               month: 'long',
