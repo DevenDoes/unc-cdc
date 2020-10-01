@@ -45,8 +45,6 @@ class CreateNewUser implements CreatesNewUsers
                     'github' => '',
                     'discord' => '',
                     'twitter' => '',
-                    'facebook' => '',
-                    'instagram' => '',
                     'share_academics' => False,
                 ]);
                 // Add to Mailchimp mailing list
