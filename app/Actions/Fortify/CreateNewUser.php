@@ -45,7 +45,7 @@ class CreateNewUser implements CreatesNewUsers
                     'github' => '',
                     'discord' => '',
                     'twitter' => '',
-                    'share_academics' => False,
+                    'share_academics' => true,
                 ]);
                 // Add to Mailchimp mailing list
                 $name = explode(" ", $user->name);

@@ -14,7 +14,10 @@ class UserProfileController extends Controller
 {
     public function index()
     {
-
+        $users = User::with('academics', 'profile')->orderBy('name')->get();
+        return Inertia::render('Portal/Profile/Index', [
+            'users' => $users,
+        ]);
     }
 
     public function show(User $user)
@@ -23,7 +26,7 @@ class UserProfileController extends Controller
         return Inertia::render('Portal/Profile/Show', [
             'isOwner' => Auth::user()->is($user),
             'name' => $user->name,
-            'photo' => $user->profile_photo_path ?: '',
+            'photo' => $user->profile_photo_path,
             'about' => $user->profile->about,
             'linkedin' => $user->profile->linkedin,
             'github' => $user->profile->github,

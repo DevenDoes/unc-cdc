@@ -34,7 +34,7 @@ class CreateUserProfilesTable extends Migration
                 'github' => '',
                 'discord' => '',
                 'twitter' => '',
-                'share_academics' => False,
+                'share_academics' => true,
             ]);
         }
     }

@@ -139,6 +139,9 @@ Route::middleware(['auth:sanctum', 'registered'])
  * Profile
  */
 Route::middleware(['auth:sanctum', 'registered'])
+    ->get('/user/profiles', [UserProfileController::class, 'index'])
+    ->name('profile.index');
+Route::middleware(['auth:sanctum', 'registered'])
     ->get('/user/profile/{user}', [UserProfileController::class, 'show'])
     ->name('profile.show');
 Route::middleware(['auth:sanctum', 'registered'])

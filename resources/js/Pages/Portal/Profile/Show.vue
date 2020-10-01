@@ -6,7 +6,10 @@
         <div class="flex-none w-1/4">
           <article class="flex flex-col w-full p-8 bg-white shadow">
             <!-- Profile picture -->
-            <div class="">
+            <div
+              class=""
+              v-if="photo"
+            >
               <img
                 :src="'/storage/' + photo"
                 :alt="'Profile picture for ' + name"
