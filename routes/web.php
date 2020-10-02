@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ScheduleController;
+use App\Http\Controllers\TeamController;
 use App\Http\Controllers\UserAcademicsController;
 use App\Http\Controllers\UserDetailsController;
 use App\Http\Controllers\UserProfileController;
@@ -155,3 +156,13 @@ Route::middleware(['auth:sanctum', 'registered'])
     ->put('/user/profile/social', [UserProfileController::class, 'updateSocial']);
 Route::middleware(['auth:sanctum', 'registered'])
     ->put('/user/profile/academics', [UserProfileController::class, 'updateAcademics']);
+
+/**
+ * Teams
+ */
+Route::middleware(['auth:sanctum', 'registered'])
+    ->get('/teams/create', [TeamController::class, 'create'])
+    ->name('teams.create');
+Route::middleware(['auth:sanctum', 'registered'])
+    ->post('/teams', [TeamController::class, 'store'])
+    ->name('teams.store');
