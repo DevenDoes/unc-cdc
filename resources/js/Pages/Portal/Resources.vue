@@ -41,7 +41,7 @@
             Communication
           </h2>
           <p class="text">
-            Discord will be used to communicate official announcements throughout the event, to connect with mentors for help on your projects, to meet and socialize with other hackers, and much more. To make sure you don't miss out, be sure to <a href="" class="link">join!</a>
+            Discord will be used to communicate official announcements throughout the event, to connect with mentors for help on your projects, to meet and socialize with other hackers, and much more. To make sure you don't miss out, be sure to <a href="https://discord.gg/mGzYGdt" class="link">join!</a>
           </p>
           <p class="text">
             Cisco WebEx will be used to conduct our opening ceremony, closing ceremony, and all the workshops and fun events in between.
