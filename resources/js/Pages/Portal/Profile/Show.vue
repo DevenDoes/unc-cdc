@@ -7,13 +7,13 @@
           <article class="flex flex-col w-full p-8 bg-white shadow">
             <!-- Profile picture -->
             <div
-              class=""
+              class="relative w-full pb-full bg-primary rounded-full"
               v-if="photo"
             >
               <img
+                class="absolute h-full w-full object-cover rounded-full shadow"
                 :src="'/storage/' + photo"
-                :alt="'Profile picture for ' + name"
-                class="rounded-full shadow-md"
+                alt="'Profile picture for ' + name"
               >
             </div>
             <!-- Name -->
@@ -182,7 +182,7 @@ export default {
     InstagramIcon,
   },
   props: {
-    user: {
+    'user': {
       type: Object,
       default: {},
     },

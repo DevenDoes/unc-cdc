@@ -36,6 +36,7 @@
         <!-- Menu navigation links -->
         <navigation-menu
           :isVisible="navIsVisible"
+          :user="$page.user"
           @toggleNavMenu="toggleNav"
         />
       </div>

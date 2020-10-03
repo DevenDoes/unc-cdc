@@ -23,18 +23,17 @@
         <!-- Register button -->
         <inertia-link
           href="/register"
-          class="mr-2 text-lg font-normal shadow-lg button bg-highlight text-light font-primary"
+          class="mr-2 text-lg font-normal shadow-lg button bg-secondary text-light font-primary"
         >
           Register
         </inertia-link>
         <!-- Newsletter button -->
-        <a
-          href="http://eepurl.com/gFzI4n"
-          target="_blank"
-          class="ml-2 text-lg font-normal shadow-lg button bg-secondary text-light font-primary"
+        <inertia-link
+          href="/login"
+          class="ml-2 text-lg font-normal shadow-lg button bg-highlight text-light font-primary"
         >
-          Newsletter
-        </a>
+          Sign In
+        </inertia-link>
       </div>
     </article>
   </section>

@@ -1,8 +1,5 @@
 <template>
   <portal-layout>
-    <template v-slot:page-title>
-      Next Steps
-    </template>
     <section class="container mx-auto">
       <div class="mt-8 md:mt-16 grid grid-cols-1 md:grid-cols-2 grid-flow-row gap-6">
         <article class="card">

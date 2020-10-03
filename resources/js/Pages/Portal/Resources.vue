@@ -1,8 +1,5 @@
 <template>
   <portal-layout>
-    <template v-slot:page-title>
-      Resources
-    </template>
     <section class="container mx-auto">
       <div class="mt-8 md:mt-16">
         <article class="card">

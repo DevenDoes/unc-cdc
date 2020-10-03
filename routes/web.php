@@ -84,7 +84,7 @@ Route::middleware(['auth:sanctum'])->get('/email/verify', function () {
 Route::middleware(['auth:sanctum', 'registered'])
     ->get('/dashboard', function () {
         $user = new \App\Models\User();
-        return Inertia\Inertia::render('Portal/NextSteps');
+        return Inertia\Inertia::render('Portal/Schedule');
     })->name('dashboard');
 
 /**
@@ -92,7 +92,7 @@ Route::middleware(['auth:sanctum', 'registered'])
  */
 Route::middleware(['auth:sanctum', 'registered'])
     ->get('/next-steps', function () {
-        return \Inertia\Inertia::render('Portal/NextSteps');
+        return \Inertia\Inertia::render('Portal/Schedule');
     })->name('next.steps');
 
 /**

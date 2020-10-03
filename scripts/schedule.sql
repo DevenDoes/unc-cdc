@@ -1,11 +1,11 @@
-INSERT INTO `homestead`.`schedules`   
+INSERT INTO `forge`.`schedules`   
 	(`date`, `start`, `end`, `type`, `event`, `url`, `created_at`)  
 VALUES   
 	('2020-10-03', '09:00:00', '10:00:00', '', 'Pre-Event Troubleshooting', 'https://unc-cs.webex.com/unc-cs/j.php?MTID=m4415617dfd83344159d9351b8341505f', current_timestamp()),
 	('2020-10-03', '10:00:00', '11:00:00', '', 'Opening Ceremony', 'https://unc-cs.webex.com/unc-cs/onstage/g.php?MTID=e95f81f97bf2c7362840a980acceeecee', current_timestamp()),
 	('2020-10-03', '11:00:00', null, 'Project', 'Hacking Begins', '#', current_timestamp()),
 	('2020-10-03', '11:00:00', '11:30:00', 'Project', 'Team Matching on Discord', '#', current_timestamp()),
-	('2020-10-03', '11:00:00', '13:00:00', '', 'Sponsorship Fair', '#', current_timestamp()),
+	('2020-10-03', '11:00:00', '13:00:00', '', 'Sponsorship Fair', 'https://app.brazenconnect.com/a/unc-computer-sceince-dept/e/k63NW', current_timestamp()),
 	('2020-10-03', '11:00:00', '23:00:00', '', 'Mentor Lounge', '#', current_timestamp()),
 	('2020-10-03', '13:00:00', '14:00:00', 'Workshop', 'CapTech: Intro to Data Visualization', 'https://unc-cs.webex.com/unc-cs/j.php?MTID=mf46a840d5eba42dd396338a4e664b579', current_timestamp()),
 	('2020-10-03', '14:00:00', '15:00:00', 'Workshop', 'Visual Data Tools: How to Create Data Animations Using DataGraph', 'https://unc-cs.webex.com/unc-cs/j.php?MTID=mbd7eaf68363cb431c1fc135b498d3c29', current_timestamp()),

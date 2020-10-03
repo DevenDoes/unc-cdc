@@ -1,8 +1,5 @@
 <template>
   <portal-layout>
-    <template v-slot:page-title>
-      Schedule
-    </template>
     <section class="container mx-auto">
       <div class="mt-8 md:mt-16">
         <div class="">

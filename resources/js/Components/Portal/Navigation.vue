@@ -5,14 +5,14 @@
       :class="classAttributes"
     >
       <ul class="flex flex-col px-3 my-16 md:my-24">
-        <li class="nav-li">
-          <inertia-link
-            href="/next-steps"
-            class="nav-links"
-          >
-            Next Steps
-          </inertia-link>
-        </li>
+<!--        <li class="nav-li">-->
+<!--          <inertia-link-->
+<!--            href="/dashboard"-->
+<!--            class="nav-links"-->
+<!--          >-->
+<!--            Dashboard-->
+<!--          </inertia-link>-->
+<!--        </li>-->
         <li class="nav-li">
           <inertia-link
             href="/schedule"
@@ -21,28 +21,28 @@
             Schedule
           </inertia-link>
         </li>
-<!--        <li class="nav-li">-->
-<!--          <inertia-link-->
-<!--            href="/portal/profiles"-->
-<!--            class="nav-links"-->
-<!--          >-->
-<!--            Attendees-->
-<!--          </inertia-link>-->
-<!--        </li>-->
-<!--        <li class="nav-li">-->
-<!--          <inertia-link-->
-<!--            href="/portal/teams"-->
-<!--            class="nav-links"-->
-<!--          >-->
-<!--            Teams-->
-<!--          </inertia-link>-->
+        <li class="nav-li">
+          <inertia-link
+            href="/user/profiles"
+            class="nav-links"
+          >
+            Attendees
+          </inertia-link>
+        </li>
+        <li class="nav-li">
+          <inertia-link
+            href="/teams/create"
+            class="nav-links"
+          >
+            Create Team
+          </inertia-link>
 <!--        </li>-->
 <!--        <li class="nav-li">-->
 <!--          <inertia-link-->
 <!--            href="/portal/prizes"-->
 <!--            class="nav-links"-->
 <!--          >-->
-<!--            Prizes-->
+<!--            Your Team-->
 <!--          </inertia-link>-->
 <!--        </li>-->
         <li class="nav-li">
@@ -56,8 +56,8 @@
       </ul>
       <div class="flex flex-col mb-6 px-4 w-full items-center">
         <inertia-link
-          href="#"
-          class="flex justify-center items-center w-14 h-14 rounded-full px-1 py-1 mt-3 text-center transition duration-300 rounded shadow-md bg-secondary text-light hover:bg-light hover:text-dark cursor-not-allowed"
+          :href="'/user/profile/' + $props.user.id"
+          class="flex justify-center items-center w-14 h-14 rounded-full px-1 py-1 mt-3 text-center transition duration-300 rounded shadow-md bg-secondary text-light hover:bg-light hover:text-dark"
         >
           <user-icon
             id="profileMenuIcon"
@@ -96,7 +96,11 @@ export default {
     isVisible: {
       type: Boolean,
       default: false,
-    }
+    },
+    'user': {
+      type: Object,
+      default: {},
+    },
   },
   data() {
     return {
