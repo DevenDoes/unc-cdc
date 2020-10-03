@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ScheduleController;
 use App\Http\Controllers\TeamController;
+use App\Http\Controllers\TeamMemberController;
+use App\Http\Controllers\TeamProjectController;
 use App\Http\Controllers\UserAcademicsController;
 use App\Http\Controllers\UserDetailsController;
 use App\Http\Controllers\UserProfileController;
@@ -164,5 +166,17 @@ Route::middleware(['auth:sanctum', 'registered'])
     ->get('/teams/create', [TeamController::class, 'create'])
     ->name('teams.create');
 Route::middleware(['auth:sanctum', 'registered'])
-    ->post('/teams', [TeamController::class, 'store'])
+    ->post('/teams/create', [TeamController::class, 'store'])
     ->name('teams.store');
+Route::middleware(['auth:sanctum', 'registered'])
+    ->get('/teams/{team}', [TeamController::class, 'show'])
+    ->name('teams.show');
+Route::middleware(['auth:sanctum', 'registered'])
+    ->get('/teams/{team}/edit', [TeamController::class, 'edit'])
+    ->name('teams.edit');
+Route::middleware(['auth:sanctum', 'registered'])
+    ->put('/teams/{team}', [TeamProjectController::class, 'update'])
+    ->name('teams.project.update');
+Route::middleware(['auth:sanctum', 'registered'])
+    ->post('/teams/{team}/member', [TeamMemberController::class, 'store'])
+    ->name('teams.member.store');

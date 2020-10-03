@@ -5,15 +5,22 @@
         <article class="w-full p-8 bg-white shadow">
           <div class="flex w-full">
             <h1 class="flex-1 font-primary font-normal text-2xl text-primary">
-              Create a Team
+              Manage Your Team
             </h1>
           </div>
         </article>
         <article class="w-full mt-8 p-8 bg-white shadow">
-          <create-team
+          <edit-team
             class=""
-            :error="$props.error"
-            :github="$props.github"
+            :team="$props.team"
+          />
+        </article>
+        <article class="w-full mt-8 p-8 bg-white shadow">
+          <add-member
+            class=""
+            :team="$props.team"
+            :team_users="$props.team_users"
+            :all_users="$props.all_users"
           />
         </article>
       </div>
@@ -23,26 +30,25 @@
 
 <script>
 import PortalLayout from "../../../Layouts/PortalLayout";
-import CreateTeam from "./Sections/CreateTeam";
+import EditTeam from "./Sections/EditTeam";
+import AddMember from "./Sections/AddMember";
 export default {
   name: 'Create',
   components: {
     PortalLayout,
-    CreateTeam
+    EditTeam,
+    AddMember,
   },
   props: {
-    'user': {
+    'team': {
       type: Object,
       default: {},
     },
-    'error': {
-      type: String,
-      default: '',
+    'team_users': {
+      type: Array,
+      default: [],
     },
-    'github': {
-      type: String,
-      default: '',
-    },
+    'all_users': {},
   },
 }
 </script>

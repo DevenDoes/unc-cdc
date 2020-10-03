@@ -18,7 +18,9 @@ class CreateTeamProjectsTable extends Migration
             $table->foreignId('team_id')->constrained('teams')->onDelete('cascade');
             $table->string('track');
             $table->integer('repo_id');
-            $table->string('repo_url');
+            $table->string('repo_name');
+            $table->string('repo_api_url');
+            $table->string('repo_html_url');
             $table->timestamps();
         });
     }

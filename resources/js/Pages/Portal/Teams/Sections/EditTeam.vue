@@ -9,7 +9,7 @@
       <form-wrapper>
         <form
           action="#"
-          v-on:submit.prevent="handleCreate"
+          v-on:submit.prevent="handleUpdate"
         >
           <!-- Name -->
           <div class="flex flex-col">
@@ -21,15 +21,11 @@
             </label>
             <input
               id="name-input"
-              class="input"
+              class="input bg-gray-100 border-none"
               type="text"
-              v-model="form.name"
-              required
+              v-model="$props.team.name"
+              disabled
             >
-            <jet-input-error
-              :message="form.error('name')"
-              class="error"
-            />
           </div>
           <!-- Track -->
           <div class="flex flex-col mt-6">
@@ -43,7 +39,6 @@
               id="track-select"
               class="select"
               v-model="form.track"
-              required
             >
               <option disabled value="">Please select one</option>
               <option value="finance">Finance</option>
@@ -56,39 +51,16 @@
               class="error"
             />
           </div>
-          <!-- GitHub username -->
-          <div class="flex flex-col mt-6">
-            <label
-              for="github-input"
-              class="label"
-            >
-              GitHub Username
-            </label>
-            <input
-              id="github-input"
-              class="input"
-              type="text"
-              v-model="form.github_username"
-              required
-            >
-            <jet-input-error
-              :message="form.error('github_username')"
-              class="error"
-            />
-          </div>
-          <div class="mt-6 flex">
-            <p class="error flex-1">
-              {{ $props.error }}
-            </p>
+          <div class="mt-6 flex justify-end">
             <button
               type="submit"
-              class="button button-primary relative justify-self-end"
+              class="button button-primary relative"
               :disabled="form.processing"
             >
               <span
                 v-if="!form.processing"
               >
-                Create
+                Update
               </span>
               <hollow-dots-spinner
                 :animation-duration="1000"
@@ -111,28 +83,23 @@ import FormWrapper from "../../../../Components/Portal/FormWrapper";
 import JetInputError from "../../../../Jetstream/InputError";
 import { HollowDotsSpinner } from 'epic-spinners';
 export default {
-  name: 'CreateTeam',
+  name: 'EditTeam',
   components: {
     FormWrapper,
     JetInputError,
     HollowDotsSpinner,
   },
   props: {
-    'github': {
-      type: String,
-      default: '',
+    'team': {
+      type: Object,
+      default: {},
     },
-    'error': {
-      type: String,
-      default: '',
-    }
   },
   data: function () {
     return {
       form: this.$inertia.form({
-        name: '',
-        track: '',
-        github_username: this.$props.github,
+        '_method': 'PUT',
+        track: this.$props.team.project.track,
       }, {
         bag: 'default',
         resetOnSuccess: false,
@@ -140,8 +107,10 @@ export default {
     }
   },
   methods: {
-    handleCreate: function () {
-      this.form.post('/teams/create');
+    handleUpdate: function () {
+      this.form.post('/teams/' + this.$props.team.id, {
+        preserveScroll: true,
+      });
     }
   }
 }
