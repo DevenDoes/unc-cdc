@@ -21,14 +21,14 @@
             Schedule
           </inertia-link>
         </li>
-        <li class="nav-li">
-          <inertia-link
-            href="/user/profiles"
-            class="nav-links"
-          >
-            Attendees
-          </inertia-link>
-        </li>
+<!--        <li class="nav-li">-->
+<!--          <inertia-link-->
+<!--            href="/user/profiles"-->
+<!--            class="nav-links"-->
+<!--          >-->
+<!--            Attendees-->
+<!--          </inertia-link>-->
+<!--        </li>-->
         <li class="nav-li">
           <inertia-link
             href="/teams/create"
