@@ -83,7 +83,7 @@ Route::middleware(['auth:sanctum'])->get('/email/verify', function () {
  */
 Route::middleware(['auth:sanctum', 'registered'])
     ->get('/dashboard', function () {
-        \Illuminate\Support\Facades\Redirect::route('/schedule');
+        \Illuminate\Support\Facades\Redirect::route('schedule');
     })->name('dashboard');
 
 /**
@@ -91,7 +91,7 @@ Route::middleware(['auth:sanctum', 'registered'])
  */
 Route::middleware(['auth:sanctum', 'registered'])
     ->get('/next-steps', function () {
-        \Illuminate\Support\Facades\Redirect::route('/schedule');
+        \Illuminate\Support\Facades\Redirect::route('schedule');
     })->name('next.steps');
 
 /**
