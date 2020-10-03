@@ -188,8 +188,11 @@ class TeamController extends Controller
 
     public function show(Team $team)
     {
+        $onTeam = $team->hasUser(Auth::user());
+
         return Inertia::render('Portal/Teams/Show', [
             'team' => $team->load('project'),
+            'onTeam' => $onTeam,
         ]);
     }
 

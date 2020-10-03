@@ -18,6 +18,22 @@
         </article>
         <article class="card">
           <h2 class="title">
+            Datasets
+          </h2>
+          <p
+            class="text"
+          >
+            Find the track datasets <a href="https://github.com/Carolina-Data-Challenge/datasets" target="_blank" class="link">here!</a>
+          </p>
+          <p class="text">
+            Cisco WebEx will be used to conduct our opening ceremony, closing ceremony, and all the workshops and fun events in between.
+          </p>
+          <p class="text">
+            The event portal (the site you're reading this on right now) is your one-stop-shop for information about this years event. Right now you can only access important <inertia-link href="/next-steps" class="link">next steps</inertia-link> you should take before the event, the event <inertia-link href="/schedule" class="link">schedule</inertia-link>, and these resources. However, on the day of the event you'll be granted additional functionality that will allow you to earn points for participation, create your team, submit your project, and much more.
+          </p>
+        </article>
+        <article class="card">
+          <h2 class="title">
             Communication
           </h2>
           <p class="text">

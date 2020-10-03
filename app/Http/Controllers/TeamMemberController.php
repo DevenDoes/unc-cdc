@@ -106,7 +106,7 @@ class TeamMemberController extends Controller
         return Redirect::route('teams.edit', [
             'team' => $team->id,
         ])->withErrors([
-            'add_member' => "There was an inviting the user to the GitHub repository. Please verify that the username is typed correctly. If the problem persists, please contact an event director.",
+            'add_member' => "There was an error inviting the user to the GitHub repository. Please verify that the username is typed correctly. If the problem persists, please contact an event director.",
         ]);
         }
 

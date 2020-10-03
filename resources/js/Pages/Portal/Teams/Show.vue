@@ -94,6 +94,10 @@ export default {
     'user': {
       type: Object,
       default: {},
+    },
+    'onTeam': {
+      type: Boolean,
+      default: false,
     }
   },
   computed: {
@@ -111,10 +115,10 @@ export default {
         return 'Popular Culture';
       }
     },
-    onTeam: function () {
-      return parseInt(this.$props.user.current_team_id) === parseInt(this.$props.team.id);
-
-    },
+    // onTeam: function () {
+    //   return parseInt(this.$props.user.current_team_id) === parseInt(this.$props.team.id);
+    //
+    // },
   }
 }
 </script>
