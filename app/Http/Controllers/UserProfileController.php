@@ -14,7 +14,7 @@ class UserProfileController extends Controller
 {
     public function index()
     {
-        $users = User::with('academics', 'profile')->orderBy('name')->get();
+        $users = User::with('academics', 'profile')->where('email_verified_at', '!=', null)->orderBy('name')->get();
         return Inertia::render('Portal/Profile/Index', [
             'users' => $users,
         ]);
