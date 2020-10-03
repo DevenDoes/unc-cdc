@@ -31,7 +31,7 @@
                     class="flex items-center"
                     v-if="user.profile.share_academics"
                   >
-                    {{ user.academics.school }}
+                    {{ user.academics.school ? user.academics.school : '' }}
                   </td>
                   <td v-if="!user.profile.share_academics"></td>
                   <td class="flex justify-end">
