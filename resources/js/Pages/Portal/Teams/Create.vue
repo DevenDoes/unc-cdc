@@ -14,7 +14,16 @@
             class=""
             :error="$props.error"
             :github="$props.github"
+            v-on:clearCreateTeamErrors="clearCreateTeamErrors"
           />
+        </article>
+        <article
+          class="w-full p-8 bg-red-500 shadow"
+          v-if="errors.create_team"
+        >
+          <p class="font-primary font-bold text-lg text-white">
+            {{ errors.create_team }}
+          </p>
         </article>
       </div>
     </section>
@@ -35,15 +44,20 @@ export default {
       type: Object,
       default: {},
     },
-    'error': {
-      type: String,
-      default: '',
+    'errors': {
+      type: Object,
+      default: {},
     },
     'github': {
       type: String,
       default: '',
     },
   },
+  methods: {
+    clearCreateTeamErrors: function () {
+      this.$props.errors.create_team = '';
+    }
+  }
 }
 </script>
 

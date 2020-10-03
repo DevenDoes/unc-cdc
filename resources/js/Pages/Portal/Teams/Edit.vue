@@ -21,7 +21,16 @@
             :team="$props.team"
             :team_users="$props.team_users"
             :all_users="$props.all_users"
+            v-on:clearAddMemberErrors="clearAddMemberErrors"
           />
+        </article>
+        <article
+          class="w-full p-8 bg-red-500 shadow"
+          v-if="errors.add_member"
+        >
+          <p class="font-primary font-bold text-lg text-white">
+            {{ errors.add_member }}
+          </p>
         </article>
       </div>
     </section>
@@ -49,7 +58,16 @@ export default {
       default: [],
     },
     'all_users': {},
+    'errors': {
+      type: Object,
+      default: {},
+    }
   },
+  methods: {
+    clearAddMemberErrors: function () {
+      this.$props.errors.add_member = '';
+    }
+  }
 }
 </script>
 

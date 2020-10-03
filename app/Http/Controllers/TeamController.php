@@ -52,55 +52,43 @@ class TeamController extends Controller
         /**
          * Generate the repository from a template
          */
-        $response = Http::retry(5, 100)
-            ->withToken(config('services.github.token'))
-            ->withHeaders([
-                'accept' => 'application/vnd.github.baptiste-preview+json',
-            ])->post('https://api.github.com/repos/Carolina-Data-Challenge/project-template/generate',[
-                'name' => $repoName,
-                'description' => "This is your teams's private repository for submitting your project.",
-                'private' => true,
+        try {
+            $response = Http::retry(5, 100)
+                ->withToken(config('services.github.token'))
+                ->withHeaders([
+                    'accept' => 'application/vnd.github.baptiste-preview+json',
+                ])->post('https://api.github.com/repos/Carolina-Data-Challenge/project-template/generate',[
+                    'name' => $repoName,
+                    'description' => "This is your teams's private repository for submitting your project.",
+                    'private' => true,
+                ])->throw();
+        } catch (\Exception $e) {
+            return Redirect::route('teams.create', [])->withErrors([
+                'create_team' => "There was an error while generating the team repository. Please try again. If the problem persists, contact an event director.",
             ]);
-
-        $validator->after(function ($validator) use($response) {
-           if (!$response->successful()) {
-               $validator->errors()->add('github_username', 'A system error (#1) has occurred. Contact an event director if the issue persists.');
-           }
-        });
-
-        if ($validator->fails()) {
-            return redirect('/teams/create')
-                ->withErrors($validator)
-                ->withInput()
-                ->with([
-                    'response' => $response->json(),
-                ]);
         }
 
         /**
          * Transfer the repository to the organization
          */
-        $response = Http::retry(5, 100)
-            ->withToken(config('services.github.token'))
-            ->withHeaders([
-                'accept' => 'application/vnd.github.v3+json',
-            ])->post('https://api.github.com/repos/DevenDoes/' . $repoName . '/transfer',[
-                'new_owner' => 'Carolina-Data-Challenge'
+        try {
+            $response = Http::retry(5, 100)
+                ->withToken(config('services.github.token'))
+                ->withHeaders([
+                    'accept' => 'application/vnd.github.v3+json',
+                ])->post('https://api.github.com/repos/DevenDoes/' . $repoName . '/transfer',[
+                    'new_owner' => 'Carolina-Data-Challenge'
+                ])->throw();
+        } catch (\Exception $e) {
+            $response = Http::retry(5, 100)
+                ->withToken(config('services.github.token'))
+                ->withHeaders([
+                    'accept' => 'application/vnd.github.v3+json',
+                ])->delete('https://api.github.com/repos/DevenDoes/' . $repoName);
+
+            return Redirect::route('teams.create', [])->withErrors([
+                'create_team' => "There was an error while transferring the team repository. Please try again. If the problem persists, contact an event director.",
             ]);
-
-        $validator->after(function ($validator) use($response) {
-            if (!$response->successful()) {
-                $validator->errors()->add('github_username', 'A system error (#2) has occurred. Contact an event director if the issue persists.');
-           }
-        });
-
-        if ($validator->fails()) {
-            return redirect('/teams/create')
-                ->withErrors($validator)
-                ->withInput()
-                ->with([
-                    'response' => $response->json(),
-                ]);
         }
 
         $repo_id = $response['id'];
@@ -109,25 +97,23 @@ class TeamController extends Controller
         /**
          * Get user id number
          */
-        $response = Http::retry(5, 100)
-            ->withToken(config('services.github.token'))
-            ->withHeaders([
-                'accept' => 'application/vnd.github.v3+json',
-            ])->get('https://api.github.com/users/' . $request['github_username']);
+        try {
+            $response = Http::retry(5, 100)
+                ->withToken(config('services.github.token'))
+                ->withHeaders([
+                    'accept' => 'application/vnd.github.v3+json',
+                ])->get('https://api.github.com/users/' . $request['github_username'])
+                ->throw();
+        } catch (\Exception $e) {
+            $response = Http::retry(5, 100)
+                ->withToken(config('services.github.token'))
+                ->withHeaders([
+                    'accept' => 'application/vnd.github.v3+json',
+                ])->delete('https://api.github.com/repos/Carolina-Data-Challenge/' . $repo_name);
 
-        $validator->after(function ($validator) use($response) {
-            if (!$response->successful()) {
-                $validator->errors()->add('github_username', 'A system error (#3) has occurred. Contact an event director if the issue persists.');
-            }
-        });
-
-        if ($validator->fails()) {
-            return redirect('/teams/create')
-                ->withErrors($validator)
-                ->withInput()
-                ->with([
-                    'response' => $response->json(),
-                ]);
+            return Redirect::route('teams.create', [])->withErrors([
+                'create_team' => "There was an error while retrieving the GitHub user ID. If the problem persists, please contact an event director.",
+            ]);
         }
 
         $github_user_id = $response['id'];
@@ -135,54 +121,48 @@ class TeamController extends Controller
         /**
          * Invite the user to the organization
          */
-        $response = Http::retry(5, 100)
-            ->withToken(config('services.github.token'))
-            ->withHeaders([
-                'accept' => 'application/vnd.github.v3+json',
-            ])->post('https://api.github.com/orgs/Carolina-Data-Challenge/invitations', [
-                'invitee_id' => $github_user_id,
-                'role' => 'direct_member',
+        try {
+            $response = Http::retry(5, 100)
+                ->withToken(config('services.github.token'))
+                ->withHeaders([
+                    'accept' => 'application/vnd.github.v3+json',
+                ])->post('https://api.github.com/orgs/Carolina-Data-Challenge/invitations', [
+                    'invitee_id' => $github_user_id,
+                    'role' => 'direct_member',
+                ])->throw();
+        } catch (\Exception $e) {
+            $response = Http::retry(5, 100)
+                ->withToken(config('services.github.token'))
+                ->withHeaders([
+                    'accept' => 'application/vnd.github.v3+json',
+                ])->delete('https://api.github.com/repos/Carolina-Data-Challenge/' . $repo_name);
+
+            return Redirect::route('teams.create', [])->withErrors([
+                'create_team' => "There was an error while inviting the user to the GitHub organization. If the problem persists, please contact an event director.",
             ]);
-
-        $validator->after(function ($validator) use($response) {
-            if (!$response->successful()) {
-                $validator->errors()->add('github_username', 'A system error (#4) has occurred. Contact an event director if the issue persists.');
-            }
-        });
-
-        if ($validator->fails()) {
-            return redirect('/teams/create')
-                ->withErrors($validator)
-                ->withInput()
-                ->with([
-                    'response' => $response->json(),
-                ]);
         }
 
         /**
          * Invite user to their repository
          */
-        $response = Http::retry(5, 100)
-            ->withToken(config('services.github.token'))
-            ->withHeaders([
-                'accept' => 'application/vnd.github.v3+json',
-            ])->put('https://api.github.com/repos/Carolina-Data-Challenge/' . $repo_name . '/collaborators/' . $request['github_username'], [
-                'permission' => 'push',
+        try {
+            $response = Http::retry(5, 100)
+                ->withToken(config('services.github.token'))
+                ->withHeaders([
+                    'accept' => 'application/vnd.github.v3+json',
+                ])->put('https://api.github.com/repos/Carolina-Data-Challenge/' . $repo_name . '/collaborators/' . $request['github_username'], [
+                    'permission' => 'push',
+                ])->throw();
+        } catch (\Exception $e) {
+            $response = Http::retry(5, 100)
+                ->withToken(config('services.github.token'))
+                ->withHeaders([
+                    'accept' => 'application/vnd.github.v3+json',
+                ])->delete('https://api.github.com/repos/Carolina-Data-Challenge/' . $repo_name);
+
+            return Redirect::route('teams.create', [])->withErrors([
+                'create_team' => "There was an error while adding the user as a collaborator to the GitHub repository. If the problem persists, please contact an event director.",
             ]);
-
-        $validator->after(function ($validator) use($response) {
-            if (!$response->successful()) {
-                $validator->errors()->add('github_username', 'A system error (#5) has occurred. Contact an event director if the issue persists.');
-            }
-        });
-
-        if ($validator->fails()) {
-            return redirect('/teams/create')
-                ->withErrors($validator)
-                ->withInput()
-                ->with([
-                    'response' => $response->json(),
-                ]);
         }
 
         $team = Auth::user()->ownedTeams()->create([

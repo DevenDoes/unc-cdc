@@ -114,14 +114,12 @@
 import FormWrapper from "../../../../Components/Portal/FormWrapper";
 import JetInputError from "../../../../Jetstream/InputError";
 import { HollowDotsSpinner } from 'epic-spinners';
-import GithubIcon from "../../../../Components/Icons/GithubIcon";
 export default {
   name: 'AddMember',
   components: {
     FormWrapper,
     JetInputError,
     HollowDotsSpinner,
-    GithubIcon,
   },
   props: {
     'team': {
@@ -157,10 +155,11 @@ export default {
   },
   methods: {
     handleAddMember: function () {
+      this.$emit('clearAddMemberErrors');
       this.form.post('/teams/' + this.$props.team.id + '/member', {
         preserveScroll: true,
       })
-    }
+    },
   }
 }
 </script>

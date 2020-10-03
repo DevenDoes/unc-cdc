@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
+use Inertia\Inertia;
 
 class TeamMemberController extends Controller
 {
@@ -53,42 +54,61 @@ class TeamMemberController extends Controller
         /**
          * Get user id number
          */
-        $response = Http::retry(5, 100)
-            ->withToken(config('services.github.token'))
-            ->withHeaders([
-                'accept' => 'application/vnd.github.v3+json',
-            ])->get('https://api.github.com/users/' . $request['github_username']);
-
-        $response->throw()->json();
+        try {
+            $response = Http::retry(5, 100)
+                ->withToken(config('services.github.token'))
+                ->withHeaders([
+                    'accept' => 'application/vnd.github.v3+json',
+                ])->get('https://api.github.com/users/' . $request['github_username'])
+                ->throw();
+        } catch (\Exception $e) {
+            return Redirect::route('teams.edit', [
+                'team' => $team->id,
+            ])->withErrors([
+                'add_member' => "There was an error finding the user's GitHub account. Please verify that the username is typed correctly. If the problem persists, please contact an event director.",
+            ]);
+        }
 
         $github_user_id = $response['id'];
 
         /**
          * Invite the user to the organization
          */
-        $response = Http::retry(5, 100)
-            ->withToken(config('services.github.token'))
-            ->withHeaders([
-                'accept' => 'application/vnd.github.v3+json',
-            ])->post('https://api.github.com/orgs/Carolina-Data-Challenge/invitations', [
-                'invitee_id' => $github_user_id,
-                'role' => 'direct_member',
+        try {
+            $response = Http::retry(5, 100)
+                ->withToken(config('services.github.token'))
+                ->withHeaders([
+                    'accept' => 'application/vnd.github.v3+json',
+                ])->post('https://api.github.com/orgs/Carolina-Data-Challenge/invitations', [
+                    'invitee_id' => $github_user_id,
+                    'role' => 'direct_member',
+                ])->throw();
+        } catch (\Exception $e) {
+            return Redirect::route('teams.edit', [
+                'team' => $team->id,
+            ])->withErrors([
+                'add_member' => "There was an error inviting the user to the GitHub organization. Please verify that the username is typed correctly. If the problem persists, please contact an event director.",
             ]);
-
-        $response->throw()->json();
+        }
 
         /**
          * Invite user to their repository
          */
-        $response = Http::retry(5, 100)
-            ->withToken(config('services.github.token'))
-            ->withHeaders([
-                'accept' => 'application/vnd.github.v3+json',
-            ])->put('https://api.github.com/repos/Carolina-Data-Challenge/' . $team->project()->first()->toArray()['repo_name'] . '/collaborators/' . $request['github_username'], [
-                'permission' => 'push',
-            ]);
-
-        $response->throw()->json();
+        try {
+            $response = Http::retry(5, 100)
+                ->withToken(config('services.github.token'))
+                ->withHeaders([
+                    'accept' => 'application/vnd.github.v3+json',
+                ])->put('https://api.github.com/repos/Carolina-Data-Challenge/' . $team->project()->first()->toArray()['repo_name'] . '/collaborators/' . $request['github_username'], [
+                    'permission' => 'push',
+                ])->throw();
+        } catch (\Exception $e) {
+        return Redirect::route('teams.edit', [
+            'team' => $team->id,
+        ])->withErrors([
+            'add_member' => "There was an inviting the user to the GitHub repository. Please verify that the username is typed correctly. If the problem persists, please contact an event director.",
+        ]);
+        }
 
         $addMember = new AddTeamMember;
 

@@ -76,13 +76,10 @@
               class="error"
             />
           </div>
-          <div class="mt-6 flex">
-            <p class="error flex-1">
-              {{ $props.error }}
-            </p>
+          <div class="mt-6 flex justify-end">
             <button
               type="submit"
-              class="button button-primary relative justify-self-end"
+              class="button button-primary relative"
               :disabled="form.processing"
             >
               <span
@@ -122,10 +119,6 @@ export default {
       type: String,
       default: '',
     },
-    'error': {
-      type: String,
-      default: '',
-    }
   },
   data: function () {
     return {
@@ -141,6 +134,7 @@ export default {
   },
   methods: {
     handleCreate: function () {
+      this.$emit('clearCreateTeamErrors');
       this.form.post('/teams/create');
     }
   }
