@@ -29,7 +29,7 @@
                   </td>
                   <td
                     class="flex items-center"
-                    v-if="user.profile.share_academics || user.academics !== null"
+                    v-if="user.profile.share_academics && user.academics !== null"
                   >
                     {{ user.academics.school }}
                   </td>
