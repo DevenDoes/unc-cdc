@@ -469,7 +469,7 @@
         >
           <div class="sponsor-img">
             <img
-              src="/img/sponsors/visualdatatools.jpg"
+              src="/img/sponsors/visualdatatools.png"
               alt="VisualDataTools logo"
             >
           </div>
