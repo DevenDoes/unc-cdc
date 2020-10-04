@@ -140,8 +140,8 @@ export default {
   },
   props: {
     'projects': {
-      type: Array,
-      default: [],
+      type: Object,
+      default: {},
     },
   },
   data: function () {
