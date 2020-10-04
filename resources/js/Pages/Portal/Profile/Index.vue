@@ -15,11 +15,6 @@
             </div>
             <div class="ml-8 flex-1">
               <table class="attendees">
-                <tr>
-                  <th>Name</th>
-                  <th>School</th>
-                  <th></th>
-                </tr>
                 <tr
                   v-for="user in letterGroup"
                   :key="user.id"

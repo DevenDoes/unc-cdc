@@ -170,6 +170,16 @@ class User extends Authenticatable implements MustVerifyEmail
     }
 
     /**
+     * Get the user's project
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function project()
+    {
+        return $this->hasOne('App\Models\Project');
+    }
+
+    /**
      * Get the user's registration data from Typeform.
      *
      * @return \Illuminate\Support\Collection

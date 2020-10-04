@@ -31,10 +31,10 @@
         </li>
         <li class="nav-li">
           <inertia-link
-            href="/teams/create"
+            href="/projects"
             class="nav-links"
           >
-            Create Team
+            Projects
           </inertia-link>
 <!--        </li>-->
 <!--        <li class="nav-li">-->

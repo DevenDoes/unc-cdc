@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProjectSubmissionController;
 use App\Http\Controllers\ScheduleController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\TeamMemberController;
@@ -179,3 +180,19 @@ Route::middleware(['auth:sanctum', 'registered'])
 Route::middleware(['auth:sanctum', 'registered'])
     ->post('/teams/{team}/member', [TeamMemberController::class, 'store'])
     ->name('teams.member.store');
+
+/**
+ * Project Submission
+ */
+Route::middleware(['auth:sanctum', 'registered'])
+    ->get('/projects', [ProjectSubmissionController::class, 'index'])
+    ->name('project.index');
+Route::middleware(['auth:sanctum', 'registered'])
+    ->get('/projects/submit', [ProjectSubmissionController::class, 'create'])
+    ->name('project.create');
+Route::middleware(['auth:sanctum', 'registered'])
+    ->post('/projects', [ProjectSubmissionController::class, 'store'])
+    ->name('project.store');
+Route::middleware(['auth:sanctum', 'registered'])
+    ->get('/projects/{project}', [ProjectSubmissionController::class, 'show'])
+    ->name('project.show');

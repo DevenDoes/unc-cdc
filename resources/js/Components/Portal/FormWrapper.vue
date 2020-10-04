@@ -59,6 +59,18 @@ export default {
       @apply bg-purple-700;
     }
   }
+  .button-secondary {
+    @apply bg-pink-500 text-white;
+    &:hover {
+      @apply bg-pink-400;
+    }
+  }
+  .button-dark {
+    @apply bg-gray-500 text-white;
+    &:hover {
+      @apply bg-gray-400;
+    }
+  }
   .text {
     @apply text-gray-500;
   }
