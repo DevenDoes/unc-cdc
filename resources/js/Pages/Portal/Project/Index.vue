@@ -139,10 +139,7 @@ export default {
     PortalLayout,
   },
   props: {
-    'projects': {
-      type: Object,
-      default: {},
-    },
+    'projects': {},
   },
   data: function () {
     return {
@@ -154,40 +151,40 @@ export default {
       console.log(this.$props.projects);
       console.log(this.projectsL);
       let science = []
-      for (const $project of this.projectsL) {
-        if ($project.track === 'science') {
-          science.push($project);
+      Object.entries(this.$props.projects).forEach(([key, value]) => {
+        if (value.track === 'science') {
+          science.push(value);
         }
-      }
+      });
       return science;
     },
     finance_projects: function () {
       let finance = []
-      for (const [key, project] of Object.entries(this.projectsL)) {
-        if (project.track === 'finance') {
-          finance.push(project);
+      Object.entries(this.$props.projects).forEach(([key, value]) => {
+        if (value.track === 'finance') {
+          finance.push(value);
         }
-      }
+      });
       console.log(finance);
       return finance;
     },
     humanities_projects: function () {
       let humanities = []
-      for (const [key, project] of Object.entries(this.projectsL)) {
-        if (project.track === 'humanities') {
-          humanities.push(project);
+      Object.entries(this.$props.projects).forEach(([key, value]) => {
+        if (value.track === 'humanities') {
+          humanities.push(value);
         }
-      }
+      });
       console.log(humanities);
       return humanities;
     },
     culture_projects: function () {
       let culture = []
-      for (const [key, project] of Object.entries(this.projectsL)) {
-        if (project.track === 'culture') {
-          culture.push(project);
+      Object.entries(this.$props.projects).forEach(([key, value]) => {
+        if (value.track === 'culture') {
+          culture.push(value);
         }
-      }
+      });
       console.log(culture);
       return culture;
     },
