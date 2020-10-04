@@ -19,6 +19,7 @@
                 <td class="flex justify-end">
                   <a
                     href="https://github.com/Carolina-Data-Challenge/datasets"
+                    target="_blank"
                     class="block text-center px-3 py-1 rounded shadow-sm font-primary font-sm text-base bg-purple-800 text-white hover:bg-purple-700"
                   >
                     View Datasets
@@ -70,6 +71,7 @@
                 </td>
                 <td class="flex justify-end">
                   <a
+                    target="_blank"
                     href="https://docs.google.com/spreadsheets/d/1sbVEnM2c19tPQiYZf7inzQq2Rk2FN06Bka6QfU3AmTY/edit?usp=sharing"
                     class="block text-center px-3 py-1 rounded shadow-sm font-primary font-sm text-base bg-purple-800 text-white hover:bg-purple-700"
                   >
@@ -83,6 +85,7 @@
                 </td>
                 <td class="flex justify-end">
                   <a
+                    target="_blank"
                     href="https://forms.gle/Fwmtp5yRzfMKeFCY6"
                     class="block text-center px-3 py-1 rounded shadow-sm font-primary font-sm text-base bg-purple-800 text-white hover:bg-purple-700"
                   >
@@ -96,6 +99,7 @@
                 </td>
                 <td class="flex justify-end">
                   <a
+                    target="_blank"
                     href="https://forms.gle/WwmESvhTKWRGs8hQA"
                     class="block text-center px-3 py-1 rounded shadow-sm font-primary font-sm text-base bg-purple-800 text-white hover:bg-purple-700"
                   >
@@ -109,6 +113,7 @@
                 </td>
                 <td class="flex justify-end">
                   <a
+                    target="_blank"
                     href="https://forms.gle/3rd2FymBhjuU6wtx7"
                     class="block text-center px-3 py-1 rounded shadow-sm font-primary font-sm text-base bg-purple-800 text-white hover:bg-purple-700"
                   >
@@ -122,6 +127,7 @@
                 </td>
                 <td class="flex justify-end">
                   <a
+                    target="_blank"
                     href="https://forms.gle/CcTkohThCwGTeYwz8"
                     class="block text-center px-3 py-1 rounded shadow-sm font-primary font-sm text-base bg-purple-800 text-white hover:bg-purple-700"
                   >
@@ -135,6 +141,7 @@
                 </td>
                 <td class="flex justify-end">
                   <a
+                    target="_blank"
                     href="https://forms.gle/wkeVtQgBqkLcaugL6"
                     class="block text-center px-3 py-1 rounded shadow-sm font-primary font-sm text-base bg-purple-800 text-white hover:bg-purple-700"
                   >
@@ -148,6 +155,7 @@
                 </td>
                 <td class="flex justify-end">
                   <a
+                    target="_blank"
                     href="https://forms.gle/aRiyz2y3LczQqY9x9"
                     class="block text-center px-3 py-1 rounded shadow-sm font-primary font-sm text-base bg-purple-800 text-white hover:bg-purple-700"
                   >
@@ -161,6 +169,7 @@
                 </td>
                 <td class="flex justify-end">
                   <a
+                    target="_blank"
                     href="https://forms.gle/gQwMrcdzX66HVZ5J7"
                     class="block text-center px-3 py-1 rounded shadow-sm font-primary font-sm text-base bg-purple-800 text-white hover:bg-purple-700"
                   >
