@@ -15,3 +15,5 @@ yarn-error.log
 /.idea/
 /scripts/data/
 /scripts/.idea/
+/scripts/Make_Repos_Public.py
+scripts/Make_Repos_Public.py
