@@ -3,6 +3,19 @@
     <section class="w-full">
       <div class="container mx-auto w-full mt-8 md:mt-16">
         <div class="w-full flex flex-col">
+          <article class="w-full p-8 bg-white shadow">
+            <div class="flex w-full">
+              <h1 class="flex-1 font-primary font-normal text-2xl text-primary">
+                Projects
+              </h1>
+              <inertia-link
+                href="/projects/submit"
+                class="flex-initial self-center block text-center px-3 py-2 rounded shadow-sm font-primary font-sm text-base bg-pink-500 text-white hover:bg-pink-400"
+              >
+                Submit a Project
+              </inertia-link>
+            </div>
+          </article>
           <article class="card">
             <div class="w-1/5 flex-initial border-r border-gray-300">
               <p class="mr-8 font-primary font-semibold text-xl text-gray-500">
