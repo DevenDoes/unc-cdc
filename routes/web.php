@@ -184,7 +184,7 @@ Route::middleware(['auth:sanctum', 'registered'])
 /**
  * Project Submission
  */
-Route::middleware(['auth:sanctum', 'registered'])
+Route::middleware([])
     ->get('/projects', [ProjectSubmissionController::class, 'index'])
     ->name('project.index');
 Route::middleware(['auth:sanctum', 'registered'])
@@ -193,6 +193,6 @@ Route::middleware(['auth:sanctum', 'registered'])
 Route::middleware(['auth:sanctum', 'registered'])
     ->post('/projects', [ProjectSubmissionController::class, 'store'])
     ->name('project.store');
-Route::middleware(['auth:sanctum', 'registered'])
+Route::middleware([])
     ->get('/projects/{project}', [ProjectSubmissionController::class, 'show'])
     ->name('project.show');
