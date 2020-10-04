@@ -19,6 +19,20 @@ class ProjectSubmissionController extends Controller
         ]);
     }
 
+    public function vdt(Request $request)
+    {
+        return Inertia::render('Portal/Project/VDT', [
+            'projects' => Project::all()->unique('github')->where('sponsor_prizes', 'vdt')->toArray(),
+        ]);
+    }
+
+    public function captech(Request $request)
+    {
+        return Inertia::render('Portal/Project/Captech', [
+            'projects' => Project::all()->unique('github')->where('sponsor_prizes', 'captech')->toArray(),
+        ]);
+    }
+
     public function show(Request $request, Project $project)
     {
         $members = Project::all()

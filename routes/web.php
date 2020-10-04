@@ -187,6 +187,12 @@ Route::middleware(['auth:sanctum', 'registered'])
 Route::middleware([])
     ->get('/projects', [ProjectSubmissionController::class, 'index'])
     ->name('project.index');
+Route::middleware([])
+    ->get('/projects/vdt', [ProjectSubmissionController::class, 'vdt'])
+    ->name('project.vdt');
+Route::middleware([])
+    ->get('/projects/captech', [ProjectSubmissionController::class, 'captech'])
+    ->name('project.captech');
 Route::middleware(['auth:sanctum', 'registered'])
     ->get('/projects/submit', [ProjectSubmissionController::class, 'create'])
     ->name('project.create');
