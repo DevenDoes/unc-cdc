@@ -163,27 +163,27 @@ export default {
     },
     finance_projects: function () {
       let finance = []
-      for (const $project of this.projectsL) {
-        if ($project.track === 'finance') {
-          finance.push($project);
+      for (const [key, project] of Object.entries(this.projectsL)) {
+        if (project.track === 'finance') {
+          finance.push(project);
         }
       }
       return finance;
     },
     humanities_projects: function () {
       let humanities = []
-      for (const $project of this.projectsL) {
-        if ($project.track === 'humanities') {
-          humanities.push($project);
+      for (const [key, project] of Object.entries(this.projectsL)) {
+        if (project.track === 'humanities') {
+          humanities.push(project);
         }
       }
       return humanities;
     },
     culture_projects: function () {
       let culture = []
-      for (const $project of this.projectsL) {
-        if ($project.track === 'culture') {
-          culture.push($project);
+      for (const [key, project] of Object.entries(this.projectsL)) {
+        if (project.track === 'culture') {
+          culture.push(project);
         }
       }
       return culture;
