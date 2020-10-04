@@ -15,7 +15,7 @@ class ProjectSubmissionController extends Controller
     public function index(Request $request)
     {
         return Inertia::render('Portal/Project/Index', [
-            'projects' => Project::all()->unique('github', true),
+            'projects' => Project::all()->unique('github', false),
         ]);
     }
 
