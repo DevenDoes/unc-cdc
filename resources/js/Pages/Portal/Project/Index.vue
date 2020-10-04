@@ -168,6 +168,7 @@ export default {
           finance.push(project);
         }
       }
+      console.log(finance);
       return finance;
     },
     humanities_projects: function () {
@@ -177,6 +178,7 @@ export default {
           humanities.push(project);
         }
       }
+      console.log(humanities);
       return humanities;
     },
     culture_projects: function () {
@@ -186,6 +188,7 @@ export default {
           culture.push(project);
         }
       }
+      console.log(culture);
       return culture;
     },
   }
