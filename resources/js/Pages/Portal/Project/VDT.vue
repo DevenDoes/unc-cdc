@@ -6,7 +6,7 @@
           <article class="w-full p-8 bg-white shadow">
             <div class="flex w-full">
               <h1 class="flex-1 font-primary font-normal text-2xl text-primary">
-                Visual Data Tools
+                Projects
               </h1>
               <inertia-link
                 href="/projects/submit"
@@ -19,7 +19,7 @@
           <article class="card">
             <div class="w-1/5 flex-initial border-r border-gray-300">
               <p class="mr-8 font-primary font-semibold text-xl text-gray-500">
-                Science
+                Visual Data Tools
               </p>
             </div>
             <div class="ml-8 flex-1">
