@@ -52,7 +52,7 @@
             <div class="w-4/5">
               <div class="w-full grid grid-cols-4 gap-8">
                 <inertia-link
-                  :href="'/users/profile/' + user.id"
+                  :href="'/user/profile/' + user.id"
                   class="col-span-1 flex flex-col items-center p-4 bg-light rounded shadow-md transform origin-center transition duration-200 hover:scale-105"
                   v-for="user in $props.members"
                   :key="user.id"
