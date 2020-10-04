@@ -202,3 +202,7 @@ Route::middleware(['auth:sanctum', 'registered'])
 Route::middleware([])
     ->get('/projects/{project}', [ProjectSubmissionController::class, 'show'])
     ->name('project.show');
+
+Route::get('/judges', function () {
+    return Inertia\Inertia::render('Portal/Project/Judges', []);
+});
