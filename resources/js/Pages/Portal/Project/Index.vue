@@ -144,10 +144,17 @@ export default {
       default: [],
     },
   },
+  data: function () {
+    return {
+      projectsL: this.$props.projects,
+    }
+  },
   computed: {
     science_projects: function () {
+      console.log(this.$props.projects);
+      console.log(this.projectsL);
       let science = []
-      for (const $project of this.$props.projects) {
+      for (const $project of this.projectsL) {
         if ($project.track === 'science') {
           science.push($project);
         }
@@ -156,7 +163,7 @@ export default {
     },
     finance_projects: function () {
       let finance = []
-      for (const $project of this.$props.projects) {
+      for (const $project of this.projectsL) {
         if ($project.track === 'finance') {
           finance.push($project);
         }
@@ -165,7 +172,7 @@ export default {
     },
     humanities_projects: function () {
       let humanities = []
-      for (const $project of this.$props.projects) {
+      for (const $project of this.projectsL) {
         if ($project.track === 'humanities') {
           humanities.push($project);
         }
@@ -174,7 +181,7 @@ export default {
     },
     culture_projects: function () {
       let culture = []
-      for (const $project of this.$props.projects) {
+      for (const $project of this.projectsL) {
         if ($project.track === 'culture') {
           culture.push($project);
         }
