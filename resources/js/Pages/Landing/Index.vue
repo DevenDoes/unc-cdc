@@ -433,7 +433,7 @@
         >
           <div class="sponsor-img">
             <img
-              src="/img/sponsors/ncds.jpg"
+              src="/img/sponsors/ncds.png"
               target="_blank"
               alt="NCDS logo"
             >
