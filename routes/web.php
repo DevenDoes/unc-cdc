@@ -37,47 +37,47 @@ Route::get('/', function () {
 /**
  * Login
  */
-Route::get('/login', function () {
-  return Inertia\Inertia::render('Auth/Login');
-})->middleware(['guest'])->name('login');
+//Route::get('/login', function () {
+//  return Inertia\Inertia::render('Auth/Login');
+//})->middleware(['guest'])->name('login');
 
 /**
  * Register
  */
-Route::get('/register', function () {
-  return Inertia\Inertia::render('Auth/Register');
-})->middleware(['guest'])->name('register');
+//Route::get('/register', function () {
+//  return Inertia\Inertia::render('Auth/Register');
+//})->middleware(['guest'])->name('register');
 
 /**
  * Forgot Password
  */
-Route::get('/forgot-password', function () {
-  return Inertia\Inertia::render('Auth/ForgotPassword');
-})->middleware(['guest'])->name('password.request');
+//Route::get('/forgot-password', function () {
+//  return Inertia\Inertia::render('Auth/ForgotPassword');
+//})->middleware(['guest'])->name('password.request');
 
 /**
  * Password Reset Link Sent
  */
-Route::get('/password-reset-sent', function () {
-  return Inertia\Inertia::render('Auth/PasswordResetSent');
-})->middleware(['guest']);
+//Route::get('/password-reset-sent', function () {
+//  return Inertia\Inertia::render('Auth/PasswordResetSent');
+//})->middleware(['guest']);
 
 /**
  * Reset Password
  */
-Route::get('/reset-password/{token}', function (Request $request, $token) {
-  return Inertia\Inertia::render('Auth/ResetPassword', [
-    'email' => $request['email'],
-    'token' => $token,
-  ]);
-})->middleware(['guest'])->name('password.reset');
+//Route::get('/reset-password/{token}', function (Request $request, $token) {
+//  return Inertia\Inertia::render('Auth/ResetPassword', [
+//    'email' => $request['email'],
+//    'token' => $token,
+//  ]);
+//})->middleware(['guest'])->name('password.reset');
 
 /**
  * Verify Email
  */
-Route::middleware(['auth:sanctum'])->get('/email/verify', function () {
-  return Inertia\Inertia::render('Auth/VerifyEmail');
-})->name('verification.notice');
+//Route::middleware(['auth:sanctum'])->get('/email/verify', function () {
+//  return Inertia\Inertia::render('Auth/VerifyEmail');
+//})->name('verification.notice');
 
 /**
  * Dashboard

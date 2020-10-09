@@ -21,19 +21,20 @@
       >
       <div class="mt-8">
         <!-- Register button -->
-        <inertia-link
-          href="/register"
-          class="mr-2 text-lg font-normal shadow-lg button bg-secondary text-light font-primary"
-        >
-          Register
-        </inertia-link>
+<!--        <inertia-link-->
+<!--          href="/register"-->
+<!--          class="mr-2 text-lg font-normal shadow-lg button bg-secondary text-light font-primary"-->
+<!--        >-->
+<!--          Register-->
+<!--        </inertia-link>-->
         <!-- Newsletter button -->
-        <inertia-link
-          href="/login"
-          class="ml-2 text-lg font-normal shadow-lg button bg-highlight text-light font-primary"
+        <a
+          href="http://eepurl.com/gFzI4n"
+          target="_blank"
+          class="text-lg font-normal shadow-lg button bg-highlight text-light font-primary"
         >
-          Sign In
-        </inertia-link>
+          Newsletter
+        </a>
       </div>
     </article>
   </section>
