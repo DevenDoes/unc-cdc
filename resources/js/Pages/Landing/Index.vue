@@ -425,6 +425,44 @@
             </p>
           </div>
         </a>
+        <!-- NCDS -->
+        <a
+          href="https://datascienceconsortium.org/"
+          target="_blank"
+          class="sponsor grid-item"
+        >
+          <div class="sponsor-img">
+            <img
+              src="/img/sponsors/ncds.jpg"
+              target="_blank"
+              alt="NCDS logo"
+            >
+          </div>
+          <div class="sponsor-tag">
+            <p class="sponsor-tag-text">
+              NCDS
+            </p>
+          </div>
+        </a>
+        <!-- RENCI -->
+        <a
+          href="https://renci.org/"
+          target="_blank"
+          class="sponsor grid-item"
+        >
+          <div class="sponsor-img">
+            <img
+              src="/img/sponsors/renci.png"
+              target="_blank"
+              alt="RENCI logo"
+            >
+          </div>
+          <div class="sponsor-tag">
+            <p class="sponsor-tag-text">
+              RENCI
+            </p>
+          </div>
+        </a>
         <!-- SAS -->
         <a
           href="https://www.sas.com/en_us/home.html"
